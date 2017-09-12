@@ -71,89 +71,89 @@
                         <td>5</td>
                         <td>3.中药材的种植</td>  
                         <td><div><number-input v-model="a5_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a5_2}}</div></td>
-                        <td><div>{{a5_3}}</div></td>
-                        <td><div>{{a5_4}}</div></td>
-                        <td><div>{{a5_5}}</div></td>
+                        <td><div><number-input v-model="a5_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a5_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a5_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a5_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a5_6}}</div></td>
-                        <td><div>{{a5_7}}</div></td>  
+                        <td><div><number-input v-model="a5_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>4.林木的培育和种植</td>  
                         <td><div><number-input v-model="a6_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a6_2}}</div></td>
-                        <td><div>{{a6_3}}</div></td>
-                        <td><div>{{a6_4}}</div></td>
-                        <td><div>{{a6_5}}</div></td>
+                        <td><div><number-input v-model="a6_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a6_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a6_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a6_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a6_6}}</div></td>
-                        <td><div>{{a6_7}}</div></td>  
+                        <td><div><number-input v-model="a6_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>5.牲畜、家禽的饲养</td>  
                         <td><div><number-input v-model="a7_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a7_2}}</div></td>
-                        <td><div>{{a7_3}}</div></td>
-                        <td><div>{{a7_4}}</div></td>
-                        <td><div>{{a7_5}}</div></td>
+                        <td><div><number-input v-model="a7_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a7_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a7_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a7_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a7_6}}</div></td>
-                        <td><div>{{a7_7}}</div></td>  
+                        <td><div><number-input v-model="a7_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>6.林产品的采集</td>  
                         <td><div><number-input v-model="a8_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a8_2}}</div></td>
-                        <td><div>{{a8_3}}</div></td>
-                        <td><div>{{a8_4}}</div></td>
-                        <td><div>{{a8_5}}</div></td>
+                        <td><div><number-input v-model="a8_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a8_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a8_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a8_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a8_6}}</div></td>
-                        <td><div>{{a8_7}}</div></td>  
+                        <td><div><number-input v-model="a8_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>7.灌溉、农产品初加工、兽医、农技推广、农机作业和维修等农、林、牧、渔服务业项目</td>  
                         <td><div><number-input v-model="a9_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a9_2}}</div></td>
-                        <td><div>{{a9_3}}</div></td>
-                        <td><div>{{a9_4}}</div></td>
-                        <td><div>{{a9_5}}</div></td>
+                        <td><div><number-input v-model="a9_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a9_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a9_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a9_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a9_6}}</div></td>
-                        <td><div>{{a9_7}}</div></td>  
+                        <td><div><number-input v-model="a9_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>其中：农产品初加工</td>  
-                        <td><div>{{a10_1}}</div></td>
-                        <td><div>{{a10_2}}</div></td>
-                        <td><div>{{a10_3}}</div></td>
-                        <td><div>{{a10_4}}</div></td>
-                        <td><div>{{a10_5}}</div></td>
+                        <td><div><number-input v-model="a10_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a10_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a10_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a10_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a10_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a10_6}}</div></td>
-                        <td><div>{{a10_7}}</div></td>  
+                        <td><div><number-input v-model="a10_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>11</td>
                         <td>8.远洋捕捞</td>  
                         <td><div><number-input v-model="a11_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a11_2}}</div></td>
-                        <td><div>{{a11_3}}</div></td>
-                        <td><div>{{a11_4}}</div></td>
-                        <td><div>{{a11_5}}</div></td>
+                        <td><div><number-input v-model="a11_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a11_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a11_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a11_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a11_6}}</div></td>
-                        <td><div>{{a11_7}}</div></td>  
+                        <td><div><number-input v-model="a11_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>12</td>
                         <td>9.其他</td>  
                         <td><div><number-input v-model="a12_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a12_2}}</div></td>
-                        <td><div>{{a12_3}}</div></td>
-                        <td><div>{{a12_4}}</div></td>
-                        <td><div>{{a12_5}}</div></td>
+                        <td><div><number-input v-model="a12_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a12_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a12_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a12_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a12_6}}</div></td>
-                        <td><div>{{a12_7}}</div></td>  
+                        <td><div><number-input v-model="a12_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>13</td>
@@ -170,34 +170,34 @@
                         <td>14</td>
                         <td>1.花卉、茶以及其他饮料作物和香料作物的种植</td>  
                         <td><div><number-input v-model="a14_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a14_2}}</div></td>
-                        <td><div>{{a14_3}}</div></td>
-                        <td><div>{{a14_4}}</div></td>
-                        <td><div>{{a14_5}}</div></td>
+                        <td><div><number-input v-model="a14_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a14_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a14_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a14_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a14_6}}</div></td>
-                        <td><div>{{a14_7}}</div></td>  
+                        <td><div><number-input v-model="a14_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>15</td>
                         <td>2.海水养殖、内陆养殖</td>  
                         <td><div><number-input v-model="a15_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a15_2}}</div></td>
-                        <td><div>{{a15_3}}</div></td>
-                        <td><div>{{a15_4}}</div></td>
-                        <td><div>{{a15_5}}</div></td>
+                        <td><div><number-input v-model="a15_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a15_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a15_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a15_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a15_6}}</div></td>
-                        <td><div>{{a15_7}}</div></td>  
+                        <td><div><number-input v-model="a15_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>16</td>
                         <td>3.其他</td>  
                         <td><div><number-input v-model="a16_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a16_2}}</div></td>
-                        <td><div>{{a16_3}}</div></td>
-                        <td><div>{{a16_4}}</div></td>
-                        <td><div>{{a16_5}}</div></td>
+                        <td><div><number-input v-model="a16_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a16_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a16_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a16_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a16_6}}</div></td>
-                        <td><div>{{a16_7}}</div></td>  
+                        <td><div><number-input v-model="a16_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>17</td>
@@ -214,89 +214,89 @@
                         <td>18</td>
                         <td>（一）港口码头项目</td>  
                         <td><div><number-input v-model="a18_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a18_2}}</div></td>
-                        <td><div>{{a18_3}}</div></td>
-                        <td><div>{{a18_4}}</div></td>
-                        <td><div>{{a18_5}}</div></td>
+                        <td><div><number-input v-model="a18_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a18_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a18_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a18_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a18_6}}</div></td>
-                        <td><div>{{a18_7}}</div></td>  
+                        <td><div><number-input v-model="a18_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>19</td>
                         <td>（二）机场项目</td>
                         <td><div><number-input v-model="a19_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a19_2}}</div></td>
-                        <td><div>{{a19_3}}</div></td>
-                        <td><div>{{a19_4}}</div></td>
-                        <td><div>{{a19_5}}</div></td>
+                        <td><div><number-input v-model="a19_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a19_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a19_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a19_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a19_6}}</div></td>
-                        <td><div>{{a19_7}}</div></td>  
+                        <td><div><number-input v-model="a19_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>20</td>
                         <td>（三）铁路项目</td>
                         <td><div><number-input v-model="a20_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a20_2}}</div></td>
-                        <td><div>{{a20_3}}</div></td>
-                        <td><div>{{a20_4}}</div></td>
-                        <td><div>{{a20_5}}</div></td>
+                        <td><div><number-input v-model="a20_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a20_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a20_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a20_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a20_6}}</div></td>
-                        <td><div>{{a20_7}}</div></td>  
+                        <td><div><number-input v-model="a20_7" :fixed="fixed"></number-input></div></td>  
                     </tr>
                     <tr>
                         <td>21</td>
                         <td>（四）公路项目</td>
                         <td><div><number-input v-model="a21_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a21_2}}</div></td>
-                        <td><div>{{a21_3}}</div></td>
-                        <td><div>{{a21_4}}</div></td>
-                        <td><div>{{a21_5}}</div></td>
+                        <td><div><number-input v-model="a21_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a21_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a21_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a21_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a21_6}}</div></td>
-                        <td><div>{{a21_7}}</div></td>
+                        <td><div><number-input v-model="a21_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>22</td>
                         <td>（五）城市公共交通项目</td>
                         <td><div><number-input v-model="a22_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a22_2}}</div></td>
-                        <td><div>{{a22_3}}</div></td>
-                        <td><div>{{a22_4}}</div></td>
-                        <td><div>{{a22_5}}</div></td>
+                        <td><div><number-input v-model="a22_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a22_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a22_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a22_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a22_6}}</div></td>
-                        <td><div>{{a22_7}}</div></td>
+                        <td><div><number-input v-model="a22_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>23</td>
                         <td>（六）电力项目</td>
                         <td><div><number-input v-model="a23_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a23_2}}</div></td>
-                        <td><div>{{a23_3}}</div></td>
-                        <td><div>{{a23_4}}</div></td>
-                        <td><div>{{a23_5}}</div></td>
+                        <td><div><number-input v-model="a23_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a23_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a23_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a23_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a23_6}}</div></td>
-                        <td><div>{{a23_7}}</div></td>
+                        <td><div><number-input v-model="a23_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>24</td>
                         <td>（七）水利项目</td>
                         <td><div><number-input v-model="a24_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a24_2}}</div></td>
-                        <td><div>{{a24_3}}</div></td>
-                        <td><div>{{a24_4}}</div></td>
-                        <td><div>{{a24_5}}</div></td>
+                        <td><div><number-input v-model="a24_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a24_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a24_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a24_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a24_6}}</div></td>
-                        <td><div>{{a24_7}}</div></td>
+                        <td><div><number-input v-model="a24_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>25</td>
                         <td>（八）其他项目</td>
                         <td><div><number-input v-model="a25_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a25_2}}</div></td>
-                        <td><div>{{a25_3}}</div></td>
-                        <td><div>{{a25_4}}</div></td>
-                        <td><div>{{a25_5}}</div></td>
+                        <td><div><number-input v-model="a25_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a25_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a25_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a25_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a25_6}}</div></td>
-                        <td><div>{{a25_7}}</div></td>
+                        <td><div><number-input v-model="a25_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>26</td>
@@ -313,100 +313,100 @@
                         <td>27</td>
                         <td>（一）公共污水处理项目</td>
                         <td><div><number-input v-model="a27_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a27_2}}</div></td>
-                        <td><div>{{a27_3}}</div></td>
-                        <td><div>{{a27_4}}</div></td>
-                        <td><div>{{a27_5}}</div></td>
+                        <td><div><number-input v-model="a27_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a27_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a27_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a27_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a27_6}}</div></td>
-                        <td><div>{{a27_7}}</div></td>
+                        <td><div><number-input v-model="a27_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>28</td>
                         <td>（二）公共垃圾处理项目</td>
-                        <td><div>{{a28_1}}</div></td>
-                        <td><div>{{a28_2}}</div></td>
-                        <td><div>{{a28_3}}</div></td>
-                        <td><div>{{a28_4}}</div></td>
-                        <td><div>{{a28_5}}</div></td>
+                        <td><div><number-input v-model="a28_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a28_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a28_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a28_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a28_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a28_6}}</div></td>
-                        <td><div>{{a28_7}}</div></td>
+                        <td><div><number-input v-model="a28_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>29</td>
                         <td>（三）沼气综合开发利用项目</td>
-                        <td><div>{{a29_1}}</div></td>
-                        <td><div>{{a29_2}}</div></td>
-                        <td><div>{{a29_3}}</div></td>
-                        <td><div>{{a29_4}}</div></td>
-                        <td><div>{{a29_5}}</div></td>
+                        <td><div><number-input v-model="a29_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a29_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a29_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a29_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a29_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a29_6}}</div></td>
-                        <td><div>{{a29_7}}</div></td>
+                        <td><div><number-input v-model="a29_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>30</td>
                         <td>（四）节能减排技术改造项目</td>
-                        <td><div>{{a30_1}}</div></td>
-                        <td><div>{{a30_2}}</div></td>
-                        <td><div>{{a30_3}}</div></td>
-                        <td><div>{{a30_4}}</div></td>
-                        <td><div>{{a30_5}}</div></td>
+                        <td><div><number-input v-model="a30_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a30_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a30_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a30_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a30_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a30_6}}</div></td>
-                        <td><div>{{a30_7}}</div></td>
+                        <td><div><number-input v-model="a30_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>31</td>
                         <td>（五）海水淡化项目</td>
-                        <td><div>{{a31_1}}</div></td>
-                        <td><div>{{a31_2}}</div></td>
-                        <td><div>{{a31_3}}</div></td>
-                        <td><div>{{a31_4}}</div></td>
-                        <td><div>{{a31_5}}</div></td>
+                        <td><div><number-input v-model="a31_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a31_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a31_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a31_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a31_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a31_6}}</div></td>
-                        <td><div>{{a31_7}}</div></td>
+                        <td><div><number-input v-model="a31_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>32</td>
                         <td>（六）其他项目</td>
-                        <td><div>{{a32_1}}</div></td>
-                        <td><div>{{a32_2}}</div></td>
-                        <td><div>{{a32_3}}</div></td>
-                        <td><div>{{a32_4}}</div></td>
-                        <td><div>{{a32_5}}</div></td>
+                        <td><div><number-input v-model="a32_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a32_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a32_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a32_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a32_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a32_6}}</div></td>
-                        <td><div>{{a32_7}}</div></td>
+                        <td><div><number-input v-model="a32_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>33</td>
                         <td>四、符合条件的技术转让项目</td>
-                        <td><div>{{a33_1}}</div></td>
-                        <td><div>{{a33_2}}</div></td>
-                        <td><div>{{a33_3}}</div></td>
-                        <td><div>{{a33_4}}</div></td>
-                        <td><div>{{a33_5}}</div></td>
-                        <td><div>{{a33_6}}</div></td>
+                        <td><div><number-input v-model="a33_1" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a33_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a33_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a33_4" :fixed="fixed"></number-input></div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td><div><number-input v-model="a33_6" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a33_7}}</div></td>
                     </tr>
                     <tr>
                         <td>34</td>
                         <td>（一）技术转让所得不超过500万元部分</td>
-                        <td><div>{{a34_1}}</div></td>
-                        <td><div>{{a34_2}}</div></td>
-                        <td><div>{{a34_3}}</div></td>
-                        <td><div>{{a34_4}}</div></td>
-                        <td><div>{{a34_5}}</div></td>
-                        <td><div>{{a34_6}}</div></td>
-                        <td><div>{{a34_7}}</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td><div><number-input v-model="a34_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>35</td>
                         <td>（二）技术转让所得超过500万元部分</td>
-                        <td><div>{{a35_1}}</div></td>
-                        <td><div>{{a35_2}}</div></td>
-                        <td><div>{{a35_3}}</div></td>
-                        <td><div>{{a35_4}}</div></td>
-                        <td><div>{{a35_5}}</div></td>
-                        <td><div>{{a35_6}}</div></td>
-                        <td><div>{{a35_7}}</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td class="blue"><div>*</div></td>
+                        <td><div><number-input v-model="a35_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>36</td>
@@ -423,34 +423,34 @@
                         <td>37</td>
                         <td>（一）实施清洁发展机制项目</td>
                         <td><div><number-input v-model="a37_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a37_2}}</div></td>
-                        <td><div>{{a37_3}}</div></td>
-                        <td><div>{{a37_4}}</div></td>
-                        <td><div>{{a37_5}}</div></td>
+                        <td><div><number-input v-model="a37_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a37_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a37_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a37_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a37_6}}</div></td>
-                        <td><div>{{a37_7}}</div></td>
+                        <td><div><number-input v-model="a37_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>38</td>
                         <td>（二）符合条件的节能服务公司实施合同能源管理项目</td>
                         <td><div><number-input v-model="a38_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a38_2}}</div></td>
-                        <td><div>{{a38_3}}</div></td>
-                        <td><div>{{a38_4}}</div></td>
-                        <td><div>{{a38_5}}</div></td>
+                        <td><div><number-input v-model="a38_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a38_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a38_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a38_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a38_6}}</div></td>
-                        <td><div>{{a38_7}}</div></td>
+                        <td><div><number-input v-model="a38_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>39</td>
                         <td>（三）其他</td>
                         <td><div><number-input v-model="a39_1" :fixed="fixed"></number-input></div></td>
-                        <td><div>{{a39_2}}</div></td>
-                        <td><div>{{a39_3}}</div></td>
-                        <td><div>{{a39_4}}</div></td>
-                        <td><div>{{a39_5}}</div></td>
+                        <td><div><number-input v-model="a39_2" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a39_3" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a39_4" :fixed="fixed"></number-input></div></td>
+                        <td><div><number-input v-model="a39_5" :fixed="fixed"></number-input></div></td>
                         <td><div>{{a39_6}}</div></td>
-                        <td><div>{{a39_7}}</div></td>
+                        <td><div><number-input v-model="a39_7" :fixed="fixed"></number-input></div></td>
                     </tr>
                     <tr>
                         <td>40</td>
@@ -931,7 +931,46 @@
                 this.a9_1 = newVal.a9_1;
                 this.a11_1 = newVal.a11_1;
                 this.a12_1 = newVal.a12_1;
-            }
+            },
+            a3_6(newVal){
+                this.a3_7 = newVal;
+            },
+            a4_6(newVal){
+                this.a4_7 = newVal;
+            },
+            a5_6(newVal){
+                this.a5_7 = newVal;
+            },
+            a6_6(newVal){
+                this.a6_7 = newVal;
+            },
+            a7_6(newVal){
+                this.a7_7 = newVal;
+            },
+            a8_6(newVal){
+                this.a8_7 = newVal;
+            },
+            a9_6(newVal){
+                this.a9_7 = newVal;
+            },
+            a10_6(newVal){
+                this.a10_7 = newVal;
+            },
+            a11_6(newVal){
+                this.a11_7 = newVal;
+            },
+            a12_6(newVal){
+                this.a12_7 = newVal;
+            },
+            a14_6(newVal){
+                this.a14_7 = newVal * 0.5;
+            },
+            a15_6(newVal){
+                this.a15_7 = newVal * 0.5;
+            },
+            a16_6(newVal){
+                this.a16_7 = newVal * 0.5;
+            },
         },
         mounted() {
             store.dispatch("getTable", {
