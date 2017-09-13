@@ -20,27 +20,7 @@
     }
     
     .excel {
-        /*table {
-            width: 100%;
-            border-spacing: 0;
-        }
-        table,
-        tr,
-        td {
-            border: none;
-        }
-        caption {
-            line-height: 60px;
-            background: #eff2f7;
-        }
-        thead {
-            line-height: 40px;
-            background: #eff2f7;
-        }
-        tbody {
-            td {
-                padding: 10px;
-            }
-        }*/
+        width: 90%;
+        margin: 0 auto;
     }
 </style>
