@@ -20,6 +20,9 @@ Vue.use(VueAxios, axios);
 
 window.$ = $;
 
+function showToast(msg) {
+    window.root.$message.error(msg);
+}
 
 function renderApp() {
     let root = new Vue({
@@ -39,11 +42,11 @@ function renderApp() {
     //     }
     // });
 
-    // //业务错误
-    // root.$on("bizError", showToast);
+    //业务错误
+    root.$on("bizError", showToast);
 
-    // //服务器错误
-    // root.$on("serverError", showToast);
+    //服务器错误
+    root.$on("serverError", showToast);
 }
 
 window.query = Utils.getParams();

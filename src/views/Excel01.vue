@@ -467,6 +467,7 @@
                 </tbody>
             </table>
         </div>
+        <el-button type="primary" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -922,15 +923,13 @@
         },
         watch: {
             getTable(newVal) {
-                this.a3_1 = newVal.a3_1;
-                this.a4_1 = newVal.a4_1;
-                this.a5_1 = newVal.a5_1;
-                this.a6_1 = newVal.a6_1;
-                this.a7_1 = newVal.a7_1;
-                this.a8_1 = newVal.a8_1;
-                this.a9_1 = newVal.a9_1;
-                this.a11_1 = newVal.a11_1;
-                this.a12_1 = newVal.a12_1;
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                }
             },
             a3_6(newVal){
                 this.a3_7 = newVal;
@@ -972,10 +971,40 @@
                 this.a16_7 = newVal * 0.5;
             },
         },
+        methods:{
+            save(){
+                let postData = {
+                    "cYear": 2016,
+                    "uid": 1,
+                    "userId": 104
+                };
+                for(let i=1;i<=40;i++){
+                    for(let j=1;j<=7;j++){
+                        let p = `a${i}_${j}`
+                        postData[p]=this[p];
+                    }
+                }
+               store.dispatch("edit", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    }
+                });
+            }
+        },
         mounted() {
             store.dispatch("getTable", {
-
-            })
+                data: {
+                    "uid":1,
+                    "year":2016,
+                    "userId":104
+                }
+            });
         }
     }
 </script>
@@ -996,13 +1025,16 @@
         table {
             width: 100%;
             &.head {
-                background-color: #eef1f6;
+                td{
+                    background-color: #eef1f6;
+                }
             }
         }
-        td {
+        td { 
             &.blue{
                 background: #96DAF7;
             }
+            vertical-align: middle;
             border-right: 1px solid #dfe6ec;
             border-bottom: 1px solid #dfe6ec;
             height: 40px;
@@ -1016,6 +1048,8 @@
                 border-right: none;
             }
             input {
+                outline: none;
+                height: 100%;
                 border: none;
                 line-height: 40px;
                 width: 100%;
@@ -1023,6 +1057,12 @@
                 color: #1f2d3d;
                 text-align: center;
                 background: #C1F1CB;
+            }
+            div{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         tr{
@@ -1035,5 +1075,8 @@
         &:last-of-type {
             border-bottom: 1px solid #dfe6ec;
         }
+    }
+    button{
+        margin-top: 30px;
     }
 </style>

@@ -5,6 +5,12 @@ const configs = {
     /***用户中心首页 */
     getTable: {
         url: formatUrl('getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    edit: {
+        url: formatUrl('edit'),
+        httpMethod: "post",
         defaultState: {}
     }
 };

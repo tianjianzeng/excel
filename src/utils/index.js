@@ -1,21 +1,9 @@
 import axios from 'axios';
 import * as qs from 'qs';
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.post['X-Requested-With'] = 'XMLHttpRequest';
 axios.defaults.withCredentials = true;
 
-
-function convert(param) {
-    param = param || {};
-    let requestData = {
-        accessKey: window.accessKey,
-        deviceId: (window.deviceInfo || {}).deviceId || "",
-        reqData: JSON.stringify(param)
-    };
-    return {
-        params: requestData
-    };
-};
 
 function ajax(config, cb, errorCb) {
     config.timeout = 30000;
@@ -31,23 +19,20 @@ function ajax(config, cb, errorCb) {
 }
 //
 export const getData = function(param, cb, errorCb) {
-    let requestData = convert(param.data);
-
     let params = {
         url: param.url,
         method: "get",
-        params: requestData.params
+        params: param.data
     };
     return ajax(params, cb, errorCb);
 }
 
 //
 export const postData = function(param, cb, errorCb) {
-    let requestData = convert(param.data);
     let params = {
         url: param.url,
         method: "post",
-        data: qs.stringify(requestData.params)
+        data: param.data
     };
     return ajax(params, cb, errorCb);
 }

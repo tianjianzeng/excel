@@ -39,7 +39,7 @@ export const init = function(configs) {
             } else {
                 let callback = opts.callback || function(rst) {
                     //网关返回失败
-                    if (rst.status != "0") {
+                    if (rst.status != 0) {
                         //网关返回的错误
                         if (opts.error) {
                             opts.error(rst);
@@ -107,5 +107,5 @@ export const init = function(configs) {
 
 
 export const formatUrl = function(url) {
-    return `${bizBaseApiUrl}/${url}.json`;
+    return `${bizBaseApiUrl}/${url}`;
 }
