@@ -36,7 +36,7 @@ Thumbs.db
 .idea/
 .svn/
 .sass-cache/
-
+dist/
 node_modules/
 
 npm-debug.log
