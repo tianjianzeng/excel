@@ -1,13 +1,19 @@
 <template>
-    <input v-model="text">
+    <div>
+        <p v-if="showText" @click="click">{{text|formatCurrency}}</p>
+        <input ref="valInput" v-else v-model="text" @blur="showText=true" @keyup="keyup">
+    </div>
 </template>
 <script>
+    import {formatCurrency} from '../utils/filters'
     export default {
         data() {
             return {
-                text: ""
+                text: "",
+                showText: true
             }
         },
+        filters: {formatCurrency},
         watch: {
             text(newVal,oldVal) {
                 if(newVal){
@@ -28,6 +34,18 @@
                 this.text = this.value.toString(); 
             }
         },
+        methods:{
+            keyup(evt){
+                console.log(evt);
+            },
+            click(evt){
+                this.showText=false;
+                this.$nextTick(()=>{
+                console.log(this.$refs);
+                this.$refs.valInput.focus();
+                });
+            }
+        },
         mounted() {
             this.text = this.value.toString();
         },
@@ -43,3 +61,8 @@
         }
     }
 </script>
+<style>
+    input{
+        width: 100%;
+    }
+</style>

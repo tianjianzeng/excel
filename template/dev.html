@@ -142,73 +142,73 @@
         // window.requestAnimationFrame(clock);
     </script>
     <script type="text/javascript">
-        window.addEventListener("DOMContentLoaded", function() {
-            var processor = {};
+        // window.addEventListener("DOMContentLoaded", function() {
+        //     var processor = {};
 
-            processor.doLoad = function doLoad() {
-                this.video = document.getElementById('video');
-                this.c1 = document.getElementById('c1');
-                this.ctx1 = this.c1.getContext('2d');
-                this.c2 = document.getElementById('c2');
-                this.ctx2 = this.c2.getContext('2d');
-                let self = this;
-                var errocb = function() {
-                    console.log('sth wrong!');
-                }
-                navigator.getUserMedia({
-                    "video": {
-                        width: 320,
-                        height: 240
-                    }
-                }, function(stream) {
-                    self.video.src = URL.createObjectURL(stream);
-                    self.video.play();
-                }, errocb)
-                this.video.addEventListener('canplay', function() {
-                    self.width = self.video.videoWidth;
-                    self.height = self.video.videoHeight;
-                    self.timerCallback();
-                }, false);
-            }
-            processor.timerCallback = function timerCallback() {
-                if (this.video.paused || this.video.ended) {
-                    return;
-                }
-                this.computeFrame();
-                let self = this;
-                setTimeout(function() {
-                    self.timerCallback();
-                }, 0);
-            }
-            processor.computeFrame = function computeFrame() {
-                this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
-                let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-                let l = frame.data.length / 4;
+        //     processor.doLoad = function doLoad() {
+        //         this.video = document.getElementById('video');
+        //         this.c1 = document.getElementById('c1');
+        //         this.ctx1 = this.c1.getContext('2d');
+        //         this.c2 = document.getElementById('c2');
+        //         this.ctx2 = this.c2.getContext('2d');
+        //         let self = this;
+        //         var errocb = function() {
+        //             console.log('sth wrong!');
+        //         }
+        //         navigator.getUserMedia({
+        //             "video": {
+        //                 width: 320,
+        //                 height: 240
+        //             }
+        //         }, function(stream) {
+        //             self.video.src = URL.createObjectURL(stream);
+        //             self.video.play();
+        //         }, errocb)
+        //         this.video.addEventListener('canplay', function() {
+        //             self.width = self.video.videoWidth;
+        //             self.height = self.video.videoHeight;
+        //             self.timerCallback();
+        //         }, false);
+        //     }
+        //     processor.timerCallback = function timerCallback() {
+        //         if (this.video.paused || this.video.ended) {
+        //             return;
+        //         }
+        //         this.computeFrame();
+        //         let self = this;
+        //         setTimeout(function() {
+        //             self.timerCallback();
+        //         }, 0);
+        //     }
+        //     processor.computeFrame = function computeFrame() {
+        //         this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+        //         let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+        //         let l = frame.data.length / 4;
 
-                for (let i = 0; i < l; i++) {
-                    let r = frame.data[i * 4 + 0];
-                    let g = frame.data[i * 4 + 1];
-                    let b = frame.data[i * 4 + 2];
-                    if (r > 100)
-                        frame.data[i * 4 + 3] = 0;
-                }
-                this.ctx2.putImageData(frame, 0, 0);
-                return;
-            }
+        //         for (let i = 0; i < l; i++) {
+        //             let r = frame.data[i * 4 + 0];
+        //             let g = frame.data[i * 4 + 1];
+        //             let b = frame.data[i * 4 + 2];
+        //             if (r > 100)
+        //                 frame.data[i * 4 + 3] = 0;
+        //         }
+        //         this.ctx2.putImageData(frame, 0, 0);
+        //         return;
+        //     }
 
-            processor.doLoad();
-        });
+        //     processor.doLoad();
+        // });
     </script>
 </head>
 
 <body>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
-
-    <canvas id="canvas" width="320" height="240"></canvas>
+    <!-- built files will be auto injected <canvas id="canvas" width="320" height="240"></canvas>
     <video id="video" autoplay="" style='width:320px;height:240px' controls="true"></video>
     <canvas id="c1" width="320" height="240"></canvas>
-    <canvas id="c2" width="320" height="240"></canvas>
+    <canvas id="c2" width="320" height="240"></canvas> -->
+
+
 </body>
 
 </html>
