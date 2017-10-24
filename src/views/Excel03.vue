@@ -2,12 +2,6 @@
     <div class="excel excel03">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <thead>
-                </thead>
-            </table>
-        </div>
-        <div class="table-wraper">
-            <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
                         <td colspan="4">中华人民共和国企业所得税年度纳税申报表（A类）</td>
