@@ -57,20 +57,131 @@
                     <tr>
                         <td style="width:5%" class="blue">1</td>
                         <td style="width:5%" class="blue">前五年度</td>
-                        <td style="width:5%" class="blue">3</td>
-                        <td style="width:5%" class="blue">4</td>
-                        <td style="width:5%" class="blue">5</td>
-                        <td style="width:10%" class="blue">6</td>
-                        <td style="width:5%" class="blue">7</td>
-                        <td style="width:5%" class="blue">8</td>
-                        <td style="width:5%" class="blue">9</td>
-                        <td style="width:5%" class="blue">10</td>
-                        <td style="width:5%" class="blue">11</td>
-                        <td style="width:5%" class="blue">12</td>
-                        <td style="width:10%" class="blue">13</td>
-                        <td style="width:5%" class="blue">14</td>
-                        <td style="width:10%" class="blue">13</td>
-                        <td style="width:10%" class="blue">14</td>
+                        <td style="width:5%">所得税汇缴所属年度-5</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue">前四年度</td>
+                        <td style="width:5%">所得税汇缴所属年度-4</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue">前三年度</td>
+                        <td style="width:5%">所得税汇缴所属年度-3</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue">前二年度</td>
+                        <td style="width:5%">所得税汇缴所属年度-2</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue">前一年度</td>
+                        <td style="width:5%">所得税汇缴所属年度-1</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue">本    年</td>
+                        <td style="width:5%">所得税汇缴所属年度-1</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue">合计（1+2+3+4+5+6）</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:5%" class="blue">*</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
