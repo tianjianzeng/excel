@@ -41,8 +41,7 @@
             click(evt){
                 this.showText=false;
                 this.$nextTick(()=>{
-                console.log(this.$refs);
-                this.$refs.valInput.focus();
+                    this.$refs.valInput.focus();
                 });
             }
         },
@@ -64,5 +63,8 @@
 <style>
     input{
         width: 100%;
+    }
+    p{
+        margin: 0;
     }
 </style>
