@@ -257,7 +257,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel01',
+        name: 'excel02',
         data() {
             return {
                 fixed:2,
@@ -498,8 +498,5 @@
         td[colspan="7"]{
             text-align: center;
         }
-    }
-    button{
-        margin-top: 30px;
     }
 </style>

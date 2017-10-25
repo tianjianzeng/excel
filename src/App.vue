@@ -92,4 +92,7 @@
             border-bottom: 1px solid #dfe6ec;
         }
     }
+    button{
+        margin-top: 30px;
+    }
 </style>

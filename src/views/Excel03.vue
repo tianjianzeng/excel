@@ -26,7 +26,7 @@
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">营业税金及附加</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">4</td>
@@ -46,17 +46,17 @@
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue">资产减值损失</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue">加：公允价值变动收益</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">投资收益</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">10</td>
@@ -199,12 +199,12 @@
                         <td class="blue">37</td>
                         <td class="blue" rowspan="2">附列资料</td>
                         <td class="blue">以前年度多缴的所得税额在本年抵减额</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">38</td>
                         <td class="blue">以前年度应缴未缴在本年入库所得税额</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr> 
                 </tbody>
             </table>
@@ -222,7 +222,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel01',
+        name: 'excel03',
         data() {
             return {
                 fixed:2,
@@ -455,7 +455,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel02{
+    .excel03{
         td{
             text-align: left;
             padding-left: 10px;
@@ -463,8 +463,5 @@
         td[colspan="7"]{
             text-align: center;
         }
-    }
-    button{
-        margin-top: 30px;
     }
 </style>

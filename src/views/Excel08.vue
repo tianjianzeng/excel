@@ -1,10 +1,10 @@
 <template>
-    <div class="excel excel04">
+    <div class="excel excel08">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <thead>
                     <tr>
-                        <td colspan="3">一般企业收入明细表</td>
+                        <td colspan="8">未按权责发生制确认收入纳税调整明细表</td>
                     </tr>
                 </thead>
             </table>
@@ -13,139 +13,166 @@
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td class="blue" style="width: 5%">行次</td>
-                        <td class="blue" style="width: 75%">项目</td>
-                        <td class="blue" style="width: 20%">金额</td>
+                        <td class="blue" rowspan="3">行次</td>
+                        <td class="blue" rowspan="3">项目</td>
+                        <td class="blue" rowspan="2">合同金额（交易金额）</td>
+                        <td class="blue" colspan="2">账载金额</td>
+                        <td class="blue" colspan="2">税收金额</td>
+                        <td class="blue" rowspan="2">纳税调整金额</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">本年</td>
+                        <td class="blue">累计</td>
+                        <td class="blue">本年</td>
+                        <td class="blue" style="border-right: 1px solid #dfe6ec;">累计</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
-                        <td class="blue">一、营业收入（2+9）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">2</td>
+                        <td class="blue">3</td>
+                        <td class="blue">4</td>
+                        <td class="blue">5</td>
+                        <td class="blue">6（4-2）</td>
+                    </tr>
+                    <tr>
+                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:30%" class="blue">一、跨期收取的租金、利息、特许权使用费收入（2+3+4）</td>
+                        <td style="width:15%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
+                        <td style="width:10%">{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
-                        <td class="blue">（一）主营业务收入（3+5+6+7+8）</td>
+                        <td class="blue">（一）租金</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
-                        <td class="blue">1.销售商品收入</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">（二）利息</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
-                        <td class="blue">其中：非货币性资产交换收入</td>
+                        <td class="blue">（三）特许权使用费</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
-                        <td class="blue">2.提供劳务收入</td>
+                        <td class="blue">二、分期确认收入（6+7+8）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
-                        <td class="blue">3.建造合同收入</td>
+                        <td class="blue">（一）分期收款方式销售货物收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
-                        <td class="blue">4.让渡资产使用权收入</td>
+                        <td class="blue">（二）持续时间超过12个月的建造合同收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
-                        <td class="blue">5.其他</td>
+                        <td class="blue">（三）其他分期确认收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
-                        <td class="blue">（二）其他业务收入（10+12+13+14+15）</td>
+                        <td class="blue">三、政府补助递延收入（10+11+12）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
-                        <td class="blue">1.销售材料收入</td>
+                        <td class="blue">（一）与收益相关的政府补助</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">11</td>
-                        <td class="blue">其中：非货币性资产交换收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">12</td>
-                        <td class="blue">2.出租固定资产收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">13</td>
-                        <td class="blue">3.出租无形资产收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">14</td>
-                        <td class="blue">4.出租包装物和商品收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">15</td>
-                        <td class="blue">5.其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">16</td>
-                        <td class="blue">二、营业外收入（17+18+19+20+21+22+23+24+25+26）</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">17</td>
-                        <td class="blue">（一）非流动资产处置利得</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">18</td>
-                        <td class="blue">（二）非货币性资产交换利得</td>
+                        <td class="blue">11</td>
+                        <td class="blue">（二）与资产相关的政府补助</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">19</td>
-                        <td class="blue">（三）债务重组利得</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">20</td>
-                        <td class="blue">（四）政府补助利得</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">21</td>
-                        <td class="blue">（五）盘盈利得</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">22</td>
-                        <td class="blue">（六）捐赠利得</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">23</td>
-                        <td class="blue">（七）罚没利得</td>
+                        <td class="blue">12</td>
+                        <td class="blue">（三）其他</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">24</td>
-                        <td class="blue">（八）确实无法偿付的应付款项</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">25</td>
-                        <td class="blue">（九）汇兑收益</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">26</td>
-                        <td class="blue">（十）其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">13</td>
+                        <td class="blue">四、其他未按权责发生制确认收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">14</td>
+                        <td class="blue">合计（1+5+9+13）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -163,7 +190,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel04',
+        name: 'excel08',
         data() {
             return {
                 fixed:2,
@@ -396,12 +423,12 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel04{
+    .excel08{
         td{
             text-align: left;
             padding-left: 10px;
         }
-        td[colspan="7"]{
+        td[colspan="8"]{
             text-align: center;
         }
     }

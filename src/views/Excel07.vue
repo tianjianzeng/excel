@@ -1,10 +1,10 @@
 <template>
-    <div class="excel excel04">
+    <div class="excel excel07">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <thead>
                     <tr>
-                        <td colspan="3">一般企业收入明细表</td>
+                        <td colspan="4">视同销售和房地产开发企业特定业务纳税调整明细表</td>
                     </tr>
                 </thead>
             </table>
@@ -13,139 +13,188 @@
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td class="blue" style="width: 5%">行次</td>
-                        <td class="blue" style="width: 75%">项目</td>
-                        <td class="blue" style="width: 20%">金额</td>
+                        <td class="blue" rowspan="2" style="width: 5%">行次</td>
+                        <td class="blue" rowspan="2" style="width: 75%">项目</td>
+                        <td class="blue" style="width: 10%">税收金额</td>
+                        <td class="blue" style="width: 10%">纳税调整金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
-                        <td class="blue">一、营业收入（2+9）</td>
+                        <td class="blue">2</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">1</td>
+                        <td class="blue">一、视同销售（营业）收入（2+3+4+5+6+7+8+9+10）</td>
+                        <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
-                        <td class="blue">（一）主营业务收入（3+5+6+7+8）</td>
+                        <td class="blue">（一）非货币性资产交换视同销售收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
-                        <td class="blue">1.销售商品收入</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">（二）用于市场推广或销售视同销售收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
-                        <td class="blue">其中：非货币性资产交换收入</td>
+                        <td class="blue">（三）用于交际应酬视同销售收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
-                        <td class="blue">2.提供劳务收入</td>
+                        <td class="blue">（四）用于职工奖励或福利视同销售收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
-                        <td class="blue">3.建造合同收入</td>
+                        <td class="blue">（五）用于股息分配视同销售收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
-                        <td class="blue">4.让渡资产使用权收入</td>
+                        <td class="blue">（六）用于对外捐赠视同销售收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
-                        <td class="blue">5.其他</td>
+                        <td class="blue">（七）用于对外投资项目视同销售收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
-                        <td class="blue">（二）其他业务收入（10+12+13+14+15）</td>
+                        <td class="blue">（八）提供劳务视同销售收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
-                        <td class="blue">1.销售材料收入</td>
+                        <td class="blue">（九）其他</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
-                        <td class="blue">其中：非货币性资产交换收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">二、视同销售（营业）成本（12+13+14+15+16+17+18+19+20）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
-                        <td class="blue">2.出租固定资产收入</td>
+                        <td class="blue">（一）非货币性资产交换视同销售成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
-                        <td class="blue">3.出租无形资产收入</td>
+                        <td class="blue">（二）用于市场推广或销售视同销售成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
-                        <td class="blue">4.出租包装物和商品收入</td>
+                        <td class="blue">（三）用于交际应酬视同销售成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
-                        <td class="blue">5.其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">（四）用于职工奖励或福利视同销售成本</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
-                        <td class="blue">二、营业外收入（17+18+19+20+21+22+23+24+25+26）</td>
+                        <td class="blue">（五）用于股息分配视同销售成本</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
-                        <td class="blue">（一）非流动资产处置利得</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">（六）用于对外捐赠视同销售成本</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
-                        <td class="blue">（二）非货币性资产交换利得</td>
+                        <td class="blue">（七）用于对外投资项目视同销售成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">19</td>
-                        <td class="blue">（三）债务重组利得</td>
+                        <td class="blue">（八）提供劳务视同销售成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">20</td>
-                        <td class="blue">（四）政府补助利得</td>
+                        <td class="blue">（九）其他</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">21</td>
-                        <td class="blue">（五）盘盈利得</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">三、房地产开发企业特定业务计算的纳税调整额（22-26）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
-                        <td class="blue">（六）捐赠利得</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">（一）房地产企业销售未完工开发产品特定业务计算的纳税调整额（24-25）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
-                        <td class="blue">（七）罚没利得</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">1.销售未完工产品的收入</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
                     </tr>
                     <tr>
                         <td class="blue">24</td>
-                        <td class="blue">（八）确实无法偿付的应付款项</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">2.销售未完工产品预计毛利额</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">25</td>
-                        <td class="blue">（九）汇兑收益</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">3.实际发生的营业税金及附加、土地增值税</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
-                        <td class="blue">（十）其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">（二）房地产企业销售的未完工产品转完工产品特定业务计算的纳税调整额（28-29）</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">27</td>
+                        <td class="blue">1.销售未完工产品转完工产品确认的销售收入</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">28</td>
+                        <td class="blue">2.转回的销售未完工产品预计毛利额</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">29</td>
+                        <td class="blue">3.转回实际发生的营业税金及附加、土地增值税</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -163,7 +212,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel04',
+        name: 'excel07',
         data() {
             return {
                 fixed:2,
@@ -396,12 +445,12 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel04{
+    .excel07{
         td{
             text-align: left;
             padding-left: 10px;
         }
-        td[colspan="7"]{
+        td[colspan="4"]{
             text-align: center;
         }
     }
