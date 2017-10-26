@@ -4,142 +4,40 @@
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td colspan="5">特殊行业准备金纳税调整明细表</td>
+                        <td colspan="13">企业所得税弥补亏损明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue" rowspan="2">行次</td>
-                        <td style="width:65%" class="blue" rowspan="2">项目</td>
-                        <td style="width:10%" class="blue">账载金额</td>
-                        <td style="width:10%" class="blue">税收金额</td>
-                        <td style="width:10%" class="blue">纳税调整金额</td>
+                        <td style="width:5%" class="blue" rowspan="3">行次</td>
+                        <td style="width:5%" class="blue" rowspan="3">项目</td>
+                        <td style="width:10%" class="blue" rowspan="2">年度</td>
+                        <td style="width:10%" class="blue" rowspan="2">纳税调整后所得</td>
+                        <td style="width:10%" class="blue" rowspan="2">合并、分立转入（转出）可弥补的亏损额</td>
+                        <td style="width:10%" class="blue" rowspan="2" >当年可弥补的亏损额</td>
+                        <td style="width:10%" class="blue" colspan="5">以前年度亏损已弥补额</td>
+                        <td style="width:10%" class="blue" rowspan="2">本年度实际弥补的以前年度亏损额</td>
+                        <td style="width:10%" class="blue" rowspan="2">可结转以后年度弥补的亏损额</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">前四年度</td>
+                        <td class="blue">前三年度</td>
+                        <td class="blue">前二年度</td>
+                        <td class="blue">前一年度</td>
+                        <td class="blue">合计</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">2</td>
                         <td class="blue">3</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">一、保险公司（2+3+6+7+8+9+10）</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">2</td>
-                        <td class="blue">（一）未到期责任准备金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">3</td>
-                        <td class="blue">（二）未决赔款准备金（4+5）</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">4</td>
-                        <td class="blue">其中：已发生已报案未决赔款准备金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">5</td>
-                        <td class="blue">已发生未报案未决赔款准备金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">6</td>
-                        <td class="blue">（三）巨灾风险准备金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">7</td>
-                        <td class="blue">（四）寿险责任准备金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">8</td>
-                        <td class="blue">（五）长期健康险责任准备金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">9</td>
-                        <td class="blue">（六）保险保障基金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">10</td>
-                        <td class="blue">（七）其他</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">11</td>
-                        <td class="blue">二、证券行业（12+13+14+15）</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
                     </tr>
-                    <tr>
-                        <td class="blue">12</td>
-                        <td class="blue">（一）证券交易所风险基金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">13</td>
-                        <td class="blue">（二）证券结算风险基金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">14</td>
-                        <td class="blue">（三）证券投资者保护基金</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">15</td>
-                        <td class="blue">（四）其他</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-
-16	三、期货行业（17+18+19+20）	本列（17行加至20行）	本列（17行加至20行）	本行（1列-2列）
-17	   （一）期货交易所风险准备金	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-18	   （二）期货公司风险准备金	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-19	   （三）期货投资者保障基金	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-20	   （四）其他	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-21	四、金融企业（22+23+24)	本列（22行加至24行）	本列（22行加至24行）	本行（1列-2列）
-22	   （一）涉农和中小企业贷款损失准备金	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-23	   （二）贷款损失准备金	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-24	   （三）其他	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-25	五、中小企业信用担保机构(26+27+28)	本列（26行加至28行）	本列（26行加至28行）	本行（1列-2列）
-26	   （一）担保赔偿准备	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-27	   （二）未到期责任准备	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-28	   （三）其他	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-29	六、其他	默认0.00，手工修改	默认0.00，手工修改	本行（1列-2列）
-30	合计(1+11+16+21+25+29)	本列（1行+11行+16行+21行+25行+29行）	本列（1行+11行+16行+21行+25行+29行）	本行（1列-2列）
-
+                 
                 </tbody>
             </table>
         </div>
