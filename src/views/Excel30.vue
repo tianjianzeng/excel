@@ -159,7 +159,7 @@
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>      
-                     <tr>
+                    <tr>
                         <td class="blue">减：营业外支出</td>
                         <td class="blue">24</td>
                         <td class="green">{{0|formatCurrency}}</td>
