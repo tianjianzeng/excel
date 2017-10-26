@@ -2,16 +2,10 @@
     <div class="excel excel06">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <thead>
+                <tbody>
                     <tr>
                         <td colspan="8">期间费用明细表</td>
                     </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="table-wraper">
-            <table cellspacing="0" cellpadding="0" border="0" >
-                <tbody>
                     <tr>
                         <td class="blue" rowspan="2" style="width: 5%">行次</td>
                         <td class="blue" rowspan="2" style="width: 35%">项目</td>

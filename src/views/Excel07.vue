@@ -2,16 +2,10 @@
     <div class="excel excel07">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <thead>
+                <tbody>
                     <tr>
                         <td colspan="4">视同销售和房地产开发企业特定业务纳税调整明细表</td>
                     </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="table-wraper">
-            <table cellspacing="0" cellpadding="0" border="0" >
-                <tbody>
                     <tr>
                         <td class="blue" rowspan="2" style="width: 5%">行次</td>
                         <td class="blue" rowspan="2" style="width: 75%">项目</td>

@@ -1,145 +1,118 @@
 <template>
-    <div class="excel excel05">
+    <div class="excel excel11">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td colspan="3">一般企业成本支出明细表</td>
+                        <td colspan="8">资产损失（专项申报）税前扣除及纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" style="width: 5%">行次</td>
-                        <td class="blue" style="width: 75%">项目</td>
-                        <td class="blue" style="width: 20%">金额</td>
+                        <td style="width:5%" class="blue" rowspan="2">行次</td>
+                        <td style="width:35%" class="blue" rowspan="2">项目</td>
+                        <td style="width:10%" class="blue">账载金额</td>
+                        <td style="width:10%" class="blue">处置收入</td>
+                        <td style="width:10%" class="blue">赔偿收入</td>
+                        <td style="width:10%" class="blue">计税基础</td>
+                        <td style="width:10%" class="blue">税收金额</td>
+                        <td style="width:10%" class="blue">纳税调整金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
-                        <td class="blue">一、营业成本（2+9）</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">2</td>
-                        <td class="blue">（一）主营业务成本（3+5+6+7+8）</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">3</td>
-                        <td class="blue">1.销售商品成本</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">4</td>
-                        <td class="blue">其中:非货币性资产交换成本</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
                         <td class="blue">5</td>
-                        <td class="blue">2.提供劳务成本</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
                         <td class="blue">6</td>
-                        <td class="blue">3.建造合同成本</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7</td>
-                        <td class="blue">4.让渡资产使用权成本</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">8</td>
-                        <td class="blue">5.其他</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">9</td>
-                        <td class="blue">（二）其他业务成本（10+12+13+14+15）</td>
+                        <td class="blue">001</td>
+                        <td class="blue">一、货币资产损失</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">10</td>
-                        <td class="blue">1.材料销售成本</td>
+                        <td class="blue">002</td>
+                        <td class="green"><input></td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">11</td>
-                        <td class="blue">其中：非货币性资产交换成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">12</td>
-                        <td class="blue">2.出租固定资产成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">13</td>
-                        <td class="blue">3.出租无形资产成本</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">14</td>
-                        <td class="blue">4.包装物出租成本</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">15</td>
-                        <td class="blue">5.其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">16</td>
-                        <td class="blue">二、营业外支出（17+18+19+20+21+22+23+24+25+26）</td>
+                        <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">17</td>
-                        <td class="blue">（一）非流动资产处置损失</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">003</td>
+                        <td class="blue">一、非货币资产损失</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">18</td>
-                        <td class="blue">（二）非货币性资产交换损失</td>
+                        <td class="blue">004</td>
+                        <td class="green"><input></td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">19</td>
-                        <td class="blue">（三）债务重组损失</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">20</td>
-                        <td class="blue">（四）非常损失</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">21</td>
-                        <td class="blue">（五）捐赠支出</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">22</td>
-                        <td class="blue">（六）赞助支出</td>
+                        <td class="blue">007</td>
+                        <td class="blue">三、投资损失</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">008</td>
+                        <td class="green"><input></td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">23</td>
-                        <td class="blue">（七）罚没支出</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">24</td>
-                        <td class="blue">（八）坏账损失</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">25</td>
-                        <td class="blue">（九）无法收回的债券股权投资损失</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">26</td>
-                        <td class="blue">（十）其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">010</td>
+                        <td class="blue">四、其他</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">011</td>
+                        <td class="green"><input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">013</td>
+                        <td class="blue">合计</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -157,7 +130,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel05',
+        name: 'excel11',
         data() {
             return {
                 fixed:2,
@@ -390,12 +363,12 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel05{
+    .excel11{
         td{
             text-align: left;
             padding-left: 10px;
         }
-        td[colspan="3"]{
+        td[colspan="8"]{
             text-align: center;
         }
     }

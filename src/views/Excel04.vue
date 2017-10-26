@@ -2,16 +2,10 @@
     <div class="excel excel04">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <thead>
+                <tbody>
                     <tr>
                         <td colspan="3">一般企业收入明细表</td>
                     </tr>
-                </thead>
-            </table>
-        </div>
-        <div class="table-wraper">
-            <table cellspacing="0" cellpadding="0" border="0" >
-                <tbody>
                     <tr>
                         <td class="blue" style="width: 5%">行次</td>
                         <td class="blue" style="width: 75%">项目</td>

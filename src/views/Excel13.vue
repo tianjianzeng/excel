@@ -1,146 +1,136 @@
 <template>
-    <div class="excel excel05">
+    <div class="excel excel13">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td colspan="3">一般企业成本支出明细表</td>
+                        <td colspan="3">政策性搬迁纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" style="width: 5%">行次</td>
-                        <td class="blue" style="width: 75%">项目</td>
-                        <td class="blue" style="width: 20%">金额</td>
+                        <td style="width:5%"class="blue">行次</td>
+                        <td style="width:75%" class="blue">项目</td>
+                        <td style="width:20%" class="blue">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
-                        <td class="blue">一、营业成本（2+9）</td>
+                        <td class="blue">一、搬迁收入(2+8)</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
-                        <td class="blue">（一）主营业务成本（3+5+6+7+8）</td>
+                        <td class="blue">（一）搬迁补偿收入（3+4+5+6+7）</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
-                        <td class="blue">1.销售商品成本</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">1.对被征用资产价值的补偿</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
-                        <td class="blue">其中:非货币性资产交换成本</td>
+                        <td class="blue">2.因搬迁、安置而给予的补偿</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
-                        <td class="blue">2.提供劳务成本</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">3.对停产停业形成的损失而给予的补偿</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
-                        <td class="blue">3.建造合同成本</td>
+                        <td class="blue">4.资产搬迁过程中遭到毁损而取得的保险赔款</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
-                        <td class="blue">4.让渡资产使用权成本</td>
+                        <td class="blue">5.其他补偿收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
-                        <td class="blue">5.其他</td>
+                        <td class="blue">（二）搬迁资产处置收入</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
-                        <td class="blue">（二）其他业务成本（10+12+13+14+15）</td>
+                        <td class="blue">二、搬迁支出(10+16)</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
-                        <td class="blue">1.材料销售成本</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
+                        <td class="blue">（一）搬迁费用支出(11+12+13+14+15)</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>      
                     <tr>
                         <td class="blue">11</td>
-                        <td class="blue">其中：非货币性资产交换成本</td>
+                        <td class="blue">1.安置职工实际发生的费用</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
-                        <td class="blue">2.出租固定资产成本</td>
+                        <td class="blue">2.停工期间支付给职工的工资及福利费</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
-                        <td class="blue">3.出租无形资产成本</td>
+                        <td class="blue">3.临时存放搬迁资产而发生的费用</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
-                        <td class="blue">4.包装物出租成本</td>
+                        <td class="blue">4.各类资产搬迁安装费用</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
-                        <td class="blue">5.其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">16</td>
-                        <td class="blue">二、营业外支出（17+18+19+20+21+22+23+24+25+26）</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">17</td>
-                        <td class="blue">（一）非流动资产处置损失</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">18</td>
-                        <td class="blue">（二）非货币性资产交换损失</td>
+                        <td class="blue">5.其他与搬迁相关的费用</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
+                        <td class="blue">16</td>
+                        <td class="blue">（二）搬迁资产处置支出</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">17</td>
+                        <td class="blue">三、搬迁所得或损失（1-9）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">18</td>
+                        <td class="blue">四、应计入本年应纳税所得额的搬迁所得或损失（19+20+21）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>  
+                    <tr>
                         <td class="blue">19</td>
-                        <td class="blue">（三）债务重组损失</td>
+                        <td class="blue">其中：搬迁所得</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">20</td>
-                        <td class="blue">（四）非常损失</td>
+                        <td class="blue">搬迁损失一次性扣除</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">21</td>
-                        <td class="blue">（五）捐赠支出</td>
+                        <td class="blue">搬迁损失分期扣除</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
-                        <td class="blue">（六）赞助支出</td>
+                        <td class="blue">五、计入当期损益的搬迁收益或损失</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
-                        <td class="blue">（七）罚没支出</td>
+                        <td class="blue">六、以前年度搬迁损失当期扣除金额</td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">24</td>
-                        <td class="blue">（八）坏账损失</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">25</td>
-                        <td class="blue">（九）无法收回的债券股权投资损失</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">26</td>
-                        <td class="blue">（十）其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr>
+                        <td class="blue">七、纳税调整金额（18-22-23）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>  
                 </tbody>
             </table>
         </div>
@@ -157,7 +147,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel05',
+        name: 'excel13',
         data() {
             return {
                 fixed:2,
@@ -390,7 +380,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel05{
+    .excel13{
         td{
             text-align: left;
             padding-left: 10px;
