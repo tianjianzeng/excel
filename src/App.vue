@@ -20,7 +20,7 @@
     }
     
     .excel {
-        width: 90%;
+        width: 98%;
         margin: 0 auto;
     }
     .table-wraper {
@@ -37,6 +37,7 @@
         table-layout: fixed;
         table {
             width: 100%;
+            table-layout: fixed;
             &.head {
                 td{
                     background-color: #eef1f6;
