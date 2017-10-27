@@ -34,10 +34,10 @@
         border-bottom: none;
         font-size: 14px;
         color: #1f2d3d;
-        table-layout: fixed;
         table {
+            word-wrap: break-word; 
+            word-break: break-all;
             width: 100%;
-            table-layout: fixed;
             &.head {
                 td{
                     background-color: #eef1f6;
@@ -56,7 +56,6 @@
             border-bottom: 1px solid #dfe6ec;
             height: 40px;
             color: #1f2d3d;
-            min-width: 0;
             box-sizing: border-box;
             text-overflow: ellipsis;
             vertical-align: middle;
