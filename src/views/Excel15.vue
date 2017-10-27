@@ -1,5 +1,5 @@
 <template>
-    <div class="excel excel14">
+    <div class="excel excel15">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
@@ -7,15 +7,15 @@
                         <td colspan="13">企业所得税弥补亏损明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue" rowspan="3">行次</td>
-                        <td style="width:5%" class="blue" rowspan="3">项目</td>
-                        <td style="width:10%" class="blue" rowspan="2">年度</td>
-                        <td style="width:10%" class="blue" rowspan="2">纳税调整后所得</td>
-                        <td style="width:10%" class="blue" rowspan="2">合并、分立转入（转出）可弥补的亏损额</td>
-                        <td style="width:10%" class="blue" rowspan="2" >当年可弥补的亏损额</td>
-                        <td style="width:10%" class="blue" colspan="5">以前年度亏损已弥补额</td>
-                        <td style="width:10%" class="blue" rowspan="2">本年度实际弥补的以前年度亏损额</td>
-                        <td style="width:10%" class="blue" rowspan="2">可结转以后年度弥补的亏损额</td>
+                        <td style="width:2%"  class="blue" rowspan="3">行次</td>
+                        <td style="width:5%"  class="blue" rowspan="3">项目</td>
+                        <td style="width:13%" class="blue" rowspan="2">年度</td>
+                        <td style="width:13%" class="blue" rowspan="2">纳税调整后所得</td>
+                        <td style="width:13%" class="blue" rowspan="2">合并、分立转入（转出）可弥补的亏损额</td>
+                        <td style="width:13%" class="blue" rowspan="2" >当年可弥补的亏损额</td>
+                        <td style="width:13%" class="blue" colspan="5">以前年度亏损已弥补额</td>
+                        <td style="width:13%" class="blue" rowspan="2">本年度实际弥补的以前年度亏损额</td>
+                        <td style="width:13%" class="blue" rowspan="2">可结转以后年度弥补的亏损额</td>
                     </tr>
                     <tr>
                         <td class="blue">前四年度</td>
@@ -37,7 +37,101 @@
                         <td class="blue">10</td>
                         <td class="blue">11</td>
                     </tr>
-                 
+                    <tr>
+                        <td class="blue">1</td>
+                        <td class="blue">前五年度</td>
+                        <td>所得税汇缴所属年度-5，不可修改</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">*</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">2</td>
+                        <td class="blue">前四年度</td>
+                        <td>所得税汇缴所属年度-4，不可修改</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">3</td>
+                        <td class="blue">前三年度</td>
+                        <td>所得税汇缴所属年度-3，不可修改</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">4</td>
+                        <td class="blue">前二年度</td>
+                        <td>所得税汇缴所属年度-2，不可修改</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">5</td>
+                        <td class="blue">前一年度</td>
+                        <td>所得税汇缴所属年度-1，不可修改</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                     <tr>
+                        <td class="blue">6</td>
+                        <td class="blue">本年度</td>
+                        <td>所得税汇缴所属年度，不可修改</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td class="blue">*</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">7</td>
+                        <td class="blue" colspan="11">可结转以后年度弥补的亏损额合计</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -54,7 +148,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel14',
+        name: 'excel15',
         data() {
             return {
                 fixed:2,
@@ -287,12 +381,12 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel14{
+    .excel15{
         td{
             text-align: left;
             padding-left: 10px;
         }
-        td[colspan="3"]{
+        td[colspan="13"]{
             text-align: center;
         }
     }
