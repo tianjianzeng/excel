@@ -19,14 +19,14 @@
                         <td colspan="2">单位：元</td>
                     </tr>
                     <tr>
-                        <td class="blue" style="width:20%">资产</td>
-                        <td class="blue" style="width:10%">行次</td>
-                        <td class="blue" style="width:20%">年初数</td>
-                        <td class="blue" style="width:20%">期末数</td>
+                        <td class="blue" style="width:10%">资产</td>
+                        <td class="blue" style="width:5%">行次</td>
+                        <td class="blue" style="width:15%">年初数</td>
+                        <td class="blue" style="width:15%">期末数</td>
                         <td class="blue" style="width:20%">负债和所有者权益（或股东权益）</td>
-                        <td class="blue" style="width:10%">行次</td>
-                        <td class="blue" style="width:20%">年初数</td>
-                        <td class="blue" style="width:20%">期末数</td>
+                        <td class="blue" style="width:5%">行次</td>
+                        <td class="blue" style="width:15%">年初数</td>
+                        <td class="blue" style="width:15%">期末数</td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="4">流动资产：</td>
@@ -176,7 +176,7 @@
                     </tr>  
                     <tr>
                         <td class="blue">长期股权投资</td>
-                        <td class="blue">31</td>
+                        <td class="blue">32</td>
                         <td >{{0|formatCurrency}}</td>
                         <td ><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                         <td class="blue"> 流动负债合计</td>
@@ -186,145 +186,188 @@
                     </tr> 
                     <tr>
                         <td class="blue">长期债权投资</td>
-                        <td class="blue">32</td>
+                        <td class="blue">34</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
                         <td class="blue" colspan="4">长期负债：</td>+
                     </tr>
                     <tr>
-                        <td class="blue">长期股权投资</td>
-                        <td class="blue">17</td>
+                        <td class="blue">长期投资合计</td>
+                        <td class="blue">38</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue">负债合计</td>
-                        <td class="blue">47</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue"> 长期借款</td>
+                        <td class="blue">101</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
                     </tr>  
                     <tr>
-                        <td class="blue"> 固定资产原价</td>
-                        <td class="blue">18</td>
+                        <td class="blue" colspan="4">固定资产：</td>
+                        <td class="blue"> 应付债券</td>
+                        <td class="blue">102</td>
                         <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
+                        <td class="green">{{0|formatCurrency}}</td>
                     </tr>   
                      <tr>
-                        <td class="blue">减：累计折旧</td>
-                        <td class="blue">19</td>
+                        <td class="blue"> 固定资产原价</td>
+                        <td class="blue">39</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
+                        <td class="blue">  长期应付款</td>
+                        <td class="blue">103</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
                     </tr>  
                      <tr>
-                        <td class="blue"> 固定资产账面价值</td>
-                        <td class="blue">20</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
+                        <td class="blue">减：累计折旧</td>
+                        <td class="blue">40</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">专项应付款</td>
+                        <td class="blue">106</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
                     </tr>      
                     <tr>
-                        <td class="blue">在建工程</td>
-                        <td class="blue">21</td>
+                        <td class="blue">固定资产净值</td>
+                        <td class="blue">41</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue"> 其他长期负债</td>
+                        <td class="blue">108</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr>       
+                     <tr>
+                        <td class="blue">减：固定资产减值准备</td>
+                        <td class="blue">42</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
+                        <td class="blue">长期负债合计</td>
+                        <td class="blue">110</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>      
+                    <tr>
+                        <td class="blue"> 固定资产净额</td>
+                        <td class="blue">43</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue" colspan="4">递延税项：</td>
                     </tr>       
                      <tr>
                         <td class="blue">工程物资</td>
-                        <td class="blue">22</td>
+                        <td class="blue">44</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
+                        <td class="blue">递延税款贷项</td>
+                        <td class="blue">111</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        
                     </tr>      
                     <tr>
-                        <td class="blue">固定资产清理</td>
-                        <td class="blue">23</td>
+                        <td class="blue">在建工程</td>
+                        <td class="blue">45</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
-                        <td class="blue"></td>
+                        <td class="blue">负债合计</td>
+                        <td class="blue">114</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>   
+                     <tr>
+                        <td class="blue"> 固定资产清理</td>
+                        <td class="blue">46</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue" colspan="4">资本公积</td>
+                    </tr>      
+                    <tr>
+                        <td class="blue"> 固定资产合计</td>
+                        <td class="blue">50</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue" colspan="4">所有者权益（或股东权益）：</td>
                     </tr>       
                      <tr>
-                        <td class="blue">生物性生物资产</td>
-                        <td class="blue">24</td>
+                        <td class="blue" colspan="4">无形资产及其他资产：</td>
+                        <td class="blue">实收资本(或股本)</td>
+                        <td class="blue">115</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue" colspan="4">所有者权益（或股东权益）</td>
                     </tr>      
                     <tr>
                         <td class="blue">无形资产</td>
-                        <td class="blue">25</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"> 实收资本（或股本）</td>
-                        <td class="blue">48</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>   
-                     <tr>
-                        <td class="blue">开发支出</td>
-                        <td class="blue">26</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue">资本公积</td>
-                        <td class="blue">49</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>      
-                    <tr>
-                        <td class="blue">长期待摊费用</td>
-                        <td class="blue">27</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"> 盈余公积</td>
-                        <td class="blue">50</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>       
-                     <tr>
-                        <td class="blue">其他非流动资产</td>
-                        <td class="blue">28</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue"> 实收资本（或股本）</td>
                         <td class="blue">51</td>
                         <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>      
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue"> 减：已归还投资</td>
+                        <td class="blue">116</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr>  
                     <tr>
-                        <td class="blue">  非流动资产合计</td>
-                        <td class="blue">29</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue">所有者权益（或股东权益）合计</td>
+                        <td class="blue">长期待摊费用</td>
                         <td class="blue">52</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">实收资本(或股本)净额</td>
+                        <td class="blue">117</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>       
+                    <tr>
+                        <td class="blue">其他长期资产</td>
+                        <td class="blue">53</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue"> 资本公积</td>
+                        <td class="blue">118</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr>  
+                    <tr>
+                        <td class="blue">无形资产及其他资产合计</td>
+                        <td class="blue">60</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td class="blue"> 盈余公积</td>
+                        <td class="blue">119</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr> 
+                    <tr>
+                        <td class="blue" colspan="4"></td>
+                        <td class="blue"> 其中：法定公益金</td>
+                        <td class="blue">120</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr>   
+                    <tr>
+                        <td class="blue" colspan="4">递延税项：</td>
+                        <td class="blue"> 未分配利润</td>
+                        <td class="blue">121</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr>    
+                     <tr>
+                        <td class="blue">  递延税款借项</td>
+                        <td class="blue">61</td>
+                        <td class="green" >{{0|formatCurrency}}</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="blue">所有者权益（或股东权益）合计</td>
+                        <td class="blue">122</td>
                         <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">资产合计</td>
-                        <td class="blue">30</td>
+                        <td class="blue">67</td>
                         <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                         <td class="blue">负债和所有者权益（或股东权益）总计</td>
-                        <td class="blue">53</td>
+                        <td class="blue">135</td>
                         <td>{{0|formatCurrency}}</td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>       
