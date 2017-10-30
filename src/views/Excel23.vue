@@ -1,5 +1,5 @@
 <template>
-    <div class="excel excel22">
+    <div class="excel excel23">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
@@ -40,6 +40,138 @@
                             <el-radio class="radio" v-model="a106" :label="false">否</el-radio>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="blue">4</td>
+                        <td class="blue" colspan="5">关键指标</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">5</td>
+                        <td class="blue" rowspan="5">收入指标</td>
+                        <td class="blue" colspan="3">一、本年高新技术产品（服务）收入（6+7）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">6</td>
+                        <td class="blue" colspan="3">其中：产品（服务）收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">7</td>
+                        <td class="blue" colspan="3">技术性收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">8</td>
+                        <td class="blue" colspan="3">二、本年企业总收入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">9</td>
+                        <td class="blue" colspan="3">三、本年高新技术产品（服务）收入占企业总收入的比例（5÷8）</td>
+                        <td>{{0|formatCurrency}}百分比显示，2位小数，四舍五入例：12.34%"</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">10</td>
+                        <td class="blue" rowspan="5">人员指标</td>
+                        <td class="blue" colspan="3">四、本年具有大学专科以上学历的科技人员数</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">11</td>
+                        <td class="blue" colspan="3">五、本年研发人员数</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">12</td>
+                        <td class="blue" colspan="3">六、本年职工总数</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">13</td>
+                        <td class="blue" colspan="3">七、本年具有大学专科以上学历的科技人员占企业当年职工总数的比例（10÷12）</td>
+                        <td>{{0|formatCurrency}}百分比显示，2位小数，四舍五入例：12.34%"</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">14</td>
+                        <td class="blue" colspan="3">八、本年研发人员占企业当年职工总数的比例（11÷12）</td>
+                        <td>{{0|formatCurrency}}百分比显示，2位小数，四舍五入例：12.34%"</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">15</td>
+                        <td class="blue" rowspan="14">研究开发费用指标</td>
+                        <td class="blue" colspan="3">九、本年归集的高新研发费用金额（16+25）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">16</td>
+                        <td class="blue" colspan="3">（一）内部研究开发投入（17+18+19+20+21+22+24）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">17</td>
+                        <td class="blue" colspan="3">1.人员人工</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">18</td>
+                        <td class="blue" colspan="3">2.直接投入</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">19</td>
+                        <td class="blue" colspan="3">3.折旧费用与长期费用摊销</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">20</td>
+                        <td class="blue" colspan="3">4.设计费用</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">21</td>
+                        <td class="blue" colspan="3">5.装备调试费</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">22</td>
+                        <td class="blue" colspan="3">6.无形资产摊销</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">23</td>
+                        <td class="blue" colspan="3">7.其他费用</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">24</td>
+                        <td class="blue" colspan="3">其中：可计入研发费用的其他费用</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">25</td>
+                        <td class="blue" colspan="3">（二）委托外部研究开发费用（26+27）</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">26</td>
+                        <td class="blue" colspan="3">1.境内的外部研发费</td>
+                        <td>{{0|formatCurrency}}</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">27</td>
+                        <td class="blue" colspan="3">2.境外的外部研发费</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">28</td>
+                        <td class="blue" colspan="3">十、本年研发费用占销售（营业）收入比例</td>
+                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input>录入结果以%显示，2位小数，不限制正负零</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">29</td>
+                        <td class="blue" colspan="4">减免税金额</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -56,7 +188,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel22',
+        name: 'excel23',
         data() {
             return {
                 fixed:2,
@@ -289,12 +421,12 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel22{
+    .excel23{
         td{
             text-align: left;
             padding-left: 10px;
         }
-        td[colspan="3"]{
+        td[colspan="6"]{
             text-align: center;
         }
     }
