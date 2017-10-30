@@ -1,28 +1,25 @@
 <template>
-    <div class="excel excel26">
+    <div class="excel excel29">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td colspan="20">境外分支机构弥补亏损明细表</td>
+                        <td colspan="20">跨年度结转抵免境外所得税明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="4">行次</td>
-                        <td class="blue" rowspan="3">国家（地区）</td>
-                        <td class="blue" colspan="4">非实际亏损额的弥补</td>
-                        <td class="blue" colspan="14">境外所得纳税调整后所得</td>
+                        <td class="blue" rowspan="3">行次</td>
+                        <td class="blue" rowspan="2">国家（地区）</td>
+                        <td class="blue" colspan="6">前五年境外所得已缴所得税未抵免余额</td>
+                        <td class="blue" colspan="6">本年实际抵免以前年度未抵免的境外已缴所得税额</td>
+                        <td class="blue" colspan="6">结转以后年度抵免的境外所得已缴所得税额</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="2">以前年度结转尚未弥补的非实际亏损额</td>
-                        <td class="blue" rowspan="2">年发生的非实际亏损额</td>
-                        <td class="blue" rowspan="2">本年弥补的以前年度非实际亏损额</td>
-                        <td class="blue" rowspan="2">结转以后年度弥补的非实际亏损额</td>
-                        <td class="blue" colspan="6">以前年度结转尚未弥补的实际亏损额</td>
-                        <td class="blue" rowspan="2">本年发生的实际亏损额</td>
-                        <td class="blue" rowspan="2">本年弥补的以前年度实际亏损额</td>
-                        <td class="blue" colspan="6">结转以后年度弥补的实际亏损额</td>
-                    </tr>
-                    <tr>
+                        <td class="blue">前五年</td>
+                        <td class="blue">前四年</td>
+                        <td class="blue">前三年</td>
+                        <td class="blue">前二年</td>
+                        <td class="blue">前一年</td>
+                        <td class="blue">小计</td>
                         <td class="blue">前五年</td>
                         <td class="blue">前四年</td>
                         <td class="blue">前三年</td>
@@ -33,6 +30,7 @@
                         <td class="blue">前三年</td>
                         <td class="blue">前二年</td>
                         <td class="blue">前一年</td>
+                        <td class="blue">本年</td>
                         <td class="blue">小计</td>
                     </tr>
                     <tr>
@@ -40,21 +38,21 @@
                         <td class="blue">2</td>
                         <td class="blue">3</td>
                         <td class="blue">4</td>
-                        <td class="blue">5（2+3-4）</td>
+                        <td class="blue">5（3-4）</td>
                         <td class="blue">6</td>
-                        <td class="blue">7</td>
+                        <td class="blue">7（2+3+4+5+6）</td>
                         <td class="blue">8</td>
                         <td class="blue">9</td>
                         <td class="blue">10</td>
                         <td class="blue">11</td>
                         <td class="blue">12</td>
-                        <td class="blue">13</td>
-                        <td class="blue">14</td>
-                        <td class="blue">15</td>
-                        <td class="blue">16</td>
-                        <td class="blue">17</td>
+                        <td class="blue">13（8+9+10+11+12）</td>
+                        <td class="blue">14（3-9）</td>
+                        <td class="blue">15（4-10）</td>
+                        <td class="blue">16（5-11）</td>
+                        <td class="blue">17（6-12）</td>
                         <td class="blue">18</td>
-                        <td class="blue">19</td>
+                        <td class="blue">19（14+15+16+17+18）</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue"></td>
@@ -62,10 +60,6 @@
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%">{{0|formatCurrency}}</td>
@@ -74,7 +68,11 @@
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:5%">{{0|formatCurrency}}</td>
                         <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
                         <td style="width:5%">{{0|formatCurrency}}</td>
                     </tr>
@@ -116,7 +114,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel26',
+        name: 'excel29',
         data() {
             return {
                 fixed:2,
@@ -349,7 +347,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel26{
+    .excel29{
         td{
             text-align: left;
             padding-left: 10px;
