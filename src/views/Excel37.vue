@@ -1,10 +1,10 @@
 <template>
-    <div class="excel excel36">
+    <div class="excel excel37">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
               <tbody>
                    <tr>
-                        <td colspan="3">利润表</td>
+                        <td colspan="3">现金流量表_年报</td>
                    </tr>
                     <tr>
                         <td colspan="3">（适用执行企业会计准则的一般企业）</td>
@@ -20,163 +20,195 @@
                         <td class="blue" style="width:30%">上期金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">一、营业收入</td>
+                        <td class="blue">一、经营活动产生的现金流量：</td>
+                        <td class="blue">--</td>
+                        <td class="blue">--</td>
+                    </tr>
+                    <tr>
+                        <td class="blue">销售商品、提供劳务收到的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">减：营业成本</td>
+                        <td class="blue" >收到的税费返还</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue" >营业税金及附加</td>
+                        <td class="blue"> 收到其他与经营活动有关的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">  销售费用</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue"> 管理费用</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">财务费用</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">资产减值损失</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">加：公允价值变动收益（损失以“-”号填列）</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">投资收益/td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">其中：对联营企业和合营企业的投资收益</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>
-                    <tr>
-                        <td class="blue">二、营业利润（亏损以“-”号填列）</td>
+                        <td class="blue">经营活动现金流入小计</td>
                         <td>{{0|formatCurrency}}</td>
                         <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">加：营业外收入</td>
+                        <td class="blue"> 购买商品、接受劳务支付的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue"> 支付给职工以及为职工支付的现金</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue"> 支付的各项税费</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">支付其他与经营活动有关的现金</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue"> 经营活动现金流出小计</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">经营活动产生的现金流量净额</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>
+                    <tr>
+                        <td class="blue">二、投资活动产生的现金流量：</td>
+                        <td class="blue">--</td>
+                        <td class="blue">--</td>
                     </tr>
                      <tr>
-                        <td class="blue">其中：非流动资产处置利得</td>
+                        <td class="blue">收回投资收到的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">减：营业外支出</td>
+                        <td class="blue">取得投资收益收到的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">其中：非流动资产处置损失</td>
+                        <td class="blue">处置固定资产、无形资产和其他长期资产收回的现金净额</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">三、利润总额（亏损总额以“-”号填列）</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue">处置子公司及其他营业单位收到的现金净额</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">减：所得税费用</td>
+                        <td class="blue">收到其他与投资活动有关的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">四、净利润（净亏损以“-”号填列）</td>
+                        <td class="blue">投资活动现金流入小计</td>
                         <td>{{0|formatCurrency}}</td>
                         <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">五、其他综合收益的税后净额</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue"> 购建固定资产、无形资产和其他长期资产支付的现金</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">（一）以后不能重分类进损益的其他综合收益</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue">投资支付的现金</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">1.重新计量设定收益计划净负债或净资产的变动</td>
+                        <td class="blue">取得子公司及其他营业单位支付的现金净额</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green">><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>   
                      <tr>
-                        <td class="blue">2.权益法下在被投资单位不能重分类进损益的其他综合收益中享有的份额</td>
+                        <td class="blue"> 支付其他与投资活动有关的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">（二）以后将重分类进损益的其他综合收益</td>
+                        <td class="blue">投资活动现金流出小计</td>
                         <td>{{0|formatCurrency}}</td>
                         <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>      
                     <tr>
-                        <td class="blue">1.权益法下在被投资单位以后将重分类进损益的其他综合收益中享有的份额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue">投资活动产生的现金流量净额</td>
+                        <td class="blue">--</td>
+                        <td class="blue">--</td>
                     </tr>   
                      <tr>
-                        <td class="blue">2.可供出售金融资产公允价值变动损益</td>
+                        <td class="blue">三、筹资活动产生的现金流量：</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">3.将有至到期投资重分类可供出售金融资产损益</td>
+                        <td class="blue">吸收投资收到的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                      <tr>
-                        <td class="blue">4.现金流经套期损益的有效部分</td>
+                        <td class="blue"> 取得借款收到的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                      <tr>
-                        <td class="blue">5.外币财务报表折算差额</td>
+                        <td class="blue"> 收到其他与筹资活动有关的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">六、综合收益总额</td>
+                        <td class="blue">筹资活动现金流入小计</td>
                         <td>{{0|formatCurrency}}</td>
                         <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr> 
-                     <tr>
-                        <td class="blue" colspan="3">七、每股收益：</td>
-                    </tr> 
                     <tr>
-                        <td class="blue">（一）基本每股收益</td>
+                        <td class="blue">偿还债务支付的现金</td>
                         <td class="green">{{0|formatCurrency}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">（二）稀释每股收益</td>
+                        <td class="blue">分配股利、利润或偿付利息支付的现金</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>    
+                    <tr>
+                        <td class="blue">支付其他与筹资活动有关的现金</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr> 
+                      <tr>
+                        <td class="blue"> 筹资活动现金流出小计</td>
                         <td>{{0|formatCurrency}}</td>
                         <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                    </tr>                 
+                    </tr> 
+                    <tr>
+                        <td class="blue">筹资活动产生的现金流量净额</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>    
+                    <tr>
+                        <td class="blue">四、汇率变动对现金及现金等价物的影响</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>  
+                     <tr>
+                        <td class="blue">五、现金及现金等价物净增加额</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>  
+                     <tr>
+                        <td class="blue">加：期初现金及现金等价物余额</td>
+                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>     
+                     <tr>
+                        <td class="blue">六、期末现金及现金等价物余额</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                    </tr>             
 
 
                 </tbody>
@@ -195,7 +227,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel36',
+        name: 'excel37',
         data() {
             return {
                 fixed:2,
@@ -428,7 +460,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel36{
+    .excel37{
         td{
             text-align: left;
             padding-left: 10px;
