@@ -175,21 +175,21 @@
                         <td class="blue" colspan="8">长期投资：</td>
                     </tr>  
                     <tr>
-                        <td class="blue" colspan="4">非流动资产</td>
-                        <td class="blue">其他非流动负债</td>
-                        <td class="blue">45</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue">长期股权投资</td>
+                        <td class="blue">31</td>
+                        <td >{{0|formatCurrency}}</td>
+                        <td ><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="blue"> 流动负债合计</td>
+                        <td class="blue">100</td>
+                        <td>{{0|formatCurrency}}</td>
+                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">长期债券投资</td>
-                        <td class="blue">16</td>
+                        <td class="blue">长期债权投资</td>
+                        <td class="blue">32</td>
                         <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td class="blue">非流动负债合计</td>
-                        <td class="blue">46</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
+                        <td class="blue" colspan="4">长期负债：</td>+
                     </tr>
                     <tr>
                         <td class="blue">长期股权投资</td>

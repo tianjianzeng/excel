@@ -61,7 +61,7 @@
                     <tr>
                         <td class="blue">7.3</td>
                         <td class="blue">     3.</td>
-                        <tdx></td>
+                        <td></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
@@ -84,7 +84,7 @@
                     <tr>
                         <td class="blue">8.3</td>
                         <td class="blue">     3.</td>
-                        <tdx></td>
+                        <td></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
@@ -107,7 +107,7 @@
                     <tr>
                         <td class="blue">9.3</td>
                         <td class="blue">     3.</td>
-                        <tdx></td>
+                        <td></td>
                         <td>{{0|formatCurrency}}</td>
                     </tr>
                     <tr>
