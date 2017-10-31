@@ -980,7 +980,14 @@
                         postData[p]=this[p];
                     }
                 }
-               store.dispatch("edit", {
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("edit", {
                     data: postData,
                     callback:(rst)=>{
                         if(rst.status==0){
@@ -989,16 +996,28 @@
                                 type: 'success'
                             });
                         }
+                    },
+                    always:()=>{
+                        loading.close();
                     }
                 });
             }
         },
         mounted() {
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
             store.dispatch("getTable", {
                 data: {
                     "uid":1,
                     "year":2016,
                     "userId":104
+                },
+                always:()=>{
+                    loading.close();
                 }
             });
         }

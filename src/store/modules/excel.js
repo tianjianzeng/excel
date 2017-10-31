@@ -2,14 +2,28 @@ import * as API from '../../utils'
 import { init, formatUrl } from '../init'
 
 const configs = {
-    /***用户中心首页 */
+    getEp: {
+        url: formatUrl("v1/a000000/getEp"),
+        httpMethod: "post",
+        defaultState: {}
+    },
     getTable: {
-        url: formatUrl('getTable'),
+        url: formatUrl('v1/a107020/getTable'),
         httpMethod: "post",
         defaultState: {}
     },
     edit: {
-        url: formatUrl('edit'),
+        url: formatUrl('v1/a107020/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA101010: {
+        url: formatUrl('v1/a101010/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA101010: {
+        url: formatUrl('v1/a101010/edit'),
         httpMethod: "post",
         defaultState: {}
     }

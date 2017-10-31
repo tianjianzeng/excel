@@ -154,7 +154,16 @@
                         <td class="green">股东名称</td>
                         <td class="green">证件种类</td>
                         <td class="green" colspan="2">证件号码</td>
-                        <td class="green">经济性质</td>
+                        <td class="green">
+                             <el-select v-model="value" placeholder="请选择">
+                                <el-option
+                                    v-for="item in getEp"
+                                    :key="item.id"
+                                    :label="item.name"
+                                    :value="item.id">
+                                </el-option>
+                            </el-select>
+                        </td>
                         <td class="green">投资比例</td>
                         <td class="green">国籍（注册地址）</td>
                     </tr>
@@ -475,7 +484,7 @@
             NumberInput
         },
         computed: {
-            
+           ...mapGetters(["getEp"]) 
         },
         watch: {
             
@@ -484,7 +493,7 @@
             
         },
         mounted() {
-            
+            store.dispatch("getEp");
         }
     }
 </script>
