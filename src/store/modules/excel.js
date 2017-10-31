@@ -26,6 +26,46 @@ const configs = {
         url: formatUrl('v1/a101010/edit'),
         httpMethod: "post",
         defaultState: {}
+    },
+    getTableA102010: {
+        url: formatUrl('v1/a101010/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA102010: {
+        url: formatUrl('v1/a101010/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA104000: {
+        url: formatUrl('v1/a104000/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA104000: {
+        url: formatUrl('v1/a104000/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA105020: {
+        url: formatUrl('v1/a105020/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA105020: {
+        url: formatUrl('v1/a105020/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA105090: {
+        url: formatUrl('v1/a105090/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA105090: {
+        url: formatUrl('v1/a105090/edit'),
+        httpMethod: "post",
+        defaultState: {}
     }
 };
 
