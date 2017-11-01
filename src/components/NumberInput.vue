@@ -69,8 +69,10 @@
             },
             click(evt){
                 this.showText=false;
+                let width = this.$el.offsetWidth;
                 this.$nextTick(()=>{
                     this.$refs.valInput.focus();
+                    this.$refs.valInput.style.width = `${width}px`;
                 });
             }
         },

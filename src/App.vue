@@ -43,6 +43,7 @@
                     background-color: #eef1f6;
                 }
             }
+            table-layout: fixed;
         }
         td { 
             &.blue{
@@ -64,21 +65,21 @@
             &:last-of-type {
                 border-right: none;
             }
-            input {
-                outline: none;
-                height: 100%;
-                border: none;
-                line-height: 40px;
-                width: 100%;
-                font-size: 14px;
-                text-align: center;
-                background: transparent;
-            }
             div{
+                width: 100%;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+            input {
+                outline: none;
+                height: 100%;
+                border: none;
+                width: 100%;
+                font-size: 14px;
+                text-align: center;
+                background: red;
             }
         }
         tr{
