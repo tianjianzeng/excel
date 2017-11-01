@@ -33,156 +33,156 @@
                     <tr>
                         <td style="width:5%" class="blue">1</td>
                         <td style="width:25%" class="blue">一、债务重组</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td>{{a1_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a1_5" :fixed="fixed"></number-input></td>
+                        <td>{{a1_6|formatCurrency}}</td>
+                        <td>{{a1_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">2</td>
                         <td style="width:25%" class="blue">其中：以非货币性资产清偿债务</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
+                        <td>{{a2_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a2_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a2_5" :fixed="fixed"></number-input></td>
+                        <td>{{a2_6|formatCurrency}}</td>
+                        <td>{{a2_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">3</td>
                         <td style="width:25%" class="blue">债转股</td>
+                        <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
+                        <td>{{a3_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a3_6|formatCurrency}}</td>
+                        <td>{{a3_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">4</td>
                         <td style="width:25%" class="blue">二、股权收购</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
+                        <td>{{a4_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a4_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a4_5" :fixed="fixed"></number-input></td>
+                        <td>{{a4_6|formatCurrency}}</td>
+                        <td>{{a4_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">5</td>
                         <td style="width:25%" class="blue">其中：涉及跨境重组的股权收购</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
+                        <td>{{a5_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a5_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a5_5" :fixed="fixed"></number-input></td>
+                        <td>{{a5_6|formatCurrency}}</td>
+                        <td>{{a5_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">6</td>
                         <td style="width:25%" class="blue">三、资产收购</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
+                        <td>{{a6_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a6_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a6_5" :fixed="fixed"></number-input></td>
+                        <td>{{a6_6|formatCurrency}}</td>
+                        <td>{{a6_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">7</td>
                         <td style="width:25%" class="blue">其中：涉及跨境重组的资产收购</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
+                        <td>{{a7_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a7_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a7_5" :fixed="fixed"></number-input></td>
+                        <td>{{a7_6|formatCurrency}}</td>
+                        <td>{{a7_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">8</td>
                         <td style="width:25%" class="blue">四、企业合并（9+10）</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a8_1|formatCurrency}}</td>
+                        <td>{{a8_2|formatCurrency}}</td>
+                        <td>{{a8_3|formatCurrency}}</td>
+                        <td>{{a8_4|formatCurrency}}</td>
+                        <td>{{a8_5|formatCurrency}}</td>
+                        <td>{{a8_6|formatCurrency}}</td>
+                        <td>{{a8_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">9</td>
                         <td style="width:25%" class="blue">其中：同一控制下企业合并</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
+                        <td>{{a9_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a9_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a9_5" :fixed="fixed"></number-input></td>
+                        <td>{{a9_6|formatCurrency}}</td>
+                        <td>{{a9_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">10</td>
                         <td style="width:25%" class="blue">非同一控制下企业合并</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
+                        <td>{{a10_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a10_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a10_5" :fixed="fixed"></number-input></td>
+                        <td>{{a10_6|formatCurrency}}</td>
+                        <td>{{a10_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">11</td>
                         <td style="width:25%" class="blue">五、企业分立</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
+                        <td>{{a11_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a11_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a11_5" :fixed="fixed"></number-input></td>
+                        <td>{{a11_6|formatCurrency}}</td>
+                        <td>{{a11_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">12</td>
                         <td style="width:25%" class="blue">六、其他</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
+                        <td>{{a12_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a12_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12_5" :fixed="fixed"></number-input></td>
+                        <td>{{a12_6|formatCurrency}}</td>
+                        <td>{{a12_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">13</td>
                         <td style="width:25%" class="blue">其中：以非货币性资产对外投资</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
+                        <td>{{a13_3|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a13_4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a13_5" :fixed="fixed"></number-input></td>
+                        <td>{{a13_6|formatCurrency}}</td>
+                        <td>{{a13_7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">14</td>
                         <td style="width:25%" class="blue">合计（1+4+6+8+11+12）</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a14_1|formatCurrency}}</td>
+                        <td>{{a14_2|formatCurrency}}</td>
+                        <td>{{a14_3|formatCurrency}}</td>
+                        <td>{{a14_4|formatCurrency}}</td>
+                        <td>{{a14_5|formatCurrency}}</td>
+                        <td>{{a14_6|formatCurrency}}</td>
+                        <td>{{a14_7|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -204,213 +204,54 @@
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                a1_1:0,
+                a2_1:0,
+                a3_1:0,
+                a4_1:0,
+                a5_1:0,
+                a6_1:0,
+                a7_1:0,
+                a9_1:0,
+                a10_1:0,
+                a11_1:0,
+                a12_1:0,
+                a13_1:0,
+                a1_2:0,
+                a2_2:0,
+                a3_2:0,
+                a4_2:0,
+                a5_2:0,
+                a6_2:0,
+                a7_2:0,
+                a9_2:0,
+                a10_2:0,
+                a11_2:0,
+                a12_2:0,
+                a13_2:0,
+                a1_4:0,
+                a2_4:0,
+                a3_4:0,
+                a4_4:0,
+                a5_4:0,
+                a6_4:0,
+                a7_4:0,
+                a9_4:0,
+                a10_4:0,
+                a11_4:0,
+                a12_4:0,
+                a13_4:0,
+                a1_5:0,
+                a2_5:0,
+                a3_5:0,
+                a4_5:0,
+                a5_5:0,
+                a6_5:0,
+                a7_5:0,
+                a9_5:0,
+                a10_5:0,
+                a11_5:0,
+                a12_5:0,
+                a13_5:0
             }
         },
         filters:{formatCurrency},
@@ -418,28 +259,225 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA105100"]),
+            a1_3(){
+                return (this.a1_2 * Math.pow(10, this.fixed) - this.a1_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a2_3(){
+                return (this.a2_2 * Math.pow(10, this.fixed) - this.a2_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a3_3(){
+                return (this.a3_2 * Math.pow(10, this.fixed) - this.a3_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a4_3(){
+                return (this.a4_2 * Math.pow(10, this.fixed) - this.a4_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a5_3(){
+                return (this.a5_2 * Math.pow(10, this.fixed) - this.a5_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a6_3(){
+                return (this.a6_2 * Math.pow(10, this.fixed) - this.a6_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a7_3(){
+                return (this.a7_2 * Math.pow(10, this.fixed) - this.a7_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_1(){
+                return (this.a9_1 * Math.pow(10, this.fixed) + this.a10_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_2(){
+                return (this.a9_2 * Math.pow(10, this.fixed) + this.a10_2 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_3(){
+                return (this.a8_2 * Math.pow(10, this.fixed) - this.a8_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_4(){
+                return (this.a9_4 * Math.pow(10, this.fixed) + this.a10_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_5(){
+                return (this.a9_5 * Math.pow(10, this.fixed) + this.a10_5 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a9_3(){
+                return (this.a9_2 * Math.pow(10, this.fixed) - this.a9_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a10_3(){
+                return (this.a10_2 * Math.pow(10, this.fixed) - this.a10_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a11_3(){
+                return (this.a11_2 * Math.pow(10, this.fixed) - this.a11_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a12_3(){
+                return (this.a12_2 * Math.pow(10, this.fixed) - this.a12_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a13_3(){
+                return (this.a13_2 * Math.pow(10, this.fixed) - this.a13_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a1_6(){
+                return (this.a1_5 * Math.pow(10, this.fixed) - this.a1_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a2_6(){
+                return (this.a2_5 * Math.pow(10, this.fixed) - this.a2_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a3_6(){
+                return (this.a3_5 * Math.pow(10, this.fixed) - this.a3_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a4_6(){
+                return (this.a4_5 * Math.pow(10, this.fixed) - this.a4_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a5_6(){
+                return (this.a5_5 * Math.pow(10, this.fixed) - this.a5_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a6_6(){
+                return (this.a6_5 * Math.pow(10, this.fixed) - this.a6_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a7_6(){
+                return (this.a7_5 * Math.pow(10, this.fixed) - this.a7_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_6(){
+                return (this.a8_5 * Math.pow(10, this.fixed) - this.a8_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a9_6(){
+                return (this.a9_5 * Math.pow(10, this.fixed) - this.a9_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a10_6(){
+                return (this.a10_5 * Math.pow(10, this.fixed) - this.a10_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a11_6(){
+                return (this.a11_5 * Math.pow(10, this.fixed) - this.a11_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a12_6(){
+                return (this.a12_5 * Math.pow(10, this.fixed) - this.a12_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a13_6(){
+                return (this.a13_5 * Math.pow(10, this.fixed) - this.a13_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a1_7(){
+                return (this.a1_3 * Math.pow(10, this.fixed) + this.a1_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a2_7(){
+                return (this.a2_3 * Math.pow(10, this.fixed) + this.a2_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a3_7(){
+                return (this.a3_3 * Math.pow(10, this.fixed) + this.a3_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a4_7(){
+                return (this.a4_3 * Math.pow(10, this.fixed) + this.a4_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a5_7(){
+                return (this.a5_3 * Math.pow(10, this.fixed) + this.a5_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a6_7(){
+                return (this.a6_3 * Math.pow(10, this.fixed) + this.a6_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a7_7(){
+                return (this.a7_3 * Math.pow(10, this.fixed) + this.a7_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a8_7(){
+                return (this.a8_3 * Math.pow(10, this.fixed) + this.a8_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a9_7(){
+                return (this.a9_3 * Math.pow(10, this.fixed) + this.a9_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a10_7(){
+                return (this.a10_3 * Math.pow(10, this.fixed) + this.a10_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a11_7(){
+                return (this.a11_3 * Math.pow(10, this.fixed) + this.a11_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a12_7(){
+                return (this.a12_3 * Math.pow(10, this.fixed) + this.a12_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a13_7(){
+                return (this.a13_3 * Math.pow(10, this.fixed) + this.a13_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_1(){
+                return (this.a1_1 * Math.pow(10, this.fixed) + this.a4_1 * Math.pow(10, this.fixed) + this.a6_1 * Math.pow(10, this.fixed) + this.a8_1 * Math.pow(10, this.fixed) + this.a11_1 * Math.pow(10, this.fixed) + this.a12_1 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_2(){
+                return (this.a1_2 * Math.pow(10, this.fixed) + this.a4_2 * Math.pow(10, this.fixed) + this.a6_2 * Math.pow(10, this.fixed) + this.a8_2 * Math.pow(10, this.fixed) + this.a11_2 * Math.pow(10, this.fixed) + this.a12_2 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_3(){
+                return (this.a1_3 * Math.pow(10, this.fixed) + this.a4_3 * Math.pow(10, this.fixed) + this.a6_3 * Math.pow(10, this.fixed) + this.a8_3 * Math.pow(10, this.fixed) + this.a11_3 * Math.pow(10, this.fixed) + this.a12_3 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_4(){
+                return (this.a1_4 * Math.pow(10, this.fixed) + this.a4_4 * Math.pow(10, this.fixed) + this.a6_4 * Math.pow(10, this.fixed) + this.a8_4 * Math.pow(10, this.fixed) + this.a11_4 * Math.pow(10, this.fixed) + this.a12_4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_5(){
+                return (this.a1_5 * Math.pow(10, this.fixed) + this.a4_5 * Math.pow(10, this.fixed) + this.a6_5 * Math.pow(10, this.fixed) + this.a8_5 * Math.pow(10, this.fixed) + this.a11_5 * Math.pow(10, this.fixed) + this.a12_5 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_6(){
+                return (this.a1_6 * Math.pow(10, this.fixed) + this.a4_6 * Math.pow(10, this.fixed) + this.a6_6 * Math.pow(10, this.fixed) + this.a8_6 * Math.pow(10, this.fixed) + this.a11_6 * Math.pow(10, this.fixed) + this.a12_6 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            },
+            a14_7(){
+                return (this.a1_7 * Math.pow(10, this.fixed) + this.a4_7 * Math.pow(10, this.fixed) + this.a6_7 * Math.pow(10, this.fixed) + this.a8_7 * Math.pow(10, this.fixed) + this.a11_7 * Math.pow(10, this.fixed) + this.a12_7 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+            }
         },
         watch: {
-            
+            getTableA105100(newVal) {
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                }
+            }
         },
         methods:{
-            save(){}
+            save(){
+                let postData = {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                };
+                for(let i=1;i<=25;i++){
+                    for(let j=1;j<=6;j++){
+                        let p = `a${i}_${j}`
+                        postData[p]=this[p];
+                    }
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA105100", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableA105100",{
+                data:{
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .excel12{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="5"]{
-            text-align: center;
-        }
-    }
 </style>

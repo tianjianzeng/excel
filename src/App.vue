@@ -47,6 +47,7 @@
         td { 
             &.blue{
                 background: #96DAF7;
+                text-align: left;
             }
             &.green{
                 background: #C1F1CB;
@@ -70,7 +71,6 @@
                 line-height: 40px;
                 width: 100%;
                 font-size: 14px;
-                color: #1f2d3d;
                 text-align: center;
                 background: transparent;
             }
@@ -91,8 +91,5 @@
         &:last-of-type {
             border-bottom: 1px solid #dfe6ec;
         }
-    }
-    button{
-        margin-top: 30px;
     }
 </style>
