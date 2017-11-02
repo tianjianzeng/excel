@@ -86,6 +86,16 @@ const configs = {
         url: formatUrl('v1/a105120/edit'),
         httpMethod: "post",
         defaultState: {}
+    },
+    getTableA107013: {
+        url: formatUrl('v1/a107013/get'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107013: {
+        url: formatUrl('v1/a107013/edit'),
+        httpMethod: "post",
+        defaultState: {}
     }
 };
 

@@ -79,7 +79,7 @@
                 width: 100%;
                 font-size: 14px;
                 text-align: center;
-                background: red;
+                background: transparent;
             }
         }
         tr{
