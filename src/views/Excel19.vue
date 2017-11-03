@@ -54,7 +54,7 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">   （二）保险公司为种植业、养殖业提供保险业务取得的保费减计收入（5×10%）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a9|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
@@ -69,12 +69,12 @@
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">   （二）其他符合条件的机构取得农户小额贷款利息减计收入（11×10%）</td>
-                        <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">合计（3+9+12）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a13|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -96,17 +96,14 @@
         data() {
             return {
                 fixed:2,
-                "a1":null,
+                "a1":0,
                 "a2":20,
-                "a4":null,
+                "a4":0,
                 "a6":60,
                 "a7":70,
                 "a8":80,
-                "a9":5,
                 "a10":0,
-                "a11":110,
-                "a12":11,
-                "a13":18,
+                "a11":110
             }
         },
         filters:{formatCurrency},
@@ -120,6 +117,15 @@
              },
              a5() {
                  return ((this.a7 || 0) * Math.pow(10,this.fixed) + (this.a8 || 0) * Math.pow(10,this.fixed) - (this.a8 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+             },
+             a9() {
+                 return (((this.a5 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed)) * 0.1
+             },
+             a12() {
+                 return (((this.a11 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed)) * 0.1
+             },
+             a13() {
+                 return ((this.a3 || 0) * Math.pow(10,this.fixed) + (this.a9 || 0) * Math.pow(10,this.fixed) + (this.a12 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed)
              }
         },
         watch: {
