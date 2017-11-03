@@ -177,7 +177,7 @@
             }
         },
         mounted() {
-           const loading = this.$loading({
+            const loading = this.$loading({
                 lock: true,
                 text: '加载中',
                 spinner: 'el-icon-loading',

@@ -106,7 +106,18 @@ const configs = {
         url: formatUrl('v1/a105110/edit'),
         httpMethod: "post",
         defaultState: {}
-    }
+    },
+    getTableflowA: {
+        url: formatUrl('v1/flowA/get'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editflowA: {
+        url: formatUrl('v1/flowA/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+
 };
 
 
