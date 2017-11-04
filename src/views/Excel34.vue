@@ -349,34 +349,24 @@
                 a1:0,
                  a3:0,
                  a8:0,
-                 a9:0,
                 a10:0,
                 a12:0,
                 a13:0,
                 a18:0,
-                a20:0,
-                a21:0,
                 a22:0,
                 a23:0,
                 a25:0,
                 a28:0,
-                a29:0,
                 a30:0,
                 a31:0,
                 a35:0,
-                a36:0,
-                a37:0,
                 a38:0,
                 a40:0,
                 a43:0,
-                a44:0,
                 a45:0,
                 a46:0,
                 a52:0,
-                a53:0,
-                a54:0,
                 a55:0,
-                a56:0,
                 a57:0,
                 a58:0,
                 a59:0,
@@ -393,15 +383,13 @@
                 a72:0,
                 a73:0,
                 a74:0,
-                a75:0,
                 a76:0,
                 a77:0,
                 a78:0,
                 a79:0,
                 a80:0,
                 a81:0,
-                a82:0,
-                a83:0
+                a82:0
             }
         },
         filters:{formatCurrency},
@@ -433,6 +421,50 @@
                     this[`a${i}`] && (rst += this[`a${i}`] * Math.pow(10,this.fixed))
                 }
                 return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a36(){
+                let rst = 0;
+                for(var i of [30,31,35]){
+                    this[`a${i}`] && (rst += this[`a${i}`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a37(){
+                return (this.a29 * Math.pow(10,this.fixed) - this.a36 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a44(){
+                let rst = 0;
+                for(var i of [38,40,43]){
+                    this[`a${i}`] && (rst += this[`a${i}`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a53(){
+                let rst = 0;
+                for(var i of [45,46,52]){
+                    this[`a${i}`] && (rst += this[`a${i}`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a54(){
+                return (this.a44 * Math.pow(10,this.fixed) - this.a53 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a56(){
+                let rst = 0;
+                for(var i of [21,37,54,55]){
+                    this[`a${i}`] && (rst += this[`a${i}`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a75(){
+                let rst = 0;
+                for(var i of [57,58,59,60,61,64,65,66,67,68,69,70,71,72,73,74]){
+                    this[`a${i}`] && (rst += this[`a${i}`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a83(){
+                return (this.a79 * Math.pow(10,this.fixed) - this.a80 * Math.pow(10,this.fixed) + this.a81 * Math.pow(10,this.fixed) - this.a82 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
             }
         },
         watch: {

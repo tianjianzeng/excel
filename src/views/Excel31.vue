@@ -182,6 +182,7 @@
         data() {
             return {
                 fixed:2,
+                id:0,
                 "a1_1":11,
                 "a1_2":12,
                 "a2_1":21,
@@ -273,7 +274,8 @@
                     "uid": "545",
                     "mon": "2017-09-07",
                     "year": "2017",
-                    "userId": "1"
+                    "userId": "1",
+                    "id":this.id
                 };
                 for(let i=1;i<=22;i++){
                     for(let j=1;j<=2;j++){

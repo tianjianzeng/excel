@@ -429,8 +429,8 @@
                     "year":2016,
                     "userId":10086
                 };
-                for(let i=1;i<=25;i++){
-                    for(let j=1;j<=6;j++){
+                for(let i=1;i<=14;i++){
+                    for(let j=1;j<=7;j++){
                         let p = `a${i}_${j}`
                         postData[p]=this[p];
                     }

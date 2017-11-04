@@ -14,7 +14,7 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">一、搬迁收入(2+8)</td>
-                        <td>{{a1|formatCurrency}}</td>
+                        <td><number-display :value="a1" :min="0"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
@@ -54,7 +54,7 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">二、搬迁支出(10+16)</td>
-                        <td>{{a9|formatCurrency}}</td>
+                        <td><number-display :value="a9" :min="0"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
@@ -144,6 +144,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -151,6 +152,7 @@
         data() {
             return {
                 fixed:2,
+                id:0,
                 "a3":0,
                 "a4":0,
                 "a5":0,
@@ -172,7 +174,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA105110"]),
@@ -220,16 +223,14 @@
         methods:{
             save(){
                let postData = {
-                    "uid": "545",
+                    "uid": 545,
                     "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1"
+                    "year": 2017,
+                    "id": this.id
                 };
-                for(let i=1;i<=13;i++){
-                    for(let j=1;j<=3;j++){
-                        let p = `a${i}_${j}`
-                        postData[p]=this[p];
-                    }
+                for(let i=1;i<=24;i++){
+                    let p = `a${i}`
+                    postData[p]=this[p];
                 }
                 const loading = this.$loading({
                     lock: true,
@@ -262,10 +263,10 @@
             });
             store.dispatch("getTableA105110",{
                 data:{
-                    "uid": "545",
+                    "uid": 545,
                     "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1"
+                    "year": 2017,
+                    "userId": 1
                 },
                 always:()=>{
                     loading.close();

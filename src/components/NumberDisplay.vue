@@ -13,6 +13,7 @@
         watch: {
             value(newVal){
                 this.$parent.invalid>0 && this.$parent.invalid--
+                this.error = false;
                 if(this.min!=undefined && this.min > newVal){
                     this.error = true;
                     this.$parent.invalid++;

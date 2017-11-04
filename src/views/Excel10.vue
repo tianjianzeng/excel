@@ -136,6 +136,7 @@
         data() {
             return {
                 fixed:2,
+                id:0,
                 a2_1:0,
                 a3_1:0,
                 a4_1:0,
@@ -243,10 +244,11 @@
                 let postData = {
                     "uid":100,
                     "year":2016,
-                    "userId":10086
+                    "userId":10086,
+                    "id":this.id
                 };
-                for(let i=1;i<=25;i++){
-                    for(let j=1;j<=6;j++){
+                for(let i=1;i<=14;i++){
+                    for(let j=1;j<=3;j++){
                         let p = `a${i}_${j}`
                         postData[p]=this[p];
                     }

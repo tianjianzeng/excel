@@ -97,6 +97,7 @@
         data() {
             return {
                 fixed:2,
+                id:0,
                 "a1":0,
                 "a2":20,
                 "a4":0,
@@ -153,13 +154,11 @@
                     "uid": "545",
                     "mon": "2017-09-07",
                     "year": "2017",
-                    "userId": "1"
+                    "id": this.id
                 };
                 for(let i=1;i<=13;i++){
-                    for(let j=1;j<=3;j++){
-                        let p = `a${i}_${j}`
-                        postData[p]=this[p];
-                    }
+                    let p = `a${i}`
+                    postData[p]=this[p];
                 }
                 
                 const loading = this.$loading({
