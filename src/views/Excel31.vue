@@ -4,7 +4,7 @@
             <table cellspacing="0" cellpadding="0" border="0" >
               <tbody>
                    <tr>
-                        <td colspan="4">现金流量表_年报</td>
+                        <td colspan="4">A现金流量表_年报</td>
                    </tr>
                     <tr>
                         <td colspan="4">（适用执行小企业会计准则的企业）</td>

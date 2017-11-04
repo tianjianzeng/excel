@@ -97,6 +97,16 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
+    getTableA105010: {
+        url: formatUrl('v1/a105010/get'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA105010: {
+        url: formatUrl('v1/a105010/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
     getTableA105110: {
         url: formatUrl('v1/a105110/get'),
         httpMethod: "post",
@@ -117,7 +127,26 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-
+    getTableflowB: {
+        url: formatUrl('v1/flowB/get'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editflowB: {
+        url: formatUrl('v1/flowB/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableflowC: {
+        url: formatUrl('v1/flowC/get'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editflowC: {
+        url: formatUrl('v1/flowC/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
 };
 
 

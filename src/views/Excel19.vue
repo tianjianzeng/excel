@@ -34,7 +34,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">   （一）保险公司为种植业、养殖业提供保险业务取得的保费收入总额（6+7-8）</td>
-                        <td>{{a5|formatCurrency}}</td>
+                        <td><number-display :value="a5" :min="0"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
@@ -69,7 +69,7 @@
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">   （二）其他符合条件的机构取得农户小额贷款利息减计收入（11×10%）</td>
-                        <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
+                        <td>{{a12|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
@@ -89,6 +89,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -108,7 +109,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
              ...mapGetters(["getTableA107013"]),
@@ -116,7 +118,7 @@
                  return (((this.a2 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed)) * 0.1
              },
              a5() {
-                 return ((this.a7 || 0) * Math.pow(10,this.fixed) + (this.a8 || 0) * Math.pow(10,this.fixed) - (this.a8 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+                 return ((this.a6 || 0) * Math.pow(10,this.fixed) + (this.a7 || 0) * Math.pow(10,this.fixed) - (this.a8 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
              },
              a9() {
                  return (((this.a5 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed)) * 0.1
@@ -141,6 +143,12 @@
         },
         methods:{
             save(){
+                if(this.invalid>0){
+                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
+                        confirmButtonText: '确定'
+                    });
+                    return;
+                }
                 let postData = {
                     "uid": "545",
                     "mon": "2017-09-07",

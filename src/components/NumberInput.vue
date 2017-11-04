@@ -51,6 +51,7 @@
                 
             },
             blur(){
+                this.$parent.invalid>0 && this.$parent.invalid--
                 if(isNaN(Number(this.text))){
                     this.error = true;
                     this.$parent.invalid++;
@@ -65,7 +66,6 @@
             },
             focus(){
                 this.error = false;
-                this.$parent.invalid>0 && this.$parent.invalid--
             },
             click(evt){
                 this.showText=false;
