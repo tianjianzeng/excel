@@ -93,4 +93,8 @@
             border-bottom: 1px solid #dfe6ec;
         }
     }
+    
+    .el-date-editor.el-input {
+        width: auto;
+    }
 </style>

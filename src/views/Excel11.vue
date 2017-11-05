@@ -2,19 +2,29 @@
     <div class="excel excel11">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                        <col width="5%" ></col>
+                        <col width="10%"></col>
+                        <col width="8%" ></col>
+                        <col width="8%" ></col>
+                        <col width="8%" ></col>
+                        <col width="8%" ></col>
+                        <col width="8%"></col>
+                        <col width="8%"></col>
+                        <col width="210px"></col>
                 <tbody>
                     <tr>
-                        <td colspan="8">资产损失（专项申报）税前扣除及纳税调整明细表</td>
+                        <td colspan="9">资产损失（专项申报）税前扣除及纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue" rowspan="2">行次</td>
-                        <td style="width:35%" class="blue" rowspan="2">项目</td>
-                        <td style="width:10%" class="blue">账载金额</td>
-                        <td style="width:10%" class="blue">处置收入</td>
-                        <td style="width:10%" class="blue">赔偿收入</td>
-                        <td style="width:10%" class="blue">计税基础</td>
-                        <td style="width:10%" class="blue">税收金额</td>
-                        <td style="width:10%" class="blue">纳税调整金额</td>
+                        <td class="blue" rowspan="2">行次</td>
+                        <td class="blue">项目</td>
+                        <td class="blue">账载金额</td>
+                        <td class="blue">处置收入</td>
+                        <td class="blue">赔偿收入</td>
+                        <td class="blue">计税基础</td>
+                        <td class="blue">税收金额</td>
+                        <td class="blue">纳税调整金额</td>
+                        <td class="blue" rowspan="2"></td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -23,97 +33,39 @@
                         <td class="blue">4</td>
                         <td class="blue">5</td>
                         <td class="blue">6</td>
+                        <td class="blue" style="border-right: 1px solid #dfe6ec;">7</td>
                     </tr>
-                    <tr>
-                        <td class="blue">001</td>
-                        <td class="blue">一、货币资产损失</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">002</td>
-                        <td class="green"><input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">003</td>
-                        <td class="blue">一、非货币资产损失</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">004</td>
-                        <td class="green"><input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">007</td>
-                        <td class="blue">三、投资损失</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">008</td>
-                        <td class="green"><input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">010</td>
-                        <td class="blue">四、其他</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">011</td>
-                        <td class="green"><input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">013</td>
-                        <td class="blue">合计</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
+                    <template v-for="(item,index) in list">
+                        <tr :key="index">
+                            <td class="blue">001</td>
+                            <td class="blue">{{item.a1}}</td>
+                            <td>{{item.a2|formatCurrency}}</td>
+                            <td>{{item.a3|formatCurrency}}</td>
+                            <td>{{item.a4|formatCurrency}}</td>
+                            <td>{{item.a5|formatCurrency}}</td>
+                            <td>{{item.a6|formatCurrency}}</td>
+                            <td>{{item.a7|formatCurrency}}</td>
+                            <td>
+                                <el-button v-if="(item.subList ||[]).length===0 && item.tag!==5" type="primary" @click="add(item)">添加</el-button>
+                            </td>
+                        </tr>
+                        <tr v-for="(it,idx) in (item.subList||[])" :key="idx">
+                            <td class="blue">002</td>
+                            <td class="green"><input v-model="it.a1"></td>
+                            <td class="green"><number-input v-model="it.a2" :fixed="fixed"></number-input></td>
+                            <td class="green"><number-input v-model="it.a3" :fixed="fixed"></number-input></td>
+                            <td class="green"><number-input v-model="it.a4" :fixed="fixed"></number-input></td>
+                            <td class="green"><number-input v-model="it.a5" :fixed="fixed"></number-input></td>
+                            <td>{{it.a6|formatCurrency}}</td>
+                            <td>{{it.a7|formatCurrency}}</td>
+                            <td>
+                                <el-button v-if="it.saved && idx==item.subList.length-1" type="primary" @click="add(item)">添加</el-button>
+                                <el-button type="primary" @click="del(it)">删除</el-button>
+                                <el-button v-if="!it.saved" type="primary" @click="sav(it)">保存</el-button>
+                                <el-button v-if="it.saved" type="primary" @click="edt(it)">修改</el-button>
+                            </td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </div>
@@ -134,213 +86,174 @@
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                tags:{
+                    "1":"一、货币资产损失",
+                    "2":"二、非货币资产损失",
+                    "3":"三、投资损失",
+                    "4":"四、其他",
+                    "5":"合计"
+                },
+                "list": [{
+                    "uid": 545,
+                    "mon": 1504713600000,
+                    "a1": "一、货币资产损失",
+                    "a2": 300,
+                    "a3": 300,
+                    "a4": 400,
+                    "a5": 500,
+                    "a6": 600,
+                    "a7": 700,
+                    "tag": 1,
+                    "state": 0,
+                    "createtime": 1505450296000,
+                    "modifytime": 1505452015000,
+                    "addid": 1,
+                    "editid": 1,
+                    "exist": 0,
+                    "cYear": 2017,
+                    "monDate": "2017-09-07",
+                    "createDate": "2017-09-15",
+                    "modifyDate": "2017-09-15",
+                    "id": 1,
+                    "subList": [{
+                        "uid": 545,
+                        "mon": 1504713600000,
+                        "a1": "test1",
+                        "a2": 300,
+                        "a3": 300,
+                        "a4": 400,
+                        "a5": 500,
+                        "a6": 600,
+                        "a7": 700,
+                        "tag": 1,
+                        "state": 0,
+                        "createtime": 1505450296000,
+                        "modifytime": 1505452013000,
+                        "addid": 1,
+                        "editid": 2,
+                        "exist": 0,
+                        "cYear": 2017,
+                        "monDate": "2017-09-07",
+                        "createDate": "2017-09-15",
+                        "modifyDate": "2017-09-15",
+                        "id": 1
+                    },{
+                        "uid": 545,
+                        "mon": 1504713600000,
+                        "a1": "test1",
+                        "a2": 300,
+                        "a3": 300,
+                        "a4": 400,
+                        "a5": 500,
+                        "a6": 600,
+                        "a7": 700,
+                        "tag": 1,
+                        "state": 0,
+                        "createtime": 1505450296000,
+                        "modifytime": 1505452013000,
+                        "addid": 1,
+                        "editid": 2,
+                        "exist": 0,
+                        "cYear": 2017,
+                        "monDate": "2017-09-07",
+                        "createDate": "2017-09-15",
+                        "modifyDate": "2017-09-15",
+                        "id": 1
+                    }]
+                },
+                {
+                    "uid": 545,
+                    "mon": 1504713600000,
+                    "a1": "二、非货币资产损失",
+                    "a2": 0,
+                    "a3": 0,
+                    "a4": 0,
+                    "a5": 0,
+                    "a6": 0,
+                    "a7": 0,
+                    "tag": 2,
+                    "state": 0,
+                    "createtime": 1505450296000,
+                    "modifytime": 1505450296000,
+                    "addid": 1,
+                    "editid": 1,
+                    "exist": 0,
+                    "cYear": 2017,
+                    "monDate": "2017-09-07",
+                    "createDate": "2017-09-15",
+                    "modifyDate": "2017-09-15",
+                    "id": 2
+                },
+                {
+                    "uid": 545,
+                    "mon": 1504713600000,
+                    "a1": "三、投资损失",
+                    "a2": 0,
+                    "a3": 0,
+                    "a4": 0,
+                    "a5": 0,
+                    "a6": 0,
+                    "a7": 0,
+                    "tag": 3,
+                    "state": 0,
+                    "createtime": 1505450296000,
+                    "modifytime": 1505450296000,
+                    "addid": 1,
+                    "editid": 1,
+                    "exist": 0,
+                    "cYear": 2017,
+                    "monDate": "2017-09-07",
+                    "createDate": "2017-09-15",
+                    "modifyDate": "2017-09-15",
+                    "id": 3
+                },
+                {
+                    "uid": 545,
+                    "mon": 1504713600000,
+                    "a1": "四、其他",
+                    "a2": 0,
+                    "a3": 0,
+                    "a4": 0,
+                    "a5": 0,
+                    "a6": 0,
+                    "a7": 0,
+                    "tag": 4,
+                    "state": 0,
+                    "createtime": 1505450296000,
+                    "modifytime": 1505450296000,
+                    "addid": 1,
+                    "editid": 1,
+                    "exist": 0,
+                    "cYear": 2017,
+                    "monDate": "2017-09-07",
+                    "createDate": "2017-09-15",
+                    "modifyDate": "2017-09-15",
+                    "id": 4
+                },
+                {
+                    "uid": 545,
+                    "mon": 1504713600000,
+                    "a1": "合计",
+                    "a2": 300,
+                    "a3": 300,
+                    "a4": 400,
+                    "a5": 500,
+                    "a6": 600,
+                    "a7": 700,
+                    "tag": 5,
+                    "state": 0,
+                    "createtime": 1505450296000,
+                    "modifytime": 1505452016000,
+                    "addid": 1,
+                    "editid": 1,
+                    "exist": 0,
+                    "cYear": 2017,
+                    "monDate": "2017-09-07",
+                    "createDate": "2017-09-15",
+                    "modifyDate": "2017-09-15",
+                    "id": 5
+                }
+            ],
             }
         },
         filters:{formatCurrency},
@@ -348,28 +261,173 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA105091"])
         },
         watch: {
-            
+            getTableA105091(newVal) {
+                if(newVal!=null){
+                    // for(let i in newVal){
+                    //     if(this.hasOwnProperty(i)){
+                    //         this[i]=newVal[i];
+                    //     }
+                    // }
+                }
+            },
+            'list':{  
+                handler:function(val,oldval){  
+                    val.forEach(item=>{
+                        if(item.subList){
+                            var a2 = 0;
+                            var a3 = 0;
+                            var a4 = 0;
+                            var a5 = 0;
+                            item.subList.forEach(it=>{
+                                if(it.saved===undefined){
+                                    it.saved = true;
+                                }
+                                it.parent = item;
+                                a2 += it.a2;
+                                a3 += it.a3;
+                                a4 += it.a4;
+                                a5 += it.a5;
+                                it.a6 = it.a5 - it.a4 - it.a3;
+                                it.a7 = it.a2 - it.a6;
+                            });
+                            item.a2 = a2;
+                            item.a3 = a3;
+                            item.a4 = a4;
+                            item.a5 = a5;
+                            item.a6 = item.a5 - item.a4 - item.a3;
+                            item.a7 = item.a2 - item.a6;
+                        }
+                    })
+                },  
+                deep:true//对象内部的属性监听，也叫深度监听  
+            },
         },
         methods:{
-            save(){}
+            save(){
+                if(this.invalid>0){
+                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
+                        confirmButtonText: '确定'
+                    });
+                    return;
+                }
+                let postData = {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086,
+                    "id":this.id
+                };
+                for(let i=1;i<=14;i++){
+                    for(let j=1;j<=3;j++){
+                        let p = `a${i}_${j}`
+                        postData[p]=this[p];
+                    }
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA105091", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            add(item){
+                if(!item.subList){
+                    item.subList = [];
+                }
+
+                item.subList.push({
+                    tag:item.tag,
+                    saved:false,
+                    parent: item,
+                    a1:"",
+                    a2:0,
+                    a3:0,
+                    a4:0,
+                    a5:0,
+                    a6:0,
+                    a7:0
+                });
+            },
+            del(it){
+                if(!it.saved){
+                    let i = it.parent.subList.indexOf(it);
+                    it.parent.subList.splice(i,1);
+                }else{
+                    //调用删除接口
+                }
+            },
+            edt(it){
+                //调用编辑接口
+            },
+            sav(it){
+                //保存接口
+                it.saved = true;
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableA105091",{
+                data:{
+                    "uid": "545",
+                    "mon": "2017-09-07",
+                    "year": "2017",
+                    "userId": "1"
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
+            this.list.forEach(item=>{
+                var a2 = 0;
+                var a3 = 0;
+                var a4 = 0;
+                var a5 = 0;
+                if(item.subList){
+                    item.subList.forEach(it=>{
+                        if(it.saved===undefined){
+                            it.saved = true;
+                        }
+                        it.parent = item;
+                        a2 += it.a2;
+                        a3 += it.a3;
+                        a4 += it.a4;
+                        a5 += it.a5;
+                        it.a6 = it.a5 - it.a4 - it.a3;
+                        it.a7 = it.a2 - it.a6;
+                    });
+                    item.a2 = a2;
+                    item.a3 = a3;
+                    item.a4 = a4;
+                    item.a5 = a5;
+                    item.a6 = item.a5 - item.a4 - item.a3;
+                    item.a7 = item.a2 - item.a6;
+                }
+            });
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .excel11{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="8"]{
-            text-align: center;
-        }
-    }
 </style>
