@@ -230,10 +230,10 @@
         name: 'excel37',
         data() {
             return {
-                fixed:2,
+                fixed:4,
                 a106:true,
                 a107:false,
-                "a3_1": 0,
+                "a1_2": 0,
                 "a3_2": 0,
                 "a3_3": 0,
                 "a3_4": 0,
@@ -445,15 +445,72 @@
             NumberInput
         },
         computed: {
+            ...mapGetters(["getTableflowC"]),
             
         },
         watch: {
-            
+            getTableflowC(newVal) {
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                }
+               
+            }
         },
         methods:{
-            save(){}
+            save(){
+                let postData = {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                };
+                for(let i=1;i<=26;i++){
+                    let p = `a${i}`
+                    postData[p]=this[p];
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editflowC", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });  
+            }
         },
         mounted() {
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableflowC",{
+                data:{
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
             
         }
     }
