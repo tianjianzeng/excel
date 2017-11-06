@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p v-if="showText" @click="click">{{text|formatCurrency}}</p>
+        <p v-if="showText" @click="click">{{text|formatCurrency(fixed)}}</p>
         <input ref="valInput" :class="{'error':error}" @focus="focus" v-else v-model="text" @blur="blur" @keyup="keyup">
     </div>
 </template>

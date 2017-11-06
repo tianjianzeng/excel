@@ -2,8 +2,33 @@ import * as API from '../../utils'
 import { init, formatUrl } from '../init'
 
 const configs = {
-    getEp: {
+    getEpA000000: {
         url: formatUrl("v1/a000000/getEp"),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA000000: {
+        url: formatUrl("v1/a000000/get"),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    addA000000: {
+        url: formatUrl("v1/a000000/add"),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA000000: {
+        url: formatUrl("v1/a000000/edit"),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    delInvestA000000: {
+        url: formatUrl("v1/a000000/delInvest"),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editInvestA000000: {
+        url: formatUrl("v1/a000000/editInvest"),
         httpMethod: "post",
         defaultState: {}
     },
@@ -209,6 +234,16 @@ const configs = {
     },
     deleteA107012: {
         url: formatUrl('v1/a107012/del'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getResearch: {
+        url: formatUrl('v1/research/get'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editResearch: {
+        url: formatUrl('v1/research/edit'),
         httpMethod: "post",
         defaultState: {}
     }

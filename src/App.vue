@@ -46,9 +46,9 @@
             table-layout: fixed;
         }
         td { 
+            text-align: left;
             &.blue{
                 background: #96DAF7;
-                text-align: left;
             }
             &.green{
                 background: #C1F1CB;

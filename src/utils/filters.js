@@ -2,7 +2,7 @@ import moment from 'moment';
 /*
 金额格式化
     */
-export function formatCurrency(s) {
+export function formatCurrency(s, fixed = 2) {
     if (!/^(-?\d+)(\.\d*)?$/.test(s)) {
         return 'invalid value';
     }
@@ -16,13 +16,13 @@ export function formatCurrency(s) {
     }
     s = Math.abs(s);
     if (/^\d+$/.test(s)) {
-        return (sign + (s + '').replace(/\B(?=(\d{3})+$)/g, ',') + '.00');
+        return (sign + (s + '').replace(/\B(?=(\d{3})+$)/g, ',') + '.' + "".padStart(fixed, "0"));
     }
     if (/^(\d+)\.(\d+)$/.test(s)) {
         s = s + '0';
         var v = s.split('.');
         var f = (v[0] + '').replace(/\B(?=(\d{3})+$)/g, ',');
-        var h = v[1].substring(0, 2);
+        var h = v[1].substring(0, fixed);
         return (sign + f + '.' + h);
     }
 }
