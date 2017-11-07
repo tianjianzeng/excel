@@ -246,6 +246,71 @@ const configs = {
         url: formatUrl('v1/research/edit'),
         httpMethod: "post",
         defaultState: {}
+    },
+    addResearch2: {
+        url: formatUrl('v1/research/add2'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editResearch2: {
+        url: formatUrl('v1/research/edit2'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    deleteResearch2: {
+        url: formatUrl('v1/research/del'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA105040: {
+        url: formatUrl('v1/a105040/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA105040: {
+        url: formatUrl('v1/a105040/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA106000: {
+        url: formatUrl('v1/a106000/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA106000: {
+        url: formatUrl('v1/a106000/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107010: {
+        url: formatUrl('v1/a107010/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107010: {
+        url: formatUrl('v1/a107010/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107011: {
+        url: formatUrl('v1/a107011/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    addA107011: {
+        url: formatUrl('v1/a107011/add'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107011: {
+        url: formatUrl('v1/a107011/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    deleteA107011: {
+        url: formatUrl('v1/a107011/del'),
+        httpMethod: "post",
+        defaultState: {}
     }
 };
 

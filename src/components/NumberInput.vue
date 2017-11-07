@@ -62,6 +62,11 @@
                     this.$parent.invalid++;
                     return;
                 }
+                if(this.max!=undefined && this.max < Number(this.text)){
+                    this.error = true;
+                    this.$parent.invalid++;
+                    return;
+                }
                 this.showText=true;
             },
             focus(){
@@ -90,6 +95,9 @@
                 default: 0
             },
             "min":{
+                type: Number
+            },
+            "max":{
                 type: Number
             }
         }

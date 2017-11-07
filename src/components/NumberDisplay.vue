@@ -19,6 +19,11 @@
                     this.$parent.invalid++;
                     return;
                 }
+                if(this.max!=undefined && this.max < newVal){
+                    this.error = true;
+                    this.$parent.invalid++;
+                    return;
+                }
             }
         },
         methods:{
@@ -32,6 +37,9 @@
                 default: 0
             },
             "min":{
+                type: Number
+            },
+            "max":{
                 type: Number
             }
         }

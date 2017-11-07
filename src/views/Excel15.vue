@@ -1,5 +1,5 @@
 <template>
-    <div class="excel excel14">
+    <div class="excel excel15">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
@@ -54,7 +54,7 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel14',
+        name: 'excel15',
         data() {
             return {
                 fixed:2,
@@ -287,7 +287,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel14{
+    .excel15{
         td{
             text-align: left;
             padding-left: 10px;
