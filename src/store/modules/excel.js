@@ -23,7 +23,9 @@ const configs = {
         defaultState: {}
     },
     delInvestA000000: {
-        url: formatUrl("v1/a000000/delInvest"),
+        url: function(param) {
+            return formatUrl(`v1/a000000/delInvest/${param}`);
+        },
         httpMethod: "post",
         defaultState: {}
     },
@@ -128,7 +130,9 @@ const configs = {
         defaultState: {}
     },
     deleteA105091: {
-        url: formatUrl('v1/a105091/del'),
+        url: function(param) {
+            return formatUrl(`v1/a105091/del/${param}`);
+        },
         httpMethod: "post",
         defaultState: {}
     },
@@ -178,7 +182,9 @@ const configs = {
         defaultState: {}
     },
     delet108010: {
-        url: formatUrl('v1/a108010/del'),
+        url: function(param) {
+            return formatUrl(`v1/a108010/del/${param}`);
+        },
         httpMethod: "post",
         defaultState: {}
     },
@@ -233,7 +239,9 @@ const configs = {
         defaultState: {}
     },
     deleteA107012: {
-        url: formatUrl('v1/a107012/del'),
+        url: function(param) {
+            return formatUrl(`v1/a107012/del/${param}`);
+        },
         httpMethod: "post",
         defaultState: {}
     },
@@ -247,18 +255,20 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    addResearch2: {
+    add2Research: {
         url: formatUrl('v1/research/add2'),
         httpMethod: "post",
         defaultState: {}
     },
-    editResearch2: {
+    edit2Research: {
         url: formatUrl('v1/research/edit2'),
         httpMethod: "post",
         defaultState: {}
     },
-    deleteResearch2: {
-        url: formatUrl('v1/research/del'),
+    delResearch: {
+        url: function(param) {
+            return formatUrl(`v1/research/del/${param}`);
+        },
         httpMethod: "post",
         defaultState: {}
     },
@@ -297,13 +307,13 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    addA107011: {
-        url: formatUrl('v1/a107011/add'),
+    editA107011: {
+        url: formatUrl('v1/a107011/edit'),
         httpMethod: "post",
         defaultState: {}
     },
-    editA107011: {
-        url: formatUrl('v1/a107011/edit'),
+    addA107011: {
+        url: formatUrl('v1/a107011/add'),
         httpMethod: "post",
         defaultState: {}
     },

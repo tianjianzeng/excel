@@ -249,45 +249,46 @@
         },
         methods:{
             save(){
-                if(this.invalid>0){
-                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
-                        confirmButtonText: '确定'
-                    });
-                    return;
-                }
-                let postData = {
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086,
-                    "id":this.id
-                };
-                for(let i=1;i<=14;i++){
-                    for(let j=1;j<=3;j++){
-                        let p = `a${i}_${j}`
-                        postData[p]=this[p];
-                    }
-                }
+                // if(this.invalid>0){
+                //     this.$alert('请修改不和规范的字段后再进行保存', '验证', {
+                //         confirmButtonText: '确定'
+                //     });
+                //     return;
+                // }
+                // let postData = {
+                //     "uid": "545",
+                //     "mon": "2017-09-07",
+                //     "year": "2017",
+                //     "userId": "1",
+                //     "id":this.id
+                // };
+                // for(let i=1;i<=14;i++){
+                //     for(let j=1;j<=3;j++){
+                //         let p = `a${i}_${j}`
+                //         postData[p]=this[p];
+                //     }
+                // }
                 
-                const loading = this.$loading({
-                    lock: true,
-                    text: '加载中',
-                    spinner: 'el-icon-loading',
-                    background: 'rgba(0, 0, 0, 0.7)'
-                });
-                store.dispatch("editA108010", {
-                    data: postData,
-                    callback:(rst)=>{
-                        if(rst.status==0){
-                            this.$message({
-                                message: '保存成功',
-                                type: 'success'
-                            });
-                        }
-                    },
-                    always:()=>{
-                        loading.close();
-                    }
-                });
+                // const loading = this.$loading({
+                //     lock: true,
+                //     text: '加载中',
+                //     spinner: 'el-icon-loading',
+                //     background: 'rgba(0, 0, 0, 0.7)'
+                // });
+                // store.dispatch("editA108010", {
+                //     data: postData,
+                //     callback:(rst)=>{
+                //         if(rst.status==0){
+                //             this.$message({
+                //                 message: '保存成功',
+                //                 type: 'success'
+                //             });
+                //         }
+                //     },
+                //     always:()=>{
+                //         loading.close();
+                //     }
+                // });
             },
             add(item){
                 this.list.push({
@@ -345,32 +346,6 @@
                 },
                 always:()=>{
                     loading.close();
-                }
-            });
-            this.list.forEach(item=>{
-                var a2 = 0;
-                var a3 = 0;
-                var a4 = 0;
-                var a5 = 0;
-                if(item.subList){
-                    item.subList.forEach(it=>{
-                        if(it.saved===undefined){
-                            it.saved = true;
-                        }
-                        it.parent = item;
-                        a2 += it.a2;
-                        a3 += it.a3;
-                        a4 += it.a4;
-                        a5 += it.a5;
-                        it.a6 = it.a5 - it.a4 - it.a3;
-                        it.a7 = it.a2 - it.a6;
-                    });
-                    item.a2 = a2;
-                    item.a3 = a3;
-                    item.a4 = a4;
-                    item.a5 = a5;
-                    item.a6 = item.a5 - item.a4 - item.a3;
-                    item.a7 = item.a2 - item.a6;
                 }
             });
         }

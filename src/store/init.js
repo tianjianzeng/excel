@@ -58,8 +58,12 @@ export const init = function(configs) {
 
                 let httpMethod = config.httpMethod || "get";
                 httpMethod = httpMethod.toLowerCase() + "Data";
+                let url = config.url;
+                if (typeof config.url === "function") {
+                    url = config.url(opts.urlParam);
+                }
                 let promise = Util[httpMethod]({
-                    url: config.url,
+                    url: url,
                     data: opts.data,
                     withOutAccessKey: opts.withOutAccessKey
                 }, (rst) => {
