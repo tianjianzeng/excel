@@ -1,5 +1,5 @@
 <template>
-    <div class="excel excel19">
+    <div class="excel excel21">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
@@ -17,42 +17,42 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">本年新增的符合条件的股权投资额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a1|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">   税收规定的抵扣率</td>
-                        <td>{{"70%"}}</td>
+                        <td>{{a2}}</td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">   本年新增的可抵扣的股权投资额（1行×2行）%）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a3|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue">以前年度结转的尚未抵扣的股权投资余额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a4|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">本年可抵扣的股权投资额（3行+4行）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a5|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue">本年可用于抵扣的应纳税所得额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a6|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue">本年实际抵扣应纳税所得额（5行≤6行，本行=5行；5行＞6行，本行=6行）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a7|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue">本年实际抵扣应纳税所得额（5行≤6行，本行=5行；5行＞6行，本行=6行）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a8|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td colspan="3">二、通过有限合伙制创业投资企业投资未上市中小高新企业按一定比例抵扣分得的应纳税所得额</td>
@@ -60,32 +60,32 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">本年从有限合伙创投企业应分得的应纳税所得额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a9|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue">本年新增的可抵扣投资额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a10|formatCurrency}}</td>
                     </tr>      
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue">以前年度结转的可抵扣投资额余额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a11|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">本年可抵扣投资额（10行+11行）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a12|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">本年实际抵扣应分得的应纳税所得额（9行≤12行，本行=9行；9行＞12行，本行=12行）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a13|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue">结转以后年度抵扣的投资额余额（9行≤12行，本行=12行-9行；9行＞12行，本行=0）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a14|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td colspan="3">三、抵扣应纳税所得额合计</td>
@@ -93,7 +93,7 @@
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">合计（7行+13行）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a15|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -111,217 +111,26 @@
     import {formatCurrency} from '../utils/filters'
 
     export default {
-        name: 'excel19',
+        name: 'excel21',
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                id:0,
+                a1:0,
+                a2:0,
+                a3:0,
+                a4:0,
+                a5:0,
+                a6:0,
+                a7:0,
+                a8:0,
+                a9:0,
+                a10:0,
+                a11:0,
+                a12:0,
+                a13:0,
+                a14:0,
+                a15:0
             }
         },
         filters:{formatCurrency},
@@ -329,28 +138,74 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA107030"])
         },
         watch: {
-            
+            getTableA107030(newVal) {
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                }
+            }
         },
         methods:{
-            save(){}
+            save(){
+                let postData = {
+                    "uid":100,
+                    "cyear":2016,
+                    "editId":10086,
+                    "id":this.id
+                };
+                for(let i=1;i<=15;i++){
+                    let p = `a${i}`
+                    postData[p]=this[p];
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA107030", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableA107030", {
+                data: {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .excel19{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="3"]{
-            text-align: center;
-        }
-    }
 </style>

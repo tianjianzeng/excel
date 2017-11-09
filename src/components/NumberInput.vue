@@ -1,11 +1,11 @@
 <template>
     <div>
-        <p v-if="showText" @click="click">{{text|formatCurrency(fixed)}}</p>
+        <p v-if="showText" @click="click">{{text|filter(filter,fixed)}}</p>
         <input ref="valInput" :class="{'error':error}" @focus="focus" v-else v-model="text" @blur="blur" @keyup="keyup">
     </div>
 </template>
 <script>
-    import {formatCurrency} from '../utils/filters'
+    import {formatCurrency, filter} from '../utils/filters'
     export default {
         data() {
             return {
@@ -14,7 +14,7 @@
                 error: false
             }
         },
-        filters: {formatCurrency},
+        filters: {filter},
         watch: {
             text(newVal,oldVal) {
                 if(newVal){
@@ -99,6 +99,10 @@
             },
             "max":{
                 type: Number
+            },
+            "filter":{
+                type: Function,
+                default: formatCurrency
             }
         }
     }

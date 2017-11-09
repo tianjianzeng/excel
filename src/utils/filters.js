@@ -43,3 +43,9 @@ export function formatYear(year) {
     }
     return `前${arr[idx]}年度`;
 }
+
+export function filter(input, fn) {
+    let arg = Array.prototype.slice.call(arguments, 2);
+    arg.unshift(input);
+    return fn.apply(null, arg);
+}

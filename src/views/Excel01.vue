@@ -690,7 +690,7 @@
             NumberInput
         },
         computed: {
-            ...mapGetters(["getTable"]),
+            ...mapGetters(["getTableA107020"]),
             a1_1() {
                 return ((this.a2_1 || 0) * Math.pow(10,this.fixed) + (this.a13_1 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
             },
@@ -918,7 +918,7 @@
             },
         },
         watch: {
-            getTable(newVal) {
+            getTableA107020(newVal) {
                 if(newVal!=null){
                     for(let i in newVal){
                         if(this.hasOwnProperty(i)){
@@ -987,7 +987,7 @@
                     spinner: 'el-icon-loading',
                     background: 'rgba(0, 0, 0, 0.7)'
                 });
-                store.dispatch("edit", {
+                store.dispatch("editA107020", {
                     data: postData,
                     callback:(rst)=>{
                         if(rst.status==0){
@@ -1010,7 +1010,7 @@
                 spinner: 'el-icon-loading',
                 background: 'rgba(0, 0, 0, 0.7)'
             });
-            store.dispatch("getTable", {
+            store.dispatch("getTableA107020", {
                 data: {
                     "uid":1,
                     "year":2016,

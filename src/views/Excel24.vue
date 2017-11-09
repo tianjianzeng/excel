@@ -32,7 +32,7 @@
                         <td class="green">
                             <input>
                         </td>
-                        <td class="blue">是否发生偷骗税行为</td>
+                        <td class="blue">集成电路生产企业认定文号</td>
                         <td class="green">
                             <input>
                         </td>
@@ -467,16 +467,122 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA107042"]),
+            a5(){
+                let rst = 0;
+                for(let i=6;i<=7;i++){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a9(){
+                return (this.a5 * 100.0 / this.a8).toFixed(2) + "%";
+            },
+            a13(){
+                return (this.a10 * 100.0 / this.a12).toFixed(2) + "%";
+            },
+            a14(){
+                return (this.a11 * 100.0 / this.a12).toFixed(2) + "%";
+            },
+            a15(){
+                let rst = 0;
+                for(let i of [16,25]){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a16(){
+                let rst = 0;
+                for(let i of [17,18,19,20,21,22,24]){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a25(){
+                let rst = 0;
+                for(let i of [26,27]){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a28(){
+                return this.toPercent(this.a28_,2);
+            }
         },
         watch: {
-            
+            getTableA107042(newVal) {
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                    this.a28_ = parseFloat(newVal.a28);
+                }
+            }
         },
         methods:{
-            save(){}
+            toPercent(num, fixed = 2) {
+                if(typeof num != "number"){
+                    num = Number(num);
+                    if( isNaN(num)){
+                        num = 0;
+                    }
+                }
+                return num.toFixed(fixed) + '%';
+            },
+            save(){
+                let postData = {
+                    "id":this.id
+                };
+                for(let i=1;i<=29;i++){
+                    let p = `a${i}`
+                    postData[p]=this[p];
+                    for(let j = 1;j<=2;j++){
+                        let q = `a${i}_${j}`
+                        postData[q]=this[q];
+                    }
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA107042", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableA107042", {
+                data: {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
         }
     }
 </script>

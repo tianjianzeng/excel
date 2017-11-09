@@ -34,12 +34,12 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    getTable: {
+    getTableA107020: {
         url: formatUrl('v1/a107020/getTable'),
         httpMethod: "post",
         defaultState: {}
     },
-    edit: {
+    editA107020: {
         url: formatUrl('v1/a107020/edit'),
         httpMethod: "post",
         defaultState: {}
@@ -319,6 +319,56 @@ const configs = {
     },
     deleteA107011: {
         url: formatUrl('v1/a107011/del'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107014: {
+        url: formatUrl('v1/a107014/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107030: {
+        url: formatUrl('v1/a107030/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107030: {
+        url: formatUrl('v1/a107030/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    selListA107040: {
+        url: formatUrl('v1/a107040/selList'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107040: {
+        url: formatUrl('v1/a107040/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107040: {
+        url: formatUrl('v1/a107040/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107041: {
+        url: formatUrl('v1/a107041/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107041: {
+        url: formatUrl('v1/a107041/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA107042: {
+        url: formatUrl('v1/a107042/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA107042: {
+        url: formatUrl('v1/a107042/edit'),
         httpMethod: "post",
         defaultState: {}
     }
