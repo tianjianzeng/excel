@@ -2,9 +2,23 @@
     <div class="excel excel25">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col width="5%"></col>
+                <col width="10%"></col>
+                <col width="5%"></col>
+                <col width="10%"></col>
+                <col width="10%"></col>
+                <col width="10%"></col>
+                <col width="5%"></col>
+                <col width="5%"></col>
+                <col width="5%"></col>
+                <col width="5%"></col>
+                <col width="5%"></col>
+                <col width="5%"></col>
+                <col width="10%"></col>
+                <col width="10%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="14">软件、集成电路企业优惠情况及明细表</td>
+                        <td colspan="14">税额抵免优惠明细表</td>
                     </tr>
                     <tr>
                         <td class="blue" rowspan="3">行次</td>
@@ -37,134 +51,55 @@
                         <td class="blue">9</td>
                         <td class="blue">10（5+6+7+8+9）</td>
                         <td class="blue">11</td>
+                        <td class="blue">12（4-10-11）</td>
                     </tr>
-                    <tr>
-                        <td style="width:5%" class="blue">1</td>
-                        <td style="width:10%" class="blue">前五年度</td>
-                        <td style="width:5%" class="green">{{-5}}</td>
-                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:10%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:10%">{{0|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:10%">{{0|formatCurrency}}</td>
-                        <td style="width:10%" class="blue">*</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">2</td>
-                        <td class="blue">前四年度</td>
-                        <td class="green">{{-5}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue">*</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">3</td>
-                        <td class="blue">前三年度</td>
-                        <td class="green">{{-5}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">4</td>
-                        <td class="blue">前二年度</td>
-                        <td class="green">{{-5}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">5</td>
-                        <td class="blue">前一年度</td>
-                        <td class="green">{{-5}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                    </tr>
-                    <tr>
-                        <td class="blue">6</td>
-                        <td class="blue">本年度</td>
-                        <td class="green">{{0}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                    <tr v-for="(item,index) in list" :key="index">
+                        <td class="blue">{{item.rowNum}}</td>
+                        <td class="blue">{{item.a1|formatYear}}</td>
+                        <td class="green">{{item.a1}}</td>
+                        <td class="green"><number-input v-model="item.a2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a3" :fixed="fixed"></number-input></td>
+                        <td>{{item.a4|formatCurrency}}</td>
+                        <td :class="{'green':item.a5!=null,'blue':item.a5==null}"><span v-if="item.a5==null">*</span><number-input v-else v-model="item.a5" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a6!=null,'blue':item.a6==null}"><span v-if="item.a6==null">*</span><number-input v-else v-model="item.a6" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a7!=null,'blue':item.a7==null}"><span v-if="item.a7==null">*</span><number-input v-else v-model="item.a7" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a8!=null,'blue':item.a8==null}"><span v-if="item.a8==null">*</span><number-input v-else v-model="item.a8" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a9!=null,'blue':item.a9==null}"><span v-if="item.a9==null">*</span><number-input v-else v-model="item.a9" :fixed="fixed"></number-input></td>
+                        <td :class="{'blue':!item.a10}"><span v-if="!item.a10">*</span><span v-else>{{item.a10|formatCurrency}}</span></td>
+                        <td>{{item.a11|formatCurrency}}</td>
+                        <td :class="{'blue':(index==0)}"><span v-if="index==0">*</span><span v-else>{{item.a12|formatCurrency}}</span></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue" colspan="11">本年实际抵免税额合计</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a7Check|formatCurrency}}</td>
                         <td class="blue">*</td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue" colspan="12">可结转以后年度抵免的税额合计</td>
-                        <td class="blue">*</td>
+                        <td>{{a8|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue" rowspan="3">专用设备投资情况</td>
                         <td class="blue" colspan="8">本年允许抵免的环境保护专用设备投资额</td>
-                        <td class="green" colspan="4"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green" colspan="4"><number-input v-model="a9" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue" colspan="8">本年允许抵免节能节水的专用设备投资额</td>
-                        <td class="green" colspan="4"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green" colspan="4"><number-input v-model="a10" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue" colspan="8">本年允许抵免的安全生产专用设备投资额</td>
-                        <td class="green" colspan="4"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green" colspan="4"><number-input v-model="a11" :fixed="fixed"></number-input></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" :disabled="a7<a7Check" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -174,249 +109,123 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
-    import {formatCurrency} from '../utils/filters'
+    import {formatCurrency,formatYear} from '../utils/filters'
 
     export default {
         name: 'excel25',
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                id:0,
+                list:[],
+                a7Check:0,
+                a7:0,
+                a8:0,
+                a9:0,
+                a10:0,
+                a11:0
             }
         },
-        filters:{formatCurrency},
+        filters:{formatCurrency,formatYear},
         components: {
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA107050"])
         },
         watch: {
-            
+            getTableA107050(newVal){
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                    this.list = JSON.parse(JSON.stringify(newVal.rows));
+                }
+            },
+            list:{
+                handler(val){
+                    var a7=0,
+                        a8=0;
+                        
+                    val[0].a11 = Math.min(val[5].a2, val[0].a4-val[0].a10);
+                    val[1].a11 = Math.min(val[5].a2-val[0].a11, val[1].a4-val[1].a10);
+                    val[2].a11 = Math.min(val[5].a2-val[1].a11, val[2].a4-val[2].a10);
+                    val[3].a11 = Math.min(val[5].a2-val[2].a11, val[3].a4-val[3].a10);
+                    val[4].a11 = Math.min(val[5].a2-val[3].a11, val[4].a4-val[4].a10);
+                    val[5].a11 = Math.min(val[5].a2-val[4].a11, val[5].a4);
+                    val.forEach((item,index)=>{
+                        item.a4 = item.a3 * 0.1;
+                        item.a10 = ((item.a5||0) * Math.pow(10, this.fixed) + (item.a6||0) * Math.pow(10, this.fixed) + (item.a7||0) * Math.pow(10, this.fixed) + (item.a8||0) * Math.pow(10, this.fixed) + (item.a9||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        if(index!=0){
+                            item.a12 = ((item.a4) * Math.pow(10, this.fixed) - (item.a10||0) * Math.pow(10, this.fixed) - (item.a11||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                            a8 += item.a12;
+                        }
+                        a7 += item.a11;
+                    });
+                    this.a7Check = a7;
+                    this.a8 = a8;
+                },
+                deep: true
+            }
         },
         methods:{
-            save(){}
+            save(){
+                let postData = {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086,
+                    "id":this.id
+                };
+                for(let i=1;i<=11;i++){
+                    let p = `a${i}`
+                    postData[p]=this[p];
+                }
+                postData.rows = this.list;
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA107050", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableA107050", {
+                data: {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .excel25{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="14"]{
-            text-align: center;
-        }
-    }
 </style>

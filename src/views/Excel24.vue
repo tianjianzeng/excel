@@ -13,35 +13,35 @@
                     <tr>
                         <td class="blue">1</td>
                         <td style="width:40%" class="blue" colspan="2">企业成立日期</td>
-                        <td style="width:10%" class="green">{{""}}</td>
+                        <td style="width:10%" class="green">{{a1_1}}</td>
                         <td style="width:35%" class="blue">软件企业证书取得日期</td>
-                        <td style="width:10%" class="green"><input type="date"></td>
+                        <td style="width:10%" class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" default-value="a1_2"></el-date-picker></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue" colspan="2">软件企业认定证书编号</td>
-                        <td class="green"><input></td>
+                        <td class="green"><input v-model="a2_1"></td>
                         <td class="blue">软件产品登记证书编号</td>
                         <td class="green">
-                            <input>
+                            <input v-model="a2_2">
                         </td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue" colspan="2">计算机信息系统集成资质等级认定证书编号</td>
                         <td class="green">
-                            <input>
+                            <input v-model="a3_1">
                         </td>
                         <td class="blue">集成电路生产企业认定文号</td>
                         <td class="green">
-                            <input>
+                            <input v-model="a3_2">
                         </td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue" colspan="2">集成电路设计企业认定证书编号</td>
                         <td class="green" colspan="3">
-                            <input>
+                            <input v-model="a4">
                         </td>
                     </tr>
                     <tr>
@@ -52,124 +52,124 @@
                         <td class="blue">6</td>
                         <td class="blue" rowspan="5" style="width:5%">人员指标</td>
                         <td class="blue" colspan="3">一、企业本年月平均职工总人数</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a6" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue" colspan="3">    其中:签订劳动合同关系且具有大学专科以上学历的职工人数</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a7" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue" colspan="3">二、研究开发人员人数</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a8" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue" colspan="3">三、签订劳动合同关系且具有大学专科以上学历的职工人数占企业当年月平均职工总人数的比例（7÷6）</td>
-                        <td>{{0|formatCurrency}}百分比显示，2位小数，四舍五入例：12.34%"</td>
+                        <td>{{a9}}</td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue" colspan="3">四、研究开发人员占企业本年月平均职工总数的比例（8÷6）</td>
-                        <td>{{0|formatCurrency}}百分比显示，2位小数，四舍五入例：12.34%"</td>
+                        <td>{{a10}}</td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
-                        <td class="blue" rowspan="5">收入指标</td>
+                        <td class="blue" rowspan="15">收入指标</td>
                         <td class="blue" colspan="3">五、企业收入总额</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue" colspan="3">六、集成电路制造销售（营业）收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue" colspan="3">七、集成电路制造销售（营业）收入占企业收入总额的比例（12÷11）</td>
-                        <td>{{0|formatCurrency}}百分比显示，2位小数，四舍五入例：12.34%"</td>
+                        <td>{{a13}}</td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue" colspan="3">八、集成电路设计销售（营业）收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a14" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue" colspan="3">    其中：集成电路自主设计销售（营业）收入</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a15" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue" colspan="3">九、集成电路设计企业的集成电路设计销售（营业）收入占企业收入总额的比例（14÷11）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a16}}</td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue" colspan="3">十、集成电路自主设计销售（营业）收入占企业收入总额的比例（15÷11）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a17}}</td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
                         <td class="blue" colspan="3">十一、软件产品开发销售（营业）收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">19</td>
                         <td class="blue" colspan="3">     其中：嵌入式软件产品和信息系统集成产品开发销售（营业）收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">20</td>
                         <td class="blue" colspan="3">十二、软件产品自主开发销售（营业）收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a20" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">21</td>
                         <td class="blue" colspan="3">     其中：嵌入式软件产品和信息系统集成产品自主开发销售（营业）收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a21" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
                         <td class="blue" colspan="3">十三、软件企业的软件产品开发销售（营业）收入占企业收入总额的比例（18÷11）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a22}}</td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
                         <td class="blue" colspan="3">十四、嵌入式软件产品和信息系统集成产品开发销售（营业）收入占企业收入总额的比例（19÷11）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a23}}</td>
                     </tr>
                     <tr>
                         <td class="blue">24</td>
                         <td class="blue" colspan="3">十五、软件产品自主开发销售（营业）收入占企业收入总额的比例（20÷11）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a24}}</td>
                     </tr>
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue" colspan="3">十六、嵌入式软件产品和信息系统集成产品自主开发销售（营业）收入占企业收入总额的比例（21÷11）</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a25}}</td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue" rowspan="3">研究开发费用指标</td>
                         <td class="blue" colspan="3">十七、研究开发费用总额</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a26" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
                         <td class="blue" colspan="3">     其中：企业在中国境内发生的研究开发费用金额</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a27" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">28</td>
                         <td class="blue" colspan="3">十八、研究开发费用总额占企业销售（营业）收入总额的比例</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input>录入结果以%显示，2位小数，不限制正负零</td>
+                        <td class="green"><number-input v-model="a28_" :fixed="fixed" :filter="toPercent"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">29</td>
                         <td class="blue" colspan="3">十九、企业在中国境内发生的研究开发费用金额占研究开发费用总额的比例（27÷26）</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a29}}</td>
                     </tr>
                     <tr>
                         <td class="blue">30</td>
@@ -179,59 +179,59 @@
                         <td class="blue">31</td>
                         <td class="blue" rowspan="3">人员指标</td>
                         <td class="blue" colspan="3">二十、企业职工总数</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a31" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">32</td>
                         <td class="blue" colspan="3">二十一、从事软件产品开发和技术服务的技术人员</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a32" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">33</td>
                         <td class="blue" colspan="3">二十二、从事软件产品开发和技术服务的技术人员占企业职工总数的比例（32÷31）</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a33}}</td>
                     </tr>
                     <tr>
                         <td class="blue">34</td>
                         <td class="blue" rowspan="5">收入指标</td>
                         <td class="blue" colspan="3">二十三、企业年总收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a34" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">35</td>
                         <td class="blue" colspan="3">    其中：企业年软件销售收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a35" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">36</td>
                         <td class="blue" colspan="3">        其中：自产软件销售收入</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a36" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">37</td>
                         <td class="blue" colspan="3">二十四、软件销售收入占企业年总收入比例（35÷34）</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a37}}</td>
                     </tr>
                     <tr>
                         <td class="blue">38</td>
                         <td class="blue" colspan="3">二十五、自产软件收入占软件销售收入比例（36÷35）</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a38}}</td>
                     </tr>
                     <tr>
                         <td class="blue">39</td>
                         <td class="blue" rowspan="2">研究开发经费指标</td>
                         <td class="blue" colspan="3">二十六、软件技术及产品的研究开发经费</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a39" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">40</td>
                         <td class="blue" colspan="3">二十七、软件技术及产品的研究开发经费占企业年软件收入比例（39÷35）</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a40}}</td>
                     </tr>
                     <tr>
                         <td class="blue">41</td>
                         <td class="blue" colspan="4">减免税金额</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a41" :fixed="fixed"></number-input></td>
                     </tr>
                 </tbody>
             </table>
@@ -253,213 +253,37 @@
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                id:0,
+                a1_1:null,
+                a1_2:"",
+                a2_1:"",
+                a2_2:"",
+                a3_1:"",
+                a3_2:"",
+                a4:"",
+                a5:0,
+                a6:0,
+                a7:0,
+                a8:0,
+                a11:0,
+                a12:0,
+                a14:0,
+                a15:0,
+                a18:0,
+                a19:0,
+                a20:0,
+                a21:0,
+                a26:0,
+                a27:0,
+                a30:0,
+                a31:0,
+                a32:0,
+                a34:0,
+                a35:0,
+                a36:0,
+                a39:0,
+                a28_:0,
+                a41:0
             }
         },
         filters:{formatCurrency},
@@ -468,45 +292,50 @@
         },
         computed: {
             ...mapGetters(["getTableA107042"]),
-            a5(){
-                let rst = 0;
-                for(let i=6;i<=7;i++){
-                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
-                }
-                return rst * 1.0/ Math.pow(10,this.fixed);
-            },
             a9(){
-                return (this.a5 * 100.0 / this.a8).toFixed(2) + "%";
+                return this.toPercent(this.a7 * 100.0 / this.a6);
+            },
+            a10(){
+                return this.toPercent(this.a8 * 100.0 / this.a6);
             },
             a13(){
-                return (this.a10 * 100.0 / this.a12).toFixed(2) + "%";
-            },
-            a14(){
-                return (this.a11 * 100.0 / this.a12).toFixed(2) + "%";
-            },
-            a15(){
-                let rst = 0;
-                for(let i of [16,25]){
-                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
-                }
-                return rst * 1.0/ Math.pow(10,this.fixed);
+                return this.toPercent(this.a12 * 100.0 / this.a11);
             },
             a16(){
-                let rst = 0;
-                for(let i of [17,18,19,20,21,22,24]){
-                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
-                }
-                return rst * 1.0/ Math.pow(10,this.fixed);
+                return this.toPercent(this.a14 * 100.0 / this.a11);
+            },
+            a17(){
+                return this.toPercent(this.a15 * 100.0 / this.a11);
+            },
+            a22(){
+                return this.toPercent(this.a18 * 100.0 / this.a11);
+            },
+            a23(){
+                return this.toPercent(this.a19 * 100.0 / this.a11);
+            },
+            a24(){
+                return this.toPercent(this.a20 * 100.0 / this.a11);
             },
             a25(){
-                let rst = 0;
-                for(let i of [26,27]){
-                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
-                }
-                return rst * 1.0/ Math.pow(10,this.fixed);
+                return this.toPercent(this.a21 * 100.0 / this.a11);
             },
             a28(){
                 return this.toPercent(this.a28_,2);
+            },
+            a29(){
+                return this.toPercent(this.a27 * 100.0 / this.a26);
+            },
+            a33(){
+                return this.toPercent(this.a32 * 100.0 / this.a31);
+            },
+            a37(){
+                return this.toPercent(this.a35 * 100.0 / this.a34);
+            },
+            a38(){
+                return this.toPercent(this.a36 * 100.0 / this.a35);
+            },
+            a40(){
+                return this.toPercent(this.a39 * 100.0 / this.a35);
             }
         },
         watch: {
@@ -535,7 +364,7 @@
                 let postData = {
                     "id":this.id
                 };
-                for(let i=1;i<=29;i++){
+                for(let i=1;i<=41;i++){
                     let p = `a${i}`
                     postData[p]=this[p];
                     for(let j = 1;j<=2;j++){

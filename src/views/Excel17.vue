@@ -67,7 +67,7 @@
                         <td class="blue" colspan="2">16（6+9+15）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">001</td>
+                        <td class="blue">{{(index+1).toString().padSart("0",3)}}</td>
                         <td class="green"><input v-model="item.a1"></td>
                         <td class="green">
                             <el-select v-model="item.a2" placeholder="请选择">

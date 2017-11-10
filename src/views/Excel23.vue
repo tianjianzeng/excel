@@ -15,7 +15,7 @@
                         <td class="blue" colspan="2">高新技术企业证书编号</td>
                         <td class="green"><input v-model="a1_1"></td>
                         <td class="blue">高新技术企业证书取得时间</td>
-                        <td class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" default-value="a2"></el-date-picker></td>
+                        <td class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" default-value="a1_2"></el-date-picker></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
