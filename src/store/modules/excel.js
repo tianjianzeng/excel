@@ -39,8 +39,8 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    addA100000: {
-        url: formatUrl("v1/a100000/add"),
+    editA100000: {
+        url: formatUrl("v1/a100000/edit"),
         httpMethod: "post",
         defaultState: {}
     },
@@ -391,7 +391,27 @@ const configs = {
         url: formatUrl('v1/a107050/edit'),
         httpMethod: "post",
         defaultState: {}
-    }
+    },
+    getTableA108000: {
+        url: formatUrl('v1/a108000/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA108000: {
+        url: formatUrl('v1/a108000/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableAproA: {
+        url: formatUrl('v1/aproa/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editAproA: {
+        url: formatUrl('v1/aproa/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
 };
 
 

@@ -1,15 +1,15 @@
 <template>
-    <p :class="{'error':error}">{{value|formatCurrency}}</p>
+    <p :class="{'error':error}">{{value|filter(filter,fixed)}}</p>
 </template>
 <script>
-    import {formatCurrency} from '../utils/filters'
+    import {formatCurrency, filter} from '../utils/filters'
     export default {
         data() {
             return {
                 error: false
             }
         },
-        filters: {formatCurrency},
+        filters: {filter},
         watch: {
             value(newVal){
                 this.$parent.invalid>0 && this.$parent.invalid--
@@ -32,6 +32,10 @@
             this.$parent.invalid = 0;
         },
         props: {
+            "fixed":{
+                type: Number,
+                default: 2
+            },
             "value":{
                 type: Number,
                 default: 0
@@ -41,6 +45,10 @@
             },
             "max":{
                 type: Number
+            },
+            "filter":{
+                type: Function,
+                default: formatCurrency
             }
         }
     }

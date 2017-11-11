@@ -4,7 +4,7 @@
             <table cellspacing="0" cellpadding="0" border="0" >
                 <tbody>
                     <tr>
-                        <td colspan="20">境外所得税收抵免明细表</td>
+                        <td colspan="21">境外所得税收抵免明细表</td>
                     </tr>
                     <tr>
                         <td class="blue" rowspan="3">行次</td>
@@ -23,7 +23,7 @@
                         <td class="blue" rowspan="2">未超过境外所得税抵免限额的余额</td>
                         <td class="blue" rowspan="2">本年可抵免以前年度未抵免境外所得税额</td>
                         <td class="blue" colspan="4">按简易办法计算</td>
-                        <td class="blue" rowspan="2">境外所得抵免所得税额合计</td>
+                        <td class="blue" rowspan="2" colspan="2">境外所得抵免所得税额合计</td>
                     </tr>
                     <tr>
                         <td class="blue">按低于12.5%的实际税率计算的抵免额</td>
@@ -50,56 +50,56 @@
                         <td class="blue">16</td>
                         <td class="blue">17</td>
                         <td class="blue">18（15+16+17）</td>
-                        <td class="blue">19（12+14+18）</td>
+                        <td class="blue" colspan="2">19（12+14+18）</td>
                     </tr>
-                    <tr>
+                    <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">001</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{item.a1|formatCurrency}}</td>
+                        <td>{{item.a2|formatCurrency}}</td>
+                        <td>{{item.a3|formatCurrency}}</td>
+                        <td>{{item.a4|formatCurrency}}</td>
+                        <td>{{item.a5|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a6" :fixed="fixed"></number-input></td>
+                        <td>{{item.a7|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a8" :fixed="fixed"></number-input></td>
+                        <td>{{item.a9|formatCurrency}}</td>
+                        <td>{{item.a10|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a11" :fixed="fixed"></number-input></td>
+                        <td>{{item.a12|formatCurrency}}</td>
+                        <td>{{item.a13|formatCurrency}}</td>
+                        <td>{{item.a14|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a15" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a16" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a17" :fixed="fixed"></number-input></td>
+                        <td>{{item.a18|formatCurrency}}</td>
+                        <td>{{item.a19|formatCurrency}}</td>
+                        <td><el-button type="primary" @click="edit(item)">保存</el-button></td>
                     </tr>
                     <tr>
                         <td class="blue"></td>
                         <td class="blue">合计</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{total.a2|formatCurrency}}</td>
+                        <td>{{total.a3|formatCurrency}}</td>
+                        <td>{{total.a4|formatCurrency}}</td>
+                        <td>{{total.a5|formatCurrency}}</td>
+                        <td>{{total.a6|formatCurrency}}</td>
+                        <td>{{total.a7|formatCurrency}}</td>
+                        <td>{{total.a8|formatCurrency}}</td>
+                        <td>{{total.a9|formatCurrency}}</td>
+                        <td>{{total.a10|formatCurrency}}</td>
+                        <td>{{total.a11|formatCurrency}}</td>
+                        <td>{{total.a12|formatCurrency}}</td>
+                        <td>{{total.a13|formatCurrency}}</td>
+                        <td>{{total.a14|formatCurrency}}</td>
+                        <td>{{total.a15|formatCurrency}}</td>
+                        <td>{{total.a16|formatCurrency}}</td>
+                        <td>{{total.a17|formatCurrency}}</td>
+                        <td>{{total.a18|formatCurrency}}</td>
+                        <td colspan="2">{{total.a19|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -116,213 +116,8 @@
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                total:{},
+                list:[]
             }
         },
         filters:{formatCurrency},
@@ -330,28 +125,95 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA108000"])
         },
         watch: {
-            
+            getTableA108000(newVal){
+                if(newVal!=null){
+                    this.list = newVal.rows && JSON.parse(JSON.stringify(newVal.rows));
+                    this.total = newVal.total && JSON.parse(JSON.stringify(newVal.total));
+                }
+            },
+            list:{
+                handler(val){
+                    var a7=0,
+                        a8=0;
+                        
+                    val[0].a11 = Math.min(val[5].a2, val[0].a4-val[0].a10);
+                    val[1].a11 = Math.min(val[5].a2-val[0].a11, val[1].a4-val[1].a10);
+                    val[2].a11 = Math.min(val[5].a2-val[1].a11, val[2].a4-val[2].a10);
+                    val[3].a11 = Math.min(val[5].a2-val[2].a11, val[3].a4-val[3].a10);
+                    val[4].a11 = Math.min(val[5].a2-val[3].a11, val[4].a4-val[4].a10);
+                    val[5].a11 = Math.min(val[5].a2-val[4].a11, val[5].a4);
+                    val.forEach((item,index)=>{
+                        item.a4 = item.a3 * 0.1;
+                        item.a10 = ((item.a5||0) * Math.pow(10, this.fixed) + (item.a6||0) * Math.pow(10, this.fixed) + (item.a7||0) * Math.pow(10, this.fixed) + (item.a8||0) * Math.pow(10, this.fixed) + (item.a9||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        if(index!=0){
+                            item.a12 = ((item.a4) * Math.pow(10, this.fixed) - (item.a10||0) * Math.pow(10, this.fixed) - (item.a11||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                            a8 += item.a12;
+                        }
+                        a7 += item.a11;
+                    });
+                    this.a7Check = a7;
+                    this.a8 = a8;
+                },
+                deep: true
+            }
         },
         methods:{
-            save(){}
+            edit(item){
+                let postData = {
+                    a6: item.a6,
+                    a8: item.a8,
+                    a11: item.a11,
+                    a15:item.a15,
+                    a16: item.a16,
+                    a17: item.a17,
+                    id:item.id
+                };
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA108000", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableA108000", {
+                data: {
+                    "uid":100,
+                    "year":2016,
+                    "userId":10086
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .excel26{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="20"]{
-            text-align: center;
-        }
-    }
 </style>

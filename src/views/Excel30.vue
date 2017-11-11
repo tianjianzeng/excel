@@ -449,16 +449,106 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableAproA"]),
+            a7_1() {
+                return ((this.a1_1 || 0) * Math.pow(10,this.fixed) + (this.a2_1 || 0) * Math.pow(10,this.fixed) - (this.a3_1 || 0) * Math.pow(10,this.fixed) - (this.a4_1 || 0) * Math.pow(10,this.fixed) - (this.a5_1 || 0) * Math.pow(10,this.fixed) - (this.a6_1 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a7_2() {
+                return ((this.a1_2 || 0) * Math.pow(10,this.fixed) + (this.a2_2 || 0) * Math.pow(10,this.fixed) - (this.a3_2 || 0) * Math.pow(10,this.fixed) - (this.a4_2 || 0) * Math.pow(10,this.fixed) - (this.a5_2 || 0) * Math.pow(10,this.fixed) - (this.a6_2 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a13_1() {
+                return ((this.a8_1 || 0) * Math.pow(10,this.fixed) + (this.a9_1 || 0) * Math.pow(10,this.fixed) + (this.a10_1 || 0) * Math.pow(10,this.fixed) - (this.a11_1 || 0) * Math.pow(10,this.fixed) + (this.a12_1 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a13_2() {
+                return ((this.a8_2 || 0) * Math.pow(10,this.fixed) + (this.a9_2 || 0) * Math.pow(10,this.fixed) + (this.a10_2 || 0) * Math.pow(10,this.fixed) - (this.a11_2 || 0) * Math.pow(10,this.fixed) + (this.a12_2 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a19_1() {
+                return ((this.a14_1 || 0) * Math.pow(10,this.fixed) + (this.a15_1 || 0) * Math.pow(10,this.fixed) - (this.a16_1 || 0) * Math.pow(10,this.fixed) - (this.a11_1 || 0) * Math.pow(10,this.fixed) - (this.a17_1 || 0) * Math.pow(10,this.fixed) - (this.a18_1 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a19_2() {
+                return ((this.a14_2 || 0) * Math.pow(10,this.fixed) + (this.a15_2 || 0) * Math.pow(10,this.fixed) - (this.a16_2 || 0) * Math.pow(10,this.fixed) - (this.a11_1 || 0) * Math.pow(10,this.fixed) - (this.a17_2 || 0) * Math.pow(10,this.fixed) - (this.a18_2 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a20_1() {
+                return ((this.a7_1 || 0) * Math.pow(10,this.fixed) + (this.a13_1 || 0) * Math.pow(10,this.fixed) + (this.a119_1 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a20_2() {
+                return ((this.a7_2 || 0) * Math.pow(10,this.fixed) + (this.a13_2 || 0) * Math.pow(10,this.fixed) + (this.a119_2 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a22_1() {
+                return ((this.a20_1 || 0) * Math.pow(10,this.fixed) + (this.a21_1 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a22_2() {
+                return ((this.a20_2 || 0) * Math.pow(10,this.fixed) + (this.a21_2 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            }
+
         },
         watch: {
-            
+            getTableAproA(newVal) {
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                }
+            },
         },
         methods:{
-            save(){}
+            save(){
+                let postData = {
+                    "uid": "545",
+                    "mon": "2017-09-07",
+                    "year": "2017",
+                    "userId": "1",
+                    "id":this.id
+                };
+                for(let i=1;i<=22;i++){
+                    for(let j=1;j<=2;j++){
+                        let p = `a${i}_${j}`
+                        postData[p]=this[p];
+                    }
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editAproA", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableAproA",{
+                data:{
+                    "uid": 1,
+                    "mon": 12,
+                    "year": 2016,
+                    "userId":104
+                },
+                always:()=>{
+                    loading.close();
+                }
+            }); 
         }
     }
 </script>
