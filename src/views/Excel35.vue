@@ -35,346 +35,346 @@
                     <tr>
                         <td class="blue">货币资金</td>
                         <td class="blue">1</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a1_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">短期借款</td>
                         <td class="blue">68</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a68_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a68_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">短期投资</td>
                         <td class="blue">2</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a2_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a2_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">应付票据</td>
                         <td class="blue">69</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a69_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a69_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">应收票据</td>
                         <td class="blue">3</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a3_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a3_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">应付账款</td>
                         <td class="blue">70</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a70_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a70_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">应收股利</td>
                         <td class="blue">4</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a4_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a4_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">预收帐款</td>
                         <td class="blue">71</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a71_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a71_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">应收利息</td>
                         <td class="blue">5</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a5_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a5_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 应付工资</td>
                         <td class="blue">72</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a72_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a72_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">应收账款</td>
                         <td class="blue">6</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a6_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a6_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">应付福利费</td>
                         <td class="blue">73</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a73_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a73_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">其他应收款</td>
                         <td class="blue">7</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a7_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a7_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">应付股利</td>
                         <td class="blue">74</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a74_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a74_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">预付账款</td>
                         <td class="blue">8</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a8_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a8_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">应交税金</td>
                         <td class="blue">75</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a75_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a75_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 应收补贴款</td>
                         <td class="blue">9</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a9_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a9_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">其他应交款</td>
                         <td class="blue">80</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a80_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a80_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 存货</td>
                         <td class="blue">10</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a10_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a10_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 其他应付款</td>
                         <td class="blue">81</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a81_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a81_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">待摊费用</td>
                         <td class="blue">11</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a11_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a11_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">预提费用</td>
                         <td class="blue">82</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a82_1|formatCurrency}}</td>
+                        <td class="green">{{a82_2|formatCurrency}}</td>
                     </tr>
                      <tr>
                         <td class="blue">一年内到期的长期债权投资</td>
                         <td class="blue">21</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a21_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a21_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 预计负债</td>
                         <td class="blue">83</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a83_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a83_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue"> 其他流动资产</td>
                         <td class="blue">24</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a24_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a24_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 一年内到期的长期负债</td>
                         <td class="blue">86</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a86_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a86_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 流动资产合计</td>
                         <td class="blue">31</td>
-                        <td >{{0|formatCurrency}}</td>
-                        <td ><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td >{{a31_1|formatCurrency}}</td>
+                        <td ><number-input v-model="a31_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 其他流动负债</td>
                         <td class="blue">90</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a90_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a90_2" :fixed="fixed" :editable="false"></number-input></td>
                     <tr>
                         <td class="blue" colspan="8">长期投资：</td>
                     </tr>  
                     <tr>
                         <td class="blue">长期股权投资</td>
                         <td class="blue">32</td>
-                        <td >{{0|formatCurrency}}</td>
-                        <td ><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td >{{a32_1|formatCurrency}}</td>
+                        <td ><number-input v-model="a32_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 流动负债合计</td>
                         <td class="blue">100</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td>{{a100_1|formatCurrency}}</td>
+                        <td><number-input v-model="a100_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">长期债权投资</td>
                         <td class="blue">34</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a34_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a34_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue" colspan="4">长期负债：</td>+
                     </tr>
                     <tr>
                         <td class="blue">长期投资合计</td>
                         <td class="blue">38</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a38_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a38_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 长期借款</td>
                         <td class="blue">101</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a101_1|formatCurrency}}</td>
+                        <td class="green">{{a101_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue" colspan="4">固定资产：</td>
                         <td class="blue"> 应付债券</td>
                         <td class="blue">102</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a102_1|formatCurrency}}</td>
+                        <td class="green">{{a102_2|formatCurrency}}</td>
                     </tr>   
                      <tr>
                         <td class="blue"> 固定资产原价</td>
                         <td class="blue">39</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a39_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a39_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">  长期应付款</td>
                         <td class="blue">103</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a103_1|formatCurrency}}</td>
+                        <td class="green">{{a103_2|formatCurrency}}</td>
                     </tr>  
                      <tr>
                         <td class="blue">减：累计折旧</td>
                         <td class="blue">40</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a40_1|formatCurrency}}</td>
+                        <td class="green">{{a40_2|formatCurrency}}</td>
                         <td class="blue">专项应付款</td>
                         <td class="blue">106</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a106_1|formatCurrency}}</td>
+                        <td class="green">{{a106_2|formatCurrency}}</td>
                     </tr>      
                     <tr>
                         <td class="blue">固定资产净值</td>
                         <td class="blue">41</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td>{{a41_1|formatCurrency}}</td>
+                        <td><number-input v-model="a41_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue"> 其他长期负债</td>
                         <td class="blue">108</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a108_1|formatCurrency}}</td>
+                        <td class="green">{{a108_2|formatCurrency}}</td>
                     </tr>       
                      <tr>
                         <td class="blue">减：固定资产减值准备</td>
                         <td class="blue">42</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a42_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a42_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">长期负债合计</td>
                         <td class="blue">110</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a110_1|formatCurrency}}</td>
+                        <td>{{a110_2|formatCurrency}}</td>
                     </tr>      
                     <tr>
                         <td class="blue"> 固定资产净额</td>
                         <td class="blue">43</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td>{{a43_1|formatCurrency}}</td>
+                        <td><number-input v-model="a43_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue" colspan="4">递延税项：</td>
                     </tr>       
                      <tr>
                         <td class="blue">工程物资</td>
                         <td class="blue">44</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a44_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a44_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">递延税款贷项</td>
                         <td class="blue">111</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a111_1|formatCurrency}}</td>
+                        <td class="green">{{a111_2|formatCurrency}}</td>
                         
                     </tr>      
                     <tr>
                         <td class="blue">在建工程</td>
                         <td class="blue">45</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a45_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a45_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue">负债合计</td>
                         <td class="blue">114</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a114_1|formatCurrency}}</td>
+                        <td>{{a114_2|formatCurrency}}</td>
                     </tr>   
                      <tr>
                         <td class="blue"> 固定资产清理</td>
                         <td class="blue">46</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a46_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a46_2" :fixed="fixed" :editable="false"></number-input></td>
                         <td class="blue" colspan="4">资本公积</td>
                     </tr>      
                     <tr>
                         <td class="blue"> 固定资产合计</td>
                         <td class="blue">50</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a50_1|formatCurrency}}</td>
+                        <td>{{a50_2|formatCurrency}}</td>
                         <td class="blue" colspan="4">所有者权益（或股东权益）：</td>
                     </tr>       
                      <tr>
                         <td class="blue" colspan="4">无形资产及其他资产：</td>
                         <td class="blue">实收资本(或股本)</td>
                         <td class="blue">115</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green">{{a115_1|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="a115_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>      
                     <tr>
                         <td class="blue">无形资产</td>
                         <td class="blue">51</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a51_1|formatCurrency}}</td>
+                        <td class="green">{{a51_2|formatCurrency}}</td>
                         <td class="blue"> 减：已归还投资</td>
                         <td class="blue">116</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a116_1|formatCurrency}}</td>
+                        <td class="green">{{a116_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">长期待摊费用</td>
                         <td class="blue">52</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a52_1|formatCurrency}}</td>
+                        <td class="green">{{a52_2|formatCurrency}}</td>
                         <td class="blue">实收资本(或股本)净额</td>
                         <td class="blue">117</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a117_1|formatCurrency}}</td>
+                        <td>{{a117_2|formatCurrency}}</td>
                     </tr>       
                     <tr>
                         <td class="blue">其他长期资产</td>
                         <td class="blue">53</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a53_1|formatCurrency}}</td>
+                        <td class="green">{{a53_2|formatCurrency}}</td>
                         <td class="blue"> 资本公积</td>
                         <td class="blue">118</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a118_1|formatCurrency}}</td>
+                        <td class="green">{{a118_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">无形资产及其他资产合计</td>
                         <td class="blue">60</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a60_1|formatCurrency}}</td>
+                        <td>{{a60_2|formatCurrency}}</td>
                         <td class="blue"> 盈余公积</td>
                         <td class="blue">119</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                    </tr> 
+                        <td class="green">{{a119_1|formatCurrency}}</td>
+                        <td class="green">{{a119_2|formatCurrency}}</td>
+                    </tr>
                     <tr>
                         <td class="blue" colspan="4"></td>
                         <td class="blue"> 其中：法定公益金</td>
                         <td class="blue">120</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a120_1|formatCurrency}}</td>
+                        <td class="green">{{a120_2|formatCurrency}}</td>
                     </tr>   
                     <tr>
                         <td class="blue" colspan="4">递延税项：</td>
                         <td class="blue"> 未分配利润</td>
                         <td class="blue">121</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a121_1|formatCurrency}}</td>
+                        <td class="green">{{a121_2|formatCurrency}}</td>
                     </tr>    
                      <tr>
                         <td class="blue">  递延税款借项</td>
                         <td class="blue">61</td>
-                        <td class="green" >{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green">{{a61_1|formatCurrency}}</td>
+                        <td class="green">{{a61_2|formatCurrency}}</td>
                         <td class="blue">所有者权益（或股东权益）合计</td>
                         <td class="blue">122</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a122_1|formatCurrency}}</td>
+                        <td>{{a122_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">资产合计</td>
                         <td class="blue">67</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a67_1|formatCurrency}}</td>
+                        <td>{{a67_2|formatCurrency}}</td>
                         <td class="blue">负债和所有者权益（或股东权益）总计</td>
                         <td class="blue">135</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{a135_1|formatCurrency}}</td>
+                        <td>{{a135_2|formatCurrency}}</td>
                     </tr>       
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" v-if="false" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -391,213 +391,135 @@
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                id:0,
+                a1_1: 0,
+                a1_2: 0,
+                a2_1: 0,
+                a2_2: 0,
+                a3_1: 0,
+                a3_2: 0,
+                a4_1: 0,
+                a4_2: 0,
+                a5_1: 0,
+                a5_2: 0,
+                a6_1: 0,
+                a6_2: 0,
+                a7_1: 0,
+                a7_2: 0,
+                a8_1: 0,
+                a8_2: 0,
+                a9_1: 0,
+                a9_2: 0,
+                a10_1: 0,
+                a10_2: 0,
+                a11_1: 0,
+                a11_2: 0,
+                a21_1: 0,
+                a21_2: 0,
+                a24_1: 0,
+                a24_2: 0,
+                a31_1: 0,
+                a31_2: 0,
+                a32_1: 0,
+                a32_2: 0,
+                a34_1: 0,
+                a34_2: 0,
+                a38_1: 0,
+                a38_2: 0,
+                a39_1: 0,
+                a39_2: 0,
+                a40_1: 0,
+                a40_2: 0,
+                a41_1: 0,
+                a41_2: 0,
+                a42_1: 0,
+                a42_2: 0,
+                a43_1: 0,
+                a43_2: 0,
+                a44_1: 0,
+                a44_2: 0,
+                a45_1: 0,
+                a45_2: 0,
+                a46_1: 0,
+                a46_2: 0,
+                a50_1: 0,
+                a50_2: 0,
+                a51_1: 0,
+                a51_2: 0,
+                a52_1: 0,
+                a52_2: 0,
+                a53_1: 0,
+                a53_2: 0,
+                a60_1: 0,
+                a60_2: 0,
+                a61_1: 0,
+                a61_2: 0,
+                a67_1: 0,
+                a67_2: 0,
+                a68_1: 0,
+                a68_2: 0,
+                a69_1: 0,
+                a69_2: 0,
+                a70_1: 0,
+                a70_2: 0,
+                a71_1: 0,
+                a71_2: 0,
+                a72_1: 0,
+                a72_2: 0,
+                a73_1: 0,
+                a73_2: 0,
+                a74_1: 0,
+                a74_2: 0,
+                a75_1: 0,
+                a75_2: 0,
+                a80_1: 0,
+                a80_2: 0,
+                a81_1: 0,
+                a81_2: 0,
+                a82_1: 0,
+                a82_2: 0,	
+                a83_1: 0,
+                a83_2: 0,
+                a86_1: 0,
+                a86_2: 0,
+                a90_1: 0,
+                a90_2: 0,
+                a100_1: 0,
+                a100_2: 0,
+                a101_1: 0,
+                a101_2: 0,
+                a102_1: 0,
+                a102_2: 0,
+                a103_1: 0,
+                a103_2: 0,
+                a106_1: 0,
+                a106_2: 0,
+                a108_1: 0,
+                a108_2: 0,
+                a110_1: 0,
+                a110_2: 0,
+                a111_1: 0,
+                a111_2: 0,
+                a114_1: 0,
+                a114_2: 0,
+                a115_1: 0,
+                a115_2: 0,
+                a116_1: 0,
+                a116_2: 0,
+                a117_1: 0,
+                a117_2: 0,
+                a118_1: 0,
+                a118_2: 0,
+                a119_1: 0,
+                a119_2: 0,
+                a120_1: 0,
+                a120_2: 0,
+                a121_1: 0,
+                a121_2: 0,
+                a122_1: 0,
+                a122_2: 0,
+                a135_1: 0,
+                a135_2: 0
             }
         },
         filters:{formatCurrency},
@@ -605,16 +527,75 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableAbalB"]),
         },
         watch: {
-            
+            getTableAbalB(newVal) {
+                if(newVal!=null){
+                    for(let i in newVal){
+                        if(this.hasOwnProperty(i)){
+                            this[i]=newVal[i];
+                        }
+                    }
+                }
+            },
         },
         methods:{
-            save(){}
+            save(){
+                let postData = {
+                    "id":this.id,
+                    "uid": 1,
+                    "mon": 12,
+                    "year": 2016,
+                    "userId":104
+                };
+                for(let i=1;i<=135;i++){
+                    for(let j=1;j<=2;j++){
+                        let p = `a${i}_${j}`
+                        postData[p]=this[p];
+                    }
+                }
+                
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editAbalB", {
+                    data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getTableAbalB",{
+                data:{
+                    "uid": 2,
+                    "mon": 12,
+                    "year": 2016,
+                    "userId":104
+                },
+                always:()=>{
+                    loading.close();
+                }
+            }); 
         }
     }
 </script>

@@ -73,6 +73,9 @@
                 this.error = false;
             },
             click(evt){
+                if(!this.editable){
+                    return;
+                }
                 this.showText=false;
                 let width = this.$el.offsetWidth;
                 this.$nextTick(()=>{
@@ -103,6 +106,10 @@
             "filter":{
                 type: Function,
                 default: formatCurrency
+            },
+            "editable":{
+                type: Boolean,
+                default: true
             }
         }
     }

@@ -2,6 +2,11 @@ import * as API from '../../utils'
 import { init, formatUrl } from '../init'
 
 const configs = {
+    getFirst: {
+        url: formatUrl("v1/first/get"),
+        httpMethod: "post",
+        defaultState: {}
+    },
     getEpA000000: {
         url: formatUrl("v1/a000000/getEp"),
         httpMethod: "post",
@@ -412,10 +417,60 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-};
+    getTableAproB: {
+        url: formatUrl('v1/aprob/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editAproB: {
+        url: formatUrl('v1/aprob/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableAproC: {
+        url: formatUrl('v1/aproc/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editAproC: {
+        url: formatUrl('v1/aproc/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableAbalA: {
+        url: formatUrl('v1/abala/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editAbalA: {
+        url: formatUrl('v1/abala/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableAbalB: {
+        url: formatUrl('v1/abalb/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editAbalB: {
+        url: formatUrl('v1/abalb/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableAbalC: {
+        url: formatUrl('v1/abalc/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editAbalC: {
+        url: formatUrl('v1/abalc/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    }
+}
 
 
 
 // init state
 
-export default init(configs);
+export default init(configs)
