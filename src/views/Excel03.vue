@@ -268,7 +268,7 @@
             ...mapGetters(["getTableA100000"]),
             a10() {
                 // 1行-2行-3行-4行-5行-6行-7行+8行+9行?
-                let rst = this.a1;
+                let rst = this.a1 * Math.pow(10,this.fixed);
                 for(let i =2;i<=7;i++){
                     rst -= this[`a${i}`] * Math.pow(10,this.fixed);
                 }
@@ -288,7 +288,7 @@
             },
             a19(){
                 //13行-14行+15行-16行-17行+18行
-                let rst = this.a13;
+                let rst = this.a13 * Math.pow(10,this.fixed);
                 rst -= this.a14 * Math.pow(10,this.fixed);
                 rst += this.a15 * Math.pow(10,this.fixed);
                 rst -= this.a16 * Math.pow(10,this.fixed);
@@ -298,7 +298,7 @@
             },
             a23(){
                 //取数规则：=19行-20行-21行-22行,正数和0正常显示，如结果＜0，则取0；
-                let rst = this.a19;
+                let rst = this.a19 * Math.pow(10,this.fixed);
                 for(let i =20;i<=22;i++){
                     rst -= this[`a${i}`] * Math.pow(10,this.fixed);
                 }
@@ -310,7 +310,7 @@
             },
             a28(){
                 //25行-26行-27行
-                let rst = this.a25;
+                let rst = this.a25 * Math.pow(10,this.fixed);
                 for(let i =26;i<=27;i++){
                     rst -= this[`a${i}`] * Math.pow(10,this.fixed);
                 }
@@ -318,14 +318,14 @@
             },
             a31(){
                 // 28行+29行-30行
-                let rst = this.a28;
+                let rst = this.a28 * Math.pow(10,this.fixed);
                 rst += this.a29 * Math.pow(10,this.fixed);
                 rst -= this.a30 * Math.pow(10,this.fixed);
                 return rst * 1.0/ Math.pow(10,this.fixed);
             },
             a33(){
                 //31行-32行
-                let rst = this.a31;
+                let rst = this.a31 * Math.pow(10,this.fixed);
                 rst -= this.a32 * Math.pow(10,this.fixed);
                 return rst * 1.0/ Math.pow(10,this.fixed);
             }

@@ -2,6 +2,10 @@
     <div class="excel excel22">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col width="20%"></col>
+                <col width="20%"></col>
+                <col width="40%"></col>
+                <col width="20%"></col>
                 <tbody>
                     <tr>
                         <td colspan="3">减免所得税优惠明细表</td>
@@ -243,19 +247,46 @@
                     <tr>
                         <td class="blue">29</td>
                         <td class="blue">   （二十三）其他1</td>
-                        <td class="blue"> 详见批注</td>
+                        <td class="blue">
+                            <el-select v-model="a29_1" placeholder="请选择">
+                                <el-option
+                                    v-for="it in selListA107040"
+                                    :key="it.id"
+                                    :label="it.name"
+                                    :value="it.id">
+                                </el-option>
+                            </el-select>
+                        </td>
                         <td class="green"><number-input v-model="a29" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">30</td>
                         <td class="blue">   （二十四）其他2</td>
-                        <td class="blue">详见批注</td>
+                        <td class="blue">
+                            <el-select v-model="a30_1" placeholder="请选择">
+                                <el-option
+                                    v-for="it in selListA107040"
+                                    :key="it.id"
+                                    :label="it.name"
+                                    :value="it.id">
+                                </el-option>
+                            </el-select>
+                        </td>
                         <td class="green"><number-input v-model="a30" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">31</td>
                         <td class="blue">   （二十五）其他3</td>
-                        <td class="blue">详见批注</td>
+                        <td class="blue">
+                            <el-select v-model="a31_1" placeholder="请选择">
+                                <el-option
+                                    v-for="it in selListA107040"
+                                    :key="it.id"
+                                    :label="it.name"
+                                    :value="it.id">
+                                </el-option>
+                            </el-select>
+                        </td>
                         <td class="green"><number-input v-model="a31" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -318,24 +349,27 @@
                 a14_2:0,
                 a15_1:0,
                 a15_2:0,
-                a16:0,
-                a17:0,
-                a18:0,
-                a19:0,
-                a20:0,
-                a21:0,
-                a22:0,
-                a23:0,
-                a24:0,
-                a25:0,
-                a26:0,
-                a27:0,
-                a28:0,
-                a29:0,
-                a30:0,
-                a31:0,
-                a32:0,
-                a33:0
+                a16: 0,
+                a17: 0,
+                a18: 0,
+                a19: 0,
+                a20: 0,
+                a21: 0,
+                a22: 0,
+                a23: 0,
+                a24: 0,
+                a25: 0,
+                a26: 0,
+                a27: 0,
+                a28: 0,
+                a29_1: null,
+                a29: 0,
+                a30_1: null,
+                a30: 0,
+                a31_1: null,
+                a31: 0,
+                a32: 0,
+                a33: 0
             }
         },
         filters:{formatCurrency},

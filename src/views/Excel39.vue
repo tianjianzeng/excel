@@ -387,7 +387,28 @@
                     this.list.splice(i,1);
                 }else{
                     //调用删除接口
-                    
+                    const loading = this.$loading({
+                        lock: true,
+                        text: '加载中',
+                        spinner: 'el-icon-loading',
+                        background: 'rgba(0, 0, 0, 0.7)'
+                    });
+                    store.dispatch("delResearch",{
+                        urlParam: item.id,
+                        callback:(rst)=>{
+                            if(rst.status==0){
+                                this.$message({
+                                    message: '删除成功',
+                                    type: 'success'
+                                });
+                                let i = this.list.indexOf(item);
+                                this.list.splice(i,1);
+                            }
+                        },
+                        always:()=>{
+                            loading.close();
+                        }
+                    })
                 }
             },
             edt(item){
@@ -404,6 +425,14 @@
                         "addid":"1",
                         a1: item.a1,
                         a2: item.a2
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
                     },
                     always:()=>{
                         loading.close();
@@ -426,6 +455,14 @@
                         "addid":"1",
                         a1: item.a1,
                         a2: item.a2
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
                     },
                     always:()=>{
                         loading.close();

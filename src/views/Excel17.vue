@@ -67,7 +67,7 @@
                         <td class="blue" colspan="2">16（6+9+15）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">{{(index+1).toString().padSart("0",3)}}</td>
+                        <td class="blue">{{(index+1).toString().padStart(3, "0")}}</td>
                         <td class="green"><input v-model="item.a1"></td>
                         <td class="green">
                             <el-select v-model="item.a2" placeholder="请选择">
@@ -80,7 +80,7 @@
                             </el-select>      
                         </td>
                         <td class="green"><number-input v-model="item.a3" :min="0" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="item.a4" :fixed="8"></number-input></td>
+                        <td class="green"><number-input v-model="item.a4_" :min="0" :max="1" :fixed="8" :filter="toPercent"></number-input></td>
                         <td class="green"><el-date-picker v-model="item.a5" type="date" placeholder="选择日期" default-value="item.a5"></el-date-picker></td>
                         <td class="green"><number-input v-model="item.a6" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a7" :min="0" :fixed="fixed"></number-input></td>
@@ -94,7 +94,7 @@
                         <td>{{item.a15|formatCurrency}}</td>
                         <td>{{item.a16|formatCurrency}}</td>
                         <td>
-                            <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add(item)">添加</el-button>
+                            <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add()">添加</el-button>
                             <el-button type="primary" @click="del(item)">删除</el-button>
                             <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
                             <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
@@ -122,7 +122,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" v-if="false" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -178,6 +178,7 @@
                         a9 += item.a9;
                         a15 += item.a15;
                         a16 += item.a16;
+                        item.a4_ = parseFloat(item.a4) || 0;
                     });
                     this.total.a6 = a6;
                     this.total.a9 = a9;
@@ -188,15 +189,26 @@
             },
         },
         methods:{
+             toPercent(num, fixed = 4) {
+                fixed = 4;
+                if(typeof num != "number"){
+                    num = Number(num);
+                    if( isNaN(num)){
+                        num = 0;
+                    }
+                }
+                return num.toFixed(fixed) + '%';
+            },
             save(){
             },
-            add(item){
+            add(){
                 this.list.push({
                     saved:false,
                     a1:null,
                     a2:1,
                     a3:0,
-                    a4:0,
+                    a4:"",
+                    a4_:0,
                     a5:0,
                     a6:0,
                     a7:0,
@@ -256,21 +268,21 @@
                 });
                 store.dispatch("editA107011", {
                     data:{
-                        "id": item.id,
-                        "uid": 100,
-                        "year": 2016,
-                        "userId": 10086,
-                        "a1": item.a1,
-                        "a2": item.a2,
-                        "a3": item.a3,
-                        "a4": item.a4.toString(),
-                        "a5": formatDate(item.a5,"YYYY-MM-DD"),
-                        "a6": item.a6,
-                        "a7": item.a7,
-                        "a8": item.a8,
-                        "a10": item.a20,
-                        "a11": item.a11,
-                        "a14": item.a14
+                        id: item.id,
+                        uid: 100,
+                        year: 2016,
+                        userId: 10086,
+                        a1: item.a1,
+                        a2: item.a2,
+                        a3: item.a3,
+                        a4: this.toPercent(item.a4_),
+                        a5: formatDate(item.a5,"YYYY-MM-DD"),
+                        a6: item.a6,
+                        a7: item.a7,
+                        a8: item.a8,
+                        a10: item.a20,
+                        a11: item.a11,
+                        a14: item.a14
                     },
                     callback:(rst)=>{
                         if(rst.status==0){
@@ -301,12 +313,12 @@
                         "a1": item.a1,
                         "a2": item.a2,
                         "a3": item.a3,
-                        "a4": item.a4.toString(),
+                        "a4": this.toPercent(item.a4_),
                         "a5": formatDate(item.a5,"YYYY-MM-DD"),
                         "a6": item.a6,
                         "a7": item.a7,
                         "a8": item.a8,
-                        "a10": item.a20,
+                        "a10": item.a10,
                         "a11": item.a11,
                         "a14": item.a14
                     },

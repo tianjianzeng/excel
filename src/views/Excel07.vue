@@ -210,6 +210,7 @@
         data() {
             return {
                 fixed:2,
+                id:0,
                 a2_1:0,
                 a3_1:0,
                 a4_1:0,
@@ -355,10 +356,7 @@
         methods:{
             save(){
                 let postData = {
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId":"1"
+                    id:this.id
                 };
                 for(let i=1;i<=29;i++){
                     for(let j=1;j<=2;j++){
@@ -373,7 +371,7 @@
                     spinner: 'el-icon-loading',
                     background: 'rgba(0, 0, 0, 0.7)'
                 });
-                store.dispatch("editA104000", {
+                store.dispatch("editA105010", {
                     data: postData,
                     callback:(rst)=>{
                         if(rst.status==0){

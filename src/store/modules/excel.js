@@ -31,7 +31,7 @@ const configs = {
         url: function(param) {
             return formatUrl(`v1/a000000/delInvest/${param}`);
         },
-        httpMethod: "post",
+        httpMethod: "get",
         defaultState: {}
     },
     editInvestA000000: {
@@ -70,12 +70,12 @@ const configs = {
         defaultState: {}
     },
     getTableA102010: {
-        url: formatUrl('v1/a101010/getTable'),
+        url: formatUrl('v1/a102010/getTable'),
         httpMethod: "post",
         defaultState: {}
     },
     editA102010: {
-        url: formatUrl('v1/a101010/edit'),
+        url: formatUrl('v1/a102010/edit'),
         httpMethod: "post",
         defaultState: {}
     },
@@ -284,7 +284,7 @@ const configs = {
         url: function(param) {
             return formatUrl(`v1/research/del/${param}`);
         },
-        httpMethod: "post",
+        httpMethod: "get",
         defaultState: {}
     },
     getTableA105040: {
@@ -354,7 +354,7 @@ const configs = {
     },
     selListA107040: {
         url: formatUrl('v1/a107040/selList'),
-        httpMethod: "post",
+        httpMethod: "get",
         defaultState: {}
     },
     getTableA107040: {

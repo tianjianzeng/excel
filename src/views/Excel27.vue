@@ -102,8 +102,8 @@
                         <td>{{item.a18|formatCurrency}}</td>
                         <td>
                             <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add(item)">添加</el-button>
-                            <el-button type="primary" @click="del(item)">删除</el-button>
-                            <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
+                            <!-- <el-button type="primary" @click="del(item)">删除</el-button> -->
+                            <!-- <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button> -->
                             <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
                         </td>
                     </tr>
@@ -132,7 +132,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" v-if="false" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -323,10 +323,38 @@
             },
             edt(item){
                 //调用编辑接口
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA108010",{
+                    data:{
+                        id: item.id,
+                        a6: item.a6,
+                        a8: item.a8,
+                        a11: item.a11,
+                        a15:item.a15,
+                        a16: item.a16,
+                        a17: item.a17
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
             },
             sav(item){
                 //保存接口
-                item.saved = true;
+                // item.saved = true;
             }
         },
         mounted() {

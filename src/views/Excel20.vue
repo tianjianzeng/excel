@@ -54,8 +54,8 @@
                         <td class="blue">18（16+17）</td>
                         <td class="blue">19（14+18）</td>
                     </tr>
-                    <tr v-for="(item,index) in list" :kye="index">
-                        <td class="blue">001</td>
+                    <tr v-for="(item,index) in list" :key="index">
+                        <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
                         <td>{{item.a1}}</td>
                         <td class="green">{{item.a2|formatCurrency}}</td>
                         <td class="green">{{item.a3|formatCurrency}}</td>
@@ -118,6 +118,8 @@
         data() {
             return {
                 fixed:2,
+                list:[],
+                total:{}
             }
         },
         filters:{formatCurrency},
@@ -125,12 +127,31 @@
             NumberInput
         },
         computed: {
-            ...mapGetters(["getTableA107014"]),
-            list(){
-                return this.getTableA107014.rows ||[];
+            ...mapGetters(["getTableA107014"])
+        },
+        watch:{
+            getTableA107014(newVal){
+                this.list = newVal.rows && JSON.parse(JSON.stringify(newVal.rows));
+                this.total = newVal.total && JSON.parse(JSON.stringify(newVal.total));
             },
-            total(){
-                return this.getTableA107014.total ||{};
+            list:{
+                handler(newVal){
+                    // newVal.forEach(item=>{
+                    //     if(item.saved === undefined){
+                    //         item.saved = true;
+                    //     }
+                    //     let rst = 0;
+                    //     for(let i=2;i<=9;i++){
+                    //         rst += item[`a${i}`] * Math.pow(10,this.fixed);
+                    //     }
+                    //     item.a10 = rst * 1.0/ Math.pow(10,this.fixed);
+                    //     item.a12 = (item.a10 * Math.pow(10,this.fixed) - item.a11 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+                    //     item.a14 = item.a13 * 0.5;
+                    //     item.a18 = (item.a16 * Math.pow(10,this.fixed) + item.a17 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                    //     item.a19 = (item.a14 * Math.pow(10,this.fixed) + item.a18 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                    // });
+                },
+                deep:true
             }
         },
         mounted() {

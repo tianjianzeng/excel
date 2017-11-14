@@ -277,7 +277,7 @@
                             this[i]=newVal[i];
                         }
                     }
-                    this.a28_ = parseFloat(newVal.a28);
+                    this.a28_ = parseFloat(newVal.a28) || 0;
                 }
             }
         },

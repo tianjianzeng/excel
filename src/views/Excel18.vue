@@ -45,26 +45,29 @@
                         <td class="blue">7</td>
                         <td class="blue">8</td>
                         <td class="blue">9</td>
-                        <td class="blue" colspan="2">10（9×10%）</td>
+                        <td class="blue">10（9×10%）</td>
+                        <td>
+                            <el-button v-if="0===list.length" type="primary" @click="add">添加</el-button>
+                        </td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">001</td>
-                        <td class="green"><input></td>
-                        <td class="green"><el-date-picker v-model="value8" type="date" placeholder="选择日期"></el-date-picker></td>
-                        <td class="green"><el-date-picker v-model="value8" type="date" placeholder="选择日期"></el-date-picker></td>
-                        <td class="green"><el-date-picker v-model="value8" type="date" placeholder="选择日期"></el-date-picker></td>
-                        <td class="green"><input></td>
-                        <td class="green"><input></td>
-                        <td class="green"><input></td>
-                        <td class="green">*</td>
-                        <td class="green">*</td>
-                        <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
+                        <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
+                        <td class="green"><input v-model="item.a1"></td>
+                        <td class="green"><el-date-picker v-model="item.a2" type="date" placeholder="选择日期"></el-date-picker></td>
+                        <td class="green"><el-date-picker v-model="item.a3s" type="date" placeholder="选择日期"></el-date-picker></td>
+                        <td class="green"><el-date-picker v-model="item.a3e" type="date" placeholder="选择日期"></el-date-picker></td>
+                        <td class="green"><input v-model="item.a4"></td>
+                        <td class="green"><input v-model="item.a5"></td>
+                        <td class="green"><input v-model="item.a6"></td>
+                        <td class="green"><number-input v-model="item.a7_" :fixed="8" :filter="toPercent"></number-input></td>
+                        <td class="green"><number-input v-model="item.a8_" :fixed="8" :filter="toPercent"></number-input></td>
+                        <td class="green"><number-input v-model="item.a9" :fixed="fixed"></number-input></td>
                         <td>{{0|formatCurrency}}</td>
                         <td>
-                            <!-- <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add(item)">添加</el-button>
+                            <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add">添加</el-button>
                             <el-button type="primary" @click="del(item)">删除</el-button>
                             <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
-                            <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button> -->
+                            <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
                         </td>
                     </tr><tr>
                         <td class="blue"></td>
@@ -78,8 +81,7 @@
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td></td>
+                        <td colspan="2">{{total.a10|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -101,6 +103,7 @@
         data() {
             return {
                 fixed:2,
+                total:{},
                 list:[]
             }
         },
@@ -114,15 +117,35 @@
         watch: {
             getTableA107012(newVal) {
                 if(newVal!=null){
-                    for(let i in newVal){
-                        if(this.hasOwnProperty(i)){
-                            this[i]=newVal[i];
-                        }
-                    }
+                    this.list = newVal.subList && JSON.parse(JSON.stringify(newVal.subList));
+                    this.total = newVal.total && JSON.parse(JSON.stringify(newVal.total));
                 }
             },
+            list:{
+                handler(newVal){
+                    newVal.forEach(item=>{
+                        if(item.saved === undefined){
+                            item.saved = true;
+                        }
+                        item.a10 = item.a9 * 0.1;
+                        item.a7_ = parseFloat(item.a8) || 0;
+                        item.a8_ = parseFloat(item.a8) || 0;
+                    });
+                },
+                deep: true
+            }
         },
         methods:{
+             toPercent(num, fixed = 4) {
+                fixed = 4;
+                if(typeof num != "number"){
+                    num = Number(num);
+                    if( isNaN(num)){
+                        num = 0;
+                    }
+                }
+                return num.toFixed(fixed) + '%';
+            },
             save(){
                 if(this.invalid>0){
                     this.$alert('请修改不和规范的字段后再进行保存', '验证', {
@@ -163,6 +186,134 @@
                         loading.close();
                     }
                 });
+            },
+            add(){
+                this.list.push({
+                    saved:false,
+                    a1:"",
+                    a2:"2017-03-01",
+                    a3s:"2017-03-01",
+                    a3e:"2017-04-01",
+                    a4:"",
+                    a5:"",
+                    a6:"",
+                    a7:"0",
+                    a8:"0",
+                    a9:0
+                });
+            },
+            del(item){
+                if(!item.saved){
+                    let i = this.list.indexOf(item);
+                    this.list.splice(i,1);
+                }else{
+                    //调用删除接口
+                    const loading = this.$loading({
+                        lock: true,
+                        text: '加载中',
+                        spinner: 'el-icon-loading',
+                        background: 'rgba(0, 0, 0, 0.7)'
+                    });
+                    store.dispatch("deleteA107012",{
+                        data:{
+                            "uid":100,
+                            "year":2016,
+                            "userId":10086,
+                            "id": item.id
+                        },
+                        callback:(rst)=>{
+                            if(rst.status==0){
+                                this.$message({
+                                    message: '删除成功',
+                                    type: 'success'
+                                });
+                                let i = this.list.indexOf(item);
+                                this.list.splice(i,1);
+                            }
+                        },
+                        always:()=>{
+                            loading.close();
+                        }
+                    });
+                }
+            },
+            edt(item){
+                //调用编辑接口
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA107012", {
+                    data:{
+                        uid: this.total.uid,
+                        mon: this.total.mon,
+                        cYear: this.total.cYear,
+                        a1: item.a1,
+                        a2: item.a2,
+                        a3s: item.a3s,
+                        a3e: item.a3e,
+                        a4: item.a4,
+                        a5: item.a5,
+                        a6: item.a6,
+                        a7: this.toPercent(item.a7_),
+                        a8: this.toPercent(item.a8_),
+                        a9: item.a9,
+                        addid: 1,
+                        id: item.id      
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            sav(item){
+                //保存接口
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("addA107012",{
+                    data:{
+                        uid: this.total.uid,
+                        mon: this.total.mon,
+                        cYear: this.total.cYear,
+                        a1: item.a1,
+                        a2: item.a2,
+                        a3s: item.a3s,
+                        a3e: item.a3e,
+                        a4: item.a4,
+                        a5: item.a5,
+                        a6: item.a6,
+                        a7: this.toPercent(item.a7_),
+                        a8: this.toPercent(item.a8_),
+                        a9: item.a9,
+                        addid: 1                   
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                            item.saved = true;
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                })
             }
         },
         mounted() {
