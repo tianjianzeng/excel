@@ -30,7 +30,7 @@ export function formatCurrency(s, fixed = 2) {
 
 export function formatDate(dateTime, type = "YYYY/MM/DD") {
     if (!dateTime) {
-        return "--";
+        return null;
     }
     return moment(dateTime).format(type);
 }

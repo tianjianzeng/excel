@@ -266,11 +266,7 @@
         watch: {
             getTableA105091(newVal) {
                 if(newVal!=null){
-                    // for(let i in newVal){
-                    //     if(this.hasOwnProperty(i)){
-                    //         this[i]=newVal[i];
-                    //     }
-                    // }
+                    this.list = JSON.parse(JSON.stringify(newVal.list));
                 }
             },
             'list':{  

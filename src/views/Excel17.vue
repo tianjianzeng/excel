@@ -209,7 +209,7 @@
                     a3:0,
                     a4:"",
                     a4_:0,
-                    a5:0,
+                    a5:null,
                     a6:0,
                     a7:0,
                     a8:0,
@@ -235,7 +235,7 @@
                         spinner: 'el-icon-loading',
                         background: 'rgba(0, 0, 0, 0.7)'
                     });
-                    store.dispatch("deleteA107011",{
+                    store.dispatch("delA107011",{
                         data:{
                             "uid":100,
                             "year":2016,

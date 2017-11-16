@@ -148,7 +148,7 @@
                         <td class="blue" colspan="2">六、其他相关费用小计</td>
                         <td colspan="2">{{a6|formatCurrency}}</td>
                     </tr>
-                    <tr v-for="(item,index) in (list)">
+                    <tr v-for="(item,index) in (list)" :key="index">
                         <td class="blue">6.{{index+1}}</td>
                         <td class="blue" colspan="2"><input v-model="item.a1"></td>
                         <td class="green"><number-input v-model="item.a2" :fixed="fixed"></number-input></td>

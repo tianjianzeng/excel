@@ -102,8 +102,8 @@
                         <td>{{item.a18|formatCurrency}}</td>
                         <td>
                             <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add(item)">添加</el-button>
-                            <!-- <el-button type="primary" @click="del(item)">删除</el-button> -->
-                            <!-- <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button> -->
+                            <el-button type="primary" @click="del(item)">删除</el-button>
+                            <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
                             <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
                         </td>
                     </tr>
@@ -319,6 +319,31 @@
                     this.list.splice(i,1);
                 }else{
                     //调用删除接口
+                    const loading = this.$loading({
+                        lock: true,
+                        text: '加载中',
+                        spinner: 'el-icon-loading',
+                        background: 'rgba(0, 0, 0, 0.7)'
+                    });
+                    store.dispatch("delA108010",{
+                        data:{
+                            "uid":100,
+                            "id": item.id
+                        },
+                        callback:(rst)=>{
+                            if(rst.status==0){
+                                this.$message({
+                                    message: '删除成功',
+                                    type: 'success'
+                                });
+                                let i = this.list.indexOf(item);
+                                this.list.splice(i,1);
+                            }
+                        },
+                        always:()=>{
+                            loading.close();
+                        }
+                    });
                 }
             },
             edt(item){
@@ -332,12 +357,24 @@
                 store.dispatch("editA108010",{
                     data:{
                         id: item.id,
-                        a6: item.a6,
-                        a8: item.a8,
-                        a11: item.a11,
+                        a1:item.a1,
+                        a2:item.a2,
+                        a3:item.a3,
+                        a4:item.a4,
+                        a5:item.a5,
+                        a6:item.a6,
+                        a7:item.a7,
+                        a8:item.a8,
+                        a9:item.a9,
+                        a10:item.a10,
+                        a11:item.a11,
+                        a12:item.a12,
+                        a13:item.a13,
+                        a14:item.a14,
                         a15:item.a15,
-                        a16: item.a16,
-                        a17: item.a17
+                        a16:item.a16,
+                        a17:item.a17,
+                        a18:item.a18
                     },
                     callback:(rst)=>{
                         if(rst.status==0){
@@ -354,6 +391,49 @@
             },
             sav(item){
                 //保存接口
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA108010",{
+                    data:{
+                        uid: "545",
+                        mon: "2017-09-07",
+                        year: "2017",
+                        userId: "1",
+                        a1:item.a1,
+                        a2:item.a2,
+                        a3:item.a3,
+                        a4:item.a4,
+                        a5:item.a5,
+                        a6:item.a6,
+                        a7:item.a7,
+                        a8:item.a8,
+                        a9:item.a9,
+                        a10:item.a10,
+                        a11:item.a11,
+                        a12:item.a12,
+                        a13:item.a13,
+                        a14:item.a14,
+                        a15:item.a15,
+                        a16:item.a16,
+                        a17:item.a17,
+                        a18:item.a18
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
                 // item.saved = true;
             }
         },

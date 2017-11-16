@@ -227,6 +227,7 @@
         data() {
             return {
                 fixed:2,
+                id:0,
                 a1:0,
                 a2:0,
                 a3:0,
@@ -353,9 +354,10 @@
             },
             save(){
                 let postData = {
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
+                    uid:100,
+                    year:2016,
+                    userId:10086,
+                    id:this.id
                 };
                 for(let i=1;i<=38;i++){
                     let p = `a${i}`

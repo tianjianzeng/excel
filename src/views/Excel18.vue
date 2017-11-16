@@ -214,13 +214,8 @@
                         spinner: 'el-icon-loading',
                         background: 'rgba(0, 0, 0, 0.7)'
                     });
-                    store.dispatch("deleteA107012",{
-                        data:{
-                            "uid":100,
-                            "year":2016,
-                            "userId":10086,
-                            "id": item.id
-                        },
+                    store.dispatch("delA107012",{
+                        urlParam: item.id,
                         callback:(rst)=>{
                             if(rst.status==0){
                                 this.$message({
@@ -298,8 +293,8 @@
                         a6: item.a6,
                         a7: this.toPercent(item.a7_),
                         a8: this.toPercent(item.a8_),
-                        a9: item.a9,
-                        addid: 1                   
+                        a9: item.a9.toString(),
+                        userId: 1                   
                     },
                     callback:(rst)=>{
                         if(rst.status==0){

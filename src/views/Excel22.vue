@@ -380,7 +380,7 @@
             ...mapGetters(["selListA107040","getTableA107040"]),
             a3(){
                 let rst = 0;
-                for(let i=7;i<=16;i++){
+                for(let i=4;i<=5;i++){
                     rst += this[`a${i}`] * Math.pow(10,this.fixed);
                 }
                 return rst * 1.0/ Math.pow(10,this.fixed);

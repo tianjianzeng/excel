@@ -5,7 +5,7 @@ const configs = {
     getFirst: {
         url: formatUrl("v1/first/get"),
         httpMethod: "post",
-        defaultState: {}
+        defaultState: false
     },
     getEpA000000: {
         url: formatUrl("v1/a000000/getEp"),
@@ -144,7 +144,7 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    deleteA105091: {
+    delA105091: {
         url: function(param) {
             return formatUrl(`v1/a105091/del/${param}`);
         },
@@ -196,10 +196,8 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    delet108010: {
-        url: function(param) {
-            return formatUrl(`v1/a108010/del/${param}`);
-        },
+    delA108010: {
+        url: formatUrl('v1/a108010/del'),
         httpMethod: "post",
         defaultState: {}
     },
@@ -253,11 +251,10 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    deleteA107012: {
+    delA107012: {
         url: function(param) {
             return formatUrl(`v1/a107012/del/${param}`);
         },
-        httpMethod: "post",
         defaultState: {}
     },
     getResearch: {
@@ -332,7 +329,7 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
-    deleteA107011: {
+    delA107011: {
         url: formatUrl('v1/a107011/del'),
         httpMethod: "post",
         defaultState: {}
