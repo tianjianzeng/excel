@@ -31,7 +31,7 @@
                         <td class="blue" rowspan="2" colspan="2">综合利用资源减计收入</td>
                     </tr>
                     <tr>
-                        <td class="blue">《资源综合利用认定证书》取得时间</td>
+                        <td class="blue">《资源综合利用认定ddd证书》取得时间</td>
                         <td class="blue" colspan="2">《资源综合利用认定证书》有效期</td>
                         <td class="blue" style="border-right: 1px solid #dfe6ec;">《资源综合利用认定证书》编号</td>
                     </tr>
