@@ -182,7 +182,7 @@
             getTableA108010(newVal) {
                 if(newVal!=null){
                     this.list = JSON.parse(JSON.stringify(newVal.list));
-                    this.total = JSON.parse(JSON.stringify(newVal.sumResult));
+                    this.total = JSON.parse(JSON.stringify(newVal.total));
                 }
             },
             'list':{  

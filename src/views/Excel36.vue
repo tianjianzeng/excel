@@ -72,7 +72,7 @@
                     <tr>
                         <td class="blue">二、营业利润（亏损以“-”号填列）</td>
                         <td>{{a11_1|formatCurrency}}</td>
-                        <td><number-input v-model="a11_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a12_1|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">加：营业外收入</td>
@@ -92,12 +92,12 @@
                     <tr>
                         <td class="blue">其中：非流动资产处置损失</td>
                         <td class="green">{{a15_1|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a15_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td class="green"><number-input v-model="a15_2" :max="a15_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">三、利润总额（亏损总额以“-”号填列）</td>
                         <td>{{a16_1|formatCurrency}}</td>
-                        <td><number-input v-model="a16_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a16_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">减：所得税费用</td>
@@ -107,22 +107,22 @@
                     <tr>
                         <td class="blue">四、净利润（净亏损以“-”号填列）</td>
                         <td>{{a18_1|formatCurrency}}</td>
-                        <td><number-input v-model="a18_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a18_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">五、其他综合收益的税后净额</td>
                         <td>{{a19_1|formatCurrency}}</td>
-                        <td><number-input v-model="a19_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a19_2|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">（一）以后不能重分类进损益的其他综合收益</td>
                         <td>{{a20_1|formatCurrency}}</td>
-                        <td><number-input v-model="a20_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a20_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue">1.重新计量设定收益计划净负债或净资产的变动</td>
                         <td class="green">{{a21_1|formatCurrency}}</td>
-                        <td class="green">><number-input v-model="a21_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td class="green"><number-input v-model="a21_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>   
                      <tr>
                         <td class="blue">2.权益法下在被投资单位不能重分类进损益的其他综合收益中享有的份额</td>
@@ -132,7 +132,7 @@
                     <tr>
                         <td class="blue">（二）以后将重分类进损益的其他综合收益</td>
                         <td>{{a23_1|formatCurrency}}</td>
-                        <td><number-input v-model="a23_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a23_2|formatCurrency}}</td>
                     </tr>      
                     <tr>
                         <td class="blue">1.权益法下在被投资单位以后将重分类进损益的其他综合收益中享有的份额</td>
@@ -162,7 +162,7 @@
                     <tr>
                         <td class="blue">六、综合收益总额</td>
                         <td>{{a29_1|formatCurrency}}</td>
-                        <td><number-input v-model="a29_2" :fixed="fixed" :editable="getFirst"></number-input></td>
+                        <td>{{a29_2|formatCurrency}}</td>
                     </tr> 
                      <tr>
                         <td class="blue" colspan="3">七、每股收益：</td>
@@ -218,7 +218,6 @@
                 a10_1: 0,
                 a10_2: 0,
                 a11_1: 0,
-                a11_2: 0,
                 a12_1: 0,
                 a12_2: 0,
                 a13_1: 0,
@@ -228,21 +227,16 @@
                 a15_1: 0,
                 a15_2: 0,
                 a16_1: 0,
-                a16_2: 0,
                 a17_1: 0,
                 a17_2: 0,
                 a18_1: 0,
-                a18_2: 0,
                 a19_1: 0,
-                a19_2: 0,
                 a20_1: 0,
-                a20_2: 0,
                 a21_1: 0,
                 a21_2: 0,
                 a22_1: 0,
                 a22_2: 0,
                 a23_1: 0,
-                a23_2: 0,
                 a24_1: 0,
                 a24_2: 0,
                 a25_1: 0,
@@ -254,7 +248,6 @@
                 a28_1: 0,
                 a28_2: 0,
                 a29_1: 0,
-                a29_2: 0,
                 a30_1: null,
                 a30_2: null,
                 a31_1: 0,
@@ -271,6 +264,53 @@
         },
         computed: {
             ...mapGetters(["getTableAproC","getFirst"]),
+            a11_2(){
+                //本列1行-2行-3行-4行-5行-6行-7行+8行+9行
+                let rst = this.a1_2 * Math.pow(10,this.fixed);
+                for(let i=2;i<=7;i++){
+                    this[`a${i}_2`] && (rst -= this[`a${i}_2`] * Math.pow(10,this.fixed))
+                }
+                for(let i=8;i<=9;i++){
+                    this[`a${i}_2`] && (rst += this[`a${i}_2`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a16_2(){
+                //本列11行+12行-14行
+                let rst = this.a14_2 * Math.pow(10,this.fixed) * -1;
+                for(let i=11;i<=12;i++){
+                    this[`a${i}_2`] && (rst -= this[`a${i}_2`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            //本列16行-17行	18
+            // 本列20行+23行	19
+            // 本列21行+22行	20
+            a18_2(){
+                return (this.a16_2 * Math.pow(10,this.fixed) - this.a17_2 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a19_2(){
+                return (this.a20_2 * Math.pow(10,this.fixed) + this.a23_2 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a20_2(){
+                return (this.a21_2 * Math.pow(10,this.fixed) + this.a22_2 * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
+            a23_2(){
+                //本列24行+25行+26行+27行+28行
+                let rst = 0;
+                for(let i=24;i<=28;i++){
+                    this[`a${i}_2`] && (rst += this[`a${i}_2`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a29_2(){
+                //本列24行+25行+26行+27行+28行
+                let rst = 0;
+                for(let i=18;i<=19;i++){
+                    this[`a${i}_2`] && (rst += this[`a${i}_2`] * Math.pow(10,this.fixed))
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            }
         },
         watch: {
             getTableAproC(newVal) {

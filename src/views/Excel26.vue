@@ -61,18 +61,27 @@
                         <td>{{item.a5|formatCurrency}}</td>
                         <td class="green"><number-input v-model="item.a6" :fixed="fixed"></number-input></td>
                         <td>{{item.a7|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="item.a8" :fixed="fixed"></number-input></td>
+                        <td class="green">
+                            <el-select placeholder="请选择">
+                                <el-option
+                                    v-for="item in a8Template"
+                                    :key="item.id"
+                                    :label="item.name"
+                                    :value="item.id">
+                                </el-option>
+                            </el-select>
+                        </td>
                         <td>{{item.a9|formatCurrency}}</td>
                         <td>{{item.a10|formatCurrency}}</td>
                         <td class="green"><number-input v-model="item.a11" :fixed="fixed"></number-input></td>
                         <td>{{item.a12|formatCurrency}}</td>
                         <td>{{item.a13|formatCurrency}}</td>
                         <td>{{item.a14|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="item.a15" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="item.a16" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="item.a17" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a15" :min="0" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a16" :min="0" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a17" :min="0" :fixed="fixed"></number-input></td>
                         <td>{{item.a18|formatCurrency}}</td>
-                        <td>{{item.a19|formatCurrency}}</td>
+                        <td><number-input v-model="item.a19" :max="item.a9" :fixed="fixed"></number-input></td>
                         <td><el-button type="primary" @click="edit(item)">保存</el-button></td>
                     </tr>
                     <tr>
@@ -109,6 +118,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -117,12 +127,14 @@
             return {
                 fixed:2,
                 total:{},
-                list:[]
+                list:[],
+                a8Template:[{id:0.15,name:"15%"},{id:0.25,name:"25%"}]
             }
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA108000"])
@@ -136,32 +148,28 @@
             },
             list:{
                 handler(val){
-                    var a7=0,
-                        a8=0;
-                        
-                    val[0].a11 = Math.min(val[5].a2, val[0].a4-val[0].a10);
-                    val[1].a11 = Math.min(val[5].a2-val[0].a11, val[1].a4-val[1].a10);
-                    val[2].a11 = Math.min(val[5].a2-val[1].a11, val[2].a4-val[2].a10);
-                    val[3].a11 = Math.min(val[5].a2-val[2].a11, val[3].a4-val[3].a10);
-                    val[4].a11 = Math.min(val[5].a2-val[3].a11, val[4].a4-val[4].a10);
-                    val[5].a11 = Math.min(val[5].a2-val[4].a11, val[5].a4);
                     val.forEach((item,index)=>{
                         item.a4 = item.a3 * 0.1;
-                        item.a10 = ((item.a5||0) * Math.pow(10, this.fixed) + (item.a6||0) * Math.pow(10, this.fixed) + (item.a7||0) * Math.pow(10, this.fixed) + (item.a8||0) * Math.pow(10, this.fixed) + (item.a9||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
-                        if(index!=0){
-                            item.a12 = ((item.a4) * Math.pow(10, this.fixed) - (item.a10||0) * Math.pow(10, this.fixed) - (item.a11||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
-                            a8 += item.a12;
-                        }
-                        a7 += item.a11;
+                        item.a5 = ((item.a3||0) * Math.pow(10, this.fixed) - (item.a4||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        item.a7 = ((item.a5||0) * Math.pow(10, this.fixed) - (item.a6||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        item.a9 = item.a7 * item.a8;
+                        item.a12 = Math.min(item.a10,item.a11);
+                        item.a13 = item.a11 - item.a12;
+                        item.a18 = ((item.a15||0) * Math.pow(10, this.fixed) + (item.a16||0) * Math.pow(10, this.fixed) + (item.a16||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        item.a19 = ((item.a12||0) * Math.pow(10, this.fixed) + (item.a14||0) * Math.pow(10, this.fixed) + (item.a18||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
                     });
-                    this.a7Check = a7;
-                    this.a8 = a8;
                 },
                 deep: true
             }
         },
         methods:{
             edit(item){
+                if(this.invalid>0){
+                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
+                        confirmButtonText: '确定'
+                    });
+                    return;
+                }
                 let postData = {
                     a6: item.a6,
                     a8: item.a8,

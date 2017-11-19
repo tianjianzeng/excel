@@ -101,7 +101,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" v-if="false" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -154,6 +154,7 @@
                 deep:true
             }
         },
+        methods:{save(){}},
         mounted() {
             const loading = this.$loading({
                 lock: true,

@@ -42,7 +42,7 @@
                     <tr>
                         <td class="blue">经营活动现金流入小计</td>
                         <td>{{a5_1|formatCurrency}}</td>
-                        <td><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
+                        <td>{{a5_2|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue"> 购买商品、接受劳务支付的现金</td>
@@ -67,12 +67,12 @@
                     <tr>
                         <td class="blue"> 经营活动现金流出小计</td>
                         <td>{{a10_1|formatCurrency}}</td>
-                        <td><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
+                        <td>{{a10_2|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">经营活动产生的现金流量净额</td>
                         <td>{{a11_1|formatCurrency}}</td>
-                        <td><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
+                        <td>{{a11_2|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">二、投资活动产生的现金流量：</td>
@@ -107,7 +107,7 @@
                     <tr>
                         <td class="blue">投资活动现金流入小计</td>
                         <td>{{a18_1|formatCurrency}}</td>
-                        <td><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
+                        <td>{{a18_2|formatCurrency}}</td>
                     </tr>  
                     <tr>
                         <td class="blue"> 购建固定资产、无形资产和其他长期资产支付的现金</td>
@@ -132,12 +132,12 @@
                     <tr>
                         <td class="blue">投资活动现金流出小计</td>
                         <td>{{a23_1|formatCurrency}}</td>
-                        <td><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
+                        <td>{{a23_2|formatCurrency}}</td>
                     </tr>      
                     <tr>
                         <td class="blue">投资活动产生的现金流量净额</td>
-                        <td class="green">{{a24_1|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
+                        <td>{{a24_1|formatCurrency}}</td>
+                        <td>{{a24_2|formatCurrency}}</td>
                     </tr>   
                      <tr>
                         <td class="blue">三、筹资活动产生的现金流量：</td>
@@ -162,7 +162,7 @@
                     <tr>
                         <td class="blue">筹资活动现金流入小计</td>
                         <td>{{a29_1|formatCurrency}}</td>
-                        <td><number-input v-model="a29_2" :fixed="fixed"></number-input></td>
+                        <td>{{a29_2|formatCurrency}}</td>
                     </tr> 
                     <tr>
                         <td class="blue">偿还债务支付的现金</td>
@@ -182,12 +182,12 @@
                       <tr>
                         <td class="blue"> 筹资活动现金流出小计</td>
                         <td>{{a33_1|formatCurrency}}</td>
-                        <td><number-input v-model="a33_2" :fixed="fixed"></number-input></td>
+                        <td>{{a33_2|formatCurrency}}</td>
                     </tr> 
                     <tr>
                         <td class="blue">筹资活动产生的现金流量净额</td>
                         <td>{{a34_1|formatCurrency}}</td>
-                        <td><number-input v-model="a34_2" :fixed="fixed"></number-input></td>
+                        <td>{{a34_2|formatCurrency}}</td>
                     </tr>    
                     <tr>
                         <td class="blue">四、汇率变动对现金及现金等价物的影响</td>
@@ -197,7 +197,7 @@
                      <tr>
                         <td class="blue">五、现金及现金等价物净增加额</td>
                         <td>{{a36_1|formatCurrency}}</td>
-                        <td><number-input v-model="a36_2" :fixed="fixed"></number-input></td>
+                        <td>{{a36_2|formatCurrency}}</td>
                     </tr>  
                      <tr>
                         <td class="blue">加：期初现金及现金等价物余额</td>
@@ -207,7 +207,7 @@
                      <tr>
                         <td class="blue">六、期末现金及现金等价物余额</td>
                         <td>{{a38_1|formatCurrency}}</td>
-                        <td><number-input v-model="a38_2" :fixed="fixed"></number-input></td>
+                        <td>{{a38_2|formatCurrency}}</td>
                     </tr>             
 
 
@@ -490,13 +490,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel37{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="3"]{
-            text-align: center;
-        }
-    }
 </style>
