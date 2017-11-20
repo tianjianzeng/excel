@@ -122,7 +122,7 @@
                     <tr>
                         <td class="blue">取得子公司及其他营业单位支付的现金净额</td>
                         <td class="green">{{a21_1|formatCurrency}}</td>
-                        <td class="green">><number-input v-model="a21_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a21_2" :fixed="fixed"></number-input></td>
                     </tr>   
                      <tr>
                         <td class="blue"> 支付其他与投资活动有关的现金</td>

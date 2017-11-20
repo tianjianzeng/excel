@@ -87,24 +87,24 @@
                     <tr>
                         <td class="blue"></td>
                         <td class="blue">合计</td>
-                        <td>{{total.a2|formatCurrency}}</td>
-                        <td>{{total.a3|formatCurrency}}</td>
-                        <td>{{total.a4|formatCurrency}}</td>
-                        <td>{{total.a5|formatCurrency}}</td>
-                        <td>{{total.a6|formatCurrency}}</td>
-                        <td>{{total.a7|formatCurrency}}</td>
-                        <td>{{total.a8|formatCurrency}}</td>
-                        <td>{{total.a9|formatCurrency}}</td>
-                        <td>{{total.a10|formatCurrency}}</td>
-                        <td>{{total.a11|formatCurrency}}</td>
-                        <td>{{total.a12|formatCurrency}}</td>
-                        <td>{{total.a13|formatCurrency}}</td>
-                        <td>{{total.a14|formatCurrency}}</td>
-                        <td>{{total.a15|formatCurrency}}</td>
-                        <td>{{total.a16|formatCurrency}}</td>
-                        <td>{{total.a17|formatCurrency}}</td>
-                        <td>{{total.a18|formatCurrency}}</td>
-                        <td colspan="2">{{total.a19|formatCurrency}}</td>
+                        <td>{{total.a2||0|formatCurrency}}</td>
+                        <td>{{total.a3||0|formatCurrency}}</td>
+                        <td>{{total.a4||0|formatCurrency}}</td>
+                        <td>{{total.a5||0|formatCurrency}}</td>
+                        <td>{{total.a6||0|formatCurrency}}</td>
+                        <td>{{total.a7||0|formatCurrency}}</td>
+                        <td>{{total.a8||0|formatCurrency}}</td>
+                        <td>{{total.a9||0|formatCurrency}}</td>
+                        <td>{{total.a10||0|formatCurrency}}</td>
+                        <td>{{total.a11||0|formatCurrency}}</td>
+                        <td>{{total.a12||0|formatCurrency}}</td>
+                        <td>{{total.a13||0|formatCurrency}}</td>
+                        <td>{{total.a14||0|formatCurrency}}</td>
+                        <td>{{total.a15||0|formatCurrency}}</td>
+                        <td>{{total.a16||0|formatCurrency}}</td>
+                        <td>{{total.a17||0|formatCurrency}}</td>
+                        <td>{{total.a18||0|formatCurrency}}</td>
+                        <td colspan="2">{{total.a19||0|formatCurrency}}</td>
                     </tr>
                 </tbody>
             </table>

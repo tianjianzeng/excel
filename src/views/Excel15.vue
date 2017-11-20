@@ -262,28 +262,28 @@
                  for(var i=5;i<=8;i++){
                      rst+= this[`a1_${i}`] * Math.pow(10,this.fixed);
                  }
-                 return rst * 1.0 / Math.pow(10,fixed);
+                 return rst * 1.0 / Math.pow(10,this.fixed);
              },
              a2_9(){
                  let rst = 0;
                  for(var i=5;i<=8;i++){
                      rst+= this[`a2_${i}`] * Math.pow(10,this.fixed);
                  }
-                 return rst * 1.0 / Math.pow(10,fixed);
+                 return rst * 1.0 / Math.pow(10,this.fixed);
              },
              a3_9(){
                  let rst = 0;
                  for(var i=5;i<=8;i++){
                      rst+= this[`a3_${i}`] * Math.pow(10,this.fixed);
                  }
-                 return rst * 1.0 / Math.pow(10,fixed);
+                 return rst * 1.0 / Math.pow(10,this.fixed);
              },
              a4_9(){
                  let rst = 0;
                  for(var i=5;i<=8;i++){
                      rst+= this[`a4_${i}`] * Math.pow(10,this.fixed);
                  }
-                 return rst * 1.0 / Math.pow(10,fixed);
+                 return rst * 1.0 / Math.pow(10,this.fixed);
              },
         },
         watch: {
