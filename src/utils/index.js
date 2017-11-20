@@ -26,7 +26,6 @@ export const getData = function(param, cb, errorCb) {
     };
     return ajax(params, cb, errorCb);
 }
-
 //
 export const postData = function(param, cb, errorCb) {
     let params = {
