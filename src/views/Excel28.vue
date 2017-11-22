@@ -295,13 +295,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel28{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="20"]{
-            text-align: center;
-        }
-    }
 </style>

@@ -538,13 +538,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel34{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="3"]{
-            text-align: left;
-        }
-    }
 </style>

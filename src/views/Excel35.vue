@@ -601,13 +601,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel35{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="4"]{
-            text-align: left;
-        }
-    }
 </style>

@@ -580,13 +580,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel38{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="8"]{
-            text-align: center;
-        }
-    }
 </style>

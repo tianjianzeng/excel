@@ -388,13 +388,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel36{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="3"]{
-            text-align: center;
-        }
-    }
 </style>
