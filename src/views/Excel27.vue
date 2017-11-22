@@ -91,9 +91,9 @@
                         <td class="green"><number-input v-model="item.a7" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a8" :fixed="fixed"></number-input></td>
                         <td>{{item.a9|formatCurrency}}</td>
-                        <td class="green"><number-input v-model="item.a10" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="item.a11" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="item.a12" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a10" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a11" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a12" :fixed="fixed" :min="0"></number-input></td>
                         <td>{{item.a13|formatCurrency}}</td>
                         <td>{{item.a14|formatCurrency}}</td>
                         <td class="green"><number-input v-model="item.a15" :fixed="fixed"></number-input></td>
@@ -150,25 +150,7 @@
             return {
                 fixed:2,
                 list:[],
-                total:{
-                    a2:0,
-                    a3:0,
-                    a4:0,
-                    a5:0,
-                    a6:0,
-                    a7:0,
-                    a8:0,
-                    a9:0,
-                    a10:0,
-                    a11:0,
-                    a12:0,
-                    a13:0,
-                    a14:0,
-                    a15:0,
-                    a16:0,
-                    a17:0,
-                    a18:0
-                }
+                total:{}
             }
         },
         filters:{formatCurrency},
@@ -208,41 +190,64 @@
                         if(item.saved === undefined){
                             item.saved = true;
                         }
-                        a2 += item.a2;
-                        a3 += item.a3;
-                        a4 += item.a4;
-                        a5 += item.a5;
-                        a6 += item.a6;
-                        a7 += item.a7;
-                        a8 += item.a8;
-                        a9 += item.a9;
-                        a10 += item.a10;
-                        a11 += item.a11;
-                        a12 += item.a12;
-                        a13 += item.a13;
-                        a14 += item.a14;
-                        a15 += item.a15;
-                        a16 += item.a16;
-                        a17 += item.a17;
-                        a18 += item.a18;
+                        a2 += item.a2 *  Math.pow(10, this.fixed);
+                        a3 += item.a3 *  Math.pow(10, this.fixed);
+                        a4 += item.a4 *  Math.pow(10, this.fixed);
+                        a5 += item.a5 *  Math.pow(10, this.fixed);
+                        a6 += item.a6 *  Math.pow(10, this.fixed);
+                        a7 += item.a7 *  Math.pow(10, this.fixed);
+                        a8 += item.a8 *  Math.pow(10, this.fixed);
+                        let rst = 0;
+                        for(var i=2;i<=8;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a9 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a9 += item.a9 *  Math.pow(10, this.fixed);
+                        a10 += item.a10 *  Math.pow(10, this.fixed);
+                        a11 += item.a11 *  Math.pow(10, this.fixed);
+                        a12 += item.a12 *  Math.pow(10, this.fixed);
+                        rst = 0;
+                        for(var i=10;i<=12;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a13 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a13 += item.a13 *  Math.pow(10, this.fixed);
+                        rst = 0;
+                        for(var i=9;i<=11;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a14 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a14 += item.a14 *  Math.pow(10, this.fixed);
+                        a15 += item.a15 *  Math.pow(10, this.fixed);
+                        a16 += item.a16 *  Math.pow(10, this.fixed);
+                        a17 += item.a17 *  Math.pow(10, this.fixed);
+                        rst = 0;
+                        for(var i=14;i<=15;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        for(var i=16;i<=17;i++){
+                            rst -= item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a18 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a18 += item.a18 *  Math.pow(10, this.fixed);
                     });
-                    this.total.a2 = a2;
-                    this.total.a3 = a3;
-                    this.total.a4 = a4;
-                    this.total.a5 = a5;
-                    this.total.a6 = a6;
-                    this.total.a7 = a7;
-                    this.total.a8 = a8;
-                    this.total.a9 = a9;
-                    this.total.a10 = a10;
-                    this.total.a11 = a11;
-                    this.total.a12 = a12;
-                    this.total.a13 = a13;
-                    this.total.a14 = a14;
-                    this.total.a15 = a15;
-                    this.total.a16 = a16;
-                    this.total.a17 = a17;
-                    this.total.a18 = a18;
+                    this.total.a2 = a2 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a3 = a3 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a4 = a4 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a5 = a5 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a6 = a6 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a7 = a7 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a8 = a8 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a9 = a9 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a10 = a10 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a11 = a11 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a12 = a12 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a13 = a13 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a14 = a14 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a15 = a15 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a16 = a16 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a17 = a17 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a18 = a18 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
                 },  
                 deep:true//对象内部的属性监听，也叫深度监听  
             },
@@ -347,6 +352,12 @@
                 }
             },
             edt(item){
+                if(item.a16+item.a17<0){
+                    this.$alert('16+17列总和不能小于0', '验证', {
+                        confirmButtonText: '确定'
+                    });
+                    return;
+                }
                 //调用编辑接口
                 const loading = this.$loading({
                     lock: true,
@@ -390,6 +401,12 @@
                 });
             },
             sav(item){
+                if(item.a16+item.a17<0){
+                    this.$alert('16+17列总和不能小于0', '验证', {
+                        confirmButtonText: '确定'
+                    });
+                    return;
+                }
                 //保存接口
                 const loading = this.$loading({
                     lock: true,

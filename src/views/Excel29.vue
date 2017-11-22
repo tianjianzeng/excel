@@ -54,54 +54,63 @@
                         <td class="blue">18</td>
                         <td class="blue">19（14+15+16+17+18）</td>
                     </tr>
-                    <tr>
+                    <tr v-for="(item,index) in list" :key="index">
                         <td style="width:5%" class="blue"></td>
-                        <td style="width:5%" class="green">A108010》表1列</td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td style="width:5%">{{0|formatCurrency}}</td>
+                        <td style="width:5%" class="green">
+                            <el-select v-model="item.a1" placeholder="请选择">
+                                <el-option
+                                v-for="item in getCResult108010"
+                                :key="item.id"
+                                :label="item.name"
+                                :value="item.id">
+                                </el-option>
+                            </el-select>
+                        </td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a2" :fixed="fixed" :min="0"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a3" :fixed="fixed" :min="0"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a4" :fixed="fixed" :min="0"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a5" :fixed="fixed" :min="0"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a6" :fixed="fixed" :min="0"></number-input></td>
+                        <td style="width:5%">{{item.a7|formatCurrency}}</td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a8" :fixed="fixed" :min="0" :max="item.a2"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a9" :fixed="fixed" :min="0" :max="item.a3"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a10" :fixed="fixed" :min="0" :max="item.a4"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a11" :fixed="fixed" :min="0" :max="item.a5"></number-input></td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a12" :fixed="fixed" :min="0" :max="item.a6"></number-input></td>
+                        <td style="width:5%">{{item.a13|formatCurrency}}</td>
+                        <td style="width:5%">{{item.a14|formatCurrency}}</td>
+                        <td style="width:5%">{{item.a15|formatCurrency}}</td>
+                        <td style="width:5%">{{item.a16|formatCurrency}}</td>
+                        <td style="width:5%">{{item.a17|formatCurrency}}</td>
+                        <td style="width:5%" class="green"><number-input v-model="item.a18" :fixed="fixed"></number-input></td>
+                        <td style="width:5%">{{item.a19|formatCurrency}}</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">合计</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td>{{total.a2|formatCurrency}}</td>
+                        <td>{{total.a3|formatCurrency}}</td>
+                        <td>{{total.a4|formatCurrency}}</td>
+                        <td>{{total.a5|formatCurrency}}</td>
+                        <td>{{total.a6|formatCurrency}}</td>
+                        <td>{{total.a7|formatCurrency}}</td>
+                        <td>{{total.a8|formatCurrency}}</td>
+                        <td>{{total.a9|formatCurrency}}</td>
+                        <td>{{total.a10|formatCurrency}}</td>
+                        <td>{{total.a11|formatCurrency}}</td>
+                        <td>{{total.a12|formatCurrency}}</td>
+                        <td>{{total.a13|formatCurrency}}</td>
+                        <td>{{total.a14|formatCurrency}}</td>
+                        <td>{{total.a15|formatCurrency}}</td>
+                        <td>{{total.a16|formatCurrency}}</td>
+                        <td>{{total.a17|formatCurrency}}</td>
+                        <td>{{total.a18|formatCurrency}}</td>
+                        <td>{{total.a19|formatCurrency}}</td>
                     </tr> 
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" v-if="false" @click="save">保存</el-button>
     </div>
 </template>
 
@@ -118,213 +127,8 @@
         data() {
             return {
                 fixed:2,
-                a106:true,
-                a107:false,
-                "a3_1": 0,
-                "a3_2": 0,
-                "a3_3": 0,
-                "a3_4": 0,
-                "a3_5": 0,
-                "a3_7": 0,
-                "a4_1": 0,
-                "a4_2": 0,
-                "a4_3": 0,
-                "a4_4": 0,
-                "a4_5": 0,
-                "a4_7": 0,
-                "a5_1": 0,
-                "a5_2": 0,
-                "a5_3": 0,
-                "a5_4": 0,
-                "a5_5": 0,
-                "a5_7": 0,
-                "a6_1": 0,
-                "a6_2": 0,
-                "a6_3": 0,
-                "a6_4": 0,
-                "a6_5": 0,
-                "a6_7": 0,
-                "a7_1": 0,
-                "a7_2": 0,
-                "a7_3": 0,
-                "a7_4": 0,
-                "a7_5": 0,
-                "a7_7": 0,
-                "a8_1": 0,
-                "a8_2": 0,
-                "a8_3": 0,
-                "a8_4": 0,
-                "a8_5": 0,
-                "a8_7": 0,
-                "a9_1": 0,
-                "a9_2": 0,
-                "a9_3": 0,
-                "a9_4": 0,
-                "a9_5": 0,
-                "a9_7": 0,
-                "a10_1": 0,
-                "a10_2": 0,
-                "a10_3": 0,
-                "a10_4": 0,
-                "a10_5": 0,
-                "a10_7": 0,
-                "a11_1": 0,
-                "a11_2": 0,
-                "a11_3": 0,
-                "a11_4": 0,
-                "a11_5": 0,
-                "a11_7": 0,
-                "a12_1": 0,
-                "a12_2": 0,
-                "a12_3": 0,
-                "a12_4": 0,
-                "a12_5": 0,
-                "a12_7": 0,
-                "a14_1": 0,
-                "a14_2": 0,
-                "a14_3": 0,
-                "a14_4": 0,
-                "a14_5": 0,
-                "a14_7": 0,
-                "a15_1": 0,
-                "a15_2": 0,
-                "a15_3": 0,
-                "a15_4": 0,
-                "a15_5": 0,
-                "a15_7": 0,
-                "a16_1": 0,
-                "a16_2": 0,
-                "a16_3": 0,
-                "a16_4": 0,
-                "a16_5": 0,
-                "a16_7": 0,
-                "a18_1": 0,
-                "a18_2": 0,
-                "a18_3": 0,
-                "a18_4": 0,
-                "a18_5": 0,
-                "a18_7": 0,
-                "a19_1": 0,
-                "a19_2": 0,
-                "a19_3": 0,
-                "a19_4": 0,
-                "a19_5": 0,
-                "a19_7": 0,
-                "a20_1": 0,
-                "a20_2": 0,
-                "a20_3": 0,
-                "a20_4": 0,
-                "a20_5": 0,
-                "a20_7": 0,
-                "a21_1": 0,
-                "a21_2": 0,
-                "a21_3": 0,
-                "a21_4": 0,
-                "a21_5": 0,
-                "a21_7": 0,
-                "a22_1": 0,
-                "a22_2": 0,
-                "a22_3": 0,
-                "a22_4": 0,
-                "a22_5": 0,
-                "a22_7": 0,
-                "a23_1": 0,
-                "a23_2": 0,
-                "a23_3": 0,
-                "a23_4": 0,
-                "a23_5": 0,
-                "a23_7": 0,
-                "a24_1": 0,
-                "a24_2": 0,
-                "a24_3": 0,
-                "a24_4": 0,
-                "a24_5": 0,
-                "a24_7": 0,
-                "a25_1": 0,
-                "a25_2": 0,
-                "a25_3": 0,
-                "a25_4": 0,
-                "a25_5": 0,
-                "a25_7": 0,
-                "a27_1": 0,
-                "a27_2": 0,
-                "a27_3": 0,
-                "a27_4": 0,
-                "a27_5": 0,
-                "a27_7": 0,
-                "a28_1": 0,
-                "a28_2": 0,
-                "a28_3": 0,
-                "a28_4": 0,
-                "a28_5": 0,
-                "a28_7": 0,
-                "a29_1": 0,
-                "a29_2": 0,
-                "a29_3": 0,
-                "a29_4": 0,
-                "a29_5": 0,
-                "a29_7": 0,
-                "a30_1": 0,
-                "a30_2": 0,
-                "a30_3": 0,
-                "a30_4": 0,
-                "a30_5": 0,
-                "a30_7": 0,
-                "a31_1": 0,
-                "a31_2": 0,
-                "a31_3": 0,
-                "a31_4": 0,
-                "a31_5": 0,
-                "a31_7": 0,
-                "a32_1": 0,
-                "a32_2": 0,
-                "a32_3": 0,
-                "a32_4": 0,
-                "a32_5": 0,
-                "a32_7": 0,
-                "a33_1": 0,
-                "a33_2": 0,
-                "a33_3": 0,
-                "a33_4": 0,
-                "a33_5": 0,
-                "a33_6": 0,
-                "a34_1": 0,
-                "a34_2": 0,
-                "a34_3": 0,
-                "a34_4": 0,
-                "a34_5": 0,
-                "a34_6": 0,
-                "a34_7": 0,
-                "a35_1": 0,
-                "a35_2": 0,
-                "a35_3": 0,
-                "a35_4": 0,
-                "a35_5": 0,
-                "a35_6": 0,
-                "a35_7": 0,
-                "a36_6": 0,
-                "a37_1": 0,
-                "a37_2": 0,
-                "a37_3": 0,
-                "a37_4": 0,
-                "a37_5": 0,
-                "a37_6": 0,
-                "a37_7": 0,
-                "a38_1": 0,
-                "a38_2": 0,
-                "a38_3": 0,
-                "a38_4": 0,
-                "a38_5": 0,
-                "a38_6": 0,
-                "a38_7": 0,
-                "a39_1": 0,
-                "a39_2": 0,
-                "a39_3": 0,
-                "a39_4": 0,
-                "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                list:[],
+                total:{}
             }
         },
         filters:{formatCurrency},
@@ -332,16 +136,163 @@
             NumberInput
         },
         computed: {
-            
+            ...mapGetters(["getTableA108030","getCResult108010"])
         },
         watch: {
-            
+            getTableA108030(newVal) {
+                if(newVal!=null){
+                    this.list = JSON.parse(JSON.stringify(newVal.rows));
+                    this.total = JSON.parse(JSON.stringify(newVal.total));
+                }
+            },
+            'list':{  
+                handler:function(val,oldval){  
+                    var a2=0;
+                    var a3=0;
+                    var a4=0;
+                    var a5=0;
+                    var a6=0;
+                    var a7=0;
+                    var a8=0;
+                    var a9=0;
+                    var a10=0;
+                    var a11=0;
+                    var a12=0;
+                    var a13=0;
+                    var a14=0;
+                    var a15=0;
+                    var a16=0;
+                    var a17=0;
+                    var a18=0;
+                    var a19=0;
+                    val.forEach(item=>{
+                        if(item.saved === undefined){
+                            item.saved = true;
+                        }
+                        a2 += item.a2 * Math.pow(10, this.fixed);
+                        a3 += item.a3 * Math.pow(10, this.fixed);
+                        a4 += item.a4 * Math.pow(10, this.fixed);
+                        item.a5 = (item.a3 * Math.pow(10, this.fixed) - item.a4 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        a5 += item.a5 * Math.pow(10, this.fixed);
+                        a6 += item.a6 * Math.pow(10, this.fixed);                        
+                        let rst = 0;
+                        for(var i=2;i<=6;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a7 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a7 += item.a7 * Math.pow(10, this.fixed);
+                        a8 += item.a8 * Math.pow(10, this.fixed);
+                        a9 += item.a9 * Math.pow(10, this.fixed);
+                        a10 += item.a10 * Math.pow(10, this.fixed);
+                        a11 += item.a11 * Math.pow(10, this.fixed);
+                        a12 += item.a12 * Math.pow(10, this.fixed);
+                        rst = 0;
+                        for(var i=8;i<=12;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a13 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a13 += item.a13 * Math.pow(10, this.fixed);
+                        item.a14 = (item.a3 * Math.pow(10, this.fixed) - item.a9 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        a14 += item.a14 * Math.pow(10, this.fixed);
+                        item.a15 = (item.a4 * Math.pow(10, this.fixed) - item.a10 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        a15 += item.a15 * Math.pow(10, this.fixed);
+                        item.a16 = (item.a5 * Math.pow(10, this.fixed) - item.a11 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        a16 += item.a16 * Math.pow(10, this.fixed);
+                        item.a17 = (item.a6 * Math.pow(10, this.fixed) - item.a12 * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        a17 += item.a17 * Math.pow(10, this.fixed);
+                        a18 += item.a18 * Math.pow(10, this.fixed);
+                        rst = 0;
+                        for(var i=14;i<=18;i++){
+                            rst += item[`a${i}`] * Math.pow(10, this.fixed);
+                        }
+                        item.a19 = rst * 1.0 / Math.pow(10, this.fixed);
+                        a19 += item.a19 * Math.pow(10, this.fixed);
+                    });
+                    this.total.a2 = a2 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a3 = a3 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a4 = a4 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a5 = a5 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a6 = a6 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a7 = a7 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a8 = a8 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a9 = a9 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a10 = a10 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a11 = a11 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a12 = a12 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a13 = a13 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a14 = a14 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a15 = a15 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a16 = a16 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a17 = a17 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a18 = a18 * 1.0 / Math.pow(10, this.fixed);
+                    this.total.a19 = a19 * 1.0 / Math.pow(10, this.fixed);
+                },  
+                deep:true//对象内部的属性监听，也叫深度监听  
+            },
         },
         methods:{
-            save(){}
+            edt(item){
+                //调用编辑接口
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editA108030",{
+                    data:{
+                        id: item.id,
+                        a1:item.a1,
+                        a2:item.a2,
+                        a3:item.a3,
+                        a4:item.a4,
+                        a5:item.a5,
+                        a6:item.a6,
+                        a7:item.a7,
+                        a8:item.a8,
+                        a9:item.a9,
+                        a10:item.a10,
+                        a11:item.a11,
+                        a12:item.a12,
+                        a13:item.a13,
+                        a14:item.a14,
+                        a15:item.a15,
+                        a16:item.a16,
+                        a17:item.a17,
+                        a18:item.a18
+                    },
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            }
         },
         mounted() {
-            
+            const loading = this.$loading({
+                lock: true,
+                text: '加载中',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            store.dispatch("getCResult108010");
+            store.dispatch("getTableA108030",{
+                data:{
+                    "uid": "200",
+                    "year": "2017",
+                    "userId":"1"
+                },
+                always:()=>{
+                    loading.close();
+                }
+            });
         }
     }
 </script>

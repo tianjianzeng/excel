@@ -54,7 +54,7 @@
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">001</td>
-                        <td>{{item.a1|formatCurrency}}</td>
+                        <td>{{item.a1}}</td>
                         <td>{{item.a2|formatCurrency}}</td>
                         <td>{{item.a3|formatCurrency}}</td>
                         <td>{{item.a4|formatCurrency}}</td>

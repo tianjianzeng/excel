@@ -206,6 +206,26 @@ const configs = {
         httpMethod: "post",
         defaultState: {}
     },
+    getTableA108020: {
+        url: formatUrl('v1/a108020/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA108020: {
+        url: formatUrl('v1/a108020/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    getTableA108030: {
+        url: formatUrl('v1/a108030/getTable'),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    editA108030: {
+        url: formatUrl('v1/a108030/edit'),
+        httpMethod: "post",
+        defaultState: {}
+    },
     getTableflowA: {
         url: formatUrl('v1/flowA/get'),
         httpMethod: "post",
