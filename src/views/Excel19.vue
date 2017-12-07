@@ -79,7 +79,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -144,16 +144,17 @@
         },
         methods:{
             save(){
-                if(this.invalid>0){
-                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
-                        confirmButtonText: '确定'
-                    });
+                if(this.a5<0){
+                    window.root && window.root.$emit("bizError",'第5行应大于等于0');
+                    return;
+                }
+                if(this.a8<0){
+                    window.root && window.root.$emit("bizError",'第8行应大于等于0');
                     return;
                 }
                 let postData = {
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
+                    "uid": this.uid,
+                    "year": this.year,
                     "id": this.id
                 };
                 for(let i=1;i<=13;i++){
@@ -181,38 +182,49 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA107013",{
+                    data:{
+                        "uid":this.uid,
+                        "year":this.year,
+                        "mon":this.mon,
+                        "userId":this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                }); 
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a107013",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA107013",{
-                data:{
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1"
-                },
-                always:()=>{
-                    loading.close();
-                }
-            }); 
+            this.load();
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .excel19{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="3"]{
-            text-align: center;
-        }
-    }
 </style>

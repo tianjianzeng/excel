@@ -218,7 +218,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -324,10 +324,10 @@
             save(){
                 let postData = {
                     "id":this.id,
-                    "uid": 1,
-                    "mon": 12,
-                    "c_year": 2016,
-                    "userId":104
+                    "uid": this.uid,
+                    "mon": this.mon,
+                    "c_year": this.year,
+                    "userId": this.userId
                 };
                 for(let i=1;i<=32;i++){
                     let p = `a${i}_2`
@@ -354,26 +354,46 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableAproA",{
+                    data:{
+                        "uid": this.uid,
+                        "mon": this.mon,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                }); 
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"aproa",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableAproA",{
-                data:{
-                    "uid": 1,
-                    "mon": 12,
-                    "year": 2016,
-                    "userId":104
-                },
-                always:()=>{
-                    loading.close();
-                }
-            }); 
+            this.load();
         }
     }
 </script>

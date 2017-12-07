@@ -119,7 +119,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -236,15 +236,13 @@
         methods:{
             save(){
                 if(this.invalid>0){
-                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
-                        confirmButtonText: '确定'
-                    });
+                    window.root && window.root.$emit("bizError",'请修改不和规范的字段后再进行保存');
                     return;
                 }
                 let postData = {
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086,
+                    "uid": this.uid,
+                    "year": this.year,
+                    "userId": this.userId,
                     "id":this.id
                 };
                 for(let i=1;i<=14;i++){
@@ -274,25 +272,44 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA105090",{
+                    data:{
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a105090",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA105090",{
-                data:{
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

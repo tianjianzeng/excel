@@ -98,7 +98,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -153,10 +153,14 @@
         },
         methods:{
             save(){
+                if(this.a15<0){
+                    window.root && window.root.$emit("bizError",'第15行应大于等于0');
+                    return;
+                }
                 let postData = {
-                    "uid":100,
-                    "cyear":2016,
-                    "editId":10086,
+                    "uid": this.uid,
+                    "cyear": this.year,
+                    "editId": this.userId,
                     "id":this.id
                 };
                 for(let i=1;i<=15;i++){
@@ -184,25 +188,44 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA107030",{
+                    data:{
+                        "uid":this.uid,
+                        "year":this.year,
+                        "userId":this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a107030",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA107030", {
-                data: {
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

@@ -64,7 +64,10 @@
                         <td class="blue">13（10-12）</td>
                         <td class="blue">14</td>
                         <td class="blue">15(13与14孰小)</td>
-                        <td class="blue" colspan="2">16（6+9+15）</td>
+                        <td class="blue">16（6+9+15）</td>
+                        <td>
+                            <el-button v-if="list.length===0" type="primary" @click="add()">添加</el-button>
+                        </td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{(index+1).toString().padStart(3, "0")}}</td>
@@ -81,7 +84,7 @@
                         </td>
                         <td class="green"><number-input v-model="item.a3" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a4_" :min="0" :max="1" :fixed="8" :filter="toPercent"></number-input></td>
-                        <td class="green"><el-date-picker v-model="item.a5" type="date" placeholder="选择日期" default-value="item.a5"></el-date-picker></td>
+                        <td class="green"><el-date-picker v-model="item.a5" type="date" placeholder="选择日期" ></el-date-picker></td>
                         <td class="green"><number-input v-model="item.a6" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a7" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a8" :min="0" :fixed="fixed"></number-input></td>
@@ -122,7 +125,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" v-if="false" @click="save">保存</el-button>
+        <el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -237,9 +240,9 @@
                     });
                     store.dispatch("delA107011",{
                         data:{
-                            "uid":100,
-                            "year":2016,
-                            "userId":10086,
+                            "uid":this.uid,
+                            "year":this.year,
+                            "userId":this.userId,
                             "id": item.id
                         },
                         callback:(rst)=>{
@@ -269,9 +272,9 @@
                 store.dispatch("editA107011", {
                     data:{
                         id: item.id,
-                        uid: 100,
-                        year: 2016,
-                        userId: 10086,
+                        uid:this.uid,
+                        year:this.year,
+                        userId:this.userId,
                         a1: item.a1,
                         a2: item.a2,
                         a3: item.a3,
@@ -298,6 +301,10 @@
                 });
             },
             sav(item){
+                if(!item.a1){
+                    window.root && window.root.$emit("bizError",'被投资企业为必填项');
+                    return;
+                }
                 //保存接口
                 const loading = this.$loading({
                     lock: true,
@@ -307,9 +314,9 @@
                 });
                 store.dispatch("addA107011",{
                     data:{
-                        "uid": 100,
-                        "year": 2016,
-                        "userId": 10086,
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId,
                         "a1": item.a1,
                         "a2": item.a2,
                         "a3": item.a3,
@@ -335,25 +342,44 @@
                         loading.close();
                     }
                 })
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA107011",{
+                    data:{
+                        "uid":this.uid,
+                        "year":this.year,
+                        "userId":this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a107011",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA107011",{
-                data:{
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

@@ -32,16 +32,7 @@ function renderApp() {
         render: h => h(App)
     });
 
-    // window.root = root;
-    // //网关错误
-    // root.$on("gateWayError", (rst) => {
-    //     if (["100", "101", "102"].indexOf(rst.resultCode) > -1) {
-    //         $.reLogin(rst.resultMsg);
-    //     } else {
-    //         showToast(rst.resultMsg);
-    //     }
-    // });
-
+    window.root = root;
     //业务错误
     root.$on("bizError", showToast);
 

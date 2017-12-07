@@ -307,7 +307,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -450,9 +450,9 @@
         methods:{
             save(){
                 let postData = {
-                    "uid":100,
-                    "year":2016,
-                    "editId":10086,
+                    "uid":this.uid,
+                    "year":this.year,
+                    "editId":this.userId,
                     "id":this.id
                 };
 
@@ -460,14 +460,12 @@
                     check7_31 = 0;
                 for(let i of [1,3,6]){
                     let p = `a${i}`
-                    if(this[p]>0){
+                    if(this[p]>1){
                         check136++;
                     }
                 }
                 if(check136>0){
-                    this.$alert('1,3,6项目不能同时有值', '验证', {
-                        confirmButtonText: '确定'
-                    });
+                    window.root && window.root.$emit("bizError",'1,3,6项目不能同时有值');
                     return;
                 }
 
@@ -477,10 +475,8 @@
                         check7_31++;
                     }
                 }
-                if(check7_31>0){
-                    this.$alert('7-31项目不能同时有值', '验证', {
-                        confirmButtonText: '确定'
-                    });
+                if(check7_31>1){
+                    window.root && window.root.$emit("bizError",'7-31项目不能同时有值');
                     return;
                 }
                 for(let i=1;i<=34;i++){
@@ -512,26 +508,45 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("selListA107040");
+                store.dispatch("getTableA107040", {
+                    data: {
+                        "uid":this.uid,
+                        "year":this.year,
+                        "userId":this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a107040",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("selListA107040");
-            store.dispatch("getTableA107040", {
-                data: {
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

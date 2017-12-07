@@ -3,6 +3,9 @@ import moment from 'moment';
 金额格式化
     */
 export function formatCurrency(s, fixed = 2) {
+    if (fixed == 0) {
+        return s.toString();
+    }
     if (!/^(-?\d+)(\.\d*)?$/.test(s)) {
         return 'invalid value';
     }
@@ -37,7 +40,7 @@ export function formatDate(dateTime, type = "YYYY/MM/DD") {
 
 export function formatYear(year) {
     let arr = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-    let idx = new Date().getYear() + 1898 - year;
+    let idx = new Date().getYear() + 1899 - year;
     if (idx == -1) {
         return "本年";
     }

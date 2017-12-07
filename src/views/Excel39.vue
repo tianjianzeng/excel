@@ -332,9 +332,7 @@
         methods:{
             save(){
                 if(this.invalid>0){
-                    this.$alert('请修改不和规范的字段后再进行保存', '验证', {
-                        confirmButtonText: '确定'
-                    });
+                    window.root && window.root.$emit("bizError",'请修改不和规范的字段后再进行保存');
                     return;
                 }
                 let postData = {

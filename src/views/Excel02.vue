@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                         <td class="blue">102注册资本（万元）</td> 
-                        <td class="green"><number-input v-model="item.a102" :fixed="fixed"></number-input></td> 
+                        <td class="green"><number-input v-model="item.a102" :fixed="fixed":min="100"></number-input></td> 
                         <td class="blue" colspan="2">106境外中资控股居民企业</td> 
                         <td colspan="2"><el-radio class="radio" v-model="item.a106" :label="0">是</el-radio></td> 
                         <td colspan="2"><el-radio class="radio" v-model="item.a106" :label="1">否</el-radio></td> 
@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                         <td class="blue">105资产总额（万元）</td> 
-                        <td class="green"><number-input v-model="item.a105" :fixed="fixed"></number-input></td> 
+                        <td class="green"><number-input v-model="item.a105" :fixed="fixed" :min="0"></number-input></td> 
                         <td class="blue" colspan="2">109上市公司</td> 
                         <td class="green"><el-radio class="radio" v-model="item.a109" :label="0" disabled>境内</el-radio></td>
                         <td class="green"><el-radio class="radio" v-model="item.a109" :label="1" disabled>境外</el-radio></td>  
@@ -106,24 +106,24 @@
                     </tr>
                     <tr>
                         <td class="blue">206固定资产折旧方法</td>
-                        <td class="green"><el-checkbox v-model="item.a206Ya" true-label="0" false-label="1">年限平均法</el-checkbox></td>
-                        <td class="green"><el-checkbox v-model="item.a206Ws" true-label="0" false-label="1">工作量法</el-checkbox></td>
-                        <td class="green" colspan="2"><el-checkbox v-model="item.a206Dd" true-label="0" false-label="1">双倍余额递减法是</el-checkbox></td>
-                        <td class="green"><el-checkbox v-model="item.a206Yt" true-label="0" false-label="1">年数总和法</el-checkbox></td>
-                        <td colspan="2" class="green"><el-checkbox v-model="item.a206Ot" true-label="0" false-label="1">其他</el-checkbox></td>
+                        <td class="green"><el-checkbox v-model="item.a206Ya" :true-label="0" :false-label="1">年限平均法</el-checkbox></td>
+                        <td class="green"><el-checkbox v-model="item.a206Ws" :true-label="0" :false-label="1">工作量法</el-checkbox></td>
+                        <td class="green" colspan="2"><el-checkbox v-model="item.a206Dd" :true-label="0" :false-label="1">双倍余额递减法是</el-checkbox></td>
+                        <td class="green"><el-checkbox v-model="item.a206Yt" :true-label="0" :false-label="1">年数总和法</el-checkbox></td>
+                        <td colspan="2" class="green"><el-checkbox v-model="item.a206Ot" :true-label="0" :false-label="1">其他</el-checkbox></td>
                     </tr>
                     <tr>
                         <td class="blue" rowspan="2">207存货成本计价方法</td>
-                        <td class="green" colspan="2"><el-checkbox v-model="item.a207Fifo" true-label="0" false-label="1">先进先出法</el-checkbox></td>
-                        <td class="green" colspan="2"><el-checkbox v-model="item.a207Mma" true-label="0" false-label="1">移动加权平均法</el-checkbox></td>
-                        <td colspan="3" class="green"><el-checkbox v-model="item.a207Meaa" true-label="0" false-label="1">月末一次加权平均法</el-checkbox></td>
+                        <td class="green" colspan="2"><el-checkbox v-model="item.a207Fifo" :true-label="0" :false-label="1">先进先出法</el-checkbox></td>
+                        <td class="green" colspan="2"><el-checkbox v-model="item.a207Mma" :true-label="0" :false-label="1">移动加权平均法</el-checkbox></td>
+                        <td colspan="3" class="green"><el-checkbox v-model="item.a207Meaa" :true-label="0" :false-label="1">月末一次加权平均法</el-checkbox></td>
                     </tr>
                     <tr>
-                        <td class="green"><el-checkbox v-model="item.a207Ic"  true-label="0" false-label="1">个别计价法</el-checkbox></td>
-                        <td class="green"><el-checkbox v-model="item.a207Gp"  true-label="0" false-label="1">毛利率法</el-checkbox></td>
-                        <td class="green" colspan="2"><el-checkbox v-model="item.a207Rt"  true-label="0" false-label="1">零售价法</el-checkbox></td>
-                        <td class="green"><el-checkbox v-model="item.a207Pc"  true-label="0" false-label="1">计划成本法□</el-checkbox></td>
-                        <td colspan="2" class="green"><el-checkbox v-model="item.a207Ot"  true-label="0" false-label="1">其他</el-checkbox></td>
+                        <td class="green"><el-checkbox v-model="item.a207Ic"  :true-label="0" :false-label="1">个别计价法</el-checkbox></td>
+                        <td class="green"><el-checkbox v-model="item.a207Gp"  :true-label="0" :false-label="1">毛利率法</el-checkbox></td>
+                        <td class="green" colspan="2"><el-checkbox v-model="item.a207Rt"  :true-label="0" :false-label="1">零售价法</el-checkbox></td>
+                        <td class="green"><el-checkbox v-model="item.a207Pc"  :true-label="0" :false-label="1">计划成本法□</el-checkbox></td>
+                        <td colspan="2" class="green"><el-checkbox v-model="item.a207Ot"  :true-label="0" :false-label="1">其他</el-checkbox></td>
                     </tr>
                     <tr>
                         <td class="blue">208坏账损失核算方法</td>
@@ -176,7 +176,7 @@
                         <td class="blue" colspan="2">经济性质</td>
                         <td class="blue">投资比例</td>
                         <td class="blue">投资金额</td>
-                        <td colspan="2" class="blue">注册地址</td>
+                        <td colspan="2" class="blue">注册地址<el-button v-if="0===list.length" type="primary" @click="add">添加</el-button></td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="green"><input v-model="item.invName"></td>
@@ -195,7 +195,7 @@
                         <td class="green"><number-input v-model="item.invesMoney" :fixed="fixed"></number-input></td>
                         <td class="green"><input v-model="item.rigisAddr"></td>
                         <td>
-                            <el-button v-if="item.saved && index===list.length-1" type="primary" @click="item.add">添加</el-button>
+                            <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add">添加</el-button>
                             <el-button type="primary" @click="del(item)">删除</el-button>
                             <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
                             <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
@@ -204,7 +204,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -220,9 +220,13 @@
         name: 'excel02',
         data() {
             return {
+                uid:0,
+                userId:0,
+                year:0,
                 fixed:2,
                 item:{},
-                list:[]
+                list:[],
+                shouldSave: false
             }
         },
         filters: {formatCurrency},
@@ -237,15 +241,86 @@
                 if(newVal!=null){
                     this.list = JSON.parse(JSON.stringify(newVal.list));
                     this.item = JSON.parse(JSON.stringify(newVal.item));
+                    if(newVal.item==null){
+                        this.shouldSave = true;
+                    }
+                    if(!this.item){
+                        this.item = {
+                            a102:0,
+                            a106:1,
+                            a104:0,
+                            a107:1,
+                            a108:1,
+                            a105:0,
+                            a109:1,
+                            a201:null,
+                            a202:"",
+                            a204:0,
+                            a203:"",
+                            a205:1,
+                            a206Ya:0,
+                            a206Ws:1,
+                            a206Dd:1,
+                            a206Yt:1,
+                            a206Ot:1,
+                            a207Fifo:1,
+                            a207Mma:1,
+                            a207Meaa:1,
+                            a207Ic:1,
+                            a207Gp:1,
+                            a207Rt:1,
+                            a207Pc:1,
+                            a207Ot:1,
+                            a208:null,
+                            a209:null
+                        }
+                    }
                 }
             }
         },
         methods:{
             save(){
+                if(this.item.a102<100){
+                    window.root && window.root.$emit("bizError",'注册资本应大于等于100万元');
+                    return;
+                }
+                if(this.item.a104<=0){
+                    window.root && window.root.$emit("bizError",'从业人数应大于0');
+                    return;
+                }
+                if(this.item.a105<0){
+                    window.root && window.root.$emit("bizError",'资产总额数应大等于0');
+                    return;
+                }
+                if(this.item.a201==null){
+                    window.root && window.root.$emit("bizError",'“一般企业”“小企业会计制度”“企业会计制度”最少选择一项');
+                    return;
+                }
+                if(!this.item.a202){
+                    window.root && window.root.$emit("bizError",'会计档案的存放地必须填写');
+                    return;
+                }
+                if(this.item.a206Ya && this.item.a206Ws && this.item.a206Dd && this.item.a206Yt && this.item.a206Ot){                    
+                    window.root && window.root.$emit("bizError",'固定资产折旧方法最少选择一项');
+                    return;
+                }
+
+                if(this.item.a207Fifo && this.item.a207Mma && this.item.a207Meaa && this.item.a207Ic && this.item.a207Gp && this.item.a207Rt && this.item.a207Pc && this.item.a207Ot){
+                    window.root && window.root.$emit("bizError",'存货成本计价方法至少选择一项');
+                    return;
+                }
+                if(this.item.a208==null){
+                    window.root && window.root.$emit("bizError",'坏账损失核算方法必须选择');
+                    return;
+                }
+                if(this.item.a209==null){
+                    window.root && window.root.$emit("bizError",'所得税计算方法必须选择');
+                    return;
+                }
                  let postData = {
-                    "cYear": 2016,
-                    "uid": 1,
-                    "userId": 104
+                    "cYear": this.year,
+                    "uid": this.uid,"mon": "2017-09-01",
+                    "userId": this.userId
                 };
                 for(let p in this.item){
                     postData[p] = this.item[p];
@@ -257,8 +332,49 @@
                     spinner: 'el-icon-loading',
                     background: 'rgba(0, 0, 0, 0.7)'
                 });
-                store.dispatch("editA000000", {
+                let method = "editA000000"
+                if(this.shouldSave){
+                    method = "addA000000";
+                }
+                store.dispatch(method, {
                     data: postData,
+                    callback:(rst)=>{
+                        if(rst.status==0){
+                            this.shouldSave = false;
+                            this.$message({
+                                message: '保存成功',
+                                type: 'success'
+                            });
+                        }
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            add(){
+                this.list.push({
+                    saved:false,
+                });
+            },
+            sav(item){
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("editInvestA000000",{
+                    data:{
+                        id: item.id,
+                        invName: item.invName,
+                        taxprNum: item.taxprNum,
+                        ecoPro: item.ecoPro,
+                        inveSper: item.inveSper,
+                        invesMoney: item.invesMoney,
+                        rigisAddr: item.rigisAddr,
+                        addId: item.addId         
+                    },
                     callback:(rst)=>{
                         if(rst.status==0){
                             this.$message({
@@ -272,7 +388,7 @@
                     }
                 });
             },
-            sav(item){
+            edt(item){
                 const loading = this.$loading({
                     lock: true,
                     text: '加载中',
@@ -324,25 +440,44 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                store.dispatch("getEpA000000");
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA000000",{
+                    data:{
+                        "uid": this.uid,
+                        "year": this.year
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a000000",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            store.dispatch("getEpA000000");
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA000000",{
-                data:{
-                    "uid": 545,
-                    "year":2017
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

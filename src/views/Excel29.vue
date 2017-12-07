@@ -2,16 +2,37 @@
     <div class="excel excel29">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col width="3%" ></col>
+                <col width="12%" ></col>
+                <col width="5%" ></col>
+                <col width="5%" ></col>
+                <col width="5%" ></col>
+                <col width="5%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="60px"></col>
                 <tbody>
                     <tr>
-                        <td colspan="20">跨年度结转抵免境外所得税明细表</td>
+                        <td colspan="21">跨年度结转抵免境外所得税明细表</td>
                     </tr>
                     <tr>
                         <td class="blue" rowspan="3">行次</td>
                         <td class="blue" rowspan="2">国家（地区）</td>
                         <td class="blue" colspan="6">前五年境外所得已缴所得税未抵免余额</td>
                         <td class="blue" colspan="6">本年实际抵免以前年度未抵免的境外已缴所得税额</td>
-                        <td class="blue" colspan="6">结转以后年度抵免的境外所得已缴所得税额</td>
+                        <td class="blue" colspan="7">结转以后年度抵免的境外所得已缴所得税额</td>
                     </tr>
                     <tr>
                         <td class="blue">前五年</td>
@@ -31,7 +52,7 @@
                         <td class="blue">前二年</td>
                         <td class="blue">前一年</td>
                         <td class="blue">本年</td>
-                        <td class="blue">小计</td>
+                        <td class="blue" colspan="2">小计</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -52,11 +73,11 @@
                         <td class="blue">16（5-11）</td>
                         <td class="blue">17（6-12）</td>
                         <td class="blue">18</td>
-                        <td class="blue">19（14+15+16+17+18）</td>
+                        <td class="blue" colspan="2">19（14+15+16+17+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td style="width:5%" class="blue"></td>
-                        <td style="width:5%" class="green">
+                        <td class="blue">{{(index+1).toString().padStart(3,'0')}}</td>
+                        <td class="green">
                             <el-select v-model="item.a1" placeholder="请选择">
                                 <el-option
                                 v-for="item in getCResult108010"
@@ -66,24 +87,25 @@
                                 </el-option>
                             </el-select>
                         </td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a2" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a3" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a4" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a5" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a6" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%">{{item.a7|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a8" :fixed="fixed" :min="0" :max="item.a2"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a9" :fixed="fixed" :min="0" :max="item.a3"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a10" :fixed="fixed" :min="0" :max="item.a4"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a11" :fixed="fixed" :min="0" :max="item.a5"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a12" :fixed="fixed" :min="0" :max="item.a6"></number-input></td>
-                        <td style="width:5%">{{item.a13|formatCurrency}}</td>
-                        <td style="width:5%">{{item.a14|formatCurrency}}</td>
-                        <td style="width:5%">{{item.a15|formatCurrency}}</td>
-                        <td style="width:5%">{{item.a16|formatCurrency}}</td>
-                        <td style="width:5%">{{item.a17|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a18" :fixed="fixed"></number-input></td>
-                        <td style="width:5%">{{item.a19|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a2" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a3" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a4" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a5" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a6" :fixed="fixed" :min="0"></number-input></td>
+                        <td>{{item.a7|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a8" :fixed="fixed" :min="0" :max="item.a2"></number-input></td>
+                        <td class="green"><number-input v-model="item.a9" :fixed="fixed" :min="0" :max="item.a3"></number-input></td>
+                        <td class="green"><number-input v-model="item.a10" :fixed="fixed" :min="0" :max="item.a4"></number-input></td>
+                        <td class="green"><number-input v-model="item.a11" :fixed="fixed" :min="0" :max="item.a5"></number-input></td>
+                        <td class="green"><number-input v-model="item.a12" :fixed="fixed" :min="0" :max="item.a6"></number-input></td>
+                        <td>{{item.a13|formatCurrency}}</td>
+                        <td>{{item.a14|formatCurrency}}</td>
+                        <td>{{item.a15|formatCurrency}}</td>
+                        <td>{{item.a16|formatCurrency}}</td>
+                        <td>{{item.a17|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a18" :fixed="fixed"></number-input></td>
+                        <td>{{item.a19|formatCurrency}}</td>
+                        <td><el-button type="primary" @click="edt(item)">保存</el-button></td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -105,12 +127,12 @@
                         <td>{{total.a16|formatCurrency}}</td>
                         <td>{{total.a17|formatCurrency}}</td>
                         <td>{{total.a18|formatCurrency}}</td>
-                        <td>{{total.a19|formatCurrency}}</td>
+                        <td colspan="2">{{total.a19|formatCurrency}}</td>
                     </tr> 
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" v-if="false" @click="save">保存</el-button>
+        <el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -241,6 +263,9 @@
                 });
                 store.dispatch("editA108030",{
                     data:{
+                        year: this.year,
+                        uid: this.uid,
+                        userId: this.userId,
                         id: item.id,
                         a1:item.a1,
                         a2:item.a2,
@@ -273,26 +298,46 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getCResult108010");
+                store.dispatch("getTableA108030",{
+                    data:{
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a108030",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getCResult108010");
-            store.dispatch("getTableA108030",{
-                data:{
-                    "uid": "200",
-                    "year": "2017",
-                    "userId":"1"
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

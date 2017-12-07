@@ -236,7 +236,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -360,7 +360,15 @@
                 }
                 return num.toFixed(fixed) + '%';
             },
-            save(){
+            save(){				
+                if((this.a2_1 && this.a3_2) || (this.a2_1 && this.a4) || (this.a3_2 && this.a4)){
+                    window.root && window.root.$emit("bizError",'“软件企业认定证书编号”、“集成电路生产企业认定文号”、“集成电路设计企业认定证书编号”3个只能填1个');
+                    return;
+                }
+                if((this.a2_1 && !this.a1_2) ||(!this.a2_1 && this.a1_2)){
+                    window.root && window.root.$emit("bizError",'“软件企业认定证书编号”和“软件企业证书取得日期”应都填写或都不填写');
+                    return;
+                }
                 let postData = {
                     "id":this.id
                 };
@@ -393,25 +401,44 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA107042", {
+                    data: {
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a107042",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA107042", {
-                data: {
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

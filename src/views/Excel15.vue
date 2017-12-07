@@ -135,7 +135,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -304,10 +304,51 @@
         },
         methods:{
             save(){
+//①如果6行3列＞0且6行2列＜0，则6行3列要＜6行2列的绝对值，校验不通过的出现提示：若第3列＞0且第2列＜0，第3列＜第2列的绝对值	//本年度合并、分立转入（转出）可弥补的亏损额应小于纳税调整后所得											
+// ②如果6行2列＞0，则10列（1行至5行）＜＝4列（1行至5行）的绝对值；如果6行2列＜＝0，则10列（1行至5行）都＝0，校验不通过的出现提示：第6行第2列<0，则第10列1-6行应=0												
+
+                if(this.a6_3>0 && this.a6_2<0){
+                    if(this.a6_3>=Math.abs(this.a6_2)){
+                        window.root && window.root.$emit("bizError",'校验不通过');
+                        return;
+                    }
+                }
+                for(let i = 1; i<=5; i++){
+                    if(this[`a${i}_3`]>=0 && this[`a${i}_2`]<0){
+                        if(this[`a${i}_3`]>=Math.abs(this[`a${i}_2`])){
+                            window.root && window.root.$emit("bizError",'校验不通过');
+                            return;
+                        }
+                    }
+                }
+                if(this.a6_2>0){
+                    for(let i = 1; i<=5; i++){
+                        if(this[`a${i}_10`]>Math.abs(this[`a${i}_4`])){
+                            window.root && window.root.$emit("bizError",'校验不通过', '验证', {
+                                confirmButtonText: '确定'
+                            });
+                            return;
+                        }
+                    }
+                }else if(this.a6_2==0){
+                    for(let i = 1; i<=5; i++){
+                        if(this[`a${i}_10`]!=0){
+                            window.root && window.root.$emit("bizError",'校验不通过');
+                            return;
+                        }
+                    }
+                }else{
+                    for(let i = 1; i<=6; i++){
+                        if(this[`a${i}_10`]!=0){
+                            window.root && window.root.$emit("bizError",'校验不通过');
+                            return;
+                        }
+                    }
+                }
                 let postData = {
-                    "uid":100,
-                    "c_year":2016,
-                    "userId":10086
+                    "uid": this.uid,
+                    "c_year": this.year,
+                    "userId": this.userId
                 };
                 for(let i=1;i<=7;i++){
                     for(let j=1;j<=11;j++){
@@ -336,25 +377,44 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableA106000",{
+                    data:{
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a106000",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableA106000",{
-                data:{
-                    "uid":100,
-                    "year":2016,
-                    "userId":10086
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

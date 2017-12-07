@@ -37,7 +37,7 @@ export const init = function(configs) {
             if (passedTime < expire && (dataWarp.data != config.defaultState)) {
                 commit(method, dataWarp.data);
             } else {
-                let callback = opts.callback || function(rst) {
+                let callback = function(rst) {
                     //网关返回失败
                     if (rst.status != 0) {
                         //网关返回的错误
@@ -45,7 +45,7 @@ export const init = function(configs) {
                             opts.error(rst);
                         } else {
                             commit(method, config.defaultState);
-                            window.root && window.root.$emit("gateWayError", rst);
+                            window.root && window.root.$emit("bizError", rst.message);
                         }
                     } else {
                         let result = rst.data;
@@ -53,6 +53,7 @@ export const init = function(configs) {
                             result = config.process(result);
                         }
                         commit(method, result);
+                        opts.callback && opts.callback(rst);
                     }
                 };
 

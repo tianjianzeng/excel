@@ -6,7 +6,12 @@
 
 <script>
     export default {
-        name: 'app'
+        name: 'app',
+        watch:{
+            "$route":function(){
+                this.$children[0] && this.$children[0].load && this.$children[0].load();
+            }
+        }
     }
 </script>
 

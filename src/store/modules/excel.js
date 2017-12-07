@@ -2,6 +2,13 @@ import * as API from '../../utils'
 import { init, formatUrl } from '../init'
 
 const configs = {
+    flush: {
+        url: function(param) {
+            return formatUrl(`v1/${param}/flush`);
+        },
+        httpMethod: "post",
+        defaultState: false
+    },
     getFirst: {
         url: formatUrl("v1/first/get"),
         httpMethod: "post",
@@ -24,6 +31,11 @@ const configs = {
     },
     editA000000: {
         url: formatUrl("v1/a000000/edit"),
+        httpMethod: "post",
+        defaultState: {}
+    },
+    addInvestA000000: {
+        url: formatUrl("v1/a000000/addInvest"),
         httpMethod: "post",
         defaultState: {}
     },
@@ -148,7 +160,7 @@ const configs = {
         url: function(param) {
             return formatUrl(`v1/a105091/del/${param}`);
         },
-        httpMethod: "post",
+        httpMethod: "get",
         defaultState: {}
     },
     getTableA105100: {
@@ -192,7 +204,7 @@ const configs = {
         defaultState: {}
     },
     addA108010: {
-        url: formatUrl('v1/108010/add'),
+        url: formatUrl('v1/a108010/add'),
         httpMethod: "post",
         defaultState: {}
     },

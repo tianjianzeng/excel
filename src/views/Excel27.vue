@@ -69,7 +69,8 @@
                         <td class="blue">15</td>
                         <td class="blue">16</td>
                         <td class="blue">17</td>
-                        <td class="blue" colspan="2">18（14+15-16-17）</td>
+                        <td class="blue">18（14+15-16-17）</td>
+                        <td><el-button v-if="0===list.length" type="primary" @click="add()">添加</el-button></td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">001</td>
@@ -132,7 +133,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" v-if="false" @click="save">保存</el-button>
+        <el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -253,49 +254,7 @@
             },
         },
         methods:{
-            save(){
-                // if(this.invalid>0){
-                //     this.$alert('请修改不和规范的字段后再进行保存', '验证', {
-                //         confirmButtonText: '确定'
-                //     });
-                //     return;
-                // }
-                // let postData = {
-                //     "uid": "545",
-                //     "mon": "2017-09-07",
-                //     "year": "2017",
-                //     "userId": "1",
-                //     "id":this.id
-                // };
-                // for(let i=1;i<=14;i++){
-                //     for(let j=1;j<=3;j++){
-                //         let p = `a${i}_${j}`
-                //         postData[p]=this[p];
-                //     }
-                // }
-                
-                // const loading = this.$loading({
-                //     lock: true,
-                //     text: '加载中',
-                //     spinner: 'el-icon-loading',
-                //     background: 'rgba(0, 0, 0, 0.7)'
-                // });
-                // store.dispatch("editA108010", {
-                //     data: postData,
-                //     callback:(rst)=>{
-                //         if(rst.status==0){
-                //             this.$message({
-                //                 message: '保存成功',
-                //                 type: 'success'
-                //             });
-                //         }
-                //     },
-                //     always:()=>{
-                //         loading.close();
-                //     }
-                // });
-            },
-            add(item){
+            add(){
                 this.list.push({
                     saved:false,
                     a1:null,
@@ -332,7 +291,7 @@
                     });
                     store.dispatch("delA108010",{
                         data:{
-                            "uid":100,
+                            "uid": this.uid,
                             "id": item.id
                         },
                         callback:(rst)=>{
@@ -353,9 +312,7 @@
             },
             edt(item){
                 if(item.a16+item.a17<0){
-                    this.$alert('16+17列总和不能小于0', '验证', {
-                        confirmButtonText: '确定'
-                    });
+                    window.root && window.root.$emit("bizError",'16+17列总和不能小于0');
                     return;
                 }
                 //调用编辑接口
@@ -402,7 +359,7 @@
             },
             sav(item){
                 if(item.a16+item.a17<0){
-                    this.$alert('16+17列总和不能小于0', '验证', {
+                    window.root && window.root.$emit("bizError",'16+17列总和不能小于0', '验证', {
                         confirmButtonText: '确定'
                     });
                     return;
@@ -414,12 +371,12 @@
                     spinner: 'el-icon-loading',
                     background: 'rgba(0, 0, 0, 0.7)'
                 });
-                store.dispatch("getTableA108010",{
+                store.dispatch("addA108010",{
                     data:{
-                        uid: "545",
-                        mon: "2017-09-07",
-                        year: "2017",
-                        userId: "1",
+                        uid: this.uid,
+                        mon: this.mon,
+                        cYear: this.year,
+                        userId: this.userId,
                         a1:item.a1,
                         a2:item.a2,
                         a3:item.a3,
@@ -445,34 +402,53 @@
                                 message: '保存成功',
                                 type: 'success'
                             });
+                            item.saved = true;
                         }
                     },
                     always:()=>{
                         loading.close();
                     }
                 });
-                // item.saved = true;
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getCResult108010");
+                store.dispatch("getTableA108010",{
+                    data:{
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a108010",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getCResult108010");
-            store.dispatch("getTableA108010",{
-                data:{
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1"
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

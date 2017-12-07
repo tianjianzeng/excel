@@ -2,6 +2,25 @@
     <div class="excel excel28">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col width="4%" ></col>
+                <col width="15%" ></col>
+                <col width="5%" ></col>
+                <col width="5%" ></col>
+                <col width="5%" ></col>
+                <col width="5%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="4%" ></col>
+                <col width="120px"></col>                
                 <tbody>
                     <tr>
                         <td colspan="20">境外分支机构弥补亏损明细表</td>
@@ -58,7 +77,7 @@
                         <td class="blue" colspan="2">19</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td style="width:5%" class="blue"></td>
+                        <td class="blue">{{(index+1).toString().padStart(3,'0')}}</td>
                         <td class="green">
                             <el-select v-model="item.a1" placeholder="请选择">
                                 <el-option
@@ -69,24 +88,24 @@
                                 </el-option>
                             </el-select>
                         </td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a2" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a3" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a4" :fixed="fixed" :max="item.a2"></number-input></td>
-                        <td style="width:5%"><number-display v-model="item.a5" :fixed="fixed" :min="0"></number-display></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a6" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a7" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a8" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a9" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a10" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%">{{item.a11|formatCurrency}}</td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a12" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a13" :fixed="fixed" :max="item.a11"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a14" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a15" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a16" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a17" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%" class="green"><number-input v-model="item.a18" :fixed="fixed" :min="0"></number-input></td>
-                        <td style="width:5%">{{item.a19|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a2" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a3" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a4" :fixed="fixed" :max="item.a2"></number-input></td>
+                        <td><number-display v-model="item.a5" :fixed="fixed" :min="0"></number-display></td>
+                        <td class="green"><number-input v-model="item.a6" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a7" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a8" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a9" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a10" :fixed="fixed" :min="0"></number-input></td>
+                        <td>{{item.a11|formatCurrency}}</td>
+                        <td class="green"><number-input v-model="item.a12" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a13" :fixed="fixed" :max="item.a11"></number-input></td>
+                        <td class="green"><number-input v-model="item.a14" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a15" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a16" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a17" :fixed="fixed" :min="0"></number-input></td>
+                        <td class="green"><number-input v-model="item.a18" :fixed="fixed" :min="0"></number-input></td>
+                        <td>{{item.a19|formatCurrency}}</td>
                         <td><el-button type="primary" @click="edt(item)">保存</el-button></td>
                     </tr>
                     <tr>
@@ -114,7 +133,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" v-if="false" @click="save">保存</el-button>
+        <el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -229,6 +248,16 @@
         },
         methods:{
             edt(item){
+                if(this.a4>this.a2){
+                    window.root && window.root.$emit("bizError",'第4列应该小于等于第2列');
+                    return;
+                }
+                for(let i of [2,3,4,6,7,8,9,10,12,13,14,15,16,17,18]){
+                    if(this[`a${i}`]<0){
+                        window.root && window.root.$emit("bizError",`第${i}列应大于等于0`);
+                        return;
+                    }
+                }
                 //调用编辑接口
                 const loading = this.$loading({
                     lock: true,
@@ -238,6 +267,9 @@
                 });
                 store.dispatch("editA108020",{
                     data:{
+                        year: this.year,
+                        uid: this.uid,
+                        userId: this.userId,
                         id: item.id,
                         a1:item.a1,
                         a2:item.a2,
@@ -256,7 +288,8 @@
                         a15:item.a15,
                         a16:item.a16,
                         a17:item.a17,
-                        a18:item.a18
+                        a18:item.a18,
+                        a19:item.a19
                     },
                     callback:(rst)=>{
                         if(rst.status==0){
@@ -270,26 +303,46 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getCResult108010");
+                store.dispatch("getTableA108020",{
+                    data:{
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"a108020",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getCResult108010");
-            store.dispatch("getTableA108020",{
-                data:{
-                    "uid": "200",
-                    "year": "2017",
-                    "userId":"1"
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

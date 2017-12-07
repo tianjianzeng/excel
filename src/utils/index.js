@@ -12,21 +12,21 @@ function ajax(config, cb, errorCb) {
     promise.then(function(res) {
         cb && cb(res.data);
     }).catch(function(error) {
-        errorCb && errorCb("没有连接到网络，心里空空的");
+        errorCb && errorCb("接口调用异常");
     });
 
     return promise;
 }
 //
 export const getData = function(param, cb, errorCb) {
-    let params = {
-        url: param.url,
-        method: "get",
-        params: param.data
-    };
-    return ajax(params, cb, errorCb);
-}
-//
+        let params = {
+            url: param.url,
+            method: "get",
+            params: param.data
+        };
+        return ajax(params, cb, errorCb);
+    }
+    //
 export const postData = function(param, cb, errorCb) {
     let params = {
         url: param.url,
