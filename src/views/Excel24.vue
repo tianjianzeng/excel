@@ -358,7 +358,7 @@
                         num = 0;
                     }
                 }
-                return num.toFixed(fixed) + '%';
+                return (num*100).toFixed(fixed) + '%';
             },
             save(){				
                 if((this.a2_1 && this.a3_2) || (this.a2_1 && this.a4) || (this.a3_2 && this.a4)){

@@ -144,7 +144,7 @@
                         num = 0;
                     }
                 }
-                return num.toFixed(fixed) + '%';
+                return (num*100).toFixed(fixed) + '%';
             },
             add(){
                 this.list.push({

@@ -353,7 +353,7 @@
                         num = 0;
                     }
                 }
-                return num.toFixed(fixed) + '%';
+                return (num*100).toFixed(fixed) + '%';
             },
             save(){
                 let postData = {

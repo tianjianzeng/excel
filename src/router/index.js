@@ -38,14 +38,14 @@ const routes = [
     { path: '/A108030', name: 'ucExcel29', component: getModule("Excel29") },
     { path: '/AproA', name: 'ucExcel30', component: getModule("Excel30") },
     { path: '/flowA', name: 'ucExcel31', component: getModule("Excel31") },
-    { path: '/excel32', name: 'ucExcel32', component: getModule("Excel32") },
-    { path: '/excel33', name: 'ucExcel33', component: getModule("Excel33") },
-    { path: '/excel34', name: 'ucExcel34', component: getModule("Excel34") },
-    { path: '/excel35', name: 'ucExcel35', component: getModule("Excel35") },
-    { path: '/excel36', name: 'ucExcel36', component: getModule("Excel36") },
-    { path: '/excel37', name: 'ucExcel37', component: getModule("Excel37") },
-    { path: '/excel38', name: 'ucExcel38', component: getModule("Excel38") },
-    { path: '/excel39', name: 'ucExcel39', component: getModule("Excel39") }
+    { path: '/AbalA', name: 'ucExcel32', component: getModule("Excel32") },
+    { path: '/AproB', name: 'ucExcel33', component: getModule("Excel33") },
+    { path: '/flowB', name: 'ucExcel34', component: getModule("Excel34") },
+    { path: '/AbalB', name: 'ucExcel35', component: getModule("Excel35") },
+    { path: '/AproC', name: 'ucExcel36', component: getModule("Excel36") },
+    { path: '/flowC', name: 'ucExcel37', component: getModule("Excel37") },
+    { path: '/AbalC', name: 'ucExcel38', component: getModule("Excel38") },
+    { path: '/Research', name: 'ucExcel39', component: getModule("Excel39") }
 ];
 const router = new VueRouter({
     //mode: 'history',

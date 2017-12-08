@@ -2,6 +2,13 @@
     <div class="excel excel02">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 11%"></col>
+                <col style="width: 11%"></col>
+                <col style="width: 11%"></col>
+                <col style="width: 11%"></col>
+                <col style="width: 11%"></col>
+                <col style="width: 11%"></col>
+                <col style="width: 210px"></col>
                 <tbody>
                     <tr>
                         <td colspan="8">企业基础信息表</td>
@@ -178,11 +185,11 @@
                         <td class="blue">投资金额</td>
                         <td colspan="2" class="blue">注册地址<el-button v-if="0===list.length" type="primary" @click="add">添加</el-button></td>
                     </tr>
-                    <tr v-for="(item,index) in list" :key="index">
-                        <td class="green"><input v-model="item.invName"></td>
-                        <td class="green"><input v-model="item.taxprNum"></td>
+                    <tr v-for="(itm,index) in list" :key="index">
+                        <td class="green"><input v-model="itm.invName"></td>
+                        <td class="green"><input v-model="itm.taxprNum"></td>
                         <td class="green" colspan="2">
-                             <el-select v-model="item.ecoPro" placeholder="请选择">
+                             <el-select v-model="itm.ecoPro" placeholder="请选择">
                                 <el-option
                                     v-for="it in getEpA000000"
                                     :key="it.id"
@@ -191,14 +198,14 @@
                                 </el-option>
                             </el-select>
                         </td>
-                        <td class="green"><number-input v-model="item.inveSper" :fixed="4"></number-input></td>
-                        <td class="green"><number-input v-model="item.invesMoney" :fixed="fixed"></number-input></td>
-                        <td class="green"><input v-model="item.rigisAddr"></td>
+                        <td class="green"><number-input v-model="itm.inveSper" :fixed="8" :filter="toPercent"></number-input></td>
+                        <td class="green"><number-input v-model="itm.invesMoney" :fixed="fixed"></number-input></td>
+                        <td class="green"><input v-model="itm.rigisAddr"></td>
                         <td>
-                            <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add">添加</el-button>
-                            <el-button type="primary" @click="del(item)">删除</el-button>
-                            <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
-                            <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
+                            <el-button v-if="itm.saved && index===list.length-1" type="primary" @click="add">添加</el-button>
+                            <el-button type="primary" @click="del(itm)">删除</el-button>
+                            <el-button v-if="!itm.saved" type="primary" @click="sav(itm)">保存</el-button>
+                            <el-button v-if="itm.saved" type="primary" @click="edt(itm)">修改</el-button>
                         </td>
                     </tr>
                 </tbody>
@@ -239,13 +246,14 @@
         watch: {
             getTableA000000(newVal){
                 if(newVal!=null){
-                    this.list = JSON.parse(JSON.stringify(newVal.list));
+                    this.list = JSON.parse(JSON.stringify(newVal.list))||[];
                     this.item = JSON.parse(JSON.stringify(newVal.item));
                     if(newVal.item==null){
                         this.shouldSave = true;
                     }
                     if(!this.item){
                         this.item = {
+                            declare:0,
                             a102:0,
                             a106:1,
                             a104:0,
@@ -275,10 +283,22 @@
                             a209:null
                         }
                     }
+                    this.list.forEach(item=>{
+                        item.saved = true;
+                    })
                 }
             }
         },
         methods:{
+            toPercent(num) {
+                if(typeof num != "number"){
+                    num = Number(num);
+                    if( isNaN(num)){
+                        num = 0;
+                    }
+                }
+                return num.toFixed(4) + '%';
+            },
             save(){
                 if(this.item.a102<100){
                     window.root && window.root.$emit("bizError",'注册资本应大于等于100万元');
@@ -319,7 +339,7 @@
                 }
                  let postData = {
                     "cYear": this.year,
-                    "uid": this.uid,"mon": "2017-09-01",
+                    "uid": this.uid,
                     "userId": this.userId
                 };
                 for(let p in this.item){
@@ -354,7 +374,14 @@
             },
             add(){
                 this.list.push({
+                    id: this.item.id,
                     saved:false,
+                    invName: "",
+                    taxprNum: "",
+                    ecoPro: "",
+                    inveSper: 0,
+                    invesMoney: 0,
+                    rigisAddr: "",
                 });
             },
             sav(item){
@@ -364,7 +391,7 @@
                     spinner: 'el-icon-loading',
                     background: 'rgba(0, 0, 0, 0.7)'
                 });
-                store.dispatch("editInvestA000000",{
+                store.dispatch("addInvestA000000",{
                     data:{
                         id: item.id,
                         invName: item.invName,
@@ -381,6 +408,7 @@
                                 message: '保存成功',
                                 type: 'success'
                             });
+                            item.saved = true;
                         }
                     },
                     always:()=>{

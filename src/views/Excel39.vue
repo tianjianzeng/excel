@@ -146,7 +146,8 @@
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue" colspan="2">六、其他相关费用小计</td>
-                        <td colspan="2">{{a6|formatCurrency}}</td>
+                        <td>{{a6|formatCurrency}}</td>
+                        <td><el-button v-if="0===list.length" type="primary" @click="add()">添加</el-button></td>
                     </tr>
                     <tr v-for="(item,index) in (list)" :key="index">
                         <td class="blue">6.{{index+1}}</td>
@@ -331,10 +332,6 @@
         },
         methods:{
             save(){
-                if(this.invalid>0){
-                    window.root && window.root.$emit("bizError",'请修改不和规范的字段后再进行保存');
-                    return;
-                }
                 let postData = {
                     "id":this.id,
                     "a7":this.a7,
@@ -371,7 +368,7 @@
                     }
                 });
             },
-            add(item){
+            add(){
                 this.list.push({
                     saved:false,
                     a1:"",
@@ -447,10 +444,10 @@
                 });
                 store.dispatch("add2Research",{
                     data:{
-                        "uid": "545",
-                        "mon": "2017-09-07",
-                        "cYear": "2017",
-                        "addid":"1",
+                        "uid": this.uid,
+                        "mon": this.mon,
+                        "cYear": this.year,
+                        "addid": this.userId,
                         a1: item.a1,
                         a2: item.a2
                     },
@@ -467,26 +464,46 @@
                         item.saved = true;
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getResearch",{
+                    data:{
+                        "uid": this.uid,
+                        "mon": this.mon,
+                        "year": this.year,
+                        "userId": this.userId
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                });
+            },
+            refresh(){
+                // store.dispatch("flush",{
+                //     data:{
+                //         "year": this.year,
+                //         "uid": this.uid,
+                //         "userId": this.userId
+                //     },
+                //     urlParam:"abalb",
+                //     always:()=>{
+                //         this.load();
+                //     }
+                // })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getResearch",{
-                data:{
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1"
-                },
-                always:()=>{
-                    loading.close();
-                }
-            });
+            this.load();
         }
     }
 </script>

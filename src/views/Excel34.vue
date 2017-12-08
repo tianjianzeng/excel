@@ -328,7 +328,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -482,10 +482,10 @@
             save(){
                 console.log(this.id);
                 let postData = {
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1",
+                    "uid": this.uid,
+                    "mon": this.mon,
+                    "year": this.year,
+                    "userId": this.userId,
                     "id": this.id
                 };
                 for(let i=1;i<=83;i++){
@@ -513,26 +513,46 @@
                         loading.close();
                     }
                 });
+            },
+            load(){
+                this.uid = this.$route.query.uid;
+                this.year = this.$route.query.year;
+                this.userId = this.$route.query.userId;
+                this.mon = this.$route.query.mon;
+                const loading = this.$loading({
+                    lock: true,
+                    text: '加载中',
+                    spinner: 'el-icon-loading',
+                    background: 'rgba(0, 0, 0, 0.7)'
+                });
+                store.dispatch("getTableflowB",{
+                    data:{
+                        "uid": this.uid,
+                        "mon": this.mon,
+                        "year": this.year,
+                        "userId": this.userId,
+                    },
+                    always:()=>{
+                        loading.close();
+                    }
+                }); 
+            },
+            refresh(){
+                store.dispatch("flush",{
+                    data:{
+                        "year": this.year,
+                        "uid": this.uid,
+                        "userId": this.userId
+                    },
+                    urlParam:"flowb",
+                    always:()=>{
+                        this.load();
+                    }
+                })
             }
         },
         mounted() {
-            const loading = this.$loading({
-                lock: true,
-                text: '加载中',
-                spinner: 'el-icon-loading',
-                background: 'rgba(0, 0, 0, 0.7)'
-            });
-            store.dispatch("getTableflowB",{
-                data:{
-                    "uid": "545",
-                    "mon": "2017-09-07",
-                    "year": "2017",
-                    "userId": "1"
-                },
-                always:()=>{
-                    loading.close();
-                }
-            }); 
+            this.load();
         }
     }
 </script>
