@@ -9,7 +9,7 @@ import VueAxios from 'vue-axios'
 import $ from 'jquery'
 
 import Element from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(Element);
 /**
  * 把根组件挂载到 id 为 app 的 DOM 上
