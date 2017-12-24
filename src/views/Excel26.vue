@@ -149,6 +149,26 @@
             },
             list:{
                 handler(val){
+                    this.total = {
+                        a2: 0,
+                        a3: 0,
+                        a4: 0,
+                        a5: 0,
+                        a6: 0,
+                        a7: 0,
+                        a8: 0,
+                        a9: 0,
+                        a10: 0,
+                        a11: 0,
+                        a12: 0,
+                        a13: 0,
+                        a14: 0,
+                        a15: 0,
+                        a16: 0,
+                        a17: 0,
+                        a18: 0,
+                        a19: 0
+                    }
                     val.forEach((item,index)=>{
                         item.a4 = item.a3 * 0.1;
                         item.a5 = ((item.a3||0) * Math.pow(10, this.fixed) - (item.a4||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
@@ -158,6 +178,24 @@
                         item.a13 = item.a11 - item.a12;
                         item.a18 = ((item.a15||0) * Math.pow(10, this.fixed) + (item.a16||0) * Math.pow(10, this.fixed) + (item.a16||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
                         item.a19 = ((item.a12||0) * Math.pow(10, this.fixed) + (item.a14||0) * Math.pow(10, this.fixed) + (item.a18||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
+                        this.total.a2 += item.a2;
+                        this.total.a3 += item.a3;
+                        this.total.a4 += item.a4;
+                        this.total.a5 += item.a5;
+                        this.total.a6 += item.a6;
+                        this.total.a7 += item.a7;
+                        this.total.a8 += item.a8;
+                        this.total.a9 += item.a9;
+                        this.total.a10 += item.a10;
+                        this.total.a11 += item.a11;
+                        this.total.a12 += item.a12;
+                        this.total.a13 += item.a13;
+                        this.total.a14 += item.a14;
+                        this.total.a15 += item.a15;
+                        this.total.a16 += item.a16;
+                        this.total.a17 += item.a17;
+                        this.total.a18 += item.a18;
+                        this.total.a19 += item.a19;
                     });
                 },
                 deep: true

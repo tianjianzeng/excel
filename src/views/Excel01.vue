@@ -925,7 +925,7 @@
                 if(newVal!=null){
                     for(let i in newVal){
                         if(this.hasOwnProperty(i)){
-                            this[i]=newVal[i];
+                            this[i]=newVal[i] / 100.0;
                         }
                     }
                 }
@@ -980,7 +980,7 @@
                 for(let i=1;i<=40;i++){
                     for(let j=1;j<=7;j++){
                         let p = `a${i}_${j}`
-                        postData[p]=this[p];
+                        postData[p]=this[p] * 100;
                     }
                 }
                 

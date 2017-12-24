@@ -65,7 +65,7 @@
                         <td :class="{'green':item.a7!=null,'blue':item.a7==null}"><span v-if="item.a7==null">*</span><number-input v-else v-model="item.a7" :fixed="fixed"></number-input></td>
                         <td :class="{'green':item.a8!=null,'blue':item.a8==null}"><span v-if="item.a8==null">*</span><number-input v-else v-model="item.a8" :fixed="fixed"></number-input></td>
                         <td :class="{'green':item.a9!=null,'blue':item.a9==null}"><span v-if="item.a9==null">*</span><number-input v-else v-model="item.a9" :fixed="fixed"></number-input></td>
-                        <td :class="{'blue':!item.a10}"><span v-if="!item.a10">*</span><span v-else>{{item.a10|formatCurrency}}</span></td>
+                        <td :class="{'blue':(item.a10==null||item.a10==undefined)}"><span v-if="(item.a10==null||item.a10==undefined)">*</span><span v-else>{{item.a10|formatCurrency}}</span></td>
                         <td>{{item.a11|formatCurrency}}</td>
                         <td :class="{'blue':(index==0)}"><span v-if="index==0">*</span><span v-else>{{item.a12|formatCurrency}}</span></td>
                     </tr>
@@ -138,7 +138,7 @@
                 if(newVal!=null){
                     for(let i in newVal){
                         if(this.hasOwnProperty(i)){
-                            this[i]=newVal[i];
+                            this[i]=(newVal[i]||0);
                         }
                     }
                     this.list = JSON.parse(JSON.stringify(newVal.rows));
@@ -156,6 +156,7 @@
                     val[4].a11 = Math.min(val[5].a2-val[3].a11, val[4].a4-val[4].a10);
                     val[5].a11 = Math.min(val[5].a2-val[4].a11, val[5].a4);
                     val.forEach((item,index)=>{
+                        item.a2 = item.a2 || 0;
                         item.a4 = item.a3 * 0.1;
                         item.a10 = ((item.a5||0) * Math.pow(10, this.fixed) + (item.a6||0) * Math.pow(10, this.fixed) + (item.a7||0) * Math.pow(10, this.fixed) + (item.a8||0) * Math.pow(10, this.fixed) + (item.a9||0) * Math.pow(10, this.fixed)) * 1.0 / Math.pow(10, this.fixed);
                         if(index!=0){
