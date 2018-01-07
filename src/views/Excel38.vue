@@ -14,6 +14,10 @@
                         <td>单位：元</td>
                         <td></td>
                     </tr>
+                   <tr>
+                        <td colspan="4">流动资产</td>
+                        <td colspan="4">流动负债</td>
+                    </tr>
                     <tr>
                         <td class="blue" style="width:25%">资产</td>
                         <td class="blue" style="width:5%">行次</td>
