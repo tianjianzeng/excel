@@ -1,5 +1,5 @@
 <template>
-    <p :class="{'error':error}">{{value|filter(filter,fixed)}}</p>
+    <p :class="{'error':error}">{{value/100|filter(filter,fixed)}}</p>
 </template>
 <script>
     import {formatCurrency, filter} from '../utils/filters'

@@ -40,7 +40,7 @@
                     <tr>
                         <td class="blue">现金流入小计</td>
                         <td class="blue">9</td>
-                        <td>{{a9|formatCurrency}}</td>
+                        <td><number-display :value="a9"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">  购买商品、接受劳务支付的现金</td>
@@ -65,12 +65,12 @@
                     <tr>
                         <td class="blue"> 现金流出小计</td>
                         <td class="blue">20</td>
-                        <td>{{a20|formatCurrency}}</td>
+                        <td><number-display :value="a20"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">经营活动产生的现金流量净额</td>
                         <td class="blue">21</td>
-                        <td>{{a21|formatCurrency}}</td>
+                        <td><number-display :value="a21"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="3"> 二、投资活动产生的现金流量：</td>
@@ -98,7 +98,7 @@
                     <tr>
                         <td class="blue">现金流入小计</td>
                         <td class="blue">29</td>
-                        <td>{{a29|formatCurrency}}</td>
+                        <td><number-display :value="a29"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">购建固定资产、无形资产和其他长期资产所支付的现金</td>
@@ -118,12 +118,12 @@
                     <tr>
                         <td class="blue">现金流出小计</td>
                         <td class="blue">36</td>
-                        <td>{{a36|formatCurrency}}</td>
+                        <td><number-display :value="a36"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">投资活动产生的现金流量净额</td>
                         <td class="blue">37</td>
-                        <td>{{a37|formatCurrency}}</td>
+                        <td><number-display :value="a37"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="3">三、筹资活动产生的现金流量：</td>
@@ -146,7 +146,7 @@
                     <tr>
                         <td class="blue">现金流入小计</td>
                         <td class="blue">44</td>
-                        <td>{{a44|formatCurrency}}</td>
+                        <td><number-display :value="a44"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">偿还债务所支付的现金</td>
@@ -166,22 +166,22 @@
                     <tr>
                         <td class="blue">现金流出小计</td>
                         <td class="blue">53</td>
-                        <td>{{a53|formatCurrency}}</td>
+                        <td><number-display :value="a53"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue"> 筹资活动产生的现金流量净额</td>
                         <td class="blue">54</td>
-                        <td>{{a54|formatCurrency}}</td>
+                        <td><number-display :value="a54"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">四、汇率变动对现金的影响/td>
+                        <td class="blue">四、汇率变动对现金的影响</td>
                         <td class="blue">55</td>
                         <td class="green"><number-input v-model="a55" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">五、现金及现金等价物净增加额</td>
                         <td class="blue">56</td>
-                        <td>{{a56|formatCurrency}}</td>
+                        <td><number-display :value="a56"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="3"> 补充资料</td>
@@ -277,7 +277,7 @@
                     <tr>
                         <td class="blue">经营活动产生的现金流量净额</td>
                         <td class="blue">75</td>
-                        <td>{{a75|formatCurrency}}</td>
+                        <td><number-display :value="a75"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="3">2．不涉及现金收支的投资和筹资活动：</td>
@@ -323,7 +323,7 @@
                      <tr>
                         <td class="blue">现金及现金等价物净增加额</td>
                         <td class="blue">83</td>
-                        <td>{{a83|formatCurrency}}</td>
+                        <td><number-display :value="a83"></number-display></td>
                     </tr>
                 </tbody>
             </table>
@@ -472,7 +472,7 @@
                 if(newVal!=null){
                     for(let i in newVal){
                         if(this.hasOwnProperty(i)){
-                            this[i]=newVal[i];
+                            this[i]= newVal[i];
                         }
                     }
                 }

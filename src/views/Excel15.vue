@@ -43,12 +43,12 @@
                         <td class="blue">{{a1_1}}</td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_3" :fixed="fixed"></number-input></td>
-                        <td>{{a1_4|formatCurrency}}</td>
+                        <td><number-display :value="a1_4"></number-display></td>
                         <td class="green"><number-input v-model="a1_5" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_6" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_7" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_8" :fixed="fixed"></number-input></td>
-                        <td>{{a1_9|formatCurrency}}</td>
+                        <td><number-display :value="a1_9"></number-display></td>
                         <td class="green"><number-input v-model="a1_10" :fixed="fixed" :editable="a6_2>0" :min="0" :max="Math.abs(a5_4)"></number-input></td>
                         <td class="blue">*</td>
                     </tr>
@@ -58,14 +58,14 @@
                         <td class="blue">{{a2_1}}</td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_3" :fixed="fixed"></number-input></td>
-                        <td>{{a2_4|formatCurrency}}</td>
+                        <td><number-display :value="a2_4"></number-display></td>
                         <td class="blue">*</td>
                         <td class="green"><number-input v-model="a2_6" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_7" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_8" :fixed="fixed"></number-input></td>
-                        <td>{{a2_9|formatCurrency}}</td>
+                        <td><number-display :value="a2_9"></number-display></td>
                         <td class="green"><number-input v-model="a2_10" :fixed="fixed"></number-input></td>
-                        <td>{{a2_11|formatCurrency}}</td>
+                        <td><number-display :value="a2_11"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
@@ -73,14 +73,14 @@
                         <td class="blue">{{a3_1}}</td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_3" :fixed="fixed"></number-input></td>
-                        <td>{{a3_4|formatCurrency}}</td>
+                        <td><number-display :value="a3_4"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="green"><number-input v-model="a3_7" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_8" :fixed="fixed"></number-input></td>
-                        <td>{{a3_9|formatCurrency}}</td>
+                        <td><number-display :value="a3_9"></number-display></td>
                         <td class="green"><number-input v-model="a3_10" :fixed="fixed"></number-input></td>
-                        <td>{{a3_11|formatCurrency}}</td>
+                        <td><number-display :value="a3_11"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
@@ -88,14 +88,14 @@
                         <td class="blue">{{a4_1}}</td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_3" :fixed="fixed"></number-input></td>
-                        <td>{{a4_4|formatCurrency}}</td>
+                        <td><number-display :value="a4_4"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="green"><number-input v-model="a4_8" :fixed="fixed"></number-input></td>
-                        <td>{{a4_9|formatCurrency}}</td>
+                        <td><number-display :value="a4_9"></number-display></td>
                         <td class="green"><number-input v-model="a4_10" :fixed="fixed"></number-input></td>
-                        <td>{{a4_11|formatCurrency}}</td>
+                        <td><number-display :value="a4_11"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
@@ -103,34 +103,34 @@
                         <td class="blue">{{a4_1}}</td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_3" :fixed="fixed"></number-input></td>
-                        <td>{{a5_4|formatCurrency}}</td>
+                        <td><number-display :value="a5_4"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="green"><number-input v-model="a5_10" :fixed="fixed"></number-input></td>
-                        <td>{{a5_11|formatCurrency}}</td>
+                        <td><number-display :value="a5_11"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue">本年度</td>
                         <td class="blue">{{a6_1}}</td>
-                        <td>{{a6_2|formatCurrency}}</td>
+                        <td><number-display :value="a6_2"></number-display></td>
                         <td class="green"><number-input v-model="a6_3" :fixed="fixed"></number-input></td>
-                        <td>{{a6_4|formatCurrency}}</td>
+                        <td><number-display :value="a6_4"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="green"><number-display v-model="a6_10" :fixed="fixed" ></number-display></td>
-                        <td>{{a6_11|formatCurrency}}</td>
+                        <td><number-display :value="a6_11"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue" colspan="11">可结转以后年度弥补的亏损额合计</td>
-                        <td>{{a7|formatCurrency}}</td>
+                        <td><number-display :value="a7"></number-display></td>
                     </tr>
                 </tbody>
             </table>

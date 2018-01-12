@@ -14,17 +14,17 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">一、营业成本（2+9）</td>
-                        <td>{{a1|formatCurrency}}</td>
+                        <td><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">（一）主营业务成本（3+5+6+7+8）</td>
-                        <td>{{a2|formatCurrency}}</td>
+                        <td><number-display :value="a2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">1.销售商品成本</td>
-                        <td class="green">{{a3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
@@ -34,7 +34,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">2.提供劳务成本</td>
-                        <td>{{a5|formatCurrency}}</td>
+                        <td><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
@@ -54,7 +54,7 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">（二）其他业务成本（10+12+13+14+15）</td>
-                        <td>{{a9|formatCurrency}}</td>
+                        <td><number-display :value="a9"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
@@ -84,17 +84,17 @@
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">5.其他</td>
-                        <td class="green">{{a15|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue">二、营业外支出（17+18+19+20+21+22+23+24+25+26）</td>
-                        <td>{{a16|formatCurrency}}</td>
+                        <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">（一）非流动资产处置损失</td>
-                        <td class="green">{{a17|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a17"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
@@ -139,7 +139,7 @@
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue">（十）其他</td>
-                        <td class="green">{{a26|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a26"></number-display></td>
                     </tr>
                 </tbody>
             </table>
@@ -154,6 +154,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -190,7 +191,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA102010"]),

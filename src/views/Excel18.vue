@@ -62,7 +62,7 @@
                         <td class="green"><number-input v-model="item.a7_" :fixed="8" :filter="toPercent"></number-input></td>
                         <td class="green"><number-input v-model="item.a8_" :fixed="8" :filter="toPercent"></number-input></td>
                         <td class="green"><number-input v-model="item.a9" :fixed="fixed"></number-input></td>
-                        <td>{{0|formatCurrency}}</td>
+                        <td><number-display :value="0"></number-display></td>
                         <td>
                             <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add">添加</el-button>
                             <el-button type="primary" @click="del(item)">删除</el-button>
@@ -81,7 +81,7 @@
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td colspan="2">{{total.a10|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="total.a10"></number-display></td>
                     </tr>
                 </tbody>
             </table>

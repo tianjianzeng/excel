@@ -55,12 +55,12 @@
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">001</td>
                         <td>{{item.a1}}</td>
-                        <td>{{item.a2|formatCurrency}}</td>
-                        <td>{{item.a3|formatCurrency}}</td>
-                        <td>{{item.a4|formatCurrency}}</td>
-                        <td>{{item.a5|formatCurrency}}</td>
+                        <td><number-display :value="item.a2"></number-display></td>
+                        <td><number-display :value="item.a3"></number-display></td>
+                        <td><number-display :value="item.a4"></number-display></td>
+                        <td><number-display :value="item.a5"></number-display></td>
                         <td class="green"><number-input v-model="item.a6" :fixed="fixed"></number-input></td>
-                        <td>{{item.a7|formatCurrency}}</td>
+                        <td><number-display :value="item.a7"></number-display></td>
                         <td class="green">
                             <el-select placeholder="请选择">
                                 <el-option
@@ -71,40 +71,40 @@
                                 </el-option>
                             </el-select>
                         </td>
-                        <td>{{item.a9|formatCurrency}}</td>
-                        <td>{{item.a10|formatCurrency}}</td>
+                        <td><number-display :value="item.a9"></number-display></td>
+                        <td><number-display :value="item.a10"></number-display></td>
                         <td class="green"><number-input v-model="item.a11" :fixed="fixed"></number-input></td>
-                        <td>{{item.a12|formatCurrency}}</td>
-                        <td>{{item.a13|formatCurrency}}</td>
-                        <td>{{item.a14|formatCurrency}}</td>
+                        <td><number-display :value="item.a12"></number-display></td>
+                        <td><number-display :value="item.a13"></number-display></td>
+                        <td><number-display :value="item.a14"></number-display></td>
                         <td class="green"><number-input v-model="item.a15" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a16" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a17" :min="0" :fixed="fixed"></number-input></td>
-                        <td>{{item.a18|formatCurrency}}</td>
+                        <td><number-display :value="item.a18"></number-display></td>
                         <td><number-input v-model="item.a19" :max="item.a9" :fixed="fixed"></number-input></td>
                         <td><el-button type="primary" @click="edit(item)">保存</el-button></td>
                     </tr>
                     <tr>
                         <td class="blue"></td>
                         <td class="blue">合计</td>
-                        <td>{{total.a2||0|formatCurrency}}</td>
-                        <td>{{total.a3||0|formatCurrency}}</td>
-                        <td>{{total.a4||0|formatCurrency}}</td>
-                        <td>{{total.a5||0|formatCurrency}}</td>
-                        <td>{{total.a6||0|formatCurrency}}</td>
-                        <td>{{total.a7||0|formatCurrency}}</td>
-                        <td>{{total.a8||0|formatCurrency}}</td>
-                        <td>{{total.a9||0|formatCurrency}}</td>
-                        <td>{{total.a10||0|formatCurrency}}</td>
-                        <td>{{total.a11||0|formatCurrency}}</td>
-                        <td>{{total.a12||0|formatCurrency}}</td>
-                        <td>{{total.a13||0|formatCurrency}}</td>
-                        <td>{{total.a14||0|formatCurrency}}</td>
-                        <td>{{total.a15||0|formatCurrency}}</td>
-                        <td>{{total.a16||0|formatCurrency}}</td>
-                        <td>{{total.a17||0|formatCurrency}}</td>
-                        <td>{{total.a18||0|formatCurrency}}</td>
-                        <td colspan="2">{{total.a19||0|formatCurrency}}</td>
+                        <td><number-display :value="total.a2||0"></number-display></td>
+                        <td><number-display :value="total.a3||0"></number-display></td>
+                        <td><number-display :value="total.a4||0"></number-display></td>
+                        <td><number-display :value="total.a5||0"></number-display></td>
+                        <td><number-display :value="total.a6||0"></number-display></td>
+                        <td><number-display :value="total.a7||0"></number-display></td>
+                        <td><number-display :value="total.a8||0"></number-display></td>
+                        <td><number-display :value="total.a9||0"></number-display></td>
+                        <td><number-display :value="total.a10||0"></number-display></td>
+                        <td><number-display :value="total.a11||0"></number-display></td>
+                        <td><number-display :value="total.a12||0"></number-display></td>
+                        <td><number-display :value="total.a13||0"></number-display></td>
+                        <td><number-display :value="total.a14||0"></number-display></td>
+                        <td><number-display :value="total.a15||0"></number-display></td>
+                        <td><number-display :value="total.a16||0"></number-display></td>
+                        <td><number-display :value="total.a17||0"></number-display></td>
+                        <td><number-display :value="total.a18||0"></number-display></td>
+                        <td colspan="2"><number-display :value="total.a19||0"></number-display></td>
                     </tr>
                 </tbody>
             </table>

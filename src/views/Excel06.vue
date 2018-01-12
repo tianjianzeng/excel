@@ -27,9 +27,9 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">一、职工薪酬</td>
-                        <td class="green">{{a1_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a1_1"></number-display></td>
                         <td class="blue">*</td>
-                        <td class="green">{{a1_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a1_3"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -37,9 +37,9 @@
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">二、劳务费</td>
-                        <td class="green">{{a2_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a2_1"></number-display></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
-                        <td class="green">{{a2_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a2_3"></number-display></td>
                         <td class="green"><number-input v-model="a2_4" :fixed="fixed"></number-input></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -57,9 +57,9 @@
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue">四、业务招待费</td>
-                        <td class="green">{{a4_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a4_1"></number-display></td>
                         <td class="blue">*</td>
-                        <td class="green">{{a4_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a4_3"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -87,9 +87,9 @@
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue">七、资产折旧摊销费</td>
-                        <td class="green">{{a7_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a7_1"></number-display></td>
                         <td class="blue">*</td>
-                        <td class="green">{{a7_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a7_3"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -107,9 +107,9 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">九、办公费</td>
-                        <td class="green">{{a9_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a9_1"></number-display></td>
                         <td class="blue">*</td>
-                        <td class="green">{{a9_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a9_3"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -147,9 +147,9 @@
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">十三、差旅费</td>
-                        <td class="green">{{a13_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a13_1"></number-display></td>
                         <td class="blue">*</td>
-                        <td class="green">{{a13_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a13_3"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -167,7 +167,7 @@
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">十五、运输、仓储费</td>
-                        <td class="green">{{a15_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a15_1"></number-display></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_4" :fixed="fixed"></number-input></td>
@@ -209,7 +209,7 @@
                         <td class="blue">十九、研究费用</td>
                         <td class="green"><number-input v-model="a19_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
-                        <td class="green">{{a19_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a19_3"></number-display></td>
                         <td class="green"><number-input v-model="a19_4" :fixed="fixed"></number-input></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -219,7 +219,7 @@
                         <td class="blue">二十、各项税费</td>
                         <td class="green"><number-input v-model="a20_1" :fixed="fixed"></number-input></td>
                         <td class="blue">*</td>
-                        <td class="green">{{a20_3|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a20_3"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
@@ -231,7 +231,7 @@
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td class="green">{{a21_5|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a21_5"></number-display></td>
                         <td class="green"><number-input v-model="a21_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -241,7 +241,7 @@
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td class="green">{{a22_5|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a22_5"></number-display></td>
                         <td class="green"><number-input v-model="a22_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -267,12 +267,12 @@
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue">合计(1+2+3+…24)</td>
-                        <td>{{a25_1|formatCurrency}}</td>
-                        <td>{{a25_2|formatCurrency}}</td>
-                        <td>{{a25_3|formatCurrency}}</td>
-                        <td>{{a25_4|formatCurrency}}</td>
-                        <td>{{a25_5|formatCurrency}}</td>
-                        <td>{{a25_6|formatCurrency}}</td>
+                        <td><number-display :value="a25_1"></number-display></td>
+                        <td><number-display :value="a25_2"></number-display></td>
+                        <td><number-display :value="a25_3"></number-display></td>
+                        <td><number-display :value="a25_4"></number-display></td>
+                        <td><number-display :value="a25_5"></number-display></td>
+                        <td><number-display :value="a25_6"></number-display></td>
                     </tr>
                 </tbody>
             </table>
@@ -287,6 +287,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -370,7 +371,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA104000"]),

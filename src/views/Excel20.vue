@@ -57,46 +57,46 @@
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
                         <td>{{item.a1}}</td>
-                        <td class="green">{{item.a2|formatCurrency}}</td>
-                        <td class="green">{{item.a3|formatCurrency}}</td>
-                        <td class="green">{{item.a4|formatCurrency}}</td>
-                        <td class="green">{{item.a5|formatCurrency}}</td>
-                        <td class="green">{{item.a6|formatCurrency}}</td>
-                        <td class="green">{{item.a7|formatCurrency}}</td>
-                        <td class="green">{{item.a8|formatCurrency}}</td>
-                        <td class="green">{{item.a9|formatCurrency}}</td>
-                        <td>{{item.a10|formatCurrency}}</td>
-                        <td class="green">{{item.a11|formatCurrency}}</td>
-                        <td>{{item.a12|formatCurrency}}</td>
-                        <td class="green">{{item.a13|formatCurrency}}</td>
-                        <td>{{item.a14|formatCurrency}}</td>
-                        <td class="green">{{item.a15|formatCurrency}}</td>
-                        <td class="green">{{item.a16|formatCurrency}}</td>
-                        <td class="green">{{item.a17|formatCurrency}}</td>
-                        <td>{{item.a18|formatCurrency}}</td>
-                        <td>{{item.a19|formatCurrency}}</td>
+                        <td class="green"><number-display :value="item.a2"></number-display></td>
+                        <td class="green"><number-display :value="item.a3"></number-display></td>
+                        <td class="green"><number-display :value="item.a4"></number-display></td>
+                        <td class="green"><number-display :value="item.a5"></number-display></td>
+                        <td class="green"><number-display :value="item.a6"></number-display></td>
+                        <td class="green"><number-display :value="item.a7"></number-display></td>
+                        <td class="green"><number-display :value="item.a8"></number-display></td>
+                        <td class="green"><number-display :value="item.a9"></number-display></td>
+                        <td><number-display :value="item.a10"></number-display></td>
+                        <td class="green"><number-display :value="item.a11"></number-display></td>
+                        <td><number-display :value="item.a12"></number-display></td>
+                        <td class="green"><number-display :value="item.a13"></number-display></td>
+                        <td><number-display :value="item.a14"></number-display></td>
+                        <td class="green"><number-display :value="item.a15"></number-display></td>
+                        <td class="green"><number-display :value="item.a16"></number-display></td>
+                        <td class="green"><number-display :value="item.a17"></number-display></td>
+                        <td><number-display :value="item.a18"></number-display></td>
+                        <td><number-display :value="item.a19"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue"></td>
                         <td class="blue">合计</td>
-                        <td >{{total.a2|formatCurrency}}</td>
-                        <td >{{total.a3|formatCurrency}}</td>
-                        <td >{{total.a4|formatCurrency}}</td>
-                        <td >{{total.a5|formatCurrency}}</td>
-                        <td >{{total.a6|formatCurrency}}</td>
-                        <td >{{total.a7|formatCurrency}}</td>
-                        <td >{{total.a8|formatCurrency}}</td>
-                        <td >{{total.a9|formatCurrency}}</td>
-                        <td >{{total.a10|formatCurrency}}</td>
-                        <td >{{total.a11|formatCurrency}}</td>
-                        <td >{{total.a12|formatCurrency}}</td>
-                        <td >{{total.a13|formatCurrency}}</td>
-                        <td >{{total.a14|formatCurrency}}</td>
-                        <td >{{total.a15|formatCurrency}}</td>
-                        <td >{{total.a16|formatCurrency}}</td>
-                        <td >{{total.a17|formatCurrency}}</td>
-                        <td >{{total.a18|formatCurrency}}</td>
-                        <td >{{total.a19|formatCurrency}}</td>
+                        <td ><number-display :value="total.a2"></number-display></td>
+                        <td ><number-display :value="total.a3"></number-display></td>
+                        <td ><number-display :value="total.a4"></number-display></td>
+                        <td ><number-display :value="total.a5"></number-display></td>
+                        <td ><number-display :value="total.a6"></number-display></td>
+                        <td ><number-display :value="total.a7"></number-display></td>
+                        <td ><number-display :value="total.a8"></number-display></td>
+                        <td ><number-display :value="total.a9"></number-display></td>
+                        <td ><number-display :value="total.a10"></number-display></td>
+                        <td ><number-display :value="total.a11"></number-display></td>
+                        <td ><number-display :value="total.a12"></number-display></td>
+                        <td ><number-display :value="total.a13"></number-display></td>
+                        <td ><number-display :value="total.a14"></number-display></td>
+                        <td ><number-display :value="total.a15"></number-display></td>
+                        <td ><number-display :value="total.a16"></number-display></td>
+                        <td ><number-display :value="total.a17"></number-display></td>
+                        <td ><number-display :value="total.a18"></number-display></td>
+                        <td ><number-display :value="total.a19"></number-display></td>
                     </tr>
                 </tbody>
             </table>

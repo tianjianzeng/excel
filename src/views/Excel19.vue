@@ -24,7 +24,7 @@
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">   （二）金融机构取得农户小额贷款利息减计收入（2×10%）</td>
-                        <td>{{a3|formatCurrency}}</td>
+                        <td><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
@@ -54,7 +54,7 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">   （二）保险公司为种植业、养殖业提供保险业务取得的保费减计收入（5×10%）</td>
-                        <td>{{a9|formatCurrency}}</td>
+                        <td><number-display :value="a9"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
@@ -69,12 +69,12 @@
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">   （二）其他符合条件的机构取得农户小额贷款利息减计收入（11×10%）</td>
-                        <td>{{a12|formatCurrency}}</td>
+                        <td><number-display :value="a12"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">合计（3+9+12）</td>
-                        <td>{{a13|formatCurrency}}</td>
+                        <td><number-display :value="a13"></number-display></td>
                     </tr>
                 </tbody>
             </table>

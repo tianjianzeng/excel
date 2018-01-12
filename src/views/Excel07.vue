@@ -19,176 +19,176 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">一、视同销售（营业）收入（2+3+4+5+6+7+8+9+10）</td>
-                        <td>{{a1_1|formatCurrency}}</td>
-                        <td>{{a1_2|formatCurrency}}</td>
+                        <td><number-display :value="a1_1"></number-display></td>
+                        <td><number-display :value="a1_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">（一）非货币性资产交换视同销售收入</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
-                        <td>{{a2_2|formatCurrency}}</td>
+                        <td><number-display :value="a2_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">（二）用于市场推广或销售视同销售收入</td>
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
-                        <td>{{a3_2|formatCurrency}}</td>
+                        <td><number-display :value="a3_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue">（三）用于交际应酬视同销售收入</td>
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
-                        <td>{{a4_2|formatCurrency}}</td>
+                        <td><number-display :value="a4_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">（四）用于职工奖励或福利视同销售收入</td>
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
-                        <td>{{a5_2|formatCurrency}}</td>
+                        <td><number-display :value="a5_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue">（五）用于股息分配视同销售收入</td>
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
-                        <td>{{a6_2|formatCurrency}}</td>
+                        <td><number-display :value="a6_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue">（六）用于对外捐赠视同销售收入</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
-                        <td>{{a7_2|formatCurrency}}</td>
+                        <td><number-display :value="a7_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue">（七）用于对外投资项目视同销售收入</td>
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
-                        <td>{{a8_2|formatCurrency}}</td>
+                        <td><number-display :value="a8_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">（八）提供劳务视同销售收入</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
-                        <td>{{a9_2|formatCurrency}}</td>
+                        <td><number-display :value="a9_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue">（九）其他</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
-                        <td>{{a10_2|formatCurrency}}</td>
+                        <td><number-display :value="a10_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue">二、视同销售（营业）成本（12+13+14+15+16+17+18+19+20）</td>
-                        <td>{{a11_1|formatCurrency}}</td>
-                        <td>{{a11_2|formatCurrency}}</td>
+                        <td><number-display :value="a11_1"></number-display></td>
+                        <td><number-display :value="a11_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">（一）非货币性资产交换视同销售成本</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
-                        <td>{{a12_2|formatCurrency}}</td>
+                        <td><number-display :value="a12_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">（二）用于市场推广或销售视同销售成本</td>
                         <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
-                        <td>{{a13_2|formatCurrency}}</td>
+                        <td><number-display :value="a13_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue">（三）用于交际应酬视同销售成本</td>
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
-                        <td>{{a14_2|formatCurrency}}</td>
+                        <td><number-display :value="a14_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">（四）用于职工奖励或福利视同销售成本</td>
                         <td class="green"><number-input v-model="a15_1" :fixed="fixed"></number-input></td>
-                        <td>{{a15_2|formatCurrency}}</td>
+                        <td><number-display :value="a15_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue">（五）用于股息分配视同销售成本</td>
                         <td class="green"><number-input v-model="a16_1" :fixed="fixed"></number-input></td>
-                        <td>{{a16_2|formatCurrency}}</td>
+                        <td><number-display :value="a16_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">（六）用于对外捐赠视同销售成本</td>
                         <td class="green"><number-input v-model="a17_1" :fixed="fixed"></number-input></td>
-                        <td>{{a17_2|formatCurrency}}</td>
+                        <td><number-display :value="a17_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
                         <td class="blue">（七）用于对外投资项目视同销售成本</td>
                         <td class="green"><number-input v-model="a18_1" :fixed="fixed"></number-input></td>
-                        <td>{{a18_2|formatCurrency}}</td>
+                        <td><number-display :value="a18_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">19</td>
                         <td class="blue">（八）提供劳务视同销售成本</td>
                         <td class="green"><number-input v-model="a19_1" :fixed="fixed"></number-input></td>
-                        <td>{{a19_2|formatCurrency}}</td>
+                        <td><number-display :value="a19_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">20</td>
                         <td class="blue">（九）其他</td>
                         <td class="green"><number-input v-model="a20_1" :fixed="fixed"></number-input></td>
-                        <td>{{a20_2|formatCurrency}}</td>
+                        <td><number-display :value="a20_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">21</td>
                         <td class="blue">三、房地产开发企业特定业务计算的纳税调整额（22-26）</td>
-                        <td>{{a21_1|formatCurrency}}</td>
-                        <td>{{a21_2|formatCurrency}}</td>
+                        <td><number-display :value="a21_1"></number-display></td>
+                        <td><number-display :value="a21_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
                         <td class="blue">（一）房地产企业销售未完工开发产品特定业务计算的纳税调整额（24-25）</td>
-                        <td>{{a22_1|formatCurrency}}</td>
-                        <td>{{a22_2|formatCurrency}}</td>
+                        <td><number-display :value="a22_1"></number-display></td>
+                        <td><number-display :value="a22_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
                         <td class="blue">1.销售未完工产品的收入</td>
-                        <td>{{a23_1|formatCurrency}}</td>
+                        <td><number-display :value="a23_1"></number-display></td>
                         <td class="blue">*</td>
                     </tr>
                     <tr>
                         <td class="blue">24</td>
                         <td class="blue">2.销售未完工产品预计毛利额</td>
-                        <td>{{a24_1|formatCurrency}}</td>
-                        <td>{{a24_2|formatCurrency}}</td>
+                        <td><number-display :value="a24_1"></number-display></td>
+                        <td><number-display :value="a24_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue">3.实际发生的营业税金及附加、土地增值税</td>
-                        <td>{{a25_1|formatCurrency}}</td>
-                        <td>{{a25_2|formatCurrency}}</td>
+                        <td><number-display :value="a25_1"></number-display></td>
+                        <td><number-display :value="a25_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue">（二）房地产企业销售的未完工产品转完工产品特定业务计算的纳税调整额（28-29）</td>
-                        <td>{{a26_1|formatCurrency}}</td>
-                        <td>{{a26_2|formatCurrency}}</td>
+                        <td><number-display :value="a26_1"></number-display></td>
+                        <td><number-display :value="a26_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
                         <td class="blue">1.销售未完工产品转完工产品确认的销售收入</td>
-                        <td>{{a27_1|formatCurrency}}</td>
+                        <td><number-display :value="a27_1"></number-display></td>
                         <td class="blue">*</td>
                     </tr>
                     <tr>
                         <td class="blue">28</td>
                         <td class="blue">2.转回的销售未完工产品预计毛利额</td>
-                        <td>{{a28_1|formatCurrency}}</td>
-                        <td>{{a28_2|formatCurrency}}</td>
+                        <td><number-display :value="a28_1"></number-display></td>
+                        <td><number-display :value="a28_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">29</td>
                         <td class="blue">3.转回实际发生的营业税金及附加、土地增值税</td>
-                        <td>{{a29_1|formatCurrency}}</td>
-                        <td>{{a29_2|formatCurrency}}</td>
+                        <td><number-display :value="a29_1"></number-display></td>
+                        <td><number-display :value="a29_2"></number-display></td>
                     </tr>
                 </tbody>
             </table>
@@ -203,6 +203,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -245,7 +246,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA105010"]),

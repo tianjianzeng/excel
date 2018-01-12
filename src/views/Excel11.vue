@@ -39,12 +39,12 @@
                         <tr :key="index">
                             <td class="blue">{{(item.no).toString().padStart(3,'0')}}</td>
                             <td class="blue">{{item.item.a1}}</td>
-                            <td>{{item.item.a2|formatCurrency}}</td>
-                            <td>{{item.item.a3|formatCurrency}}</td>
-                            <td>{{item.item.a4|formatCurrency}}</td>
-                            <td>{{item.item.a5|formatCurrency}}</td>
-                            <td>{{item.item.a6|formatCurrency}}</td>
-                            <td>{{item.item.a7|formatCurrency}}</td>
+                            <td><number-display :value="item.item.a2"></number-display></td>
+                            <td><number-display :value="item.item.a3"></number-display></td>
+                            <td><number-display :value="item.item.a4"></number-display></td>
+                            <td><number-display :value="item.item.a5"></number-display></td>
+                            <td><number-display :value="item.item.a6"></number-display></td>
+                            <td><number-display :value="item.item.a7"></number-display></td>
                             <td>
                                 <el-button v-if="(item.subList ||[]).length===0 && item.tag!==5" type="primary" @click="add(item)">添加</el-button>
                             </td>
@@ -56,8 +56,8 @@
                             <td class="green"><number-input v-model="it.a3" :fixed="fixed"></number-input></td>
                             <td class="green"><number-input v-model="it.a4" :fixed="fixed"></number-input></td>
                             <td class="green"><number-input v-model="it.a5" :fixed="fixed"></number-input></td>
-                            <td>{{it.a6|formatCurrency}}</td>
-                            <td>{{it.a7|formatCurrency}}</td>
+                            <td><number-display :value="it.a6"></number-display></td>
+                            <td><number-display :value="it.a7"></number-display></td>
                             <td>
                                 <el-button v-if="it.saved && idx==item.subList.length-1" type="primary" @click="add(item)">添加</el-button>
                                 <el-button type="primary" @click="del(it)">删除</el-button>

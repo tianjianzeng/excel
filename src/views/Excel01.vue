@@ -20,24 +20,24 @@
                     <tr>
                         <td class="blue" style="width:5%">1</td>
                         <td class="blue" style="width:25%">一、农、林、牧、渔业项目</td>  
-                        <td style="width:10%"><div>{{a1_1|formatCurrency}}</div></td>
-                        <td style="width:10%"><div>{{a1_2|formatCurrency}}</div></td>
-                        <td style="width:10%"><div>{{a1_3|formatCurrency}}</div></td>
-                        <td style="width:10%"><div>{{a1_4|formatCurrency}}</div></td>
-                        <td style="width:10%"><div>{{a1_5|formatCurrency}}</div></td>
-                        <td style="width:10%"><div>{{a1_6|formatCurrency}}</div></td>
-                        <td style="width:10%"><div>{{a1_7|formatCurrency}}</div></td>    
+                        <td style="width:10%"><div><number-display :value="a1_1"></number-display></div></td>
+                        <td style="width:10%"><div><number-display :value="a1_2"></number-display></div></td>
+                        <td style="width:10%"><div><number-display :value="a1_3"></number-display></div></td>
+                        <td style="width:10%"><div><number-display :value="a1_4"></number-display></div></td>
+                        <td style="width:10%"><div><number-display :value="a1_5"></number-display></div></td>
+                        <td style="width:10%"><div><number-display :value="a1_6"></number-display></div></td>
+                        <td style="width:10%"><div><number-display :value="a1_7"></number-display></div></td>    
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">（一）免税项目</td>  
-                        <td><div>{{a2_1|formatCurrency}}</div></td>
-                        <td><div>{{a2_2|formatCurrency}}</div></td>
-                        <td><div>{{a2_3|formatCurrency}}</div></td>
-                        <td><div>{{a2_4|formatCurrency}}</div></td>
-                        <td><div>{{a2_5|formatCurrency}}</div></td>
-                        <td><div>{{a2_6|formatCurrency}}</div></td>
-                        <td><div>{{a2_7|formatCurrency}}</div></td> 
+                        <td><div><number-display :value="a2_1"></number-display></div></td>
+                        <td><div><number-display :value="a2_2"></number-display></div></td>
+                        <td><div><number-display :value="a2_3"></number-display></div></td>
+                        <td><div><number-display :value="a2_4"></number-display></div></td>
+                        <td><div><number-display :value="a2_5"></number-display></div></td>
+                        <td><div><number-display :value="a2_6"></number-display></div></td>
+                        <td><div><number-display :value="a2_7"></number-display></div></td> 
                     </tr>
                     <tr>
                         <td class="blue">3</td>
@@ -47,7 +47,7 @@
                         <td class="green"><number-input v-model="a3_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a3_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a3_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a3_7" :fixed="fixed"></number-input></td> 
                     </tr>
                     <tr>
@@ -58,7 +58,7 @@
                         <td class="green"><number-input v-model="a4_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a4_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a4_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a4_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -69,7 +69,7 @@
                         <td class="green"><number-input v-model="a5_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a5_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a5_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a5_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -80,7 +80,7 @@
                         <td class="green"><number-input v-model="a6_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a6_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a6_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a6_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -91,7 +91,7 @@
                         <td class="green"><number-input v-model="a7_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a7_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a7_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a7_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -102,7 +102,7 @@
                         <td class="green"><number-input v-model="a8_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a8_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a8_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a8_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -113,7 +113,7 @@
                         <td class="green"><number-input v-model="a9_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a9_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a9_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a9_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -124,7 +124,7 @@
                         <td class="green"><number-input v-model="a10_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a10_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a10_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a10_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -135,7 +135,7 @@
                         <td class="green"><number-input v-model="a11_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a11_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a11_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a11_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -146,19 +146,19 @@
                         <td class="green"><number-input v-model="a12_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a12_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a12_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a12_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">（二）减半征税项目</td>  
-                        <td><div>{{a13_1|formatCurrency}}</div></td>
-                        <td><div>{{a13_2|formatCurrency}}</div></td>
-                        <td><div>{{a13_3|formatCurrency}}</div></td>
-                        <td><div>{{a13_4|formatCurrency}}</div></td>
-                        <td><div>{{a13_5|formatCurrency}}</div></td>
-                        <td><div>{{a13_6|formatCurrency}}</div></td>
-                        <td><div>{{a13_7|formatCurrency}}</div></td>  
+                        <td><div><number-display :value="a13_1"></number-display></div></td>
+                        <td><div><number-display :value="a13_2"></number-display></div></td>
+                        <td><div><number-display :value="a13_3"></number-display></div></td>
+                        <td><div><number-display :value="a13_4"></number-display></div></td>
+                        <td><div><number-display :value="a13_5"></number-display></div></td>
+                        <td><div><number-display :value="a13_6"></number-display></div></td>
+                        <td><div><number-display :value="a13_7"></number-display></div></td>  
                     </tr>
                     <tr>
                         <td class="blue">14</td>
@@ -168,7 +168,7 @@
                         <td class="green"><number-input v-model="a14_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a14_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a14_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a14_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a14_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a14_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -179,7 +179,7 @@
                         <td class="green"><number-input v-model="a15_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a15_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a15_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a15_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -190,19 +190,19 @@
                         <td class="green"><number-input v-model="a16_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a16_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a16_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a16_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">二、国家重点扶持的公共基础设施项目</td>  
-                        <td><div>{{a17_1|formatCurrency}}</div></td>
-                        <td><div>{{a17_2|formatCurrency}}</div></td>
-                        <td><div>{{a17_3|formatCurrency}}</div></td>
-                        <td><div>{{a17_4|formatCurrency}}</div></td>
-                        <td><div>{{a17_5|formatCurrency}}</div></td>
-                        <td><div>{{a17_6|formatCurrency}}</div></td>
-                        <td><div>{{a17_7|formatCurrency}}</div></td>  
+                        <td><div><number-display :value="a17_1"></number-display></div></td>
+                        <td><div><number-display :value="a17_2"></number-display></div></td>
+                        <td><div><number-display :value="a17_3"></number-display></div></td>
+                        <td><div><number-display :value="a17_4"></number-display></div></td>
+                        <td><div><number-display :value="a17_5"></number-display></div></td>
+                        <td><div><number-display :value="a17_6"></number-display></div></td>
+                        <td><div><number-display :value="a17_7"></number-display></div></td>  
                     </tr>
                     <tr>
                         <td class="blue">18</td>
@@ -212,7 +212,7 @@
                         <td class="green"><number-input v-model="a18_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a18_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a18_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a18_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -223,7 +223,7 @@
                         <td class="green"><number-input v-model="a19_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a19_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a19_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a19_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -234,7 +234,7 @@
                         <td class="green"><number-input v-model="a20_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a20_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a20_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a20_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a20_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a20_7" :fixed="fixed"></number-input></td>  
                     </tr>
                     <tr>
@@ -245,7 +245,7 @@
                         <td class="green"><number-input v-model="a21_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a21_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a21_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a21_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a21_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a21_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -256,7 +256,7 @@
                         <td class="green"><number-input v-model="a22_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a22_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a22_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a22_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a22_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a22_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -267,7 +267,7 @@
                         <td class="green"><number-input v-model="a23_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a23_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a23_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a23_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a23_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a23_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -278,7 +278,7 @@
                         <td class="green"><number-input v-model="a24_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a24_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a24_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a24_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -289,19 +289,19 @@
                         <td class="green"><number-input v-model="a25_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a25_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a25_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a25_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a25_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a25_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue">三、符合条件的环境保护、节能节水项目</td>
-                        <td><div>{{a26_1|formatCurrency}}</div></td>
-                        <td><div>{{a26_2|formatCurrency}}</div></td>
-                        <td><div>{{a26_3|formatCurrency}}</div></td>
-                        <td><div>{{a26_4|formatCurrency}}</div></td>
-                        <td><div>{{a26_5|formatCurrency}}</div></td>
-                        <td><div>{{a26_6|formatCurrency}}</div></td>
-                        <td><div>{{a26_7|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a26_1"></number-display></div></td>
+                        <td><div><number-display :value="a26_2"></number-display></div></td>
+                        <td><div><number-display :value="a26_3"></number-display></div></td>
+                        <td><div><number-display :value="a26_4"></number-display></div></td>
+                        <td><div><number-display :value="a26_5"></number-display></div></td>
+                        <td><div><number-display :value="a26_6"></number-display></div></td>
+                        <td><div><number-display :value="a26_7"></number-display></div></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
@@ -311,7 +311,7 @@
                         <td class="green"><number-input v-model="a27_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a27_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a27_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a27_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a27_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a27_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -322,7 +322,7 @@
                         <td class="green"><number-input v-model="a28_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a28_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a28_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a28_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a28_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a28_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -333,7 +333,7 @@
                         <td class="green"><number-input v-model="a29_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a29_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a29_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a29_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a29_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a29_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -344,7 +344,7 @@
                         <td class="green"><number-input v-model="a30_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a30_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a30_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a30_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a30_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a30_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -355,7 +355,7 @@
                         <td class="green"><number-input v-model="a31_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a31_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a31_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a31_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a31_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a31_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -366,7 +366,7 @@
                         <td class="green"><number-input v-model="a32_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a32_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a32_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a32_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a32_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a32_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -378,7 +378,7 @@
                         <td class="green"><number-input v-model="a33_4" :fixed="fixed"></number-input></td>
                         <td class="blue"><div>*</div></td>
                         <td class="green"><number-input v-model="a33_6" :fixed="fixed"></number-input></td>
-                        <td><div>{{a33_7|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a33_7"></number-display></div></td>
                     </tr>
                     <tr>
                         <td class="blue">34</td>
@@ -405,13 +405,13 @@
                     <tr>
                         <td class="blue">36</td>
                         <td class="blue">五、其他专项优惠项目</td>
-                        <td><div>{{a36_1|formatCurrency}}</div></td>
-                        <td><div>{{a36_2|formatCurrency}}</div></td>
-                        <td><div>{{a36_3|formatCurrency}}</div></td>
-                        <td><div>{{a36_4|formatCurrency}}</div></td>
-                        <td><div>{{a36_5|formatCurrency}}</div></td>
-                        <td><div>{{a36_6|formatCurrency}}</div></td>
-                        <td><div>{{a36_7|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a36_1"></number-display></div></td>
+                        <td><div><number-display :value="a36_2"></number-display></div></td>
+                        <td><div><number-display :value="a36_3"></number-display></div></td>
+                        <td><div><number-display :value="a36_4"></number-display></div></td>
+                        <td><div><number-display :value="a36_5"></number-display></div></td>
+                        <td><div><number-display :value="a36_6"></number-display></div></td>
+                        <td><div><number-display :value="a36_7"></number-display></div></td>
                     </tr>
                     <tr>
                         <td class="blue">37</td>
@@ -421,7 +421,7 @@
                         <td class="green"><number-input v-model="a37_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a37_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a37_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a37_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a37_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a37_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -432,7 +432,7 @@
                         <td class="green"><number-input v-model="a38_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a38_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a38_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a38_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a38_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a38_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -443,19 +443,19 @@
                         <td class="green"><number-input v-model="a39_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a39_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a39_5" :fixed="fixed"></number-input></td>
-                        <td><div>{{a39_6|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a39_6"></number-display></div></td>
                         <td class="green"><number-input v-model="a39_7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">40</td>
                         <td class="blue">合计</td>
-                        <td><div>{{a40_1|formatCurrency}}</div></td>
-                        <td><div>{{a40_2|formatCurrency}}</div></td>
-                        <td><div>{{a40_3|formatCurrency}}</div></td>
-                        <td><div>{{a40_4|formatCurrency}}</div></td>
-                        <td><div>{{a40_5|formatCurrency}}</div></td>
-                        <td><div>{{a40_6|formatCurrency}}</div></td>
-                        <td><div>{{a40_7|formatCurrency}}</div></td>
+                        <td><div><number-display :value="a40_1"></number-display></div></td>
+                        <td><div><number-display :value="a40_2"></number-display></div></td>
+                        <td><div><number-display :value="a40_3"></number-display></div></td>
+                        <td><div><number-display :value="a40_4"></number-display></div></td>
+                        <td><div><number-display :value="a40_5"></number-display></div></td>
+                        <td><div><number-display :value="a40_6"></number-display></div></td>
+                        <td><div><number-display :value="a40_7"></number-display></div></td>
                     </tr>
 
                 </tbody>
@@ -471,6 +471,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -690,7 +691,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA107020"]),
@@ -925,7 +927,7 @@
                 if(newVal!=null){
                     for(let i in newVal){
                         if(this.hasOwnProperty(i)){
-                            this[i]=newVal[i] / 100.0;
+                            this[i]=newVal[i];
                         }
                     }
                 }
@@ -980,7 +982,7 @@
                 for(let i=1;i<=40;i++){
                     for(let j=1;j<=7;j++){
                         let p = `a${i}_${j}`
-                        postData[p]=this[p] * 100;
+                        postData[p]=this[p];
                     }
                 }
                 

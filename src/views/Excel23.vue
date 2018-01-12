@@ -48,7 +48,7 @@
                         <td class="blue">5</td>
                         <td class="blue" rowspan="5">收入指标</td>
                         <td class="blue" colspan="3">一、本年高新技术产品（服务）收入（6+7）</td>
-                        <td>{{a5|formatCurrency}}</td>
+                        <td><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
@@ -100,12 +100,12 @@
                         <td class="blue">15</td>
                         <td class="blue" rowspan="14">研究开发费用指标</td>
                         <td class="blue" colspan="3">九、本年归集的高新研发费用金额（16+25）</td>
-                        <td>{{a15|formatCurrency}}</td>
+                        <td><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue" colspan="3">（一）内部研究开发投入（17+18+19+20+21+22+24）</td>
-                        <td>{{a16|formatCurrency}}</td>
+                        <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
@@ -150,12 +150,12 @@
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue" colspan="3">（二）委托外部研究开发费用（26+27）</td>
-                        <td>{{a25|formatCurrency}}</td>
+                        <td><number-display :value="a25"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue" colspan="3">1.境内的外部研发费</td>
-                        <td>{{a26|formatCurrency}}</td>
+                        <td><number-display :value="a26"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
@@ -170,7 +170,7 @@
                     <tr>
                         <td class="blue">29</td>
                         <td class="blue" colspan="4">减免税金额</td>
-                        <td class="green">{{a29|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a29"></number-display></td>
                     </tr>
                 </tbody>
             </table>

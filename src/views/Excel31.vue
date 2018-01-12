@@ -63,8 +63,8 @@
                     <tr>
                         <td class="blue">经营活动产生的现金流量净额</td>
                         <td class="blue">7</td>
-                        <td>{{a7_1|formatCurrency}}</td>
-                        <td>{{a7_2|formatCurrency}}</td>
+                        <td><number-display :value="a7_1"></number-display></td>
+                        <td><number-display :value="a7_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="4">支付的其他与经营活动有关的现金</td>
@@ -102,8 +102,8 @@
                     <tr>
                         <td class="blue">投资活动产生的现金流量净额</td>
                         <td class="blue">13</td>
-                        <td>{{a13_1|formatCurrency}}</td>
-                        <td>{{a13_2|formatCurrency}}</td>
+                        <td><number-display :value="a13_1"></number-display></td>
+                        <td><number-display :value="a13_2"></number-display></td>
                     </tr>
                     <tr>
                          <td class="blue" colspan="4">三、筹资活动产生的现金流量：</td>
@@ -141,14 +141,14 @@
                     <tr>
                         <td class="blue">筹资活动产生的现金流量净额</td>
                         <td class="blue">19</td>
-                        <td>{{a19_1|formatCurrency}}</td>
-                        <td>{{a19_2|formatCurrency}}</td>
+                        <td><number-display :value="a19_1"></number-display></td>
+                        <td><number-display :value="a19_2"></number-display></td>
                     </tr>   
                      <tr>
                         <td class="blue">四、现金净增加额</td>
                         <td class="blue">20</td>
-                        <td>{{a20_1|formatCurrency}}</td>
-                        <td>{{a20_2|formatCurrency}}</td>
+                        <td><number-display :value="a20_1"></number-display></td>
+                        <td><number-display :value="a20_2"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">加：期初现金余额</td>
@@ -159,8 +159,8 @@
                     <tr>
                         <td class="blue">五、期末现金余额</td>
                         <td class="blue">22</td>
-                        <td>{{a22_1|formatCurrency}}</td>
-                        <td>{{a22_2|formatCurrency}}</td>
+                        <td><number-display :value="a22_1"></number-display></td>
+                        <td><number-display :value="a22_2"></number-display></td>
                     </tr>       
                 </tbody>
             </table>

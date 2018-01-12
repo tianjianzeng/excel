@@ -59,26 +59,26 @@
                         <td class="green">{{item.a1}}</td>
                         <td class="green"><number-input v-model="item.a2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a3" :fixed="fixed"></number-input></td>
-                        <td>{{item.a4|formatCurrency}}</td>
+                        <td><number-display :value="item.a4"></number-display></td>
                         <td :class="{'green':item.a5!=null,'blue':item.a5==null}"><span v-if="item.a5==null">*</span><number-input v-else v-model="item.a5" :fixed="fixed"></number-input></td>
                         <td :class="{'green':item.a6!=null,'blue':item.a6==null}"><span v-if="item.a6==null">*</span><number-input v-else v-model="item.a6" :fixed="fixed"></number-input></td>
                         <td :class="{'green':item.a7!=null,'blue':item.a7==null}"><span v-if="item.a7==null">*</span><number-input v-else v-model="item.a7" :fixed="fixed"></number-input></td>
                         <td :class="{'green':item.a8!=null,'blue':item.a8==null}"><span v-if="item.a8==null">*</span><number-input v-else v-model="item.a8" :fixed="fixed"></number-input></td>
                         <td :class="{'green':item.a9!=null,'blue':item.a9==null}"><span v-if="item.a9==null">*</span><number-input v-else v-model="item.a9" :fixed="fixed"></number-input></td>
-                        <td :class="{'blue':(item.a10==null||item.a10==undefined)}"><span v-if="(item.a10==null||item.a10==undefined)">*</span><span v-else>{{item.a10|formatCurrency}}</span></td>
-                        <td>{{item.a11|formatCurrency}}</td>
-                        <td :class="{'blue':(index==0)}"><span v-if="index==0">*</span><span v-else>{{item.a12|formatCurrency}}</span></td>
+                        <td :class="{'blue':(item.a10==null||item.a10==undefined)}"><span v-if="(item.a10==null||item.a10==undefined)">*</span><span v-else><number-display :value="item.a10"></number-display></span></td>
+                        <td><number-display :value="item.a11"></number-display></td>
+                        <td :class="{'blue':(index==0)}"><span v-if="index==0">*</span><span v-else><number-display :value="item.a12"></number-display></span></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue" colspan="11">本年实际抵免税额合计</td>
-                        <td>{{a7Check|formatCurrency}}</td>
+                        <td><number-display :value="a7Check"></number-display></td>
                         <td class="blue">*</td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue" colspan="12">可结转以后年度抵免的税额合计</td>
-                        <td>{{a8|formatCurrency}}</td>
+                        <td><number-display :value="a8"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>

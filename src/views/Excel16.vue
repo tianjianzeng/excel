@@ -14,7 +14,7 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue" colspan="2">一、免税收入（2+3+4+5</td>
-                        <td>{{a1|formatCurrency}}</td>
+                        <td><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
@@ -24,7 +24,7 @@
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue" colspan="2">（二）符合条件的居民企业之间的股息、红利等权益性投资收益（填写A107011）</td>
-                        <td>{{a3|formatCurrency}}</td>
+                        <td><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
@@ -34,7 +34,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue" colspan="2">（四）其他专项优惠（6+7+8+9+10+11+12+13+14）</td>
-                        <td>{{a5|formatCurrency}}</td>
+                        <td><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
@@ -94,22 +94,22 @@
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue" colspan="2">二、减计收入（16+17）</td>
-                        <td>{{a15|formatCurrency}}</td>
+                        <td><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue" colspan="2">（一）综合利用资源生产产品取得的收入（填写A107012）</td>
-                        <td>{{a16|formatCurrency}}</td>
+                        <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue" colspan="2">（二）其他专项优惠（18+19+20）</td>
-                        <td>{{a17|formatCurrency}}</td>
+                        <td><number-display :value="a17"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
                         <td class="blue" colspan="2">1.金融、保险等机构取得的涉农利息、保费收入（填写A107013）</td>
-                        <td>{{a18|formatCurrency}}</td>
+                        <td><number-display :value="a18"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">19</td>
@@ -124,17 +124,17 @@
                     <tr>
                         <td class="blue">21</td>
                         <td class="blue" colspan="2">三、加计扣除（22+23+26）</td>
-                        <td>{{a21|formatCurrency}}</td>
+                        <td><number-display :value="a21"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
                         <td class="blue" colspan="2">（一）开发新技术、新产品、新工艺发生的研究开发费用加计扣除（填写A107014）</td>
-                        <td>{{a22|formatCurrency}}</td>
+                        <td><number-display :value="a22"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
                         <td class="blue" colspan="2">（二）安置残疾人员及国家鼓励安置的其他就业人员所支付的工资加计扣除（24+25）</td>
-                        <td>{{a23|formatCurrency}}</td>
+                        <td><number-display :value="a23"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">24</td>
@@ -149,12 +149,12 @@
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue" colspan="2">（三）其他专项优惠</td>
-                        <td>{{a26|formatCurrency}}</td>
+                        <td><number-display :value="a26"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
                         <td class="blue" colspan="2">合计（1+15+21）</td>
-                        <td>{{a27|formatCurrency}}</td>
+                        <td><number-display :value="a27"></number-display></td>
                     </tr>
                 </tbody>
             </table>

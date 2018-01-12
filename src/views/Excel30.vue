@@ -24,193 +24,193 @@
                     <tr>
                         <td class="blue">一、营业收入</td>
                         <td class="blue">1</td>
-                        <td class="green">{{a1_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a1_1"></number-display></td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">减：营业成本</td>
                         <td class="blue">2</td>
-                        <td class="green">{{a2_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a2_1"></number-display></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">营业税金及附加</td>
                         <td class="blue">3</td>
-                        <td class="green">{{a3_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a3_1"></number-display></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">其中：消费税</td>
                         <td class="blue">4</td>
-                        <td class="green">{{a4_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a4_1"></number-display></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">营业税</td>
                         <td class="blue">5</td>
-                        <td class="green">{{a5_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a5_1"></number-display></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">城市维护建设税</td>
                         <td class="blue">6</td>
-                        <td class="green">{{a6_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a6_1"></number-display></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">资源税</td>
                         <td class="blue">7</td>
-                        <td class="green">{{a7_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a7_1"></number-display></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">土地增值税</td>
                         <td class="blue">8</td>
-                        <td class="green">{{a8_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a8_1"></number-display></td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">城镇土地使用税、房产税、车船税、印花税</td>
                         <td class="blue">9</td>
-                        <td class="green">{{a9_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a9_1"></number-display></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">教育费附加、矿产资源补偿费、排污费</td>
                         <td class="blue">10</td>
-                        <td class="green">{{a10_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a10_1"></number-display></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">销售费用</td>
                         <td class="blue">11</td>
-                        <td class="green">{{a11_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a11_1"></number-display></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">其中：商品维修费</td>
                         <td class="blue">12</td>
-                        <td class="green">{{a12_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a12_1"></number-display></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
                     </tr>
                      <tr>
                         <td class="blue">广告费和业务宣传费</td>
                         <td class="blue">13</td>
-                        <td class="green">{{a13_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a13_1"></number-display></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">管理费用</td>
                         <td class="blue">14</td>
-                        <td class="green">{{a14_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a14_1"></number-display></td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">其中：开办费</td>
                         <td class="blue">15</td>
-                        <td class="green">{{a15_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a15_1"></number-display></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">业务招待费</td>
                         <td class="blue">16</td>
-                        <td class="green">{{a16_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a16_1"></number-display></td>
                         <td class="green"><number-input v-model="a16_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">研究费用</td>
                         <td class="blue">17</td>
-                        <td class="green">{{a17_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a17_1"></number-display></td>
                         <td class="green"><number-input v-model="a17_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">财务费用</td>
                         <td class="blue">18</td>
-                        <td class="green">{{a18_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a18_1"></number-display></td>
                         <td class="green"><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">其中：利息费用（收入以“-”号填列）</td>
                         <td class="blue">19</td>
-                        <td class="green">{{a19_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a19_1"></number-display></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 加：投资收益（亏损以“-”号填列）</td>
                         <td class="blue">20</td>
-                        <td class="green">{{a20_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a20_1"></number-display></td>
                         <td class="green"><number-input v-model="a20_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue"> 二、营业利润（亏损以“-”号填列）</td>
                         <td class="blue">21</td>
-                        <td>{{a21_1|formatCurrency}}</td>
+                        <td><number-display :value="a21_1"></number-display></td>
                         <td><number-input v-model="a21_2" :fixed="fixed"></number-input></td>
                     </tr>   
                      <tr>
                         <td class="blue"> 加：营业外收入</td>
                         <td class="blue">22</td>
-                        <td class="green">{{a22_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a22_1"></number-display></td>
                         <td class="green"><number-input v-model="a22_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue"> 其中：政府补助</td>
                         <td class="blue">23</td>
-                        <td class="green">{{a23_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a23_1"></number-display></td>
                         <td class="green"><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
                     </tr>      
                     <tr>
                         <td class="blue">减：营业外支出</td>
                         <td class="blue">24</td>
-                        <td class="green">{{a24_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a24_1"></number-display></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
                     </tr>   
                      <tr>
                         <td class="blue">其中：坏账损失</td>
                         <td class="blue">25</td>
-                        <td class="green">{{a25_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a25_1"></number-display></td>
                         <td class="green"><number-input v-model="a25_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">无法收回的长期债券投资损失</td>
                         <td class="blue">26</td>
-                        <td class="green">{{a26_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a26_1"></number-display></td>
                         <td class="green"><number-input v-model="a26_2" :fixed="fixed"></number-input></td>
                     </tr>  
                      <tr>
                         <td class="blue"> 无法收回的长期股权投资损失</td>
                         <td class="blue">27</td>
-                        <td class="green">{{a27_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a27_1"></number-display></td>
                         <td class="green"><number-input v-model="a27_2" :fixed="fixed"></number-input></td>
                     </tr>  
                      <tr>
                         <td class="blue">自然灾害等不可抗力因素造成的损失</td>
                         <td class="blue">28</td>
-                        <td class="green">{{a28_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a28_1"></number-display></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue"> 税收滞纳金</td>
                         <td class="blue">29</td>
-                        <td class="green">{{a29_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a29_1"></number-display></td>
                         <td class="green"><number-input v-model="a29_2" :fixed="fixed"></number-input></td>
                     </tr> 
                      <tr>
                         <td class="blue">三、利润总额（亏损总额以“-”号填列）</td>
                         <td class="blue">30</td>
-                        <td>{{a30_1|formatCurrency}}</td>
+                        <td><number-display :value="a30_1"></number-display></td>
                         <td><number-input v-model="a30_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">减：所得税费用</td>
                         <td class="blue">31</td>
-                        <td class="green">{{a31_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a31_1"></number-display></td>
                         <td class="green"><number-input v-model="a31_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">四、净利润（净亏损以“-”号填列）</td>
                         <td class="blue">32</td>
-                        <td>{{a32_1|formatCurrency}}</td>
+                        <td><number-display :value="a32_1"></number-display></td>
                         <td><number-input v-model="a32_2" :fixed="fixed"></number-input></td>
                     </tr>                 
 

@@ -21,212 +21,212 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">一、保险公司（2+3+6+7+8+9+10）</td>
-                        <td>{{a1_1|formatCurrency}}</td>
-                        <td>{{a1_2|formatCurrency}}</td>
-                        <td>{{a1_3|formatCurrency}}</td>
+                        <td><number-display :value="a1_1"></number-display></td>
+                        <td><number-display :value="a1_2"></number-display></td>
+                        <td><number-display :value="a1_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">（一）未到期责任准备金</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
-                        <td>{{a2_3|formatCurrency}}</td>
+                        <td><number-display :value="a2_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">（二）未决赔款准备金（4+5）</td>
-                        <td>{{a3_1|formatCurrency}}</td>
-                        <td>{{a3_2|formatCurrency}}</td>
-                        <td>{{a3_3|formatCurrency}}</td>
+                        <td><number-display :value="a3_1"></number-display></td>
+                        <td><number-display :value="a3_2"></number-display></td>
+                        <td><number-display :value="a3_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue">其中：已发生已报案未决赔款准备金</td>
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
-                        <td>{{a4_3|formatCurrency}}</td>
+                        <td><number-display :value="a4_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">已发生未报案未决赔款准备金</td>
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
-                        <td>{{a5_3|formatCurrency}}</td>
+                        <td><number-display :value="a5_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue">（三）巨灾风险准备金</td>
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
-                        <td>{{a6_3|formatCurrency}}</td>
+                        <td><number-display :value="a6_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue">（四）寿险责任准备金</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
-                        <td>{{a7_3|formatCurrency}}</td>
+                        <td><number-display :value="a7_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue">（五）长期健康险责任准备金</td>
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
-                        <td>{{a8_3|formatCurrency}}</td>
+                        <td><number-display :value="a8_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">（六）保险保障基金</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
-                        <td>{{a9_3|formatCurrency}}</td>
+                        <td><number-display :value="a9_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue">（七）其他</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
-                        <td>{{a10_3|formatCurrency}}</td>
+                        <td><number-display :value="a10_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue">二、证券行业（12+13+14+15）</td>
-                        <td>{{a11_1|formatCurrency}}</td>
-                        <td>{{a11_2|formatCurrency}}</td>
-                        <td>{{a11_3|formatCurrency}}</td>
+                        <td><number-display :value="a11_1"></number-display></td>
+                        <td><number-display :value="a11_2"></number-display></td>
+                        <td><number-display :value="a11_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">（一）证券交易所风险基金</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
-                        <td>{{a12_3|formatCurrency}}</td>
+                        <td><number-display :value="a12_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">（二）证券结算风险基金</td>
                         <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
-                        <td>{{a13_3|formatCurrency}}</td>
+                        <td><number-display :value="a13_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue">（三）证券投资者保护基金</td>
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
-                        <td>{{a14_3|formatCurrency}}</td>
+                        <td><number-display :value="a14_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">（四）其他</td>
                         <td class="green"><number-input v-model="a15_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
-                        <td>{{a15_3|formatCurrency}}</td>
+                        <td><number-display :value="a15_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue">三、期货行业（17+18+19+20）</td>
-                        <td>{{a16_1|formatCurrency}}</number-input></td>
-                        <td>{{a16_2|formatCurrency}}</number-input></td>
-                        <td>{{a16_3|formatCurrency}}</td>
+                        <td><number-display :value="a16_1"></number-display></number-input></td>
+                        <td><number-display :value="a16_2"></number-display></number-input></td>
+                        <td><number-display :value="a16_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">17</td>
                         <td class="blue">（一）期货交易所风险准备金</td>
                         <td class="green"><number-input v-model="a17_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a17_2" :fixed="fixed"></number-input></td>
-                        <td>{{a17_3|formatCurrency}}</td>
+                        <td><number-display :value="a17_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
                         <td class="blue">（二）期货公司风险准备金</td>
                         <td class="green"><number-input v-model="a18_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
-                        <td>{{a18_3|formatCurrency}}</td>
+                        <td><number-display :value="a18_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">19</td>
                         <td class="blue">（三）期货投资者保障基金</td>
                         <td class="green"><number-input v-model="a19_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
-                        <td>{{a19_3|formatCurrency}}</td>
+                        <td><number-display :value="a19_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">20</td>
                         <td class="blue">（四）其他</td>
                         <td class="green"><number-input v-model="a20_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a20_2" :fixed="fixed"></number-input></td>
-                        <td>{{a20_3|formatCurrency}}</td>
+                        <td><number-display :value="a20_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">21</td>
                         <td class="blue">四、金融企业（22+23+24)</td>
-                        <td>{{a21_1|formatCurrency}}</number-input></td>
-                        <td>{{a21_2|formatCurrency}}</number-input></td>
-                        <td>{{a21_3|formatCurrency}}</td>
+                        <td><number-display :value="a21_1"></number-display></number-input></td>
+                        <td><number-display :value="a21_2"></number-display></number-input></td>
+                        <td><number-display :value="a21_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
                         <td class="blue">（一）涉农和中小企业贷款损失准备金</td>
                         <td class="green"><number-input v-model="a22_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a22_2" :fixed="fixed"></number-input></td>
-                        <td>{{a22_3|formatCurrency}}</td>
+                        <td><number-display :value="a22_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
                         <td class="blue">（二）贷款损失准备金</td>
                         <td class="green"><number-input v-model="a23_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
-                        <td>{{a23_3|formatCurrency}}</td>
+                        <td><number-display :value="a23_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">24</td>
                         <td class="blue">（三）其他</td>
                         <td class="green"><number-input v-model="a24_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
-                        <td>{{a24_3|formatCurrency}}</td>
+                        <td><number-display :value="a24_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue">五、中小企业信用担保机构(26+27+28)</td>
-                        <td>{{a25_1|formatCurrency}}</td>
-                        <td>{{a25_2|formatCurrency}}</td>
-                        <td>{{a25_3|formatCurrency}}</td>
+                        <td><number-display :value="a25_1"></number-display></td>
+                        <td><number-display :value="a25_2"></number-display></td>
+                        <td><number-display :value="a25_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue">26</td>
                         <td class="blue">（一）担保赔偿准备</td>
                         <td class="green"><number-input v-model="a26_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a26_2" :fixed="fixed"></number-input></td>
-                        <td>{{a26_3|formatCurrency}}</td>
+                        <td><number-display :value="a26_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
                         <td class="blue">（二）未到期责任准备</td>
                         <td class="green"><number-input v-model="a27_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a27_2" :fixed="fixed"></number-input></td>
-                        <td>{{a27_3|formatCurrency}}</td>
+                        <td><number-display :value="a27_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">28</td>
                         <td class="blue">（三）其他</td>
                         <td class="green"><number-input v-model="a28_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed"></number-input></td>
-                        <td>{{a28_3|formatCurrency}}</td>
+                        <td><number-display :value="a28_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">29</td>
                         <td class="blue">六、其他</td>
                         <td class="green"><number-input v-model="a29_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a29_2" :fixed="fixed"></number-input></td>
-                        <td>{{a29_3|formatCurrency}}</td>
+                        <td><number-display :value="a29_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">30</td>
                         <td class="blue">合计(1+11+16+21+25+29)</td>
-                        <td>{{a30_1|formatCurrency}}</number-input></td>
-                        <td>{{a30_2|formatCurrency}}</number-input></td>
-                        <td>{{a30_3|formatCurrency}}</td>
+                        <td><number-display :value="a30_1"></number-display></number-input></td>
+                        <td><number-display :value="a30_2"></number-display></number-input></td>
+                        <td><number-display :value="a30_3"></number-display></td>
                     </tr>
                 </tbody>
             </table>

@@ -88,14 +88,14 @@
                         <td class="green"><number-input v-model="item.a6" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a7" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a8" :min="0" :fixed="fixed"></number-input></td>
-                        <td>{{item.a9|formatCurrency}}</td>
+                        <td><number-display :value="item.a9"></number-display></td>
                         <td class="green"><number-input v-model="item.a10" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="item.a11" :fixed="fixed"></number-input></td>
-                        <td>{{item.a12|formatCurrency}}</td>
-                        <td>{{item.a13|formatCurrency}}</td>
+                        <td><number-display :value="item.a12"></number-display></td>
+                        <td><number-display :value="item.a13"></number-display></td>
                         <td class="green"><number-input v-model="item.a14" :fixed="fixed"></number-input></td>
-                        <td>{{item.a15|formatCurrency}}</td>
-                        <td>{{item.a16|formatCurrency}}</td>
+                        <td><number-display :value="item.a15"></number-display></td>
+                        <td><number-display :value="item.a16"></number-display></td>
                         <td>
                             <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add()">添加</el-button>
                             <el-button type="primary" @click="del(item)">删除</el-button>
@@ -110,17 +110,17 @@
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td>{{total.a6|formatCurrency}}</td>
+                        <td><number-display :value="total.a6"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td>{{total.a9|formatCurrency}}</td>
+                        <td><number-display :value="total.a9"></number-display></td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td>{{total.a15|formatCurrency}}</td>
-                        <td colspan="2">{{total.a16|formatCurrency}}</td>
+                        <td><number-display :value="total.a15"></number-display></td>
+                        <td colspan="2"><number-display :value="total.a16"></number-display></td>
                     </tr>
                 </tbody>
             </table>

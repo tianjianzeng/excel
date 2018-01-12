@@ -16,32 +16,32 @@
                         <td class="blue">1</td>
                         <td class="blue" rowspan="13">利润总和计算</td>
                         <td class="blue">一、营业收入(填写A100000\101020\103000)</td>
-                        <td>{{a1|formatCurrency}}</td>
+                        <td><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">减：营业成本(填写A102010\102020\103000)</td>
-                        <td>{{a2|formatCurrency}}</td>
+                        <td><number-display :value="a2"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue">营业税金及附加</td>
-                        <td>{{a3|formatCurrency}}</td>
+                        <td><number-display :value="a3"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue">销售费用(填写A104000)</td>
-                        <td>{{a4|formatCurrency}}</td>
+                        <td><number-display :value="a4"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">管理费用(填写A104000)</td>
-                        <td>{{a5|formatCurrency}}</td>
+                        <td><number-display :value="a5"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue">财务费用(填写A104000)</td>
-                        <td>{{a6|formatCurrency}}</td>
+                        <td><number-display :value="a6"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">7</td>
@@ -56,78 +56,78 @@
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue">投资收益</td>
-                        <td class="green">{{a9|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a9"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue">二、营业利润(1-2-3-4-5-6-7+8+9)</td>
-                        <td>{{a10|formatCurrency}}</td>
+                        <td><number-display :value="a10"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue">加：营业外收入(填写A100000\101020\103000)</td>
-                        <td>{{a11|formatCurrency}}</td>
+                        <td><number-display :value="a11"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue">减：营业外支出(填写A102010\102020\103000)</td>
-                        <td>{{a12|formatCurrency}}</td>
+                        <td><number-display :value="a12"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue">三、利润总额（10+11-12）</td>
-                        <td>{{a13|formatCurrency}}</td>
+                        <td><number-display :value="a13"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue" rowspan="10">应纳税所得额计算</td>
                         <td class="blue">减：境外所得（填写A108010）</td>
-                        <td>{{a14|formatCurrency}}</td>
+                        <td><number-display :value="a14"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">加：纳税调整增加额（填写A105000）</td>
-                        <td>{{a15|formatCurrency}}</td>
+                        <td><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue">减：纳税调整减少额（填写A105000）</td>
-                        <td>{{a16|formatCurrency}}</td>
+                        <td><number-display :value="a16"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">减：免税、减计收入及加计扣除（填写A107010）</td>
-                        <td>{{a17|formatCurrency}}</td>
+                        <td><number-display :value="a17"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">18</td>
                         <td class="blue">加：境外应税所得抵减境内亏损（填写A108000）</td>
-                        <td>{{a18|formatCurrency}}</td>
+                        <td><number-display :value="a18"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">19</td>
                         <td class="blue">四、纳税调整后所得（13-14+15-16-17+18）</td>
-                        <td>{{a19|formatCurrency}}</td>
+                        <td><number-display :value="a19"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">20</td>
                         <td class="blue">减：所得减免（填写A107020）</td>
-                        <td>{{a20|formatCurrency}}</td>
+                        <td><number-display :value="a20"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">21</td>
                         <td class="blue">减：抵扣应纳税所得额（填写A107030）</td>
-                        <td>{{a21|formatCurrency}}</td>
+                        <td><number-display :value="a21"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">22</td>
                         <td class="blue">减：弥补以前年度亏损（填写A106000）</td>
-                        <td>{{a22|formatCurrency}}</td>
+                        <td><number-display :value="a22"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">23</td>
                         <td class="blue">五、应纳税所得额（19-20-21-22）</td>
-                        <td>{{a23|formatCurrency}}</td>
+                        <td><number-display :value="a23"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">24</td>
@@ -138,62 +138,62 @@
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue">六、应纳所得税额（23×24）</td>
-                        <td>{{a25|formatCurrency}}</td>
+                        <td><number-display :value="a25"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue">减：减免所得税额（填写A107040）</td>
-                        <td>{{a26|formatCurrency}}</td>
+                        <td><number-display :value="a26"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">27</td>
                         <td class="blue">减：抵免所得税额（填写A107050）</td>
-                        <td>{{a27|formatCurrency}}</td>
+                        <td><number-display :value="a27"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">28</td>
                         <td class="blue">七、应纳税额（25-26-27）</td>
-                        <td>{{a28|formatCurrency}}</td>
+                        <td><number-display :value="a28"></number-display></td>
                     </tr>   
                     <tr>
                         <td class="blue">29</td>
                         <td class="blue">加：境外所得应纳所得税额（填写A108000）</td>
-                        <td>{{a29|formatCurrency}}</td>
+                        <td><number-display :value="a29"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">30</td>
                         <td class="blue">减：境外所得抵免所得税额（填写A108000）</td>
-                        <td>{{a30|formatCurrency}}</td>
+                        <td><number-display :value="a30"></number-display></td>
                     </tr>   
                     <tr>
                         <td class="blue">31</td>
                         <td class="blue">八、实际应纳所得税额（28+29-30）</td>
-                        <td>{{a31|formatCurrency}}</td>
+                        <td><number-display :value="a31"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">32</td>
                         <td class="blue">减：本年累计实际已预缴的所得税额</td>
-                        <td>{{a32|formatCurrency}}</td>
+                        <td><number-display :value="a32"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">33</td>
                         <td class="blue">九、本年应补（退）所得税额（31-32）</td>
-                        <td>{{a33|formatCurrency}}</td>
+                        <td><number-display :value="a33"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">34</td>
                         <td class="blue">其中：总机构分摊本年应补（退）所得税额(填写A109000)</td>
-                        <td>{{a34|formatCurrency}}</td>
+                        <td><number-display :value="a34"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">35</td>
                         <td class="blue">财政集中分配本年应补（退）所得税额（填写A109000）</td>
-                        <td>{{a35|formatCurrency}}</td>
+                        <td><number-display :value="a35"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">36</td>
                         <td class="blue">总机构主体生产经营部门分摊本年应补（退）所得税额(填写A109000)</td>
-                        <td>{{a36|formatCurrency}}</td>
+                        <td><number-display :value="a36"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">37</td>

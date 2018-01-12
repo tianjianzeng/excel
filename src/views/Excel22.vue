@@ -18,7 +18,7 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue" colspan="2">一、符合条件的小型微利企业 </td>
-                        <td class="green">{{a1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
@@ -28,27 +28,27 @@
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue" colspan="2">二、国家需要重点扶持的高新技术企业（4+5）</td>
-                        <td>{{a3|formatCurrency}}</td>
+                        <td><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue" colspan="2">   （一）高新技术企业低税率优惠（填写A107041）</td>
-                        <td>{{a4|formatCurrency}}</td>
+                        <td><number-display :value="a4"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue" colspan="2">   （二）经济特区和上海浦东新区新设立的高新技术企业（填写A107041）</td>
-                        <td>{{a5|formatCurrency}}</td>
+                        <td><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue" colspan="2">三、其他专项优惠（7+8+9+10+11…+14+15+16+…+31）</td>
-                        <td>{{a6|formatCurrency}}</td>
+                        <td><number-display :value="a6"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue" colspan="2">   （一）受灾地区损失严重的企业（7.1+7.2+7.3）</td>
-                        <td>{{a7|formatCurrency}}</td>
+                        <td><number-display :value="a7"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">7.1</td>
@@ -66,12 +66,12 @@
                         <td class="blue">7.3</td>
                         <td class="blue">     3.</td>
                         <td></td>
-                        <td>{{a7_3|formatCurrency}}</td>
+                        <td><number-display :value="a7_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue" colspan="2">    （二）受灾地区农村信用社（8.1+8.2+8.3）</td>
-                        <td>{{a8|formatCurrency}}</td>
+                        <td><number-display :value="a8"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">8.1</td>
@@ -89,12 +89,12 @@
                         <td class="blue">8.3</td>
                         <td class="blue">     3.</td>
                         <td></td>
-                        <td>{{a8_3|formatCurrency}}</td>
+                        <td><number-display :value="a8_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue" colspan="2">   （三）受灾地区的促进就业企业（9.1+9.2+9.3）</td>
-                        <td>{{a9|formatCurrency}}</td>
+                        <td><number-display :value="a9"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">9.1</td>
@@ -112,12 +112,12 @@
                         <td class="blue">9.3</td>
                         <td class="blue">     3.</td>
                         <td></td>
-                        <td>{{a9_3|formatCurrency}}</td>
+                        <td><number-display :value="a9_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue" colspan="2">   （四）支持和促进重点群体创业就业企业（10.1+10.2+10.3）</td>
-                        <td>{{a10|formatCurrency}}</td>
+                        <td><number-display :value="a10"></number-display></td>
                     </tr>     
                     <tr>
                         <td class="blue">10.1</td>
@@ -152,7 +152,7 @@
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue" colspan="2">   （八）集成电路线宽小于0.25微米的集成电路生产企业（14.1+14.2）</td>
-                        <td>{{a14|formatCurrency}}</td>
+                        <td><number-display :value="a14"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">14.1</td>
@@ -167,7 +167,7 @@
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue" colspan="2">   （九）投资额超过80亿元人民币的集成电路生产企业（15.1+15.2）</td>
-                        <td>{{a15|formatCurrency}}</td>
+                        <td><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">15.1</td>
@@ -182,7 +182,7 @@
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue" colspan="2">   （十）新办集成电路设计企业（填写A107042）</td>
-                        <td>{{a16|formatCurrency}}</td>
+                        <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
@@ -202,7 +202,7 @@
                     <tr>
                         <td class="blue">20</td>
                         <td class="blue" colspan="2">   （十四）符合条件的软件企业（填写A107042）</td>
-                        <td>{{a20|formatCurrency}}</td>
+                        <td><number-display :value="a20"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">21</td>
@@ -227,22 +227,22 @@
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue" colspan="2">   （十九）新疆困难地区新办企业</td>
-                        <td>{{a25|formatCurrency}}</td>
+                        <td><number-display :value="a25"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue" colspan="2">    （二十）新疆喀什、霍尔果斯特殊经济开发区新办企业</td>
-                        <td>{{a26|formatCurrency}}</td>
+                        <td><number-display :value="a26"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
                         <td class="blue" colspan="2">   （二十一）横琴新区、平潭综合实验区和前海深港现代化服务业合作区企业</td>
-                        <td>{{a27|formatCurrency}}</td>
+                        <td><number-display :value="a27"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">28</td>
                         <td class="blue" colspan="2">   （二十二）享受过渡期税收优惠企业</td>
-                        <td>{{a28|formatCurrency}}</td>
+                        <td><number-display :value="a28"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">29</td>
@@ -297,12 +297,12 @@
                     <tr>
                         <td class="blue">33</td>
                         <td class="blue" colspan="2">四、减：项目所得额按法定税率减半征收企业所得税叠加享受减免税优惠</td>
-                        <td>{{a33|formatCurrency}}</td>
+                        <td><number-display :value="a33"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">34</td>
                         <td class="blue" colspan="2">合计：（1+3+6-32+33）</td>
-                        <td>{{a34|formatCurrency}}</td>
+                        <td><number-display :value="a34"></number-display></td>
                     </tr>
                 </tbody>
             </table>

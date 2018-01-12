@@ -78,7 +78,7 @@
                         <td :class="{'green':item.a9!=null,'blue':item.a9==null}"><span v-if="item.a9==null">*</span><number-input v-else v-model="item.a9" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a3" :value="item.a10"></number-display><number-input v-else v-model="item.a10" :max="item.a3" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a10" :value="item.a11"></number-display><number-input v-else v-model="item.a11" :max="item.a10" :fixed="fixed"></number-input></td>
-                        <td>{{item.a12|formatCurrency}}</td>
+                        <td><number-display :value="item.a12"></number-display></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a12" :value="item.a13"></number-display><number-input v-else v-model="item.a13" :max="item.a12" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :value="item.a14"></number-display><number-input v-else v-model="item.a14" :fixed="fixed"></number-input></td>
                     </tr>

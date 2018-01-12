@@ -24,98 +24,98 @@
                     <tr>
                         <td class="blue">一、主营业务收入</td>
                         <td class="blue">1</td>
-                        <td class="green">{{a1_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a1_1"></number-display></td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 减：主营业务成本</td>
                         <td class="blue">4</td>
-                        <td class="green">{{a4_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a4_1"></number-display></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 主营业务税金及附加</td>
                         <td class="blue">5</td>
-                        <td class="green">{{a5_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a5_1"></number-display></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">二、主营业务利润（亏损以“－”号填列）</td>
                         <td class="blue">10</td>
-                        <td>{{a10_1|formatCurrency}}</td>
-                        <td>{{a10_2|formatCurrency}}</td>
+                        <td><number-display :value="a10_1"></number-display></td>
+                        <td><number-display :value="a10_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">加：其他业务利润（亏损以“－”号填列）</td>
                         <td class="blue">11</td>
-                        <td class="green">{{a11_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a11_1"></number-display></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">减：营业费用</td>
                         <td class="blue">14</td>
-                        <td class="green">{{a14_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a14_1"></number-display></td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">管理费用</td>
                         <td class="blue">15</td>
-                        <td class="green">{{a15_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a15_1"></number-display></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">财务费用</td>
                         <td class="blue">16</td>
-                        <td class="green">{{a16_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a16_1"></number-display></td>
                         <td class="green"><number-input v-model="a16_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">三、营业利润（亏损以“－”号填列）</td>
                         <td class="blue">18</td>
-                        <td>{{a18_1|formatCurrency}}</td>
-                        <td>{{a18_2|formatCurrency}}</td>
+                        <td><number-display :value="a18_1"></number-display></td>
+                        <td><number-display :value="a18_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">加：投资收益（损失以“－”填列）</td>
                         <td class="blue">19</td>
-                        <td class="green">{{a19_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a19_1"></number-display></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">补贴收入</td>
                         <td class="blue">22</td>
-                        <td class="green">{{a22_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a22_1"></number-display></td>
                         <td class="green"><number-input v-model="a22_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">营业外收入</td>
                         <td class="blue">23</td>
-                        <td class="green">{{a23_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a23_1"></number-display></td>
                         <td class="green"><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
                     </tr>
                      <tr>
                         <td class="blue"> 减：营业外支出</td>
                         <td class="blue">25</td>
-                        <td class="green">{{a25_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a25_1"></number-display></td>
                         <td class="green"><number-input v-model="a25_2" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">四、利润总额（亏损总额以“－”号填列）</td>
                         <td class="blue">27</td>
-                        <td>{{a27_1|formatCurrency}}</td>
-                        <td>{{a27_2|formatCurrency}}</td>
+                        <td><number-display :value="a27_1"></number-display></td>
+                        <td><number-display :value="a27_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">减：所得税</td>
                         <td class="blue">28</td>
-                        <td class="green">{{a28_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a28_1"></number-display></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">五、净利润（净亏损以“－”号填列）</td>
                         <td class="blue">30</td>
-                        <td>{{a30_1|formatCurrency}}</td>
-                        <td>{{a30_2|formatCurrency}}</td>
+                        <td><number-display :value="a30_1"></number-display></td>
+                        <td><number-display :value="a30_2"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue" colspan="4">补充资料：</td>
@@ -127,33 +127,33 @@
                     </tr>  
                     <tr>
                         <td class="blue" colspan="2">1．出售、处置部门或被投资单位所得收益</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-display :value="0"></number-display></td>
+                        <td class="green"><number-display :value="0"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="2">2．自然灾害发生的损失</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-display :value="0"></number-display></td>
+                        <td class="green"><number-display :value="0"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue" colspan="2">3．会计政策变更增加(或减少)利润总额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-display :value="0"></number-display></td>
+                        <td class="green"><number-display :value="0"></number-display></td>
                     </tr>   
                      <tr>
                         <td class="blue" colspan="2">4．会计估计变更增加(或减少)利润总额</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-display :value="0"></number-display></td>
+                        <td class="green"><number-display :value="0"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue" colspan="2">5．债务重组损失</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-display :value="0"></number-display></td>
+                        <td class="green"><number-display :value="0"></number-display></td>
                     </tr>      
                     <tr>
                         <td class="blue" colspan="2">6．其他</td>
-                        <td class="green">{{0|formatCurrency}}</td>
-                        <td class="green">{{0|formatCurrency}}</td>
+                        <td class="green"><number-display :value="0"></number-display></td>
+                        <td class="green"><number-display :value="0"></number-display></td>
                     </tr>   
                 </tbody>
             </table>

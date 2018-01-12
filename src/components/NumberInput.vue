@@ -36,14 +36,14 @@
                         return;
                     }
 
-                    this.$emit("input", Number(newVal));
+                    this.$emit("input", Number(newVal)*100);
                 }
                 else{
                     this.$emit("input","");
                 }
             },
             value(newVal){
-                this.text = this.value.toString(); 
+                this.text = (this.value / 100).toString(); 
             }
         },
         methods:{

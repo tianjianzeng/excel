@@ -19,7 +19,7 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue" colspan="2">一、人员人工费用小计</td>
-                        <td colspan="2">{{a1|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">1.1</td>
@@ -40,7 +40,7 @@
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue" colspan="2">二、直接投入费用小计</td>
-                        <td colspan="2">{{a2|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2.1</td>
@@ -86,7 +86,7 @@
                     <tr>
                         <td class="blue">3</td>
                         <td class="blue" colspan="2">三、折旧费小计</td>
-                        <td colspan="2">{{a3|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">3.1</td>
@@ -101,7 +101,7 @@
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue" colspan="2">四、无形资产摊销小计</td>
-                        <td colspan="2">{{a4|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a4"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">4.1</td>
@@ -121,7 +121,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue" colspan="2">五、新产品设计费等小计</td>
-                        <td colspan="2">{{a5|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">5.1</td>
@@ -146,7 +146,7 @@
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue" colspan="2">六、其他相关费用小计</td>
-                        <td>{{a6|formatCurrency}}</td>
+                        <td><number-display :value="a6"></number-display></td>
                         <td><el-button v-if="0===list.length" type="primary" @click="add()">添加</el-button></td>
                     </tr>
                     <tr v-for="(item,index) in (list)" :key="index">
@@ -173,12 +173,12 @@
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue" colspan="2">八、允许加计扣除的研发费用中的第1至5类费用合计（1+2+3+4+5）</td>
-                        <td colspan="2">{{a8|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a8"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">8.1</td>
                         <td class="blue" colspan="2">其他相关费用限额=序号8×10%/（1-10%）</td>
-                        <td colspan="2">{{a8_1|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a8_1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
@@ -198,7 +198,7 @@
                     <tr>
                         <td class="blue">8.1</td>
                         <td class="blue" colspan="2">十一、当期实际加计扣除总额（9+10.1）×50%</td>
-                        <td colspan="2">{{a11|formatCurrency}}</td>
+                        <td colspan="2"><number-display :value="a11"></number-display></td>
                     </tr>
                 </tbody>
             </table>

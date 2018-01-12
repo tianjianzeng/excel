@@ -21,160 +21,160 @@
                     </tr>
                     <tr>
                         <td class="blue">一、营业收入</td>
-                        <td class="green">{{a1_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a1_1"></number-display></td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">减：营业成本</td>
-                        <td class="green">{{a2_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a2_1"></number-display></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue" >营业税金及附加</td>
-                        <td class="green">{{a3_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a3_1"></number-display></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">  销售费用</td>
-                        <td class="green">{{a4_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a4_1"></number-display></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue"> 管理费用</td>
-                        <td class="green">{{a5_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a5_1"></number-display></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">财务费用</td>
-                        <td class="green">{{a6_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a6_1"></number-display></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">资产减值损失</td>
-                        <td class="green">{{a7_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a7_1"></number-display></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">加：公允价值变动收益（损失以“-”号填列）</td>
-                        <td class="green">{{a8_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a8_1"></number-display></td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">投资收益/td>
-                        <td class="green">{{a9_1|formatCurrency}}</td>
+                        <td class="blue">投资收益</td>
+                        <td class="green"><number-display :value="a9_1"></number-display></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">其中：对联营企业和合营企业的投资收益</td>
-                        <td class="green">{{a10_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a10_1"></number-display></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">二、营业利润（亏损以“-”号填列）</td>
-                        <td>{{a11_1|formatCurrency}}</td>
-                        <td>{{a12_1|formatCurrency}}</td>
+                        <td><number-display :value="a11_1"></number-display></td>
+                        <td><number-display :value="a12_1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">加：营业外收入</td>
-                        <td class="green">{{a12_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a12_1"></number-display></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                      <tr>
                         <td class="blue">其中：非流动资产处置利得</td>
-                        <td class="green">{{a13_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a13_1"></number-display></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">减：营业外支出</td>
-                        <td class="green">{{a14_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a14_1"></number-display></td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">其中：非流动资产处置损失</td>
-                        <td class="green">{{a15_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a15_1"></number-display></td>
                         <td class="green"><number-input v-model="a15_2" :max="a15_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">三、利润总额（亏损总额以“-”号填列）</td>
-                        <td>{{a16_1|formatCurrency}}</td>
-                        <td>{{a16_2|formatCurrency}}</td>
+                        <td><number-display :value="a16_1"></number-display></td>
+                        <td><number-display :value="a16_2"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">减：所得税费用</td>
-                        <td class="green">{{a17_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a17_1"></number-display></td>
                         <td class="green"><number-input v-model="a17_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">四、净利润（净亏损以“-”号填列）</td>
-                        <td>{{a18_1|formatCurrency}}</td>
-                        <td>{{a18_2|formatCurrency}}</td>
+                        <td><number-display :value="a18_1"></number-display></td>
+                        <td><number-display :value="a18_2"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">五、其他综合收益的税后净额</td>
-                        <td>{{a19_1|formatCurrency}}</td>
-                        <td>{{a19_2|formatCurrency}}</td>
+                        <td><number-display :value="a19_1"></number-display></td>
+                        <td><number-display :value="a19_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">（一）以后不能重分类进损益的其他综合收益</td>
-                        <td>{{a20_1|formatCurrency}}</td>
-                        <td>{{a20_2|formatCurrency}}</td>
+                        <td><number-display :value="a20_1"></number-display></td>
+                        <td><number-display :value="a20_2"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">1.重新计量设定收益计划净负债或净资产的变动</td>
-                        <td class="green">{{a21_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a21_1"></number-display></td>
                         <td class="green"><number-input v-model="a21_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>   
                      <tr>
                         <td class="blue">2.权益法下在被投资单位不能重分类进损益的其他综合收益中享有的份额</td>
-                        <td class="green">{{a22_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a22_1"></number-display></td>
                         <td class="green"><number-input v-model="a22_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">（二）以后将重分类进损益的其他综合收益</td>
-                        <td>{{a23_1|formatCurrency}}</td>
-                        <td>{{a23_2|formatCurrency}}</td>
+                        <td><number-display :value="a23_1"></number-display></td>
+                        <td><number-display :value="a23_2"></number-display></td>
                     </tr>      
                     <tr>
                         <td class="blue">1.权益法下在被投资单位以后将重分类进损益的其他综合收益中享有的份额</td>
-                        <td class="green">{{a24_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a24_1"></number-display></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>   
                      <tr>
                         <td class="blue">2.可供出售金融资产公允价值变动损益</td>
-                        <td class="green">{{a25_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a25_1"></number-display></td>
                         <td class="green"><number-input v-model="a25_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">3.将有至到期投资重分类可供出售金融资产损益</td>
-                        <td class="green">{{a26_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a26_1"></number-display></td>
                         <td class="green"><number-input v-model="a26_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>  
                      <tr>
                         <td class="blue">4.现金流经套期损益的有效部分</td>
-                        <td class="green">{{a27_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a27_1"></number-display></td>
                         <td class="green"><number-input v-model="a27_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>  
                      <tr>
                         <td class="blue">5.外币财务报表折算差额</td>
-                        <td class="green">{{a28_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a28_1"></number-display></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">六、综合收益总额</td>
-                        <td>{{a29_1|formatCurrency}}</td>
-                        <td>{{a29_2|formatCurrency}}</td>
+                        <td><number-display :value="a29_1"></number-display></td>
+                        <td><number-display :value="a29_2"></number-display></td>
                     </tr> 
                      <tr>
                         <td class="blue" colspan="3">七、每股收益：</td>
                     </tr> 
                     <tr>
                         <td class="blue">（一）基本每股收益</td>
-                        <td class="green">{{a31_1|formatCurrency}}</td>
+                        <td class="green"><number-display :value="a31_1"></number-display></td>
                         <td class="green"><number-input v-model="a31_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">（二）稀释每股收益</td>
-                        <td>{{a32_1|formatCurrency}}</td>
+                        <td><number-display :value="a32_1"></number-display></td>
                         <td><number-input v-model="a32_2" :fixed="fixed" :editable="getFirst"></number-input></td>
                     </tr>                 
                 </tbody>

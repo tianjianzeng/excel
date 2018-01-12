@@ -19,7 +19,7 @@
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue">（一）搬迁补偿收入（3+4+5+6+7）</td>
-                        <td>{{a2|formatCurrency}}</td>
+                        <td><number-display :value="a2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
@@ -59,7 +59,7 @@
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue">（一）搬迁费用支出(11+12+13+14+15)</td>
-                        <td>{{a10|formatCurrency}}</td>
+                        <td><number-display :value="a10"></number-display></td>
                     </tr>      
                     <tr>
                         <td class="blue">11</td>
@@ -94,12 +94,12 @@
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">三、搬迁所得或损失（1-9）</td>
-                        <td>{{a17|formatCurrency}}</td>
+                        <td><number-display :value="a17"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
                         <td class="blue">四、应计入本年应纳税所得额的搬迁所得或损失（19+20+21）</td>
-                        <td>{{a18|formatCurrency}}</td>
+                        <td><number-display :value="a18"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">19</td>
@@ -129,7 +129,7 @@
                     <tr>
                         <td class="blue">24</td>
                         <td class="blue">七、纳税调整金额（18-22-23）</td>
-                        <td>{{a24|formatCurrency}}</td>
+                        <td><number-display :value="a24"></number-display></td>
                     </tr>  
                 </tbody>
             </table>

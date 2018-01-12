@@ -35,154 +35,154 @@
                         <td style="width:25%" class="blue">一、债务重组</td>
                         <td class="green"><number-input v-model="a1_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
-                        <td>{{a1_3|formatCurrency}}</td>
+                        <td><number-display :value="a1_3"></number-display></td>
                         <td class="green"><number-input v-model="a1_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_5" :fixed="fixed"></number-input></td>
-                        <td>{{a1_6|formatCurrency}}</td>
-                        <td>{{a1_7|formatCurrency}}</td>
+                        <td><number-display :value="a1_6"></number-display></td>
+                        <td><number-display :value="a1_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">2</td>
                         <td style="width:25%" class="blue">其中：以非货币性资产清偿债务</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
-                        <td>{{a2_3|formatCurrency}}</td>
+                        <td><number-display :value="a2_3"></number-display></td>
                         <td class="green"><number-input v-model="a2_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_5" :fixed="fixed"></number-input></td>
-                        <td>{{a2_6|formatCurrency}}</td>
-                        <td>{{a2_7|formatCurrency}}</td>
+                        <td><number-display :value="a2_6"></number-display></td>
+                        <td><number-display :value="a2_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">3</td>
                         <td style="width:25%" class="blue">债转股</td>
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
-                        <td>{{a3_3|formatCurrency}}</td>
+                        <td><number-display :value="a3_3"></number-display></td>
                         <td class="green"><number-input v-model="a3_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_5" :fixed="fixed"></number-input></td>
-                        <td>{{a3_6|formatCurrency}}</td>
-                        <td>{{a3_7|formatCurrency}}</td>
+                        <td><number-display :value="a3_6"></number-display></td>
+                        <td><number-display :value="a3_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">4</td>
                         <td style="width:25%" class="blue">二、股权收购</td>
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
-                        <td>{{a4_3|formatCurrency}}</td>
+                        <td><number-display :value="a4_3"></number-display></td>
                         <td class="green"><number-input v-model="a4_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_5" :fixed="fixed"></number-input></td>
-                        <td>{{a4_6|formatCurrency}}</td>
-                        <td>{{a4_7|formatCurrency}}</td>
+                        <td><number-display :value="a4_6"></number-display></td>
+                        <td><number-display :value="a4_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">5</td>
                         <td style="width:25%" class="blue">其中：涉及跨境重组的股权收购</td>
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
-                        <td>{{a5_3|formatCurrency}}</td>
+                        <td><number-display :value="a5_3"></number-display></td>
                         <td class="green"><number-input v-model="a5_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_5" :fixed="fixed"></number-input></td>
-                        <td>{{a5_6|formatCurrency}}</td>
-                        <td>{{a5_7|formatCurrency}}</td>
+                        <td><number-display :value="a5_6"></number-display></td>
+                        <td><number-display :value="a5_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">6</td>
                         <td style="width:25%" class="blue">三、资产收购</td>
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
-                        <td>{{a6_3|formatCurrency}}</td>
+                        <td><number-display :value="a6_3"></number-display></td>
                         <td class="green"><number-input v-model="a6_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_5" :fixed="fixed"></number-input></td>
-                        <td>{{a6_6|formatCurrency}}</td>
-                        <td>{{a6_7|formatCurrency}}</td>
+                        <td><number-display :value="a6_6"></number-display></td>
+                        <td><number-display :value="a6_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">7</td>
                         <td style="width:25%" class="blue">其中：涉及跨境重组的资产收购</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
-                        <td>{{a7_3|formatCurrency}}</td>
+                        <td><number-display :value="a7_3"></number-display></td>
                         <td class="green"><number-input v-model="a7_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_5" :fixed="fixed"></number-input></td>
-                        <td>{{a7_6|formatCurrency}}</td>
-                        <td>{{a7_7|formatCurrency}}</td>
+                        <td><number-display :value="a7_6"></number-display></td>
+                        <td><number-display :value="a7_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">8</td>
                         <td style="width:25%" class="blue">四、企业合并（9+10）</td>
-                        <td>{{a8_1|formatCurrency}}</td>
-                        <td>{{a8_2|formatCurrency}}</td>
-                        <td>{{a8_3|formatCurrency}}</td>
-                        <td>{{a8_4|formatCurrency}}</td>
-                        <td>{{a8_5|formatCurrency}}</td>
-                        <td>{{a8_6|formatCurrency}}</td>
-                        <td>{{a8_7|formatCurrency}}</td>
+                        <td><number-display :value="a8_1"></number-display></td>
+                        <td><number-display :value="a8_2"></number-display></td>
+                        <td><number-display :value="a8_3"></number-display></td>
+                        <td><number-display :value="a8_4"></number-display></td>
+                        <td><number-display :value="a8_5"></number-display></td>
+                        <td><number-display :value="a8_6"></number-display></td>
+                        <td><number-display :value="a8_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">9</td>
                         <td style="width:25%" class="blue">其中：同一控制下企业合并</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
-                        <td>{{a9_3|formatCurrency}}</td>
+                        <td><number-display :value="a9_3"></number-display></td>
                         <td class="green"><number-input v-model="a9_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_5" :fixed="fixed"></number-input></td>
-                        <td>{{a9_6|formatCurrency}}</td>
-                        <td>{{a9_7|formatCurrency}}</td>
+                        <td><number-display :value="a9_6"></number-display></td>
+                        <td><number-display :value="a9_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">10</td>
                         <td style="width:25%" class="blue">非同一控制下企业合并</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
-                        <td>{{a10_3|formatCurrency}}</td>
+                        <td><number-display :value="a10_3"></number-display></td>
                         <td class="green"><number-input v-model="a10_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_5" :fixed="fixed"></number-input></td>
-                        <td>{{a10_6|formatCurrency}}</td>
-                        <td>{{a10_7|formatCurrency}}</td>
+                        <td><number-display :value="a10_6"></number-display></td>
+                        <td><number-display :value="a10_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">11</td>
                         <td style="width:25%" class="blue">五、企业分立</td>
                         <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
-                        <td>{{a11_3|formatCurrency}}</td>
+                        <td><number-display :value="a11_3"></number-display></td>
                         <td class="green"><number-input v-model="a11_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_5" :fixed="fixed"></number-input></td>
-                        <td>{{a11_6|formatCurrency}}</td>
-                        <td>{{a11_7|formatCurrency}}</td>
+                        <td><number-display :value="a11_6"></number-display></td>
+                        <td><number-display :value="a11_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">12</td>
                         <td style="width:25%" class="blue">六、其他</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
-                        <td>{{a12_3|formatCurrency}}</td>
+                        <td><number-display :value="a12_3"></number-display></td>
                         <td class="green"><number-input v-model="a12_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_5" :fixed="fixed"></number-input></td>
-                        <td>{{a12_6|formatCurrency}}</td>
-                        <td>{{a12_7|formatCurrency}}</td>
+                        <td><number-display :value="a12_6"></number-display></td>
+                        <td><number-display :value="a12_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">13</td>
                         <td style="width:25%" class="blue">其中：以非货币性资产对外投资</td>
                         <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
-                        <td>{{a13_3|formatCurrency}}</td>
+                        <td><number-display :value="a13_3"></number-display></td>
                         <td class="green"><number-input v-model="a13_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a13_5" :fixed="fixed"></number-input></td>
-                        <td>{{a13_6|formatCurrency}}</td>
-                        <td>{{a13_7|formatCurrency}}</td>
+                        <td><number-display :value="a13_6"></number-display></td>
+                        <td><number-display :value="a13_7"></number-display></td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">14</td>
                         <td style="width:25%" class="blue">合计（1+4+6+8+11+12）</td>
-                        <td>{{a14_1|formatCurrency}}</td>
-                        <td>{{a14_2|formatCurrency}}</td>
-                        <td>{{a14_3|formatCurrency}}</td>
-                        <td>{{a14_4|formatCurrency}}</td>
-                        <td>{{a14_5|formatCurrency}}</td>
-                        <td>{{a14_6|formatCurrency}}</td>
-                        <td>{{a14_7|formatCurrency}}</td>
+                        <td><number-display :value="a14_1"></number-display></td>
+                        <td><number-display :value="a14_2"></number-display></td>
+                        <td><number-display :value="a14_3"></number-display></td>
+                        <td><number-display :value="a14_4"></number-display></td>
+                        <td><number-display :value="a14_5"></number-display></td>
+                        <td><number-display :value="a14_6"></number-display></td>
+                        <td><number-display :value="a14_7"></number-display></td>
                     </tr>
                 </tbody>
             </table>
