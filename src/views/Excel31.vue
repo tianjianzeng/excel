@@ -27,38 +27,38 @@
                     <tr>
                         <td class="blue">销售从产品、商品、提供劳务收到的现金</td>
                         <td class="blue">1</td>
-                        <td class="green"><number-input v-model="a1_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a1_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a1_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">收到的其他与经营活动有关的现金</td>
                         <td class="blue">2</td>
-                        <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a2_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a2_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">购买原材料、商品、接受劳务支付的现金</td>
                         <td class="blue">3</td>
-                        <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a3_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">支付的职工薪酬</td>
                         <td class="blue">4</td>
-                        <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a4_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a4_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">支付的税费</td>
                         <td class="blue">5</td>
-                        <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a5_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a5_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">支付的其他与经营活动有关的现金</td>
                         <td class="blue">6</td>
-                        <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a6_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a6_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">经营活动产生的现金流量净额</td>
@@ -67,37 +67,37 @@
                         <td><number-display :value="a7_2"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue" colspan="4">支付的其他与经营活动有关的现金</td>
+                        <td class="blue" colspan="4">二、投资活动产生的现金流量</td>
                     </tr>
                     <tr>
                         <td class="blue">收回短期投资、长期债券投资和长期股权投资收到的现金</td>
                         <td class="blue">8</td>
-                        <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a8_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a8_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">取得投资收益收到的现金</td>
                         <td class="blue">9</td>
-                        <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a9_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a9_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">处置固定资产、无形资产和其他非流动资产收回的现金净额</td>
                         <td class="blue">10</td>
-                        <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a10_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a10_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">短期投资、长期债券投资和长期股权投资支付的现金</td>
                         <td class="blue">11</td>
-                        <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a11_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a11_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                      <tr>
                         <td class="blue">构建固定资产、无形资产和其他非流动资产支付的现金</td>
                         <td class="blue">12</td>
-                        <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a12_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">投资活动产生的现金流量净额</td>
@@ -111,32 +111,32 @@
                     <tr>
                         <td class="blue">取得借款收到的现金</td>
                         <td class="blue">14</td>
-                        <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a14_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a14_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">吸收投资者投资收到的现金</td>
                         <td class="blue">15</td>
-                        <td class="green"><number-input v-model="a15_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a15_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a15_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr> 
                     <tr>
                         <td class="blue">偿还借款本金支付的现金</td>
                         <td class="blue">16</td>
-                        <td class="green"><number-input v-model="a16_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a16_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a16_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a16_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">偿还借款利息支付的现金</td>
                         <td class="blue">17</td>
-                        <td class="green"><number-input v-model="a17_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a17_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a17_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a17_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">分配利润支付的现金</td>
                         <td class="blue">18</td>
-                        <td class="green"><number-input v-model="a18_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a18_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a18_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>  
                     <tr>
                         <td class="blue">筹资活动产生的现金流量净额</td>
@@ -153,8 +153,8 @@
                     <tr>
                         <td class="blue">加：期初现金余额</td>
                         <td class="blue">21</td>
-                        <td class="green"><number-input v-model="a21_1" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a21_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a21_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-input v-model="a21_2" :fixed="fixed" :editable="false"></number-input></td>
                     </tr>      
                     <tr>
                         <td class="blue">五、期末现金余额</td>

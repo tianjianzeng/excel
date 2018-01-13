@@ -307,7 +307,7 @@
                         <td class="blue">28</td>
                         <td class="green"><number-display :value="a28_1"></number-display></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed" :editable="false"></number-input></td>
-                        <td class="blue"> 实收资本（或股本）</td>
+                        <td class="blue">未分配利润</td>
                         <td class="blue">51</td>
                         <td class="green"><number-display :value="a51_1"></number-display></td>
                         <td class="green"><number-input v-model="a51_2" :fixed="fixed" :editable="false"></number-input></td>
