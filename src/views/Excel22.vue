@@ -64,8 +64,7 @@
                     </tr>
                     <tr>
                         <td class="blue">7.3</td>
-                        <td class="blue">     3.</td>
-                        <td></td>
+                        <td class="blue" colspan="2">     3.</td>
                         <td><number-display :value="a7_3"></number-display></td>
                     </tr>
                     <tr>
@@ -87,8 +86,7 @@
                     </tr>
                     <tr>
                         <td class="blue">8.3</td>
-                        <td class="blue">     3.</td>
-                        <td></td>
+                        <td class="blue" colspan="2">     3.</td>
                         <td><number-display :value="a8_3"></number-display></td>
                     </tr>
                     <tr>
@@ -110,8 +108,7 @@
                     </tr>
                     <tr>
                         <td class="blue">9.3</td>
-                        <td class="blue">     3.</td>
-                        <td></td>
+                        <td class="blue" colspan="2">     3.</td>
                         <td><number-display :value="a9_3"></number-display></td>
                     </tr>
                     <tr>
@@ -296,8 +293,8 @@
                     </tr>
                     <tr>
                         <td class="blue">33</td>
-                        <td class="blue" colspan="2">四、减：项目所得额按法定税率减半征收企业所得税叠加享受减免税优惠</td>
-                        <td><number-display :value="a33"></number-display></td>
+                        <td class="blue" colspan="2">五、减免地方分享所得税的民族自治地方企业创建</td>
+                        <td class="green"><number-input v-model="a33" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">34</td>
@@ -317,6 +314,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -374,7 +372,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["selListA107040","getTableA107040"]),

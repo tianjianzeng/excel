@@ -77,7 +77,7 @@
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue">六、佣金和手续费</td>
-                        <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a6_1"></number-display></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_4" :fixed="fixed"></number-input></td>
@@ -257,9 +257,9 @@
                     <tr>
                         <td class="blue">24</td>
                         <td class="blue">二十四、其他</td>
-                        <td class="green"><number-input v-model="a24_1" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a24_1"></number-display></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a24_3" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a24_3"></number-display></td>
                         <td class="green"><number-input v-model="a24_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_5" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_6" :fixed="fixed"></number-input></td>

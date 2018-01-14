@@ -15,7 +15,7 @@
                         <td class="blue" colspan="2">高新技术企业证书编号</td>
                         <td class="green"><input v-model="a1_1"></td>
                         <td class="blue">高新技术企业证书取得时间</td>
-                        <td class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" default-value="a1_2"></el-date-picker></td>
+                        <td class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" :default-value="new Date()"></el-date-picker></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
@@ -42,7 +42,7 @@
                     </tr>
                     <tr>
                         <td class="blue">4</td>
-                        <td class="blue" colspan="5">关键指标</td>
+                        <td class="blue" colspan="5">关键指标情况</td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
@@ -74,17 +74,17 @@
                         <td class="blue">10</td>
                         <td class="blue" rowspan="5">人员指标</td>
                         <td class="blue" colspan="3">四、本年具有大学专科以上学历的科技人员数</td>
-                        <td class="green"><number-input v-model="a10" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a10" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue" colspan="3">五、本年研发人员数</td>
-                        <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a11" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue" colspan="3">六、本年职工总数</td>
-                        <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
@@ -155,7 +155,7 @@
                     <tr>
                         <td class="blue">26</td>
                         <td class="blue" colspan="3">1.境内的外部研发费</td>
-                        <td><number-display :value="a26"></number-display></td>
+                        <td class="green"><number-input v-model="a26" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">27</td>
@@ -185,6 +185,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -222,7 +223,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA107041"]),
@@ -234,13 +236,13 @@
                 return rst * 1.0/ Math.pow(10,this.fixed);
             },
             a9(){
-                return (this.a5 * 100.0 / this.a8).toFixed(2) + "%";
+                return this.toPercent(this.a5 / this.a8);
             },
             a13(){
-                return (this.a10 * 100.0 / this.a12).toFixed(2) + "%";
+                return this.toPercent(this.a10 / this.a12);
             },
             a14(){
-                return (this.a11 * 100.0 / this.a12).toFixed(2) + "%";
+                return this.toPercent(this.a11 / this.a12);
             },
             a15(){
                 let rst = 0;
@@ -283,10 +285,14 @@
             toPercent(num, fixed = 2) {
                 if(typeof num != "number"){
                     num = Number(num);
-                    if( isNaN(num)){
-                        num = 0;
-                    }
                 }
+                if(num === Infinity){
+                    return "";
+                }
+                if(isNaN(num)){
+                    num = 0;
+                }
+
                 return (num*100).toFixed(fixed) + '%';
             },
             save(){

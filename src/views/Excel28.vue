@@ -66,7 +66,7 @@
                         <td class="blue">8</td>
                         <td class="blue">9</td>
                         <td class="blue">10</td>
-                        <td class="blue">11</td>
+                        <td class="blue">11（6+7+8+9+10）</td>
                         <td class="blue">12</td>
                         <td class="blue">13</td>
                         <td class="blue">14</td>
@@ -74,7 +74,7 @@
                         <td class="blue">16</td>
                         <td class="blue">17</td>
                         <td class="blue">18</td>
-                        <td class="blue" colspan="2">19</td>
+                        <td class="blue" colspan="2">19（14+15+16+17+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{(index+1).toString().padStart(3,'0')}}</td>

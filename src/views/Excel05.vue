@@ -94,7 +94,7 @@
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">（一）非流动资产处置损失</td>
-                        <td class="green"><number-display :value="a17"></number-display></td>
+                        <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>
@@ -114,17 +114,17 @@
                     <tr>
                         <td class="blue">21</td>
                         <td class="blue">（五）捐赠支出</td>
-                        <td class="green"><number-input v-model="a21" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a21"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">22</td>
                         <td class="blue">（六）赞助支出</td>
-                        <td class="green"><number-input v-model="a22" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a22"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">23</td>
                         <td class="blue">（七）罚没支出</td>
-                        <td class="green"><number-input v-model="a23" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a23"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">24</td>

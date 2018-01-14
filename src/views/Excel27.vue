@@ -143,6 +143,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -156,7 +157,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA108010","getCResult108010"])
@@ -232,23 +234,23 @@
                         item.a18 = rst * 1.0 / Math.pow(10, this.fixed);
                         a18 += item.a18 *  Math.pow(10, this.fixed);
                     });
-                    this.total.a2 = a2 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a3 = a3 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a4 = a4 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a5 = a5 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a6 = a6 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a7 = a7 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a8 = a8 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a9 = a9 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a10 = a10 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a11 = a11 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a12 = a12 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a13 = a13 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a14 = a14 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a15 = a15 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a16 = a16 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a17 = a17 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
-                    this.total.a18 = a18 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) *  Math.pow(10, this.fixed);
+                    this.total.a2 = a2 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a3 = a3 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a4 = a4 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a5 = a5 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a6 = a6 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a7 = a7 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a8 = a8 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a9 = a9 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a10 = a10 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a11 = a11 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a12 = a12 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a13 = a13 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a14 = a14 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a15 = a15 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a16 = a16 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a17 = a17 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
+                    this.total.a18 = a18 * 1.0 / Math.pow(10, this.fixed) *  Math.pow(10, this.fixed) /  Math.pow(10, this.fixed);
                 },  
                 deep:true//对象内部的属性监听，也叫深度监听  
             },

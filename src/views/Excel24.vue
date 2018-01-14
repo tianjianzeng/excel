@@ -15,7 +15,7 @@
                         <td style="width:40%" class="blue" colspan="2">企业成立日期</td>
                         <td style="width:10%" class="green">{{a1_1}}</td>
                         <td style="width:35%" class="blue">软件企业证书取得日期</td>
-                        <td style="width:10%" class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" default-value="a1_2"></el-date-picker></td>
+                        <td style="width:10%" class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" :default-value="new Date()"></el-date-picker></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
@@ -168,7 +168,7 @@
                     </tr>
                     <tr>
                         <td class="blue">29</td>
-                        <td class="blue" colspan="3">十九、企业在中国境内发生的研究开发费用金额占研究开发费用总额的比例（27÷26）</td>
+                        <td class="blue" colspan="4">十九、企业在中国境内发生的研究开发费用金额占研究开发费用总额的比例（27÷26）</td>
                         <td class="green">{{a29}}</td>
                     </tr>
                     <tr>
@@ -293,49 +293,49 @@
         computed: {
             ...mapGetters(["getTableA107042"]),
             a9(){
-                return this.toPercent(this.a7 * 100.0 / this.a6);
+                return this.toPercent(this.a7 / this.a6);
             },
             a10(){
-                return this.toPercent(this.a8 * 100.0 / this.a6);
+                return this.toPercent(this.a8 / this.a6);
             },
             a13(){
-                return this.toPercent(this.a12 * 100.0 / this.a11);
+                return this.toPercent(this.a12 / this.a11);
             },
             a16(){
-                return this.toPercent(this.a14 * 100.0 / this.a11);
+                return this.toPercent(this.a14 / this.a11);
             },
             a17(){
-                return this.toPercent(this.a15 * 100.0 / this.a11);
+                return this.toPercent(this.a15 / this.a11);
             },
             a22(){
-                return this.toPercent(this.a18 * 100.0 / this.a11);
+                return this.toPercent(this.a18 / this.a11);
             },
             a23(){
-                return this.toPercent(this.a19 * 100.0 / this.a11);
+                return this.toPercent(this.a19 / this.a11);
             },
             a24(){
-                return this.toPercent(this.a20 * 100.0 / this.a11);
+                return this.toPercent(this.a20 / this.a11);
             },
             a25(){
-                return this.toPercent(this.a21 * 100.0 / this.a11);
+                return this.toPercent(this.a21 / this.a11);
             },
             a28(){
                 return this.toPercent(this.a28_,2);
             },
             a29(){
-                return this.toPercent(this.a27 * 100.0 / this.a26);
+                return this.toPercent(this.a27 / this.a26);
             },
             a33(){
-                return this.toPercent(this.a32 * 100.0 / this.a31);
+                return this.toPercent(this.a32 / this.a31);
             },
             a37(){
-                return this.toPercent(this.a35 * 100.0 / this.a34);
+                return this.toPercent(this.a35 / this.a34);
             },
             a38(){
-                return this.toPercent(this.a36 * 100.0 / this.a35);
+                return this.toPercent(this.a36 / this.a35);
             },
             a40(){
-                return this.toPercent(this.a39 * 100.0 / this.a35);
+                return this.toPercent(this.a39 / this.a35);
             }
         },
         watch: {
@@ -354,10 +354,14 @@
             toPercent(num, fixed = 2) {
                 if(typeof num != "number"){
                     num = Number(num);
-                    if( isNaN(num)){
-                        num = 0;
-                    }
                 }
+                if(num === Infinity){
+                    return "";
+                }
+                if(isNaN(num)){
+                    num = 0;
+                }
+
                 return (num*100).toFixed(fixed) + '%';
             },
             save(){				

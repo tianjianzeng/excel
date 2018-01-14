@@ -38,23 +38,23 @@
                         <td class="blue">103所属行业明细代码</td> 
                         <td>{{item.a103}}</td> 
                         <td class="blue" colspan="2">107从事国家非限制和禁止行业</td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a107" :label="0">是</el-radio></td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a107" :label="1">否</el-radio></td> 
+                        <td colspan="2"><el-radio class="radio" v-model="item.a107" :label="0" disabled>是</el-radio></td> 
+                        <td colspan="2"><el-radio class="radio" v-model="item.a107" :label="1" disabled>否</el-radio></td> 
                     </tr>
                     <tr>
                         <td class="blue">104从业人数 </td> 
                         <td class="green"><number-input v-model="item.a104" :fixed="0"></number-input></td> 
                         <td class="blue" colspan="2">108存在境外关联交易</td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a108" :label="0" disabled>是</el-radio></td> 
-                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a108" :label="1" disabled>否</el-radio></td> 
+                        <td colspan="2"><el-radio class="radio" v-model="item.a108" :label="0">是</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a108" :label="1">否</el-radio></td> 
                     </tr>
                     <tr>
                         <td class="blue">105资产总额（万元）</td> 
                         <td class="green"><number-input v-model="item.a105" :fixed="fixed" :min="0"></number-input></td> 
                         <td class="blue" colspan="2">109上市公司</td> 
-                        <td class="green"><el-radio class="radio" v-model="item.a109" :label="0" disabled>境内</el-radio></td>
-                        <td class="green"><el-radio class="radio" v-model="item.a109" :label="1" disabled>境外</el-radio></td>  
-                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a109" :label="2" disabled>否</el-radio></td> 
+                        <td class="green"><el-radio class="radio" v-model="item.a109" :label="0">境内</el-radio></td>
+                        <td class="green"><el-radio class="radio" v-model="item.a109" :label="1">境外</el-radio></td>  
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a109" :label="2">否</el-radio></td> 
                     </tr>
                     <tr>
                         <td colspan="8" class="blue">200主要会计政策和估计</td> 
@@ -109,13 +109,13 @@
                         <td class="green"><el-radio class="radio" v-model="item.a204" :label="1" disabled>其他</el-radio></td>
                         <td class="blue" colspan="2">205会计政策和估计是否发生变化</td>
                         <td class="green"><el-radio class="radio" v-model="item.a205" :label="0">是</el-radio></td>
-                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a205" :label="0">否</el-radio></td>
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a205" :label="1">否</el-radio></td>
                     </tr>
                     <tr>
                         <td class="blue">206固定资产折旧方法</td>
                         <td class="green"><el-checkbox v-model="item.a206Ya" :true-label="0" :false-label="1">年限平均法</el-checkbox></td>
                         <td class="green"><el-checkbox v-model="item.a206Ws" :true-label="0" :false-label="1">工作量法</el-checkbox></td>
-                        <td class="green" colspan="2"><el-checkbox v-model="item.a206Dd" :true-label="0" :false-label="1">双倍余额递减法是</el-checkbox></td>
+                        <td class="green" colspan="2"><el-checkbox v-model="item.a206Dd" :true-label="0" :false-label="1">双倍余额递减法</el-checkbox></td>
                         <td class="green"><el-checkbox v-model="item.a206Yt" :true-label="0" :false-label="1">年数总和法</el-checkbox></td>
                         <td colspan="2" class="green"><el-checkbox v-model="item.a206Ot" :true-label="0" :false-label="1">其他</el-checkbox></td>
                     </tr>
@@ -138,7 +138,7 @@
                         <td class="green" colspan="5"><el-radio class="radio" v-model="item.a208" :label="1">直接核销法</el-radio></td>
                     </tr>
                     <tr>
-                        <td class="blue">208坏账损失核算方法</td>
+                        <td class="blue">209所得税计算方法</td>
                         <td class="green" colspan="2"><el-radio class="radio" v-model="item.a209" :label="0">应付税款法</el-radio></td>
                         <td class="green" colspan="2"><el-radio class="radio" v-model="item.a209" :label="1">资产负债表债务法</el-radio></td>
                         <td class="green" colspan="3"><el-radio class="radio" v-model="item.a209" :label="2">其他</el-radio></td>
@@ -254,13 +254,14 @@
                     if(!this.item){
                         this.item = {
                             declare:0,
+                            a101: 2,
                             a102:0,
                             a106:1,
                             a104:0,
                             a107:1,
                             a108:1,
                             a105:0,
-                            a109:1,
+                            a109:2,
                             a201:null,
                             a202:"",
                             a204:0,
@@ -374,7 +375,7 @@
             },
             add(){
                 this.list.push({
-                    id: this.item.id,
+                    refId: this.item.id,
                     saved:false,
                     invName: "",
                     taxprNum: "",
@@ -393,7 +394,7 @@
                 });
                 store.dispatch("addInvestA000000",{
                     data:{
-                        id: item.id,
+                        refId: item.refId,
                         invName: item.invName,
                         taxprNum: item.taxprNum,
                         ecoPro: item.ecoPro,

@@ -25,19 +25,19 @@
                         <td class="blue">一、主营业务收入</td>
                         <td class="blue">1</td>
                         <td class="green"><number-display :value="a1_1"></number-display></td>
-                        <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a1_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue"> 减：主营业务成本</td>
                         <td class="blue">4</td>
                         <td class="green"><number-display :value="a4_1"></number-display></td>
-                        <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a4_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue"> 主营业务税金及附加</td>
                         <td class="blue">5</td>
                         <td class="green"><number-display :value="a5_1"></number-display></td>
-                        <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a5_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">二、主营业务利润（亏损以“－”号填列）</td>
@@ -49,25 +49,25 @@
                         <td class="blue">加：其他业务利润（亏损以“－”号填列）</td>
                         <td class="blue">11</td>
                         <td class="green"><number-display :value="a11_1"></number-display></td>
-                        <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a11_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">减：营业费用</td>
                         <td class="blue">14</td>
                         <td class="green"><number-display :value="a14_1"></number-display></td>
-                        <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a14_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">管理费用</td>
                         <td class="blue">15</td>
                         <td class="green"><number-display :value="a15_1"></number-display></td>
-                        <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a15_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">财务费用</td>
                         <td class="blue">16</td>
                         <td class="green"><number-display :value="a16_1"></number-display></td>
-                        <td class="green"><number-input v-model="a16_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a16_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">三、营业利润（亏损以“－”号填列）</td>
@@ -79,25 +79,25 @@
                         <td class="blue">加：投资收益（损失以“－”填列）</td>
                         <td class="blue">19</td>
                         <td class="green"><number-display :value="a19_1"></number-display></td>
-                        <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a19_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">补贴收入</td>
                         <td class="blue">22</td>
                         <td class="green"><number-display :value="a22_1"></number-display></td>
-                        <td class="green"><number-input v-model="a22_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a22_2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">营业外收入</td>
                         <td class="blue">23</td>
                         <td class="green"><number-display :value="a23_1"></number-display></td>
-                        <td class="green"><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a23_2"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue"> 减：营业外支出</td>
                         <td class="blue">25</td>
                         <td class="green"><number-display :value="a25_1"></number-display></td>
-                        <td class="green"><number-input v-model="a25_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a25_2"></number-display></td>
                     </tr>  
                     <tr>
                         <td class="blue">四、利润总额（亏损总额以“－”号填列）</td>
@@ -109,7 +109,7 @@
                         <td class="blue">减：所得税</td>
                         <td class="blue">28</td>
                         <td class="green"><number-display :value="a28_1"></number-display></td>
-                        <td class="green"><number-input v-model="a28_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-display :value="a28_2"></number-display></td>
                     </tr> 
                     <tr>
                         <td class="blue">五、净利润（净亏损以“－”号填列）</td>
@@ -168,6 +168,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -235,7 +236,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableAproB"]),

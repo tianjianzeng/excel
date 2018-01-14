@@ -22,28 +22,38 @@
                     let reg2 = new RegExp(`^[-]{0,1}[0](\\.(\\d{0,${this.fixed}})?)?$`);
 
                     let reg3 = new RegExp(`^[-]$`);
-                    let reg4 = new RegExp(`^[0][1-9]$`);
-                    //匹配单独负号
-                    if(reg3.test(newVal)){
-                        return;
-                    }
-                    if(reg4.test(newVal)){
-                        this.text = newVal.substring(1);
-                        return;
-                    }
-                    if( !(reg1.test(newVal)) && !(reg2.test(newVal)) ) {
-                        this.text = oldVal;
-                        return;
+                    let reg4 = new RegExp(`^[0][1-9\-]$`);
+
+                    
+                    let reg5 = new RegExp(`^[-]{0,1}[1-9][0-9]*$`);
+                    if(this.fixed>0){
+                        //匹配单独负号
+                        if(reg3.test(newVal)){
+                            return;
+                        }
+                        if(reg4.test(newVal)){
+                            this.text = newVal.substring(1);
+                            return;
+                        }
+                        if( !(reg1.test(newVal)) && !(reg2.test(newVal)) ) {
+                            this.text = oldVal;
+                            return;
+                        }
+                    }else{
+                        if( !reg5.test(newVal) ) {
+                            this.text = oldVal;
+                            return;
+                        }
                     }
 
-                    this.$emit("input", Number(newVal)*100);
+                    this.$emit("input", Number(newVal)* Math.pow(10, this.fixed));
                 }
                 else{
                     this.$emit("input","");
                 }
             },
             value(newVal){
-                this.text = (this.value / 100).toString(); 
+                this.text = (this.value / Math.pow(10, this.fixed)).toString(); 
             }
         },
         methods:{

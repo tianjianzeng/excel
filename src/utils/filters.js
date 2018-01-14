@@ -7,7 +7,7 @@ export function formatCurrency(s, fixed = 2) {
         return s.toString();
     }
     if (!/^(-?\d+)(\.\d*)?$/.test(s)) {
-        return 'invalid value';
+        return '0.00';
     }
 
     let sign = '';

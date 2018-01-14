@@ -64,7 +64,7 @@
                         <td class="green"><number-input v-model="a2_7" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_8" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a2_9"></number-display></td>
-                        <td class="green"><number-input v-model="a2_10" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a2_10" :fixed="fixed" :editable="a6_2>0" :min="0" :max="Math.abs(a5_4)"></number-input></td>
                         <td><number-display :value="a2_11"></number-display></td>
                     </tr>
                     <tr>
@@ -79,7 +79,7 @@
                         <td class="green"><number-input v-model="a3_7" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_8" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a3_9"></number-display></td>
-                        <td class="green"><number-input v-model="a3_10" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a3_10" :fixed="fixed" :editable="a6_2>0" :min="0" :max="Math.abs(a5_4)"></number-input></td>
                         <td><number-display :value="a3_11"></number-display></td>
                     </tr>
                     <tr>
@@ -94,13 +94,13 @@
                         <td class="blue">*</td>
                         <td class="green"><number-input v-model="a4_8" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a4_9"></number-display></td>
-                        <td class="green"><number-input v-model="a4_10" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a4_10" :fixed="fixed" :editable="a6_2>0" :min="0" :max="Math.abs(a5_4)"></number-input></td>
                         <td><number-display :value="a4_11"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">前一年度</td>
-                        <td class="blue">{{a4_1}}</td>
+                        <td class="blue">{{a5_1}}</td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_3" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a5_4"></number-display></td>
@@ -109,7 +109,7 @@
                         <td class="blue">*</td>
                         <td class="blue">*</td>
                         <td class="blue">*</td>
-                        <td class="green"><number-input v-model="a5_10" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a5_10" :fixed="fixed" :editable="a6_2>0" :min="0" :max="Math.abs(a5_4)"></number-input></td>
                         <td><number-display :value="a5_11"></number-display></td>
                     </tr>
                     <tr>

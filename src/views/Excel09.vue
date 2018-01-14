@@ -66,7 +66,7 @@
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{item.rowNum}}</td>
-                        <td class="blue"><span v-if="item.a1==null">合计</span><span v-else>{{item.a1|formatYear}}</span></td>
+                        <td class="blue"><span v-if="item.a1==null">合计（1+2+3+4+5+6）</span><span v-else>{{item.a1|formatYear}}</span></td>
                         <td :class="{'green':item.a1!=null,'blue':item.a1==null}"><span v-if="item.a1==null">*</span><span>{{item.a1}}</span></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :value="item.a2"></number-display><number-input v-else v-model="item.a2" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a2" :value="item.a3"></number-display><number-input v-else v-model="item.a3" :max="item.a2" :fixed="fixed"></number-input></td>
