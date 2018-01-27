@@ -16,7 +16,7 @@
                     <tr>
                         <td class="blue">1</td>
                         <td class="blue">2</td>
-                        <td class="blue">3</td>
+                        <td class="blue">3（1-2）</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>

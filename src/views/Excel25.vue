@@ -55,9 +55,9 @@
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{item.rowNum}}</td>
-                        <td class="blue">{{item.a1|formatYear}}</td>
+                        <td class="blue">{{item.a1|formatYear1}}</td>
                         <td class="green">{{item.a1}}</td>
-                        <td class="green"><number-input v-model="item.a2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a2" :fixed="fixed" :editable="item.a1!=(new Date()).getFullYear()-1"></number-input></td>
                         <td class="green"><number-input v-model="item.a3" :fixed="fixed"></number-input></td>
                         <td><number-display :value="item.a4"></number-display></td>
                         <td :class="{'green':item.a5!=null,'blue':item.a5==null}"><span v-if="item.a5==null">*</span><number-input v-else v-model="item.a5" :fixed="fixed"></number-input></td>
@@ -109,7 +109,8 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
-    import {formatCurrency,formatYear} from '../utils/filters'
+    import NumberDisplay from '../components/NumberDisplay'
+    import {formatCurrency,formatYear,formatYear1} from '../utils/filters'
 
     export default {
         name: 'excel25',
@@ -126,9 +127,10 @@
                 a11:0
             }
         },
-        filters:{formatCurrency,formatYear},
+        filters:{formatCurrency,formatYear,formatYear1},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA107050"])

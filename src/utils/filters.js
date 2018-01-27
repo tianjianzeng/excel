@@ -47,6 +47,15 @@ export function formatYear(year) {
     return `前${arr[idx]}年度`;
 }
 
+export function formatYear1(year) {
+    let arr = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+    let idx = new Date().getYear() + 1898 - year;
+    if (idx == -1) {
+        return "本年";
+    }
+    return `前${arr[idx]}年度`;
+}
+
 export function filter(input, fn) {
     let arg = Array.prototype.slice.call(arguments, 2);
     arg.unshift(input);

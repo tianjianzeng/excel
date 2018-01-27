@@ -32,8 +32,8 @@
                         <td class="blue">3</td>
                         <td class="blue">4</td>
                         <td class="blue">5</td>
-                        <td class="blue">6</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">7</td>
+                        <td class="blue">6（5-3-4）</td>
+                        <td class="blue" style="border-right: 1px solid #dfe6ec;">7（2-6）</td>
                     </tr>
                     <template v-for="(item,index) in list">
                         <tr :key="index">
@@ -46,10 +46,10 @@
                             <td><number-display :value="item.item.a6"></number-display></td>
                             <td><number-display :value="item.item.a7"></number-display></td>
                             <td>
-                                <el-button v-if="(item.subList ||[]).length===0 && item.tag!==5" type="primary" @click="add(item)">添加</el-button>
+                                <el-button v-if="(item.subList ||[]).length===0 && item.item.tag!=5" type="primary" @click="add(item.item)">添加</el-button>
                             </td>
                         </tr>
-                        <tr v-for="(it,idx) in (item.subList||[])" :key="idx">
+                        <tr v-for="(it,idx) in (item.subList)" :key="idx">
                             <td class="blue">{{(it.no).toString().padStart(3,'0')}}</td>
                             <td class="green"><input v-model="it.a1"></td>
                             <td class="green"><number-input v-model="it.a2" :fixed="fixed"></number-input></td>
@@ -60,7 +60,7 @@
                             <td><number-display :value="it.a7"></number-display></td>
                             <td>
                                 <el-button v-if="it.saved && idx==item.subList.length-1" type="primary" @click="add(item)">添加</el-button>
-                                <el-button type="primary" @click="del(it)">删除</el-button>
+                                <el-button type="primary" @click="del(it)" v-if="idx>0">删除</el-button>
                                 <el-button v-if="!it.saved" type="primary" @click="sav(it)">保存</el-button>
                                 <el-button v-if="it.saved" type="primary" @click="edt(it)">修改</el-button>
                             </td>
@@ -121,19 +121,33 @@
                             var a3 = 0;
                             var a4 = 0;
                             var a5 = 0;
-                            item.subList.forEach(it=>{
-                                if(it.saved===undefined){
-                                    it.saved = true;
-                                }
-                                it.no = ++i;
-                                it.parent = item;
-                                a2 += it.a2;
-                                a3 += it.a3;
-                                a4 += it.a4;
-                                a5 += it.a5;
-                                it.a6 = it.a5 - it.a4 - it.a3;
-                                it.a7 = it.a2 - it.a6;
-                            });
+                            if(item.subList && item.subList.length>0){
+                                item.subList.forEach(it=>{
+                                    if(it.saved===undefined){
+                                        it.saved = true;
+                                    }
+                                    it.no = ++i;
+                                    it.parent = item;
+                                    a2 += it.a2;
+                                    a3 += it.a3;
+                                    a4 += it.a4;
+                                    a5 += it.a5;
+                                    it.a6 = it.a5 - it.a4 - it.a3;
+                                    it.a7 = it.a2 - it.a6;
+                                });
+                            }else{
+                                item.subList = [{
+                                    saved : false,
+                                    no : ++i,
+                                    parent : item,
+                                    a2 : 0,
+                                    a3 : 0,
+                                    a4 : 0,
+                                    a5 : 0,
+                                    a6 : 0,
+                                    a7 : 0,
+                                }];
+                            }
                             item.item.a2 = a2;
                             item.item.a3 = a3;
                             item.item.a4 = a4;

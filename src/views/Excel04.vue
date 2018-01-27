@@ -134,7 +134,7 @@
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue">（九）汇兑收益</td>
-                        <td class="green"><number-input v-model="a25" :fixed="fixed"></number-input></td>
+                        <td title="该项目仅为执行小企业准则企业填表"><number-input v-model="a25" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>

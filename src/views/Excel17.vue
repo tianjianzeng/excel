@@ -2,15 +2,12 @@
     <div class="excel excel17">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col width="3%"></col>
+                <col width="3%"></col>
+                <col width="100px"></col>
                 <col width="4%"></col>
                 <col width="4%"></col>
-                <col width="120px"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="120px"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
+                <col width="100px"></col>
                 <col width="4%"></col>
                 <col width="4%"></col>
                 <col width="4%"></col>
@@ -19,7 +16,10 @@
                 <col width="4%"></col>
                 <col width="4%"></col>
                 <col width="4%"></col>
-                <col width="210px"></col>
+                <col width="4%"></col>
+                <col width="4%"></col>
+                <col width="4%"></col>
+                <col width="220px"></col>
                 <tbody>
                     <tr>
                         <td colspan="17">符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表</td>
@@ -98,7 +98,7 @@
                         <td><number-display :value="item.a16"></number-display></td>
                         <td>
                             <el-button v-if="item.saved && index===list.length-1" type="primary" @click="add()">添加</el-button>
-                            <el-button type="primary" @click="del(item)">删除</el-button>
+                            <el-button type="primary" @click="del(item)" v-if="index>0">删除</el-button>
                             <el-button v-if="!item.saved" type="primary" @click="sav(item)">保存</el-button>
                             <el-button v-if="item.saved" type="primary" @click="edt(item)">修改</el-button>
                         </td>

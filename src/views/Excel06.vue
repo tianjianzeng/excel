@@ -493,7 +493,7 @@
                         "uid": this.uid,
                         "userId": this.userId
                     },
-                    urlParam:"a101010",
+                    urlParam:"a104000",
                     always:()=>{
                         this.load();
                     }

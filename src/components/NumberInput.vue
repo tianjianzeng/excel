@@ -28,6 +28,12 @@
                     let reg5 = new RegExp(`^[-]{0,1}[1-9][0-9]*$`);
                     if(this.fixed>0){
                         //匹配单独负号
+                        if(this.min>=0){
+                            if(newVal.indexOf("-")>-1){
+                                this.text = oldVal;
+                                return;
+                            }
+                        }
                         if(reg3.test(newVal)){
                             return;
                         }

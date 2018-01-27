@@ -7,19 +7,28 @@
                         <td colspan="9">所得减免优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%">行次</td>
-                        <td style="width:25%">项目</td>  
+                        <td style="width:5%" rowspan="2">行次</td>
+                        <td style="width:25%" rowspan="2">项目</td>   
                         <td style="width:10%">项目收入</td>
                         <td style="width:10%">项目成本</td>
                         <td style="width:10%">相关税费</td>
                         <td style="width:10%">应分摊期间费用</td>
                         <td style="width:10%">纳税调整额</td>
                         <td style="width:10%">项目所得额</td>
-                        <td style="width:10%">减免所得额</td>    
+                        <td style="width:10%">减免所得额</td>  
+                    </tr>
+                    <tr>   
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6(1-2-3-4+5)</td>
+                        <td>7</td> 
                     </tr>
                     <tr>
                         <td class="blue" style="width:5%">1</td>
-                        <td class="blue" style="width:25%">一、农、林、牧、渔业项目</td>  
+                        <td class="blue" style="width:25%">一、农、林、牧、渔业项目(2+13)</td>  
                         <td style="width:10%"><div><number-display :value="a1_1"></number-display></div></td>
                         <td style="width:10%"><div><number-display :value="a1_2"></number-display></div></td>
                         <td style="width:10%"><div><number-display :value="a1_3"></number-display></div></td>
@@ -30,7 +39,7 @@
                     </tr>
                     <tr>
                         <td class="blue">2</td>
-                        <td class="blue">（一）免税项目</td>  
+                        <td class="blue">（一）免税项目（3+4+5+6+7+8+9+11+12)</td>  
                         <td><div><number-display :value="a2_1"></number-display></div></td>
                         <td><div><number-display :value="a2_2"></number-display></div></td>
                         <td><div><number-display :value="a2_3"></number-display></div></td>
@@ -151,7 +160,7 @@
                     </tr>
                     <tr>
                         <td class="blue">13</td>
-                        <td class="blue">（二）减半征税项目</td>  
+                        <td class="blue">（二）减半征税项目（14+15+16）</td>  
                         <td><div><number-display :value="a13_1"></number-display></div></td>
                         <td><div><number-display :value="a13_2"></number-display></div></td>
                         <td><div><number-display :value="a13_3"></number-display></div></td>
@@ -195,7 +204,7 @@
                     </tr>
                     <tr>
                         <td class="blue">17</td>
-                        <td class="blue">二、国家重点扶持的公共基础设施项目</td>  
+                        <td class="blue">二、国家重点扶持的公共基础设施项目(18+19+20+21+22+23+24+25)</td>  
                         <td><div><number-display :value="a17_1"></number-display></div></td>
                         <td><div><number-display :value="a17_2"></number-display></div></td>
                         <td><div><number-display :value="a17_3"></number-display></div></td>
@@ -294,7 +303,7 @@
                     </tr>
                     <tr>
                         <td class="blue">26</td>
-                        <td class="blue">三、符合条件的环境保护、节能节水项目</td>
+                        <td class="blue">三、符合条件的环境保护、节能节水项目(27+28+29+30+31+32）</td>
                         <td><div><number-display :value="a26_1"></number-display></div></td>
                         <td><div><number-display :value="a26_2"></number-display></div></td>
                         <td><div><number-display :value="a26_3"></number-display></div></td>
@@ -371,7 +380,7 @@
                     </tr>
                     <tr>
                         <td class="blue">33</td>
-                        <td class="blue">四、符合条件的技术转让项目</td>
+                        <td class="blue">四、符合条件的技术转让项目（34+35）</td>
                         <td class="green"><number-input v-model="a33_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a33_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a33_3" :fixed="fixed"></number-input></td>
@@ -404,7 +413,7 @@
                     </tr>
                     <tr>
                         <td class="blue">36</td>
-                        <td class="blue">五、其他专项优惠项目</td>
+                        <td class="blue">五、其他专项优惠项目（37+38+39）</td>
                         <td><div><number-display :value="a36_1"></number-display></div></td>
                         <td><div><number-display :value="a36_2"></number-display></div></td>
                         <td><div><number-display :value="a36_3"></number-display></div></td>
@@ -448,7 +457,7 @@
                     </tr>
                     <tr>
                         <td class="blue">40</td>
-                        <td class="blue">合计</td>
+                        <td class="blue">合计（1+17+26+33+36）</td>
                         <td><div><number-display :value="a40_1"></number-display></div></td>
                         <td><div><number-display :value="a40_2"></number-display></div></td>
                         <td><div><number-display :value="a40_3"></number-display></div></td>

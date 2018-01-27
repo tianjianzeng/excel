@@ -53,7 +53,7 @@
                         <td class="blue" colspan="2">19（12+14+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">001</td>
+                        <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
                         <td>{{item.a1}}</td>
                         <td><number-display :value="item.a2"></number-display></td>
                         <td><number-display :value="item.a3"></number-display></td>
@@ -62,7 +62,7 @@
                         <td class="green"><number-input v-model="item.a6" :fixed="fixed"></number-input></td>
                         <td><number-display :value="item.a7"></number-display></td>
                         <td class="green">
-                            <el-select placeholder="请选择">
+                            <el-select placeholder="请选择" v-model="item.a8">
                                 <el-option
                                     v-for="item in a8Template"
                                     :key="item.id"

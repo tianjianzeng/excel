@@ -9,17 +9,17 @@
                     <tr>
                         <td style="width:5%" class="blue">行次</td>
                         <td style="width:85%" class="blue" colspan="2">项目</td>
-                        <td style="width:10%" class="blue">账载金额</td>
+                        <td style="width:10%" class="blue">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
-                        <td class="blue" colspan="2">一、免税收入（2+3+4+5</td>
+                        <td class="blue" colspan="2">一、免税收入（2+3+4+5）</td>
                         <td><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">2</td>
                         <td class="blue" colspan="2">（一）国债利息收入</td>
-                        <td class="green"><number-input v-model="a2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a2" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">3</td>
@@ -29,7 +29,7 @@
                     <tr>
                         <td class="blue">4</td>
                         <td class="blue" colspan="2">（三）符合条件的非营利组织的收入</td>
-                        <td class="green"><number-input v-model="a4" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a4" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
@@ -39,57 +39,57 @@
                     <tr>
                         <td class="blue">6</td>
                         <td class="blue" colspan="2">1.中国清洁发展机制基金取得的收入</td>
-                        <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a6" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">7</td>
                         <td class="blue" colspan="2">2.证券投资基金从证券市场取得的收入</td>
-                        <td class="green"><number-input v-model="a7" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a7" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">8</td>
                         <td class="blue" colspan="2">3.证券投资基金投资者获得的分配收入</td>
-                        <td class="green"><number-input v-model="a8" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a8" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">9</td>
                         <td class="blue" colspan="2">4.证券投资基金管理人运用基金买卖股票、债券的差价收入</td>
-                        <td class="green"><number-input v-model="a9" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a9" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">10</td>
                         <td class="blue" colspan="2">5.取得的地方政府债券利息所得或收入</td>
-                        <td class="green"><number-input v-model="a10" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a10" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">11</td>
                         <td class="blue" colspan="2">6.受灾地区企业取得的救灾和灾后恢复重建款项等收入</td>
-                        <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a11" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">12</td>
                         <td class="blue" colspan="2">7.中国期货保证金监控中心有限责任公司取得的银行存款利息等收入</td>
-                        <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a12" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">13</td>
                         <td class="blue" colspan="2">8.中国保险保障基金有限责任公司取得的保险保障基金等收入</td>
-                        <td class="green"><number-input v-model="a13" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a13" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">14</td>
                         <td class="blue">二、证券行业（12+13+14+15）</td>
                         <td class="green">
-                            <!-- <el-select v-model="a14_1" placeholder="请选择">
+                            <el-select v-model="a14_1" placeholder="请选择">
                                 <el-option
                                 v-for="item in options"
-                                :key="item.value"
+                                :key="item.label"
                                 :label="item.label"
-                                :value="item.value">
+                                :value="item.id">
                                 </el-option>
-                            </el-select>       -->
+                            </el-select>      
                         </td>
-                        <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a14_2" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">15</td>
@@ -114,12 +114,12 @@
                     <tr>
                         <td class="blue">19</td>
                         <td class="blue" colspan="2">2.取得的中国铁路建设债券利息收入</td>
-                        <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a19" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">20</td>
                         <td class="blue" colspan="2">3.其他</td>
-                        <td class="green"><number-input v-model="a20" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a20" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">21</td>
@@ -139,12 +139,12 @@
                     <tr>
                         <td class="blue">24</td>
                         <td class="blue" colspan="2">1.支付残疾人员工资加计扣除</td>
-                        <td class="green"><number-input v-model="a24" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a24" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">25</td>
                         <td class="blue" colspan="2">2.国家鼓励的其他就业人员工资加计扣除</td>
-                        <td class="green"><number-input v-model="a25" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a25" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">26</td>
@@ -169,6 +169,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -178,19 +179,19 @@
                 fixed:2,
                 options:[{
                     id: "0004129999",
-                    label:"科技企业孵化器收入免征企业所得税，国家大学科技园收入免征企业所得税 其他"
+                    label:"0004129999 科技企业孵化器收入免征企业所得税，国家大学科技园收入免征企业所得税 其他"
                 },{
                     id: "0004129999",
-                    label:"证券投资基金从证券市场中取得的收入暂不征收企业所得税 其他"
+                    label:"0004129999 证券投资基金从证券市场中取得的收入暂不征收企业所得税 其他"
                 },{
                     id: "0004129999",
-                    label:"证券投资基金管理人运用基金买卖股票、债券的差价收入暂不征收企业所得税 其他"
+                    label:"0004129999 证券投资基金管理人运用基金买卖股票、债券的差价收入暂不征收企业所得税 其他"
                 },{
                     id: "0004129999",
-                    label:"其他 其他"
+                    label:"0004129999 其他 其他"
                 },{
                     id: "0004129925",
-                    label:"中央电视台的广告费和有线电视费收入免征企业所得税 《财政部国家税务总局关于中央电视台广告费和有线电视费收入企业所得税政策问题的通知》财税（2016）80号"
+                    label:"0004129925 中央电视台的广告费和有线电视费收入免征企业所得税 《财政部国家税务总局关于中央电视台广告费和有线电视费收入企业所得税政策问题的通知》财税（2016）80号"
                 }],
                 a2:0,
                 a3:0,
@@ -223,7 +224,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA107010"]),
