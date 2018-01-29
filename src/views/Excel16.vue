@@ -82,12 +82,12 @@
                         <td class="green">
                             <el-select v-model="a14_1" placeholder="请选择">
                                 <el-option
-                                v-for="item in options"
-                                :key="item.label"
-                                :label="item.label"
-                                :value="item.id">
+                                    v-for="it in selListA107040"
+                                    :key="it.id"
+                                    :label="it.name"
+                                    :value="it.id">
                                 </el-option>
-                            </el-select>      
+                            </el-select>
                         </td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed" :min="0"></number-input></td>
                     </tr>
@@ -228,7 +228,7 @@
             NumberDisplay
         },
         computed: {
-            ...mapGetters(["getTableA107010"]),
+            ...mapGetters(["selListA107040","getTableA107010"]),
             a1() {
                 let rst = 0;
                 for(let i=2;i<=5;i++){
@@ -293,6 +293,7 @@
                     spinner: 'el-icon-loading',
                     background: 'rgba(0, 0, 0, 0.7)'
                 });
+                store.dispatch("selListA107040");
                 store.dispatch("getTableA107010",{
                     data:{
                         "uid": this.uid,
