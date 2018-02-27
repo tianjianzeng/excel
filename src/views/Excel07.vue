@@ -2,9 +2,13 @@
     <div class="excel excel07">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 60px"></col>
+                <col style="width: 75%"></col>
+                <col style="width: 10%"></col>
+                <col style="width: 10%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="4">视同销售和房地产开发企业特定业务纳税调整明细表</td>
+                        <td colspan="4" class="ta-c">视同销售和房地产开发企业特定业务纳税调整明细表</td>
                     </tr>
                     <tr>
                         <td class="blue" rowspan="2" style="width: 5%">行次</td>
@@ -193,7 +197,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -433,13 +437,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel07{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="4"]{
-            text-align: center;
-        }
-    }
 </style>

@@ -2,9 +2,13 @@
     <div class="excel excel03">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 60px"></col>
+                <col style="width: 120px"></col>
+                <col style="width: 60%"></col>
+                <col style="width: 20%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="4">中华人民共和国企业所得税年度纳税申报表（A类）</td>
+                        <td colspan="4" class="ta-c">中华人民共和国企业所得税年度纳税申报表（A类）</td>
                     </tr>
                     <tr>
                         <td style="width: 5%">行次</td>
@@ -14,7 +18,7 @@
                     </tr>
                     <tr>
                         <td class="blue">1</td>
-                        <td class="blue" rowspan="13">利润总和计算</td>
+                        <td class="blue" rowspan="13">利润总额计算</td>
                         <td class="blue">一、营业收入(填写A100000\101020\103000)</td>
                         <td><number-display :value="a1"></number-display></td>
                     </tr>
@@ -133,7 +137,7 @@
                         <td class="blue">24</td>
                         <td class="blue" rowspan="13">应纳税额计算</td>
                         <td class="blue">税率（25%）</td>
-                        <td><number-display :fixed="fixed" :filter="toPercent"></number-display></td>
+                        <td><number-display :fixed="0" :value="25" :filter="toPercent"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">25</td>
@@ -209,7 +213,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -430,13 +434,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel03{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="7"]{
-            text-align: center;
-        }
-    }
 </style>

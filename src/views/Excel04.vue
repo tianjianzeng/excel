@@ -2,14 +2,17 @@
     <div class="excel excel04">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 60px"></col>
+                <col style="width: 75%"></col>
+                <col style="width: 20%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="3">一般企业收入明细表</td>
+                        <td colspan="3" class="ta-c">一般企业收入明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" style="width: 5%">行次</td>
-                        <td class="blue" style="width: 75%">项目</td>
-                        <td class="blue" style="width: 20%">金额</td>
+                        <td class="blue ta-c" style="width: 5%">行次</td>
+                        <td class="blue ta-c" style="width: 75%">项目</td>
+                        <td class="blue ta-c" style="width: 20%">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -34,7 +37,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">2.提供劳务收入</td>
-                        <td><number-display :value="a5"></number-display></td>
+                        <td class="green"><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>

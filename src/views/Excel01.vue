@@ -2,20 +2,29 @@
     <div class="excel excel02">
         <div class="table-wraper">
             <table class="body" style="mouse" cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:60px" ></col>
+                <col style="width:25%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="9">所得减免优惠明细表</td>
+                        <td colspan="9" class="ta-c">所得减免优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" rowspan="2">行次</td>
-                        <td style="width:25%" rowspan="2">项目</td>   
-                        <td style="width:10%">项目收入</td>
-                        <td style="width:10%">项目成本</td>
-                        <td style="width:10%">相关税费</td>
-                        <td style="width:10%">应分摊期间费用</td>
-                        <td style="width:10%">纳税调整额</td>
-                        <td style="width:10%">项目所得额</td>
-                        <td style="width:10%">减免所得额</td>  
+                        <td rowspan="2">行次</td>
+                        <td rowspan="2">项目</td>   
+                        <td>项目收入</td>
+                        <td>项目成本</td>
+                        <td>相关税费</td>
+                        <td>应分摊期间费用</td>
+                        <td>纳税调整额</td>
+                        <td>项目所得额</td>
+                        <td>减免所得额</td>  
                     </tr>
                     <tr>   
                         <td>1</td>
@@ -398,7 +407,7 @@
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
-                        <td class="green"><number-input v-model="a34_7" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a34_7" :max="Math.min(a33_6,5000000)" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">35</td>
@@ -409,7 +418,7 @@
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
-                        <td class="green"><number-input v-model="a35_7" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a35_7" :editable="a33_6>5000000" :max="Math.max(0,a33_6-5000000)" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">36</td>
@@ -470,7 +479,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -673,29 +682,24 @@
                 "a35_5": 0,
                 "a35_6": 0,
                 "a35_7": 0,
-                "a36_6": 0,
                 "a37_1": 0,
                 "a37_2": 0,
                 "a37_3": 0,
                 "a37_4": 0,
                 "a37_5": 0,
-                "a37_6": 0,
                 "a37_7": 0,
                 "a38_1": 0,
                 "a38_2": 0,
                 "a38_3": 0,
                 "a38_4": 0,
                 "a38_5": 0,
-                "a38_6": 0,
                 "a38_7": 0,
                 "a39_1": 0,
                 "a39_2": 0,
                 "a39_3": 0,
                 "a39_4": 0,
                 "a39_5": 0,
-                "a39_6": 0,
-                "a39_7": 0,
-                "a40_6": 0
+                "a39_7": 0
             }
         },
         filters:{formatCurrency},
@@ -906,6 +910,21 @@
             a32_6(){
                 return ((this.a32_1 || 0) * Math.pow(10,this.fixed) - (this.a32_2 || 0) * Math.pow(10,this.fixed) - (this.a32_3 || 0) * Math.pow(10,this.fixed) - (this.a32_4 || 0) * Math.pow(10,this.fixed) + (this.a32_5 || 0) * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
             },
+            a36_6(){
+                return ((this.a37_6 || 0) * Math.pow(10,this.fixed) + (this.a38_6 || 0) * Math.pow(10,this.fixed) + (this.a37_6 || 0) * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+            },
+            a37_6(){
+                return ((this.a37_1 || 0) * Math.pow(10,this.fixed) - (this.a37_2 || 0) * Math.pow(10,this.fixed) - (this.a37_3 || 0) * Math.pow(10,this.fixed) - (this.a37_4 || 0) * Math.pow(10,this.fixed) + (this.a37_5 || 0) * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+            },
+            a38_6(){
+                return ((this.a38_1 || 0) * Math.pow(10,this.fixed) - (this.a38_2 || 0) * Math.pow(10,this.fixed) - (this.a38_3 || 0) * Math.pow(10,this.fixed) - (this.a38_4 || 0) * Math.pow(10,this.fixed) + (this.a38_5 || 0) * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+            },
+            a39_6(){
+                return ((this.a39_1 || 0) * Math.pow(10,this.fixed) - (this.a39_2 || 0) * Math.pow(10,this.fixed) - (this.a39_3 || 0) * Math.pow(10,this.fixed) - (this.a39_4 || 0) * Math.pow(10,this.fixed) + (this.a39_5 || 0) * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+            },
+            a40_6(){
+                return ((this.a1_6 || 0) * Math.pow(10,this.fixed) + (this.a17_6 || 0) * Math.pow(10,this.fixed) + (this.a26_6 || 0) * Math.pow(10,this.fixed) + (this.a33_6 || 0) * Math.pow(10,this.fixed) + (this.a36_6 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
+            },
             a1_7() {
                 return ((this.a2_7 || 0) * Math.pow(10,this.fixed) + (this.a13_7 || 0) * Math.pow(10,this.fixed)) * 1.0/ Math.pow(10,this.fixed);
             },
@@ -980,6 +999,14 @@
             a16_6(newVal){
                 this.a16_7 = newVal * 0.5;
             },
+            a33_6(newVal){
+                this.a34_7 = 5000000;
+                this.a35_7 = (newVal-5000000)/2;
+                if(newVal<=5000000){
+                    this.a34_7 = newVal;
+                    this.a35_7 = 0;
+                }
+            }
         },
         methods:{
             save(){

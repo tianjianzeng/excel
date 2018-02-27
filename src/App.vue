@@ -52,6 +52,7 @@
         }
         td { 
             text-align: left;
+            padding-left: 10px;
             &.blue{
                 background: #96DAF7;
             }
@@ -85,6 +86,10 @@
                 font-size: 14px;
                 text-align: center;
                 background: transparent;
+            }
+            &.ta-c{
+                text-align: center;
+                padding-left: 0;
             }
         }
         tr{

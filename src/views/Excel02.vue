@@ -11,7 +11,7 @@
                 <col style="width: 210px"></col>
                 <tbody>
                     <tr>
-                        <td colspan="8">企业基础信息表</td>
+                        <td colspan="8" class="ta-c">企业基础信息表</td>
                     </tr>
                     <tr>
                         <td colspan="2"><el-radio class="radio" v-model="item.declare" :label="0" disabled>正常申报</el-radio></td>
@@ -19,7 +19,7 @@
                         <td colspan="4"><el-radio class="radio" v-model="item.declare" :label="2" disabled>补充申报</el-radio></td>
                     </tr>
                     <tr>
-                        <td colspan="8" class="blue">100基本信息</td> 
+                        <td colspan="8" class="blue ta-c">100基本信息</td> 
                     </tr>
                     <tr>
                         <td class="blue">101汇总纳税企业</td> 
@@ -57,7 +57,7 @@
                         <td colspan="2" class="green"><el-radio class="radio" v-model="item.a109" :label="2">否</el-radio></td> 
                     </tr>
                     <tr>
-                        <td colspan="8" class="blue">200主要会计政策和估计</td> 
+                        <td colspan="8" class="blue ta-c">200主要会计政策和估计</td> 
                     </tr>
                     <tr>
                         <td style="width: 20%" rowspan="9" class="blue">201适用的会计准则或会计制度 </td> 
@@ -144,7 +144,7 @@
                         <td class="green" colspan="3"><el-radio class="radio" v-model="item.a209" :label="2">其他</el-radio></td>
                     </tr>
                     <tr>
-                        <td class="blue" colspan="8">300企业主要股东及对外投资情况</td>
+                        <td class="blue ta-c" colspan="8">300企业主要股东及对外投资情况</td>
                     </tr>
                     <tr>
                         <td class="blue" colspan="8" style="text-align:left;">301企业主要股东（前5位）</td>

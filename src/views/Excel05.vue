@@ -2,14 +2,17 @@
     <div class="excel excel05">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                        <col style="width: 50px"></col>
+                        <col style="width: 75%"></col>
+                        <col style="width: 20%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="3">一般企业成本支出明细表</td>
+                        <td colspan="3" class="ta-c">一般企业成本支出明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" style="width: 5%">行次</td>
-                        <td class="blue" style="width: 75%">项目</td>
-                        <td class="blue" style="width: 20%">金额</td>
+                        <td class="blue">行次</td>
+                        <td class="blue">项目</td>
+                        <td class="blue">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -34,7 +37,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">2.提供劳务成本</td>
-                        <td><number-display :value="a5"></number-display></td>
+                        <td class="green"><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">6</td>
@@ -84,17 +87,17 @@
                     <tr>
                         <td class="blue">15</td>
                         <td class="blue">5.其他</td>
-                        <td class="green"><number-display :value="a15"></number-display></td>
+                        <td class="green"><number-display :value="a15" :fixed="fixed"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue">二、营业外支出（17+18+19+20+21+22+23+24+25+26）</td>
-                        <td><number-display :value="a16"></number-display></td>
+                        <td><number-display :value="a16" :fixed="fixed"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue">17</td>
                         <td class="blue">（一）非流动资产处置损失</td>
-                        <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="a17" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue">18</td>

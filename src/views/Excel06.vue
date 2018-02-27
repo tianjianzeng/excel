@@ -2,27 +2,35 @@
     <div class="excel excel06">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 60px"></col>
+                <col style="width: 35%"></col>
+                <col style="width: 10%"></col>
+                <col style="width: 10%"></col>
+                <col style="width: 10%"></col>
+                <col style="width: 10%"></col>
+                <col style="width: 10%"></col>
+                <col style="width: 10%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="8">期间费用明细表</td>
+                        <td colspan="8" class="ta-c">期间费用明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="2" style="width: 5%">行次</td>
-                        <td class="blue" rowspan="2" style="width: 35%">项目</td>
-                        <td class="blue" style="width: 10%">销售费用</td>
-                        <td class="blue" style="width: 10%">其中：境外支付</td>
-                        <td class="blue" style="width: 10%">管理费用</td>
-                        <td class="blue" style="width: 10%">其中：境外支付</td>
-                        <td class="blue" style="width: 10%">财务费用</td>
-                        <td class="blue" style="width: 10%">其中：境外支付</td>
+                        <td class="blue ta-c" rowspan="2" style="width: 5%">行次</td>
+                        <td class="blue ta-c" rowspan="2" style="width: 35%">项目</td>
+                        <td class="blue ta-c" style="width: 10%">销售费用</td>
+                        <td class="blue ta-c" style="width: 10%">其中：境外支付</td>
+                        <td class="blue ta-c" style="width: 10%">管理费用</td>
+                        <td class="blue ta-c" style="width: 10%">其中：境外支付</td>
+                        <td class="blue ta-c" style="width: 10%">财务费用</td>
+                        <td class="blue ta-c" style="width: 10%">其中：境外支付</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -67,7 +75,7 @@
                     <tr>
                         <td class="blue">5</td>
                         <td class="blue">五、广告费和业务宣传费</td>
-                        <td class="green"><number-input v-model="a5_1" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-display :value="a5_1"></number-display></td>
                         <td class="blue">*</td>
                         <td class="green"><number-input v-model="a5_3" :fixed="fixed"></number-input></td>
                         <td class="blue">*</td>
@@ -81,7 +89,7 @@
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_4" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="a6_5" :fixed="fixed" :editable="false"></number-input></td>
+                        <td class="green"><number-display :value="a6_5" :fixed="fixed"></number-display></td>
                         <td class="green"><number-input v-model="a6_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>

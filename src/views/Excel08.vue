@@ -2,31 +2,39 @@
     <div class="excel excel08">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:5%" ></col>
+                <col style="width:30%"></col>
+                <col style="width:15%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
+                <col style="width:10%"></col>
                 <tbody>
                     <tr>
-                        <td colspan="8">未按权责发生制确认收入纳税调整明细表</td>
+                        <td colspan="8" class="ta-c">未按权责发生制确认收入纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="3">行次</td>
-                        <td class="blue" rowspan="3">项目</td>
-                        <td class="blue" rowspan="2">合同金额（交易金额）</td>
-                        <td class="blue" colspan="2">账载金额</td>
-                        <td class="blue" colspan="2">税收金额</td>
-                        <td class="blue" rowspan="2">纳税调整金额</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="3">项目</td>
+                        <td class="blue ta-c" rowspan="2">合同金额（交易金额）</td>
+                        <td class="blue ta-c" colspan="2">账载金额</td>
+                        <td class="blue ta-c" colspan="2">税收金额</td>
+                        <td class="blue ta-c" rowspan="2">纳税调整金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">本年</td>
-                        <td class="blue">累计</td>
-                        <td class="blue">本年</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">累计</td>
+                        <td class="blue ta-c">本年</td>
+                        <td class="blue ta-c">累计</td>
+                        <td class="blue ta-c">本年</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">累计</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6（4-2）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6（4-2）</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">1</td>
@@ -171,7 +179,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
