@@ -20,7 +20,7 @@
                         <td colspan="13">综合利用资源生产产品取得的收入优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue"rowspan="3">行次</td>
+                        <td style="width:5%" class="blue" rowspan="3">行次</td>
                         <td class="blue" rowspan="2">生产的产品名称</td>
                         <td class="blue" colspan="4">资源综合利用认定证书基本情况</td>
                         <td class="blue" rowspan="2">属于《资源综合利用企业所得税优惠目录》类别</td>
