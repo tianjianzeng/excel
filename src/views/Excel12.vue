@@ -2,33 +2,42 @@
     <div class="excel excel12">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 60px"/>
+                <col style="width: 25%"/>
+                <col style="width: 8%"/>
+                <col style="width: 8%"/>
+                <col style="width: 8%"/>
+                <col style="width: 8%"/>
+                <col style="width: 8%"/>
+                <col style="width: 8%"/>
+                <col style="width: 8%"/>
                 <tbody>
                     <tr>
-                        <td colspan="9">企业重组纳税调整明细表</td>
+                        <td colspan="9" class="ta-c">企业重组纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="3">行次</td>
-                        <td class="blue" rowspan="3">项目</td>
-                        <td class="blue" colspan="3">一般性税务处理</td>
-                        <td class="blue" colspan="3">特殊性税务处理</td>
-                        <td class="blue" rowspan="2">纳税调整金额</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="3">项目</td>
+                        <td class="blue ta-c" colspan="3">一般性税务处理</td>
+                        <td class="blue ta-c" colspan="3">特殊性税务处理</td>
+                        <td class="blue ta-c" rowspan="2">纳税调整金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">账载金额</td>
-                        <td class="blue">税收金额</td>
-                        <td class="blue">纳税调整金额</td>
-                        <td class="blue">账载金额</td>
-                        <td class="blue">税收金额</td>
-                        <td class="blue">纳税调整金额</td>
+                        <td class="blue ta-c">账载金额</td>
+                        <td class="blue ta-c">税收金额</td>
+                        <td class="blue ta-c">纳税调整金额</td>
+                        <td class="blue ta-c">账载金额</td>
+                        <td class="blue ta-c">税收金额</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">纳税调整金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3(2-1)</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6(5-4)</td>
-                        <td class="blue">7(3+6)</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3(2-1)</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6(5-4)</td>
+                        <td class="blue ta-c">7(3+6)</td>
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue">1</td>
@@ -187,7 +196,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 

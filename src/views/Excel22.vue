@@ -2,18 +2,18 @@
     <div class="excel excel22">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="20%"></col>
-                <col width="20%"></col>
-                <col width="40%"></col>
-                <col width="20%"></col>
+                <col width="60px"/>
+                <col width="20%"/>
+                <col width="40%"/>
+                <col width="20%"/>
                 <tbody>
                     <tr>
                         <td colspan="3">减免所得税优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%"class="blue">行次</td>
-                        <td style="width:75%" class="blue" colspan="2">项目</td>
-                        <td style="width:20%" class="blue">金额</td>
+                        <td class="blue ta-c">行次</td>
+                        <td class="blue ta-c" colspan="2">项目</td>
+                        <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>

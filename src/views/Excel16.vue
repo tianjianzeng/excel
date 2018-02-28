@@ -2,14 +2,18 @@
     <div class="excel excel16">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:60px" />
+                <col style="width:60%"/>
+                <col style="width:20%"/>
+                <col style="width:15%"/>
                 <tbody>
                     <tr>
-                        <td colspan="4">免税、减计收入及加计扣除优惠明细表</td>
+                        <td colspan="4" class="ta-c">免税、减计收入及加计扣除优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">行次</td>
-                        <td style="width:85%" class="blue" colspan="2">项目</td>
-                        <td style="width:10%" class="blue">金额</td>
+                        <td class="blue ta-c">行次</td>
+                        <td class="blue ta-c" colspan="2">项目</td>
+                        <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -78,7 +82,7 @@
                     </tr>
                     <tr>
                         <td class="blue">14</td>
-                        <td class="blue">二、证券行业（12+13+14+15）</td>
+                        <td class="blue"> 3.其他</td>
                         <td class="green">
                             <el-select v-model="a14_1" placeholder="请选择">
                                 <el-option
@@ -159,7 +163,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -193,10 +197,11 @@
                     id: "0004129925",
                     label:"0004129925 中央电视台的广告费和有线电视费收入免征企业所得税 《财政部国家税务总局关于中央电视台广告费和有线电视费收入企业所得税政策问题的通知》财税（2016）80号"
                 }],
+                id:0,
+                year:0,
                 a2:0,
                 a3:0,
                 a4:0,
-                a5:0,
                 a6:0,
                 a7:0,
                 a8:0,
@@ -209,13 +214,11 @@
                 a14_2:0,
                 a15:0,
                 a16:0,
-                a17:0,
                 a18:0,
                 a19:0,
                 a20:0,
                 a21:0,
                 a22:0,
-                a23:0,
                 a24:0,
                 a25:0,
                 a26:0,
@@ -236,6 +239,28 @@
                 }
                 return rst * 1.0/ Math.pow(10,this.fixed);
             },
+            a5(){
+                let rst = 0;
+                for(let i=6;i<=13;i++){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                rst += this[`a14_2`] * Math.pow(10,this.fixed);
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a17(){
+                let rst = 0;
+                for(let i=18;i<=20;i++){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            },
+            a23(){
+                let rst = 0;
+                for(let i=24;i<=25;i++){
+                    rst += this[`a${i}`] * Math.pow(10,this.fixed);
+                }
+                return rst * 1.0/ Math.pow(10,this.fixed);
+            }
         },
         watch: {
             getTableA107010(newVal) {
@@ -251,6 +276,7 @@
         methods:{
             save(){
                 let postData = {
+                    "id":this.id,
                     "uid": this.uid,
                     "year": this.year,
                     "userId": this.userId,

@@ -2,14 +2,14 @@
     <div class="excel excel06">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col style="width: 60px"></col>
-                <col style="width: 35%"></col>
-                <col style="width: 10%"></col>
-                <col style="width: 10%"></col>
-                <col style="width: 10%"></col>
-                <col style="width: 10%"></col>
-                <col style="width: 10%"></col>
-                <col style="width: 10%"></col>
+                <col style="width: 60px"/>
+                <col style="width: 35%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%"/>
                 <tbody>
                     <tr>
                         <td colspan="8" class="ta-c">期间费用明细表</td>

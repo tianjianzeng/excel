@@ -2,67 +2,67 @@
     <div class="excel excel09">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="10%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
-                <col width="6%"></col>
+                <col style="width: 60px"/>
+                <col width="6%"/>
+                <col width="10%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
+                <col width="6%"/>
                 <tbody>
                     <tr>
-                        <td colspan="16">专项用途财政性资金纳税调整明细表</td>
+                        <td colspan="16" class="ta-c">专项用途财政性资金纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="4">行次</td>
-                        <td class="blue" rowspan="4">项目</td>
-                        <td class="blue" rowspan="3">取得年度</td>
-                        <td class="blue" rowspan="3">财政性资金</td>
-                        <td class="blue" colspan="2" rowspan="2">其中：符合不征税收入条件的财政性资金</td>
-                        <td class="blue" colspan="5">以前年度支出情况</td>
-                        <td class="blue" colspan="2">本年支出情况</td>
-                        <td class="blue" colspan="3">本年结余情况</td>
+                        <td class="blue ta-c" rowspan="4">行次</td>
+                        <td class="blue ta-c" rowspan="4">项目</td>
+                        <td class="blue ta-c" rowspan="3">取得年度</td>
+                        <td class="blue ta-c" rowspan="3">财政性资金</td>
+                        <td class="blue ta-c" colspan="2" rowspan="2">其中：符合不征税收入条件的财政性资金</td>
+                        <td class="blue ta-c" colspan="5">以前年度支出情况</td>
+                        <td class="blue ta-c" colspan="2">本年支出情况</td>
+                        <td class="blue ta-c" colspan="3">本年结余情况</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="2">前五年度</td>
-                        <td class="blue" rowspan="2">前四年度</td>
-                        <td class="blue" rowspan="2">前三年度</td>
-                        <td class="blue" rowspan="2">前二年度</td>
-                        <td class="blue" rowspan="2">前一年度</td>
-                        <td class="blue" rowspan="2">支出金额</td>
-                        <td class="blue" rowspan="2">其中：费用化支出金额</td>
-                        <td class="blue" rowspan="2">结余金额</td>
-                        <td class="blue" rowspan="2">其中：上缴财政金额</td>
-                        <td class="blue" rowspan="2">应计入本年应税收入金额</td>
+                        <td class="blue ta-c" rowspan="2">前五年度</td>
+                        <td class="blue ta-c" rowspan="2">前四年度</td>
+                        <td class="blue ta-c" rowspan="2">前三年度</td>
+                        <td class="blue ta-c" rowspan="2">前二年度</td>
+                        <td class="blue ta-c" rowspan="2">前一年度</td>
+                        <td class="blue ta-c" rowspan="2">支出金额</td>
+                        <td class="blue ta-c" rowspan="2">其中：费用化支出金额</td>
+                        <td class="blue ta-c" rowspan="2">结余金额</td>
+                        <td class="blue ta-c" rowspan="2">其中：上缴财政金额</td>
+                        <td class="blue ta-c" rowspan="2">应计入本年应税收入金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">金额</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">其中：计入本年损益的金额</td>
+                        <td class="blue ta-c">金额</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">其中：计入本年损益的金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9</td>
-                        <td class="blue">10</td>
-                        <td class="blue">11</td>
-                        <td class="blue">12</td>
-                        <td class="blue">13</td>
-                        <td class="blue">14</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ta-c">12</td>
+                        <td class="blue ta-c">13</td>
+                        <td class="blue ta-c">14</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{item.rowNum}}</td>
@@ -85,7 +85,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" v-if="false" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -173,6 +173,60 @@
                     "rows": this.list
                 };
                 
+                for(var idx in this.list){
+                    var it = this.list[idx];
+                    if(idx<6){
+                        if(it.a3>it.a2){
+                            window.root && window.root.$emit("bizError",`${formatYear(it.a1)}第3列应小于等于第2列`);
+                            return;
+                        }
+                        if(it.a4>it.a3){
+                            window.root && window.root.$emit("bizError",`${formatYear(it.a1)}第4列应小于等于第3列`);
+                            return;
+                        }
+                        if(it.a10>it.a3){
+                            window.root && window.root.$emit("bizError",`${formatYear(it.a1)}第10列应小于等于第3列`);
+                            return;
+                        }
+                        if(it.a11>it.a10){
+                            window.root && window.root.$emit("bizError",`${formatYear(it.a1)}第11列应小于等于第10列`);
+                            return;
+                        }
+                        if(it.a13>it.a12){
+                            window.root && window.root.$emit("bizError",`${formatYear(it.a1)}第13列应小于等于第12列`);
+                            return;
+                        }
+                    }else{
+                        if(it.a2<0){
+                            window.root && window.root.$emit("bizError",`合计第2列应大于等于零`);
+                            return;
+                        }
+                        if(it.a3<0 || it.a3>it.a2){
+                            window.root && window.root.$emit("bizError",`合计第3列应大于等于零小于等于第2列`);
+                            return;
+                        }
+                        if(it.a4<0 || it.a4>it.a3){
+                            window.root && window.root.$emit("bizError",`合计第4列应大于等于零小于等于第3列`);
+                            return;
+                        }
+                        if(it.a10<0 || it.a10>it.a3){
+                            window.root && window.root.$emit("bizError",`合计第10列应大于等于零小于等于第3列`);
+                            return;
+                        }
+                        if(it.a11<0 || it.a4>it.a10){
+                            window.root && window.root.$emit("bizError",`合计第11列应大于等于零小于等于第10列`);
+                            return;
+                        }
+                        if(it.a13<0 || it.a13>it.a12){
+                            window.root && window.root.$emit("bizError",`合计第13列应大于等于零小于等于第12列`);
+                            return;
+                        }
+                        if(it.a14<0){
+                            window.root && window.root.$emit("bizError",`合计第14列应大于等于零`);
+                            return;
+                        }
+                    }
+                }
                 const loading = this.$loading({
                     lock: true,
                     text: '加载中',

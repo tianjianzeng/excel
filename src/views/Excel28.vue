@@ -2,79 +2,79 @@
     <div class="excel excel28">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="4%" ></col>
-                <col width="15%" ></col>
-                <col width="5%" ></col>
-                <col width="5%" ></col>
-                <col width="5%" ></col>
-                <col width="5%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="120px"></col>                
+                <col width="60px" />
+                <col width="15%" />
+                <col width="5%" />
+                <col width="5%" />
+                <col width="5%" />
+                <col width="5%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="120px"/>                
                 <tbody>
                     <tr>
-                        <td colspan="20">境外分支机构弥补亏损明细表</td>
+                        <td colspan="20" class="ta-c">境外分支机构弥补亏损明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="4">行次</td>
-                        <td class="blue" rowspan="3">国家（地区）</td>
-                        <td class="blue" colspan="4">非实际亏损额的弥补</td>
-                        <td class="blue" colspan="15">境外所得纳税调整后所得</td>
+                        <td class="blue ta-c" rowspan="4">行次</td>
+                        <td class="blue ta-c" rowspan="3">国家（地区）</td>
+                        <td class="blue ta-c" colspan="4">非实际亏损额的弥补</td>
+                        <td class="blue ta-c" colspan="15">境外所得纳税调整后所得</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="2">以前年度结转尚未弥补的非实际亏损额</td>
-                        <td class="blue" rowspan="2">年发生的非实际亏损额</td>
-                        <td class="blue" rowspan="2">本年弥补的以前年度非实际亏损额</td>
-                        <td class="blue" rowspan="2">结转以后年度弥补的非实际亏损额</td>
-                        <td class="blue" colspan="6">以前年度结转尚未弥补的实际亏损额</td>
-                        <td class="blue" rowspan="2">本年发生的实际亏损额</td>
-                        <td class="blue" rowspan="2">本年弥补的以前年度实际亏损额</td>
-                        <td class="blue" colspan="7">结转以后年度弥补的实际亏损额</td>
+                        <td class="blue ta-c" rowspan="2">以前年度结转尚未弥补的非实际亏损额</td>
+                        <td class="blue ta-c" rowspan="2">年发生的非实际亏损额</td>
+                        <td class="blue ta-c" rowspan="2">本年弥补的以前年度非实际亏损额</td>
+                        <td class="blue ta-c" rowspan="2">结转以后年度弥补的非实际亏损额</td>
+                        <td class="blue ta-c" colspan="6">以前年度结转尚未弥补的实际亏损额</td>
+                        <td class="blue ta-c" rowspan="2">本年发生的实际亏损额</td>
+                        <td class="blue ta-c" rowspan="2">本年弥补的以前年度实际亏损额</td>
+                        <td class="blue ta-c" colspan="7">结转以后年度弥补的实际亏损额</td>
                     </tr>
                     <tr>
-                        <td class="blue">前五年</td>
-                        <td class="blue">前四年</td>
-                        <td class="blue">前三年</td>
-                        <td class="blue">前二年</td>
-                        <td class="blue">前一年</td>
-                        <td class="blue">小计</td>
-                        <td class="blue">前四年</td>
-                        <td class="blue">前三年</td>
-                        <td class="blue">前二年</td>
-                        <td class="blue">前一年</td>
-                        <td class="blue">本年</td>
-                        <td class="blue" colspan="2">小计</td>
+                        <td class="blue ta-c">前五年</td>
+                        <td class="blue ta-c">前四年</td>
+                        <td class="blue ta-c">前三年</td>
+                        <td class="blue ta-c">前二年</td>
+                        <td class="blue ta-c">前一年</td>
+                        <td class="blue ta-c">小计</td>
+                        <td class="blue ta-c">前四年</td>
+                        <td class="blue ta-c">前三年</td>
+                        <td class="blue ta-c">前二年</td>
+                        <td class="blue ta-c">前一年</td>
+                        <td class="blue ta-c">本年</td>
+                        <td class="blue ta-c" colspan="2">小计</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5（2+3-4）</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9</td>
-                        <td class="blue">10</td>
-                        <td class="blue">11（6+7+8+9+10）</td>
-                        <td class="blue">12</td>
-                        <td class="blue">13</td>
-                        <td class="blue">14</td>
-                        <td class="blue">15</td>
-                        <td class="blue">16</td>
-                        <td class="blue">17</td>
-                        <td class="blue">18</td>
-                        <td class="blue" colspan="2">19（14+15+16+17+18）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5（2+3-4）</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ta-c">11（6+7+8+9+10）</td>
+                        <td class="blue ta-c">12</td>
+                        <td class="blue ta-c">13</td>
+                        <td class="blue ta-c">14</td>
+                        <td class="blue ta-c">15</td>
+                        <td class="blue ta-c">16</td>
+                        <td class="blue ta-c">17</td>
+                        <td class="blue ta-c">18</td>
+                        <td class="blue ta-c" colspan="2">19（14+15+16+17+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{(index+1).toString().padStart(3,'0')}}</td>

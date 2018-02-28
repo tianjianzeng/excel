@@ -2,13 +2,13 @@
     <div class="excel excel02">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col style="width: 11%"></col>
-                <col style="width: 11%"></col>
-                <col style="width: 11%"></col>
-                <col style="width: 11%"></col>
-                <col style="width: 11%"></col>
-                <col style="width: 11%"></col>
-                <col style="width: 210px"></col>
+                <col style="width: 11%"/>
+                <col style="width: 11%"/>
+                <col style="width: 11%"/>
+                <col style="width: 11%"/>
+                <col style="width: 11%"/>
+                <col style="width: 11%"/>
+                <col style="width: 210px"/>
                 <tbody>
                     <tr>
                         <td colspan="8" class="ta-c">企业基础信息表</td>
@@ -29,7 +29,7 @@
                     </tr>
                     <tr>
                         <td class="blue">102注册资本（万元）</td> 
-                        <td class="green"><number-input v-model="item.a102" :fixed="fixed":min="100"></number-input></td> 
+                        <td class="green"><number-input v-model="item.a102" :fixed="fixed" :min="100"></number-input></td> 
                         <td class="blue" colspan="2">106境外中资控股居民企业</td> 
                         <td colspan="2"><el-radio class="radio" v-model="item.a106" :label="0">是</el-radio></td> 
                         <td colspan="2"><el-radio class="radio" v-model="item.a106" :label="1">否</el-radio></td> 

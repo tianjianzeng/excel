@@ -52,7 +52,17 @@
         }
         td { 
             text-align: left;
-            padding-left: 10px;
+            .el-input--prefix .el-input__inner {
+                padding-left: 20px;
+            }
+
+            .el-input--suffix .el-input__inner {
+                padding-right: 20px;
+            }
+            .el-input__prefix {
+                left: 1px;
+            }
+            // padding-left: 10px;
             &.blue{
                 background: #96DAF7;
             }

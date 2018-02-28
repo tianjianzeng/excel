@@ -2,15 +2,15 @@
     <div class="excel excel02">
         <div class="table-wraper">
             <table class="body" style="mouse" cellspacing="0" cellpadding="0" border="0" >
-                <col style="width:60px" ></col>
-                <col style="width:25%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
+                <col style="width:60px" />
+                <col style="width:25%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
                 <tbody>
                     <tr>
                         <td colspan="9" class="ta-c">所得减免优惠明细表</td>

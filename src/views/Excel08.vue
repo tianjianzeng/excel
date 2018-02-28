@@ -2,14 +2,14 @@
     <div class="excel excel08">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col style="width:5%" ></col>
-                <col style="width:30%"></col>
-                <col style="width:15%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
-                <col style="width:10%"></col>
+                <col style="width:5%" />
+                <col style="width:30%"/>
+                <col style="width:15%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
+                <col style="width:10%"/>
                 <tbody>
                     <tr>
                         <td colspan="8" class="ta-c">未按权责发生制确认收入纳税调整明细表</td>

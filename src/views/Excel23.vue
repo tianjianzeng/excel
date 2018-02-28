@@ -2,13 +2,19 @@
     <div class="excel excel23">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width: 60px"/>
+                <col style="width: 120px"/>
+                <col style="width: 18%"/>
+                <col style="width: 18%"/>
+                <col style="width: 18%"/>
+                <col style="width: 18%"/>
                 <tbody>
                     <tr>
-                        <td colspan="6">高新技术企业优惠情况及明细表</td>
+                        <td colspan="6" class="ta-c">高新技术企业优惠情况及明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%"class="blue">行次</td>
-                        <td style="width:95%" class="blue" colspan="5">基本信息</td>
+                        <td class="blue ta-c">行次</td>
+                        <td class="blue ta-c" colspan="5">基本信息</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -42,7 +48,7 @@
                     </tr>
                     <tr>
                         <td class="blue">4</td>
-                        <td class="blue" colspan="5">关键指标情况</td>
+                        <td class="blue ta-c" colspan="5">关键指标情况</td>
                     </tr>
                     <tr>
                         <td class="blue">5</td>
@@ -175,7 +181,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 

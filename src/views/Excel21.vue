@@ -2,14 +2,17 @@
     <div class="excel excel21">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:60px" />
+                <col style="width:75%"/>
+                <col style="width:20%"/>
                 <tbody>
                     <tr>
-                        <td colspan="3">抵扣应纳税所得额明细表</td>
+                        <td colspan="3" class="ta-c">抵扣应纳税所得额明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%"class="blue">行次</td>
-                        <td style="width:75%" class="blue">项目</td>
-                        <td style="width:20%" class="blue">金额</td>
+                        <td class="blue ta-c">行次</td>
+                        <td class="blue ta-c">项目</td>
+                        <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
                         <td colspan="3">一、创业投资企业直接投资于未上市中小高新企业按投资额一定比例抵扣应纳税所得额</td>

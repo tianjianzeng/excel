@@ -2,29 +2,29 @@
     <div class="excel excel11">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                        <col width="5%" ></col>
-                        <col width="10%"></col>
-                        <col width="8%" ></col>
-                        <col width="8%" ></col>
-                        <col width="8%" ></col>
-                        <col width="8%" ></col>
-                        <col width="8%"></col>
-                        <col width="8%"></col>
-                        <col width="210px"></col>
+                <col width="60px" />
+                <col width="10%"/>
+                <col width="8%" />
+                <col width="8%" />
+                <col width="8%" />
+                <col width="8%" />
+                <col width="8%"/>
+                <col width="8%"/>
+                <col width="210px"/>
                 <tbody>
                     <tr>
-                        <td colspan="9">资产损失（专项申报）税前扣除及纳税调整明细表</td>
+                        <td colspan="9" class="ta-c">资产损失（专项申报）税前扣除及纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="2">行次</td>
-                        <td class="blue">项目</td>
-                        <td class="blue">账载金额</td>
-                        <td class="blue">处置收入</td>
-                        <td class="blue">赔偿收入</td>
-                        <td class="blue">计税基础</td>
-                        <td class="blue">税收金额</td>
-                        <td class="blue">纳税调整金额</td>
-                        <td class="blue" rowspan="2"></td>
+                        <td class="blue ta-c" rowspan="2">行次</td>
+                        <td class="blue ta-c">项目</td>
+                        <td class="blue ta-c">账载金额</td>
+                        <td class="blue ta-c">处置收入</td>
+                        <td class="blue ta-c">赔偿收入</td>
+                        <td class="blue ta-c">计税基础</td>
+                        <td class="blue ta-c">税收金额</td>
+                        <td class="blue ta-c">纳税调整金额</td>
+                        <td class="blue ta-c" rowspan="2"></td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -69,7 +69,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 

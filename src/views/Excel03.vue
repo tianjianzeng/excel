@@ -2,10 +2,10 @@
     <div class="excel excel03">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col style="width: 60px"></col>
-                <col style="width: 120px"></col>
-                <col style="width: 60%"></col>
-                <col style="width: 20%"></col>
+                <col style="width: 60px"/>
+                <col style="width: 120px"/>
+                <col style="width: 60%"/>
+                <col style="width: 20%"/>
                 <tbody>
                     <tr>
                         <td colspan="4" class="ta-c">中华人民共和国企业所得税年度纳税申报表（A类）</td>

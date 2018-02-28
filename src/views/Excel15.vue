@@ -135,7 +135,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -172,7 +172,6 @@
                 a2_7:0,
                 a2_8:0,
                 a2_10:0,
-                a2_11:0,
                 a3_1:0,
                 a3_2:0,
                 a3_3:0,
@@ -181,7 +180,6 @@
                 a3_7:0,
                 a3_8:0,
                 a3_10:0,
-                a3_11:0,
                 a4_1:0,
                 a4_2:0,
                 a4_3:0,
@@ -190,7 +188,6 @@
                 a4_7:0,
                 a4_8:0,
                 a4_10:0,
-                a4_11:0,
                 a5_1:0,
                 a5_2:0,
                 a5_3:0,
@@ -200,7 +197,6 @@
                 a5_8:0,
                 a5_9:0,
                 a5_10:0,
-                a5_11:0,
                 a6_1:0,
                 a6_2:0,
                 a6_3:0,
@@ -210,8 +206,6 @@
                 a6_8:0,
                 a6_9:0,
                 a6_10:0,
-                a6_11:0,
-                a7:0
             }
         },
         filters:{formatCurrency},
@@ -228,31 +222,31 @@
                  return this.a1_3;
              },
              a2_4(){
-                 if(this.a1_2 < 0){
+                 if(this.a2_2 < 0){
                      return (this.a2_2 * Math.pow(10,this.fixed) + this.a2_3 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                  }
                  return this.a2_3;
              },
              a3_4(){
-                 if(this.a1_2 < 0){
+                 if(this.a3_2 < 0){
                      return (this.a3_2 * Math.pow(10,this.fixed) + this.a3_3 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                  }
                  return this.a3_3;
              },
              a4_4(){
-                 if(this.a1_2 < 0){
+                 if(this.a4_2 < 0){
                      return (this.a4_2 * Math.pow(10,this.fixed) + this.a4_3 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                  }
                  return this.a4_3;
              },
              a5_4(){
-                 if(this.a1_2 < 0){
+                 if(this.a5_2 < 0){
                      return (this.a5_2 * Math.pow(10,this.fixed) + this.a5_3 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                  }
                  return this.a5_3;
              },
              a6_4(){
-                 if(this.a1_2 < 0){
+                 if(this.a6_2 < 0){
                      return (this.a6_2 * Math.pow(10,this.fixed) + this.a6_3 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                  }
                  return this.a6_3;
@@ -282,6 +276,43 @@
                  let rst = 0;
                  for(var i=5;i<=8;i++){
                      rst+= this[`a4_${i}`] * Math.pow(10,this.fixed);
+                 }
+                 return rst * 1.0 / Math.pow(10,this.fixed);
+             },
+             a2_11(){
+                if(this.a2_4<0){
+                    return (Math.abs(this.a2_4) * Math.pow(10,this.fixed) - this.a2_9 * Math.pow(10,this.fixed) - this.a2_10 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                }
+                return 0;
+             },
+             a3_11(){
+                if(this.a3_4<0){
+                    return (Math.abs(this.a3_4) * Math.pow(10,this.fixed) - this.a3_9 * Math.pow(10,this.fixed) - this.a3_10 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                }
+                return 0;
+             },
+             a4_11(){
+                if(this.a4_4<0){
+                    return (Math.abs(this.a4_4) * Math.pow(10,this.fixed) - this.a4_9 * Math.pow(10,this.fixed) - this.a4_10 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                }
+                return 0;
+             },
+             a5_11(){
+                if(this.a5_4<0){
+                    return (Math.abs(this.a5_4) * Math.pow(10,this.fixed) - this.a5_9 * Math.pow(10,this.fixed) - this.a5_10 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                }
+                return 0;
+            },
+             a6_11(){
+                if(this.a6_4<0){
+                    return (Math.abs(this.a6_4) * Math.pow(10,this.fixed) - this.a6_9 * Math.pow(10,this.fixed) - this.a6_10 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                }
+                return 0;
+             },
+             a7(){
+                 let rst = 0;
+                 for(var i=2;i<=6;i++){
+                     rst+= this[`a${i}_11`] * Math.pow(10,this.fixed);
                  }
                  return rst * 1.0 / Math.pow(10,this.fixed);
              },
@@ -323,7 +354,7 @@
                 }
                 if(this.a6_2>0){
                     for(let i = 1; i<=5; i++){
-                        if(this[`a${i}_10`]>Math.abs(this[`a${i}_4`])){
+                        if(this[`a${i}_10`]>Math.abs(this[`a${i}_4`]) || this[`a${i}_10`]<0){
                             window.root && window.root.$emit("bizError",'校验不通过', '验证', {
                                 confirmButtonText: '确定'
                             });

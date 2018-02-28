@@ -2,9 +2,9 @@
     <div class="excel excel04">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col style="width: 60px"></col>
-                <col style="width: 75%"></col>
-                <col style="width: 20%"></col>
+                <col style="width: 60px"/>
+                <col style="width: 75%"/>
+                <col style="width: 20%"/>
                 <tbody>
                     <tr>
                         <td colspan="3" class="ta-c">一般企业收入明细表</td>

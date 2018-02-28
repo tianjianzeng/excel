@@ -2,74 +2,74 @@
     <div class="excel excel27">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="5%"></col>
-                <col width="120px"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="210px"></col>
+                <col width="60px"/>
+                <col width="120px"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="210px"/>
                 <tbody>
                     <tr>
-                        <td colspan="20">境外所得纳税调整后所得明细表</td>
+                        <td colspan="20" class="ta-c">境外所得纳税调整后所得明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="3">行次</td>
-                        <td class="blue" rowspan="2">国家（地区）</td>
-                        <td class="blue" colspan="8">境外税后所得</td>
-                        <td class="blue" colspan="4">境外所得可抵免的所得税额</td>
-                        <td class="blue" rowspan="2">境外税前所得</td>
-                        <td class="blue" rowspan="2">境外分支机构收入与支出纳税调整额</td>
-                        <td class="blue" rowspan="2">境外分支机构调整分摊扣除的有关成本费用</td>
-                        <td class="blue" rowspan="2">境外所得对应调整的相关成本费用支出</td>
-                        <td class="blue" rowspan="2" colspan="2">境外所得纳税调整后所得</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="2">国家（地区）</td>
+                        <td class="blue ta-c" colspan="8">境外税后所得</td>
+                        <td class="blue ta-c" colspan="4">境外所得可抵免的所得税额</td>
+                        <td class="blue ta-c" rowspan="2">境外税前所得</td>
+                        <td class="blue ta-c" rowspan="2">境外分支机构收入与支出纳税调整额</td>
+                        <td class="blue ta-c" rowspan="2">境外分支机构调整分摊扣除的有关成本费用</td>
+                        <td class="blue ta-c" rowspan="2">境外所得对应调整的相关成本费用支出</td>
+                        <td class="blue ta-c" rowspan="2" colspan="2">境外所得纳税调整后所得</td>
                     </tr>
                     <tr>
-                        <td class="blue">分支机构机构营业利润所得</td>
-                        <td class="blue">股息、红利等权益性投资所得</td>
-                        <td class="blue">利息所得</td>
-                        <td class="blue">租金所得</td>
-                        <td class="blue">特许权使用费所得</td>
-                        <td class="blue">财产转让所得</td>
-                        <td class="blue">其他所得</td>
-                        <td class="blue">小计</td>
-                        <td class="blue">直接缴纳的所得税额</td>
-                        <td class="blue">间接负担的所得税额</td>
-                        <td class="blue">享受税收饶让抵免税额</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">小计</td>
+                        <td class="blue ta-c">分支机构机构营业利润所得</td>
+                        <td class="blue ta-c">股息、红利等权益性投资所得</td>
+                        <td class="blue ta-c">利息所得</td>
+                        <td class="blue ta-c">租金所得</td>
+                        <td class="blue ta-c">特许权使用费所得</td>
+                        <td class="blue ta-c">财产转让所得</td>
+                        <td class="blue ta-c">其他所得</td>
+                        <td class="blue ta-c">小计</td>
+                        <td class="blue ta-c">直接缴纳的所得税额</td>
+                        <td class="blue ta-c">间接负担的所得税额</td>
+                        <td class="blue ta-c">享受税收饶让抵免税额</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">小计</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9（2+3+4+5+6+7+8）</td>
-                        <td class="blue">10</td>
-                        <td class="blue">11</td>
-                        <td class="blue">12</td>
-                        <td class="blue">13（10+11+12）</td>
-                        <td class="blue">14（9+10+11）</td>
-                        <td class="blue">15</td>
-                        <td class="blue">16</td>
-                        <td class="blue">17</td>
-                        <td class="blue">18（14+15-16-17）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9（2+3+4+5+6+7+8）</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ta-c">12</td>
+                        <td class="blue ta-c">13（10+11+12）</td>
+                        <td class="blue ta-c">14（9+10+11）</td>
+                        <td class="blue ta-c">15</td>
+                        <td class="blue ta-c">16</td>
+                        <td class="blue ta-c">17</td>
+                        <td class="blue ta-c">18（14+15-16-17）</td>
                         <td><el-button v-if="0===list.length" type="primary" @click="add()">添加</el-button></td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">

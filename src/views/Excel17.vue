@@ -2,69 +2,69 @@
     <div class="excel excel17">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="3%"></col>
-                <col width="3%"></col>
-                <col width="100px"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="100px"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="4%"></col>
-                <col width="220px"></col>
+                <col width="60px"/>
+                <col width="100px"/>
+                <col width="100px"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="120px"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="4%"/>
+                <col width="220px"/>
                 <tbody>
                     <tr>
-                        <td colspan="17">符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表</td>
+                        <td colspan="17" class="ta-c">符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue"rowspan="3">行次</td>
-                        <td class="blue" rowspan="2">被投资企业</td>
-                        <td class="blue" rowspan="2">投资性质</td>
-                        <td class="blue" rowspan="2">投资成本</td>
-                        <td class="blue" rowspan="2">投资比例</td>
-                        <td class="blue" colspan="2">被投资企业利润分配确认金额</td>
-                        <td class="blue" colspan="3">被投资企业清算确认金额</td>
-                        <td class="blue" colspan="6">撤回或减少投资确认金额</td>
-                        <td class="blue" rowspan="2" colspan="2">合计</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="2">被投资企业</td>
+                        <td class="blue ta-c" rowspan="2">投资性质</td>
+                        <td class="blue ta-c" rowspan="2">投资成本</td>
+                        <td class="blue ta-c" rowspan="2">投资比例</td>
+                        <td class="blue ta-c" colspan="2">被投资企业利润分配确认金额</td>
+                        <td class="blue ta-c" colspan="3">被投资企业清算确认金额</td>
+                        <td class="blue ta-c" colspan="6">撤回或减少投资确认金额</td>
+                        <td class="blue ta-c" rowspan="2" colspan="2">合计</td>
                     </tr>
                     <tr>
-                        <td class="blue">被投资企业做出利润分配或转股决定时间</td>
-                        <td class="blue">依决定归属于本公司的股息、红利等权益性投资收益金额</td>
-                        <td class="blue">分得的被投资企业清算剩余资产</td>
-                        <td class="blue">被清算企业累计未分配利润和累计盈余公积应享有部分</td>
-                        <td class="blue">应确认的股息所得</td>
-                        <td class="blue">从被投资企业撤回或减少投资取得的资产</td>
-                        <td class="blue">减少投资比例</td>
-                        <td class="blue">收回初始投资成本</td>
-                        <td class="blue">取得资产中超过收回初始投资成本部分</td>
-                        <td class="blue">撤回或减少投资应享有被投资企业累计未分配利润和累计盈余公积</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">应确认的股息所得</td>
+                        <td class="blue ta-c">被投资企业做出利润分配或转股决定时间</td>
+                        <td class="blue ta-c">依决定归属于本公司的股息、红利等权益性投资收益金额</td>
+                        <td class="blue ta-c">分得的被投资企业清算剩余资产</td>
+                        <td class="blue ta-c">被清算企业累计未分配利润和累计盈余公积应享有部分</td>
+                        <td class="blue ta-c">应确认的股息所得</td>
+                        <td class="blue ta-c">从被投资企业撤回或减少投资取得的资产</td>
+                        <td class="blue ta-c">减少投资比例</td>
+                        <td class="blue ta-c">收回初始投资成本</td>
+                        <td class="blue ta-c">取得资产中超过收回初始投资成本部分</td>
+                        <td class="blue ta-c">撤回或减少投资应享有被投资企业累计未分配利润和累计盈余公积</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">应确认的股息所得</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9（7与8孰小)</td>
-                        <td class="blue">10</td>
-                        <td class="blue">11</td>
-                        <td class="blue">12（3×11）</td>
-                        <td class="blue">13（10-12）</td>
-                        <td class="blue">14</td>
-                        <td class="blue">15(13与14孰小)</td>
-                        <td class="blue">16（6+9+15）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9（7与8孰小)</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ta-c">12（3×11）</td>
+                        <td class="blue ta-c">13（10-12）</td>
+                        <td class="blue ta-c">14</td>
+                        <td class="blue ta-c">15(13与14孰小)</td>
+                        <td class="blue ta-c">16（6+9+15）</td>
                         <td>
                             <el-button v-if="list.length===0" type="primary" @click="add()">添加</el-button>
                         </td>
@@ -135,6 +135,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency,formatDate} from '../utils/filters'
 
     export default {
@@ -155,7 +156,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA107011"])

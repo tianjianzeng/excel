@@ -2,57 +2,65 @@
     <div class="excel excel20">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:60px" />
+                <col style="width:75%"/>
+                <col style="width:20%"/>
+                <col style="width:75%"/>
+                <col style="width:75%"/>
+                <col style="width:20%"/>
+                <col style="width:20%"/>
+                <col style="width:20%"/>
                 <tbody>
                     <tr>
                         <td colspan="20">研发费用加计扣除优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%"class="blue" rowspan="3">行次</td>
-                        <td style="width:75%" class="blue" rowspan="2">研发项目</td>
-                        <td style="width:20%" class="blue" colspan="9">本年研发费用明细</td>
-                        <td style="width:75%" class="blue" rowspan="2">减:作为不征税收入处理的财政性资金用于研发的部分</td>
-                        <td style="width:75%" class="blue" rowspan="2">可加计扣除的研发费用合计</td>
-                        <td style="width:20%" class="blue" colspan="2">费用化部分</td>
-                        <td style="width:20%" class="blue" colspan="4">资本化部分</td>
-                        <td style="width:20%" class="blue" rowspan="2">本年研发费用加计扣除额合计</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="2">研发项目</td>
+                        <td class="blue ta-c" colspan="9">本年研发费用明细</td>
+                        <td class="blue ta-c" rowspan="2">减:作为不征税收入处理的财政性资金用于研发的部分</td>
+                        <td class="blue ta-c" rowspan="2">可加计扣除的研发费用合计</td>
+                        <td class="blue ta-c" colspan="2">费用化部分</td>
+                        <td class="blue ta-c" colspan="4">资本化部分</td>
+                        <td class="blue ta-c" rowspan="2">本年研发费用加计扣除额合计</td>
                     </tr>
                     <tr>
-                        <td class="blue">研发活动直接消耗的材料、燃料和动力费用</td>
-                        <td class="blue">直接从事研发活动的本企业在职人员费用</td>
-                        <td class="blue">专门用于研发活动的有关折旧费、租赁费、运行维护费</td>
-                        <td class="blue">专门用于研发活动的有关无形资产摊销费</td>
-                        <td class="blue">中间试验和产品试制的有关费用，样品、样机及一般测试手段购置费</td>
-                        <td class="blue">研发成果论证、评审、验收、鉴定费用</td>
-                        <td class="blue">勘探开发技术的现场试验费，新药研制的临床试验费</td>
-                        <td class="blue">设计、制定、资料和翻译费用</td>
-                        <td class="blue">年度研发费用合计</td>
-                        <td class="blue">计入本年损益的金额</td>
-                        <td class="blue">计入本年研发费用加计扣除额</td>
-                        <td class="blue">本年形成无形资产的金额</td>
-                        <td class="blue">本年形成无形资产加计摊销额</td>
-                        <td class="blue">以前年度形成无形资产本年加计摊销额</td>
-                        <td class="blue">无形资产本年加计摊销额</td>
+                        <td class="blue ta-c">研发活动直接消耗的材料、燃料和动力费用</td>
+                        <td class="blue ta-c">直接从事研发活动的本企业在职人员费用</td>
+                        <td class="blue ta-c">专门用于研发活动的有关折旧费、租赁费、运行维护费</td>
+                        <td class="blue ta-c">专门用于研发活动的有关无形资产摊销费</td>
+                        <td class="blue ta-c">中间试验和产品试制的有关费用，样品、样机及一般测试手段购置费</td>
+                        <td class="blue ta-c">研发成果论证、评审、验收、鉴定费用</td>
+                        <td class="blue ta-c">勘探开发技术的现场试验费，新药研制的临床试验费</td>
+                        <td class="blue ta-c">设计、制定、资料和翻译费用</td>
+                        <td class="blue ta-c">年度研发费用合计</td>
+                        <td class="blue ta-c">计入本年损益的金额</td>
+                        <td class="blue ta-c">计入本年研发费用加计扣除额</td>
+                        <td class="blue ta-c">本年形成无形资产的金额</td>
+                        <td class="blue ta-c">本年形成无形资产加计摊销额</td>
+                        <td class="blue ta-c">以前年度形成无形资产本年加计摊销额</td>
+                        <td class="blue ta-c">无形资产本年加计摊销额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9</td>
-                        <td class="blue">10（2+3+4+5+6+7+8+9）</td>
-                        <td class="blue">11</td>
-                        <td class="blue">12（10-11）</td>
-                        <td class="blue">13</td>
-                        <td class="blue">14（13×50%）</td>
-                        <td class="blue">15</td>
-                        <td class="blue">16</td>
-                        <td class="blue">17</td>
-                        <td class="blue">18（16+17）</td>
-                        <td class="blue">19（14+18）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ta-c">10（2+3+4+5+6+7+8+9）</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ta-c">12（10-11）</td>
+                        <td class="blue ta-c">13</td>
+                        <td class="blue ta-c">14（13×50%）</td>
+                        <td class="blue ta-c">15</td>
+                        <td class="blue ta-c">16</td>
+                        <td class="blue ta-c">17</td>
+                        <td class="blue ta-c">18（16+17）</td>
+                        <td class="blue ta-c">19（14+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
@@ -101,7 +109,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" v-if="false" @click="refresh">刷新</el-button>
     </div>
 </template>
 

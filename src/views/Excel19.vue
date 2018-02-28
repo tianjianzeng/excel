@@ -2,14 +2,17 @@
     <div class="excel excel19">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:60px" />
+                <col style="width:75%"/>
+                <col style="width:20%"/>
                 <tbody>
                     <tr>
                         <td colspan="3">金融、保险等机构取得的涉农利息、保费收入优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%"class="blue">行次</td>
-                        <td style="width:75%" class="blue">项目</td>
-                        <td style="width:20%" class="blue">金额</td>
+                        <td class="blue ta-c">行次</td>
+                        <td class="blue ta-c">项目</td>
+                        <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -79,7 +82,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 

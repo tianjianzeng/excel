@@ -2,21 +2,26 @@
     <div class="excel excel10">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:5%" />
+                <col style="width:50%" />
+                <col style="width:15%"/>
+                <col style="width:15%"/>
+                <col style="width:15%" />
                 <tbody>
                     <tr>
-                        <td colspan="5">资产损失税前扣除及纳税调整明细表</td>
+                        <td colspan="5" class="ta-c">资产损失税前扣除及纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue" rowspan="2">行次</td>
-                        <td style="width:50%" class="blue" rowspan="2">项目</td>
-                        <td style="width:15%" class="blue">账载金额</td>
-                        <td style="width:15%" class="blue">税收金额</td>
-                        <td style="width:15%" class="blue">纳税调整金额</td>
+                        <td style="width:5%" class="blue ta-c" rowspan="2">行次</td>
+                        <td style="width:50%" class="blue ta-c" rowspan="2">项目</td>
+                        <td style="width:15%" class="blue ta-c">账载金额</td>
+                        <td style="width:15%" class="blue ta-c">税收金额</td>
+                        <td style="width:15%" class="blue ta-c">纳税调整金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3(1-2)</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3(1-2)</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>

@@ -2,78 +2,78 @@
     <div class="excel excel29">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="3%" ></col>
-                <col width="12%" ></col>
-                <col width="5%" ></col>
-                <col width="5%" ></col>
-                <col width="5%" ></col>
-                <col width="5%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="4%" ></col>
-                <col width="60px"></col>
+                <col width="60px" />
+                <col width="12%" />
+                <col width="5%" />
+                <col width="5%" />
+                <col width="5%" />
+                <col width="5%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="4%" />
+                <col width="60px"/>
                 <tbody>
                     <tr>
-                        <td colspan="21">跨年度结转抵免境外所得税明细表</td>
+                        <td colspan="21" class="ta-c">跨年度结转抵免境外所得税明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue" rowspan="3">行次</td>
-                        <td class="blue" rowspan="2">国家（地区）</td>
-                        <td class="blue" colspan="6">前五年境外所得已缴所得税未抵免余额</td>
-                        <td class="blue" colspan="6">本年实际抵免以前年度未抵免的境外已缴所得税额</td>
-                        <td class="blue" colspan="7">结转以后年度抵免的境外所得已缴所得税额</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="2">国家（地区）</td>
+                        <td class="blue ta-c" colspan="6">前五年境外所得已缴所得税未抵免余额</td>
+                        <td class="blue ta-c" colspan="6">本年实际抵免以前年度未抵免的境外已缴所得税额</td>
+                        <td class="blue ta-c" colspan="7">结转以后年度抵免的境外所得已缴所得税额</td>
                     </tr>
                     <tr>
-                        <td class="blue">前五年</td>
-                        <td class="blue">前四年</td>
-                        <td class="blue">前三年</td>
-                        <td class="blue">前二年</td>
-                        <td class="blue">前一年</td>
-                        <td class="blue">小计</td>
-                        <td class="blue">前五年</td>
-                        <td class="blue">前四年</td>
-                        <td class="blue">前三年</td>
-                        <td class="blue">前二年</td>
-                        <td class="blue">前一年</td>
-                        <td class="blue">小计</td>
-                        <td class="blue">前四年</td>
-                        <td class="blue">前三年</td>
-                        <td class="blue">前二年</td>
-                        <td class="blue">前一年</td>
-                        <td class="blue">本年</td>
-                        <td class="blue" colspan="2">小计</td>
+                        <td class="blue ta-c">前五年</td>
+                        <td class="blue ta-c">前四年</td>
+                        <td class="blue ta-c">前三年</td>
+                        <td class="blue ta-c">前二年</td>
+                        <td class="blue ta-c">前一年</td>
+                        <td class="blue ta-c">小计</td>
+                        <td class="blue ta-c">前五年</td>
+                        <td class="blue ta-c">前四年</td>
+                        <td class="blue ta-c">前三年</td>
+                        <td class="blue ta-c">前二年</td>
+                        <td class="blue ta-c">前一年</td>
+                        <td class="blue ta-c">小计</td>
+                        <td class="blue ta-c">前四年</td>
+                        <td class="blue ta-c">前三年</td>
+                        <td class="blue ta-c">前二年</td>
+                        <td class="blue ta-c">前一年</td>
+                        <td class="blue ta-c">本年</td>
+                        <td class="blue ta-c" colspan="2">小计</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5（3-4）</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7（2+3+4+5+6）</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9</td>
-                        <td class="blue">10</td>
-                        <td class="blue">11</td>
-                        <td class="blue">12</td>
-                        <td class="blue">13（8+9+10+11+12）</td>
-                        <td class="blue">14（3-9）</td>
-                        <td class="blue">15（4-10）</td>
-                        <td class="blue">16（5-11）</td>
-                        <td class="blue">17（6-12）</td>
-                        <td class="blue">18</td>
-                        <td class="blue" colspan="2">19（14+15+16+17+18）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5（3-4）</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7（2+3+4+5+6）</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ta-c">12</td>
+                        <td class="blue ta-c">13（8+9+10+11+12）</td>
+                        <td class="blue ta-c">14（3-9）</td>
+                        <td class="blue ta-c">15（4-10）</td>
+                        <td class="blue ta-c">16（5-11）</td>
+                        <td class="blue ta-c">17（6-12）</td>
+                        <td class="blue ta-c">18</td>
+                        <td class="blue ta-c" colspan="2">19（14+15+16+17+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue">{{(index+1).toString().padStart(3,'0')}}</td>

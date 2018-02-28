@@ -2,50 +2,50 @@
     <div class="excel excel18">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="5%"></col>
-                <col width="210px"></col>
+                <col width="60px"/>
+                <col width="5%"/>
+                <col width="120px"/>
+                <col width="120px"/>
+                <col width="120px"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="5%"/>
+                <col width="210px"/>
                 <tbody>
                     <tr>
-                        <td colspan="13">综合利用资源生产产品取得的收入优惠明细表</td>
+                        <td colspan="13" class="ta-c">综合利用资源生产产品取得的收入优惠明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue" rowspan="3">行次</td>
-                        <td class="blue" rowspan="2">生产的产品名称</td>
-                        <td class="blue" colspan="4">资源综合利用认定证书基本情况</td>
-                        <td class="blue" rowspan="2">属于《资源综合利用企业所得税优惠目录》类别</td>
-                        <td class="blue" rowspan="2">综合利用的资源</td>
-                        <td class="blue" rowspan="2">综合利用的资源占生产产品材料的比例</td>
-                        <td class="blue" rowspan="2">《资源综合利用企业所得税优惠目录》规定的标准</td>
-                        <td class="blue" rowspan="2">符合条件的综合利用资源生产产品取得的收入总额</td>
-                        <td class="blue" rowspan="2" colspan="2">综合利用资源减计收入</td>
+                        <td class="blue ta-c" rowspan="3">行次</td>
+                        <td class="blue ta-c" rowspan="2">生产的产品名称</td>
+                        <td class="blue ta-c" colspan="4">资源综合利用认定证书基本情况</td>
+                        <td class="blue ta-c" rowspan="2">属于《资源综合利用企业所得税优惠目录》类别</td>
+                        <td class="blue ta-c" rowspan="2">综合利用的资源</td>
+                        <td class="blue ta-c" rowspan="2">综合利用的资源占生产产品材料的比例</td>
+                        <td class="blue ta-c" rowspan="2">《资源综合利用企业所得税优惠目录》规定的标准</td>
+                        <td class="blue ta-c" rowspan="2">符合条件的综合利用资源生产产品取得的收入总额</td>
+                        <td class="blue ta-c" rowspan="2" colspan="2">综合利用资源减计收入</td>
                     </tr>
                     <tr>
-                        <td class="blue">《资源综合利用认定证书》取得时间</td>
-                        <td class="blue" colspan="2">《资源综合利用认定证书》有效期</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">《资源综合利用认定证书》编号</td>
+                        <td class="blue ta-c">《资源综合利用认定证书》取得时间</td>
+                        <td class="blue ta-c" colspan="2">《资源综合利用认定证书》有效期</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">《资源综合利用认定证书》编号</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue" colspan="2">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6</td>
-                        <td class="blue">7</td>
-                        <td class="blue">8</td>
-                        <td class="blue">9</td>
-                        <td class="blue">10（9×10%）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c" colspan="2">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ta-c">10（9×10%）</td>
                         <td>
                             <el-button v-if="0===list.length" type="primary" @click="add">添加</el-button>
                         </td>
@@ -86,7 +86,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -96,6 +96,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -109,7 +110,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
             ...mapGetters(["getTableA107012"])

@@ -2,21 +2,26 @@
     <div class="excel excel14">
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
+                <col style="width:60px" />
+                <col style="width:25%"/>
+                <col style="width:22%"/>
+                <col style="width:22%"/>
+                <col style="width:21%"/>
                 <tbody>
                     <tr>
-                        <td colspan="5">特殊行业准备金纳税调整明细表</td>
+                        <td colspan="5" class="ta-c">特殊行业准备金纳税调整明细表</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue" rowspan="2">行次</td>
-                        <td style="width:25%" class="blue" rowspan="2">项目</td>
-                        <td style="width:22%" class="blue">账载金额</td>
-                        <td style="width:22%" class="blue">税收金额</td>
-                        <td style="width:21%" class="blue">纳税调整金额</td>
+                        <td style="width:5%" class="blue ta-c" rowspan="2">行次</td>
+                        <td style="width:25%" class="blue ta-c" rowspan="2">项目</td>
+                        <td style="width:22%" class="blue ta-c">账载金额</td>
+                        <td style="width:22%" class="blue ta-c">税收金额</td>
+                        <td style="width:21%" class="blue ta-c">纳税调整金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3（1-2）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3（1-2）</td>
                     </tr>
                     <tr>
                         <td class="blue">1</td>
@@ -126,8 +131,8 @@
                     <tr>
                         <td class="blue">16</td>
                         <td class="blue">三、期货行业（17+18+19+20）</td>
-                        <td><number-display :value="a16_1"></number-display></number-input></td>
-                        <td><number-display :value="a16_2"></number-display></number-input></td>
+                        <td><number-display :value="a16_1"></number-display></td>
+                        <td><number-display :value="a16_2"></number-display></td>
                         <td><number-display :value="a16_3"></number-display></td>
                     </tr>
                      <tr>
@@ -161,8 +166,8 @@
                      <tr>
                         <td class="blue">21</td>
                         <td class="blue">四、金融企业（22+23+24)</td>
-                        <td><number-display :value="a21_1"></number-display></number-input></td>
-                        <td><number-display :value="a21_2"></number-display></number-input></td>
+                        <td><number-display :value="a21_1"></number-display>
+                        <td><number-display :value="a21_2"></number-display></td>
                         <td><number-display :value="a21_3"></number-display></td>
                     </tr>
                     <tr>
@@ -224,14 +229,14 @@
                     <tr>
                         <td class="blue">30</td>
                         <td class="blue">合计(1+11+16+21+25+29)</td>
-                        <td><number-display :value="a30_1"></number-display></number-input></td>
-                        <td><number-display :value="a30_2"></number-display></number-input></td>
+                        <td><number-display :value="a30_1"></number-display></td>
+                        <td><number-display :value="a30_2"></number-display></td>
                         <td><number-display :value="a30_3"></number-display></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -241,6 +246,7 @@
     } from 'vuex'
     import store from '../store'
     import NumberInput from '../components/NumberInput'
+    import NumberDisplay from '../components/NumberDisplay'
     import {formatCurrency} from '../utils/filters'
 
     export default {
@@ -298,7 +304,8 @@
         },
         filters:{formatCurrency},
         components: {
-            NumberInput
+            NumberInput,
+            NumberDisplay
         },
         computed: {
              ...mapGetters(["getTableA105120"]),
@@ -557,13 +564,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel14{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="3"]{
-            text-align: center;
-        }
-    }
 </style>
