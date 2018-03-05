@@ -52,6 +52,12 @@
         }
         td { 
             text-align: left;
+            .el-button+.el-button {
+                margin-left: 0;
+            }
+            .el-select .el-input.el-input--suffix .el-input__inner {
+                text-align: left;
+            }
             .el-input--prefix .el-input__inner {
                 padding-left: 20px;
             }
@@ -115,6 +121,6 @@
     }
     
     .el-date-editor.el-input {
-        width: auto;
+        width: auto !important;
     }
 </style>

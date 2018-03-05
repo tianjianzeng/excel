@@ -17,14 +17,14 @@
                         <td class="blue ta-c" colspan="5">基本信息</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
+                        <td class="blue ta-c">1</td>
                         <td class="blue" colspan="2">高新技术企业证书编号</td>
                         <td class="green"><input v-model="a1_1"></td>
                         <td class="blue">高新技术企业证书取得时间</td>
                         <td class="green"><el-date-picker v-model="a1_2" type="date" placeholder="选择日期" :default-value="new Date()"></el-date-picker></td>
                     </tr>
                     <tr>
-                        <td class="blue">2</td>
+                        <td class="blue ta-c">2</td>
                         <td class="blue" colspan="2">产品（服务）属于《国家重点支持的高新技术领域》规定的范围（填写具体范围名称）</td>
                         <td class="green"><input v-model="a2_1"></td>
                         <td class="blue">是否发生重大安全、质量事故</td>
@@ -34,7 +34,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="blue">3</td>
+                        <td class="blue ta-c">3</td>
                         <td class="blue" colspan="2">是否有环境等违法、违规行为，受到有关部门处罚的</td>
                         <td class="green">
                             <el-radio class="radio" v-model="a3_1" :label="0">是</el-radio>
@@ -47,134 +47,134 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="blue">4</td>
+                        <td class="blue ta-c">4</td>
                         <td class="blue ta-c" colspan="5">关键指标情况</td>
                     </tr>
                     <tr>
-                        <td class="blue">5</td>
-                        <td class="blue" rowspan="5">收入指标</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c" rowspan="5">收入指标</td>
                         <td class="blue" colspan="3">一、本年高新技术产品（服务）收入（6+7）</td>
                         <td><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">6</td>
+                        <td class="blue ta-c">6</td>
                         <td class="blue" colspan="3">其中：产品（服务）收入</td>
                         <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7</td>
+                        <td class="blue ta-c">7</td>
                         <td class="blue" colspan="3">技术性收入</td>
                         <td class="green"><number-input v-model="a7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">8</td>
+                        <td class="blue ta-c">8</td>
                         <td class="blue" colspan="3">二、本年企业总收入</td>
                         <td class="green"><number-input v-model="a8" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">9</td>
+                        <td class="blue ta-c">9</td>
                         <td class="blue" colspan="3">三、本年高新技术产品（服务）收入占企业总收入的比例（5÷8）</td>
                         <td>{{a9}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">10</td>
-                        <td class="blue" rowspan="5">人员指标</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ta-c" rowspan="5">人员指标</td>
                         <td class="blue" colspan="3">四、本年具有大学专科以上学历的科技人员数</td>
                         <td class="green"><number-input v-model="a10" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">11</td>
+                        <td class="blue ta-c">11</td>
                         <td class="blue" colspan="3">五、本年研发人员数</td>
                         <td class="green"><number-input v-model="a11" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">12</td>
+                        <td class="blue ta-c">12</td>
                         <td class="blue" colspan="3">六、本年职工总数</td>
                         <td class="green"><number-input v-model="a12" :fixed="0"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">13</td>
+                        <td class="blue ta-c">13</td>
                         <td class="blue" colspan="3">七、本年具有大学专科以上学历的科技人员占企业当年职工总数的比例（10÷12）</td>
                         <td>{{a13}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">14</td>
+                        <td class="blue ta-c">14</td>
                         <td class="blue" colspan="3">八、本年研发人员占企业当年职工总数的比例（11÷12）</td>
                         <td>{{a14}}</td>
                     </tr>
                     <tr>
-                        <td class="blue">15</td>
-                        <td class="blue" rowspan="14">研究开发费用指标</td>
+                        <td class="blue ta-c">15</td>
+                        <td class="blue ta-c" rowspan="14">研究开发费用指标</td>
                         <td class="blue" colspan="3">九、本年归集的高新研发费用金额（16+25）</td>
                         <td><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">16</td>
+                        <td class="blue ta-c">16</td>
                         <td class="blue" colspan="3">（一）内部研究开发投入（17+18+19+20+21+22+24）</td>
                         <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">17</td>
+                        <td class="blue ta-c">17</td>
                         <td class="blue" colspan="3">1.人员人工</td>
                         <td class="green"><number-input v-model="a17" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">18</td>
+                        <td class="blue ta-c">18</td>
                         <td class="blue" colspan="3">2.直接投入</td>
                         <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">19</td>
+                        <td class="blue ta-c">19</td>
                         <td class="blue" colspan="3">3.折旧费用与长期费用摊销</td>
                         <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">20</td>
+                        <td class="blue ta-c">20</td>
                         <td class="blue" colspan="3">4.设计费用</td>
                         <td class="green"><number-input v-model="a20" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">21</td>
+                        <td class="blue ta-c">21</td>
                         <td class="blue" colspan="3">5.装备调试费</td>
                         <td class="green"><number-input v-model="a21" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">22</td>
+                        <td class="blue ta-c">22</td>
                         <td class="blue" colspan="3">6.无形资产摊销</td>
                         <td class="green"><number-input v-model="a22" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">23</td>
+                        <td class="blue ta-c">23</td>
                         <td class="blue" colspan="3">7.其他费用</td>
                         <td class="green"><number-input v-model="a23" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">24</td>
+                        <td class="blue ta-c">24</td>
                         <td class="blue" colspan="3">其中：可计入研发费用的其他费用</td>
                         <td class="green"><number-input v-model="a24" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">25</td>
+                        <td class="blue ta-c">25</td>
                         <td class="blue" colspan="3">（二）委托外部研究开发费用（26+27）</td>
                         <td><number-display :value="a25"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">26</td>
+                        <td class="blue ta-c">26</td>
                         <td class="blue" colspan="3">1.境内的外部研发费</td>
                         <td class="green"><number-input v-model="a26" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">27</td>
+                        <td class="blue ta-c">27</td>
                         <td class="blue" colspan="3">2.境外的外部研发费</td>
                         <td class="green"><number-input v-model="a27" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">28</td>
+                        <td class="blue ta-c">28</td>
                         <td class="blue" colspan="3">十、本年研发费用占销售（营业）收入比例</td>
                         <td class="green"><number-input v-model="a28_" :fixed="fixed" :filter="toPercent"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">29</td>
+                        <td class="blue ta-c">29</td>
                         <td class="blue" colspan="4">减免税金额</td>
                         <td class="green"><number-display :value="a29"></number-display></td>
                     </tr>

@@ -27,17 +27,17 @@
                         <td class="blue ta-c" rowspan="2"></td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
-                        <td class="blue">2</td>
-                        <td class="blue">3</td>
-                        <td class="blue">4</td>
-                        <td class="blue">5</td>
-                        <td class="blue">6（5-3-4）</td>
-                        <td class="blue" style="border-right: 1px solid #dfe6ec;">7（2-6）</td>
+                        <td class="blue ta-c">1</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ta-c">6（5-3-4）</td>
+                        <td class="blue ta-c" style="border-right: 1px solid #dfe6ec;">7（2-6）</td>
                     </tr>
                     <template v-for="(item,index) in list">
                         <tr :key="index">
-                            <td class="blue">{{(item.no).toString().padStart(3,'0')}}</td>
+                            <td class="blue ta-c">{{(item.no).toString().padStart(3,'0')}}</td>
                             <td class="blue">{{item.item.a1}}</td>
                             <td><number-display :value="item.item.a2"></number-display></td>
                             <td><number-display :value="item.item.a3"></number-display></td>
@@ -50,7 +50,7 @@
                             </td>
                         </tr>
                         <tr v-for="(it,idx) in (item.subList)" :key="idx">
-                            <td class="blue">{{(it.no).toString().padStart(3,'0')}}</td>
+                            <td class="blue ta-c">{{(it.no).toString().padStart(3,'0')}}</td>
                             <td class="green"><input v-model="it.a1"></td>
                             <td class="green"><number-input v-model="it.a2" :fixed="fixed"></number-input></td>
                             <td class="green"><number-input v-model="it.a3" :fixed="fixed"></number-input></td>
@@ -140,6 +140,7 @@
                                     saved : false,
                                     no : ++i,
                                     parent : item,
+                                    tag: item.item.tag,
                                     a2 : 0,
                                     a3 : 0,
                                     a4 : 0,
@@ -200,12 +201,10 @@
                 if(!item.subList){
                     item.subList = [];
                 }
-
                 item.subList.push({
                     tag:item.item.tag,
                     saved:false,
                     parent: item,
-                    a1:"",
                     a2:0,
                     a3:0,
                     a4:0,

@@ -10,137 +10,137 @@
                         <td colspan="3" class="ta-c">一般企业成本支出明细表</td>
                     </tr>
                     <tr>
-                        <td class="blue">行次</td>
-                        <td class="blue">项目</td>
-                        <td class="blue">金额</td>
+                        <td class="blue ta-c">行次</td>
+                        <td class="blue ta-c">项目</td>
+                        <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
+                        <td class="blue ta-c">1</td>
                         <td class="blue">一、营业成本（2+9）</td>
                         <td><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">2</td>
+                        <td class="blue ta-c">2</td>
                         <td class="blue">（一）主营业务成本（3+5+6+7+8）</td>
                         <td><number-display :value="a2"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">3</td>
+                        <td class="blue ta-c">3</td>
                         <td class="blue">1.销售商品成本</td>
                         <td class="green"><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">4</td>
+                        <td class="blue ta-c">4</td>
                         <td class="blue">其中:非货币性资产交换成本</td>
                         <td class="green"><number-input v-model="a4" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">5</td>
+                        <td class="blue ta-c">5</td>
                         <td class="blue">2.提供劳务成本</td>
                         <td class="green"><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">6</td>
+                        <td class="blue ta-c">6</td>
                         <td class="blue">3.建造合同成本</td>
                         <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7</td>
+                        <td class="blue ta-c">7</td>
                         <td class="blue">4.让渡资产使用权成本</td>
                         <td class="green"><number-input v-model="a7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">8</td>
+                        <td class="blue ta-c">8</td>
                         <td class="blue">5.其他</td>
                         <td class="green"><number-input v-model="a8" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">9</td>
+                        <td class="blue ta-c">9</td>
                         <td class="blue">（二）其他业务成本（10+12+13+14+15）</td>
                         <td><number-display :value="a9"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">10</td>
+                        <td class="blue ta-c">10</td>
                         <td class="blue">1.材料销售成本</td>
                         <td class="green"><number-input v-model="a10" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">11</td>
+                        <td class="blue ta-c">11</td>
                         <td class="blue">其中：非货币性资产交换成本</td>
                         <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">12</td>
+                        <td class="blue ta-c">12</td>
                         <td class="blue">2.出租固定资产成本</td>
                         <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">13</td>
+                        <td class="blue ta-c">13</td>
                         <td class="blue">3.出租无形资产成本</td>
                         <td class="green"><number-input v-model="a13" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">14</td>
+                        <td class="blue ta-c">14</td>
                         <td class="blue">4.包装物出租成本</td>
                         <td class="green"><number-input v-model="a14" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">15</td>
+                        <td class="blue ta-c">15</td>
                         <td class="blue">5.其他</td>
                         <td class="green"><number-display :value="a15" :fixed="fixed"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">16</td>
+                        <td class="blue ta-c">16</td>
                         <td class="blue">二、营业外支出（17+18+19+20+21+22+23+24+25+26）</td>
                         <td><number-display :value="a16" :fixed="fixed"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">17</td>
+                        <td class="blue ta-c">17</td>
                         <td class="blue">（一）非流动资产处置损失</td>
                         <td class="green"><number-input v-model="a17" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">18</td>
+                        <td class="blue ta-c">18</td>
                         <td class="blue">（二）非货币性资产交换损失</td>
                         <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">19</td>
+                        <td class="blue ta-c">19</td>
                         <td class="blue">（三）债务重组损失</td>
                         <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">20</td>
+                        <td class="blue ta-c">20</td>
                         <td class="blue">（四）非常损失</td>
                         <td class="green"><number-input v-model="a20" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">21</td>
+                        <td class="blue ta-c">21</td>
                         <td class="blue">（五）捐赠支出</td>
                         <td class="green"><number-display :value="a21"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">22</td>
+                        <td class="blue ta-c">22</td>
                         <td class="blue">（六）赞助支出</td>
                         <td class="green"><number-display :value="a22"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">23</td>
+                        <td class="blue ta-c">23</td>
                         <td class="blue">（七）罚没支出</td>
                         <td class="green"><number-display :value="a23"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">24</td>
+                        <td class="blue ta-c">24</td>
                         <td class="blue">（八）坏账损失</td>
                         <td class="green"><number-input v-model="a24" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">25</td>
+                        <td class="blue ta-c">25</td>
                         <td class="blue">（九）无法收回的债券股权投资损失</td>
                         <td class="green"><number-input v-model="a25" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">26</td>
+                        <td class="blue ta-c">26</td>
                         <td class="blue">（十）其他</td>
                         <td class="green"><number-display :value="a26"></number-display></td>
                     </tr>

@@ -70,7 +70,7 @@
                         </td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">{{(index+1).toString().padStart(3, "0")}}</td>
+                        <td class="blue ta-c">{{(index+1).toString().padStart(3, "0")}}</td>
                         <td class="green"><input v-model="item.a1"></td>
                         <td class="green">
                             <el-select v-model="item.a2" placeholder="请选择">
@@ -125,7 +125,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -175,10 +175,16 @@
                     var a9=0;
                     var a15=0;
                     var a16=0;
+                    
                     val.forEach(item=>{
                         if(item.saved === undefined){
                             item.saved = true;
                         }
+                        item.a9 = Math.min(item.a7,item.a8);
+                        item.a12 = item.a3 * item.a11 * 1.0 / Math.pow(10,this.fixed);
+                        item.a13 = (item.a10 * Math.pow(10,this.fixed) - item.a12 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                        item.a15 = Math.min(item.a13,item.a14);
+                        item.a16 = (item.a6 * Math.pow(10,this.fixed) + item.a9 * Math.pow(10,this.fixed) + item.a15 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                         a6 += item.a6;
                         a9 += item.a9;
                         a15 += item.a15;

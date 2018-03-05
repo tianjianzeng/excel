@@ -51,7 +51,7 @@
                         </td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
+                        <td class="blue ta-c">{{(index+1).toString().padStart(3,"0")}}</td>
                         <td class="green"><input v-model="item.a1"></td>
                         <td class="green"><el-date-picker v-model="item.a2" type="date" placeholder="选择日期"></el-date-picker></td>
                         <td class="green"><el-date-picker v-model="item.a3s" type="date" placeholder="选择日期"></el-date-picker></td>
