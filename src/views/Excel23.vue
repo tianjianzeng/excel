@@ -58,12 +58,12 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">6</td>
-                        <td class="blue" colspan="3">其中：产品（服务）收入</td>
+                        <td class="blue ti-2" colspan="3">其中：产品（服务）收入</td>
                         <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">7</td>
-                        <td class="blue" colspan="3">技术性收入</td>
+                        <td class="blue ti-4" colspan="3">技术性收入</td>
                         <td class="green"><number-input v-model="a7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -110,62 +110,62 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">16</td>
-                        <td class="blue" colspan="3">（一）内部研究开发投入（17+18+19+20+21+22+24）</td>
+                        <td class="blue ti-2" colspan="3">（一）内部研究开发投入（17+18+19+20+21+22+24）</td>
                         <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">17</td>
-                        <td class="blue" colspan="3">1.人员人工</td>
+                        <td class="blue ti-4" colspan="3">1.人员人工</td>
                         <td class="green"><number-input v-model="a17" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">18</td>
-                        <td class="blue" colspan="3">2.直接投入</td>
+                        <td class="blue ti-4" colspan="3">2.直接投入</td>
                         <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">19</td>
-                        <td class="blue" colspan="3">3.折旧费用与长期费用摊销</td>
+                        <td class="blue ti-4" colspan="3">3.折旧费用与长期费用摊销</td>
                         <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">20</td>
-                        <td class="blue" colspan="3">4.设计费用</td>
+                        <td class="blue ti-4" colspan="3">4.设计费用</td>
                         <td class="green"><number-input v-model="a20" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">21</td>
-                        <td class="blue" colspan="3">5.装备调试费</td>
+                        <td class="blue ti-4" colspan="3">5.装备调试费</td>
                         <td class="green"><number-input v-model="a21" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">22</td>
-                        <td class="blue" colspan="3">6.无形资产摊销</td>
+                        <td class="blue ti-4" colspan="3">6.无形资产摊销</td>
                         <td class="green"><number-input v-model="a22" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">23</td>
-                        <td class="blue" colspan="3">7.其他费用</td>
+                        <td class="blue ti-4" colspan="3">7.其他费用</td>
                         <td class="green"><number-input v-model="a23" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">24</td>
-                        <td class="blue" colspan="3">其中：可计入研发费用的其他费用</td>
+                        <td class="blue ti-6" colspan="3">其中：可计入研发费用的其他费用</td>
                         <td class="green"><number-input v-model="a24" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">25</td>
-                        <td class="blue" colspan="3">（二）委托外部研究开发费用（26+27）</td>
+                        <td class="blue ti-2" colspan="3">（二）委托外部研究开发费用（26+27）</td>
                         <td><number-display :value="a25"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">26</td>
-                        <td class="blue" colspan="3">1.境内的外部研发费</td>
+                        <td class="blue ti-4" colspan="3">1.境内的外部研发费</td>
                         <td class="green"><number-input v-model="a26" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">27</td>
-                        <td class="blue" colspan="3">2.境外的外部研发费</td>
+                        <td class="blue ti-4" colspan="3">2.境外的外部研发费</td>
                         <td class="green"><number-input v-model="a27" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -302,6 +302,7 @@
                 return (num*100).toFixed(fixed) + '%';
             },
             save(){
+
                 let postData = {
                     "id":this.id
                 };
@@ -313,7 +314,19 @@
                         postData[q]=this[q];
                     }
                 }
-                
+
+                if(!postData.a1_1){
+                    window.root && window.root.$emit("bizError",'高新技术企业证书编号为必填项');
+                    return;
+                }
+                if(!postData.a1_2){
+                    window.root && window.root.$emit("bizError",'高新技术企业证书取得时间为必填项');
+                    return;
+                }
+                if(!postData.a2_1){
+                    window.root && window.root.$emit("bizError",'产品（服务）属于《国家重点支持的高新技术领域》规定的范围（填写具体范围名称）	为必填项');
+                    return;
+                }
                 const loading = this.$loading({
                     lock: true,
                     text: '加载中',

@@ -28,7 +28,8 @@
                         <td class="blue ta-c" rowspan="2">综合利用的资源占生产产品材料的比例</td>
                         <td class="blue ta-c" rowspan="2">《资源综合利用企业所得税优惠目录》规定的标准</td>
                         <td class="blue ta-c" rowspan="2">符合条件的综合利用资源生产产品取得的收入总额</td>
-                        <td class="blue ta-c" rowspan="2" colspan="2">综合利用资源减计收入</td>
+                        <td class="blue ta-c" rowspan="2">综合利用资源减计收入</td>
+                        <td rowspan="2"></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">《资源综合利用认定证书》取得时间</td>
@@ -71,16 +72,16 @@
                         </td>
                     </tr><tr>
                         <td class="blue"></td>
-                        <td class="blue">合计</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">合计</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td colspan="2"><number-display :value="total.a10"></number-display></td>
                     </tr>
                 </tbody>
@@ -194,6 +195,14 @@
                 }
             },
             edt(item){
+                if(item.a7_<0 || item.a7_>100000000){
+                    window.root && window.root.$emit("bizError",'综合利用的资源占生产产品材料的比例应介于0~1');
+                    return;
+                }
+                if(item.a8_<0 || item.a8_>100000000){
+                    window.root && window.root.$emit("bizError",'《资源综合利用企业所得税优惠目录》规定的标准应介于0~1');
+                    return;
+                }
                 //调用编辑接口
                 const loading = this.$loading({
                     lock: true,
@@ -213,8 +222,8 @@
                         a4: item.a4,
                         a5: item.a5,
                         a6: item.a6,
-                        a7: this.toPercent(item.a7_),
-                        a8: this.toPercent(item.a8_),
+                        a7: this.toPercent(item.a7_/100000000),
+                        a8: this.toPercent(item.a8_/100000000),
                         a9: item.a9,
                         addid: 1,
                         id: item.id      
@@ -233,6 +242,14 @@
                 });
             },
             sav(item){
+                if(item.a7_<0 || item.a7_>100000000){
+                    window.root && window.root.$emit("bizError",'综合利用的资源占生产产品材料的比例应介于0~1');
+                    return;
+                }
+                if(item.a8_<0 || item.a8_>100000000){
+                    window.root && window.root.$emit("bizError",'《资源综合利用企业所得税优惠目录》规定的标准应介于0~1');
+                    return;
+                }
                 //保存接口
                 const loading = this.$loading({
                     lock: true,
@@ -252,8 +269,8 @@
                         a4: item.a4,
                         a5: item.a5,
                         a6: item.a6,
-                        a7: this.toPercent(item.a7_),
-                        a8: this.toPercent(item.a8_),
+                        a7: this.toPercent(item.a7_/100000000),
+                        a8: this.toPercent(item.a8_/100000000),
                         a9: item.a9.toString(),
                         userId: 1                   
                     },

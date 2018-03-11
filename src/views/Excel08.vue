@@ -48,7 +48,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">2</td>
-                        <td class="blue">（一）租金</td>
+                        <td class="blue ti-2">（一）租金</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_3" :fixed="fixed"></number-input></td>
@@ -58,7 +58,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">3</td>
-                        <td class="blue">（二）利息</td>
+                        <td class="blue ti-2">（二）利息</td>
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_3" :fixed="fixed"></number-input></td>
@@ -68,7 +68,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">4</td>
-                        <td class="blue">（三）特许权使用费</td>
+                        <td class="blue ti-2">（三）特许权使用费</td>
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_3" :fixed="fixed"></number-input></td>
@@ -88,17 +88,17 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">6</td>
-                        <td class="blue">（一）分期收款方式销售货物收入</td>
+                        <td class="blue ti-2">（一）分期收款方式销售货物收入</td>
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_4" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_5" :fixed="fixed"></number-input></td>
-                        <td><number-display :value="a6_1"></number-display></td>
+                        <td><number-display :value="a6_6"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">7</td>
-                        <td class="blue">（二）持续时间超过12个月的建造合同收入</td>
+                        <td class="blue ti-2">（二）持续时间超过12个月的建造合同收入</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_3" :fixed="fixed"></number-input></td>
@@ -108,7 +108,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">8</td>
-                        <td class="blue">（三）其他分期确认收入</td>
+                        <td class="blue ti-2">（三）其他分期确认收入</td>
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_3" :fixed="fixed"></number-input></td>
@@ -128,7 +128,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">10</td>
-                        <td class="blue">（一）与收益相关的政府补助</td>
+                        <td class="blue ti-2">（一）与收益相关的政府补助</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_3" :fixed="fixed"></number-input></td>
@@ -138,7 +138,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">11</td>
-                        <td class="blue">（二）与资产相关的政府补助</td>
+                        <td class="blue ti-2">（二）与资产相关的政府补助</td>
                         <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_3" :fixed="fixed"></number-input></td>
@@ -148,7 +148,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">12</td>
-                        <td class="blue">（三）其他</td>
+                        <td class="blue ti-2">（三）其他</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_3" :fixed="fixed"></number-input></td>
@@ -363,28 +363,28 @@
             a9_2(){
                 let rst = 0;
                 for(var i=10;i<=12;i++){
-                    rst += this[`a${i}_1`] * Math.pow(10, this.fixed);
+                    rst += this[`a${i}_2`] * Math.pow(10, this.fixed);
                 }
                 return rst * 1.0 / Math.pow(10, this.fixed);
             },
             a9_3(){
                 let rst = 0;
                 for(var i=10;i<=12;i++){
-                    rst += this[`a${i}_1`] * Math.pow(10, this.fixed);
+                    rst += this[`a${i}_3`] * Math.pow(10, this.fixed);
                 }
                 return rst * 1.0 / Math.pow(10, this.fixed);
             },
             a9_4(){
                 let rst = 0;
                 for(var i=10;i<=12;i++){
-                    rst += this[`a${i}_1`] * Math.pow(10, this.fixed);
+                    rst += this[`a${i}_4`] * Math.pow(10, this.fixed);
                 }
                 return rst * 1.0 / Math.pow(10, this.fixed);
             },
             a9_5(){
                 let rst = 0;
                 for(var i=10;i<=12;i++){
-                    rst += this[`a${i}_1`] * Math.pow(10, this.fixed);
+                    rst += this[`a${i}_5`] * Math.pow(10, this.fixed);
                 }
                 return rst * 1.0 / Math.pow(10, this.fixed);
             },

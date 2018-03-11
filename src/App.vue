@@ -23,6 +23,16 @@
         text-align: center;
         color: #2c3e50;
     }
+
+    .ti-2{
+        padding-left: 2em;
+    }
+    .ti-4{
+        padding-left: 4em;
+    }
+    .ti-6{
+        padding-left: 6em;
+    }
     
     .excel {
         width: 98%;
@@ -106,6 +116,9 @@
             &.ta-c{
                 text-align: center;
                 padding-left: 0;
+            }
+            &.ta-r{
+                text-align: right;
             }
         }
         tr{

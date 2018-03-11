@@ -66,16 +66,16 @@
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue ta-c">{{item.rowNum}}</td>
-                        <td class="blue ta-c"><span v-if="item.a1==null">合计（1+2+3+4+5+6）</span><span v-else>{{item.a1|formatYear}}</span></td>
-                        <td :class="{'green':item.a1!=null,'blue':item.a1==null}"><span v-if="item.a1==null">*</span><span>{{item.a1}}</span></td>
+                        <td class="blue ta-c"><span v-if="item.a1==null">合计（1+2+3+4+5+6）</span><span v-else>{{index|formatYear}}</span></td>
+                        <td :class="{'green ta-c':item.a1!=null,'blue ta-c':item.a1==null}"><span v-if="item.a1==null">*</span><span>{{item.a1}}</span></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :value="item.a2"></number-display><number-input v-else v-model="item.a2" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a2" :value="item.a3"></number-display><number-input v-else v-model="item.a3" :max="item.a2" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a3" :value="item.a4"></number-display><number-input v-else v-model="item.a4" :max="item.a3" :fixed="fixed"></number-input></td>
-                        <td :class="{'green':item.a5!=null,'blue':item.a5==null}"><span v-if="item.a5==null">*</span><number-input v-else v-model="item.a5" :fixed="fixed"></number-input></td>
-                        <td :class="{'green':item.a6!=null,'blue':item.a6==null}"><span v-if="item.a6==null">*</span><number-input v-else v-model="item.a6" :fixed="fixed"></number-input></td>
-                        <td :class="{'green':item.a7!=null,'blue':item.a7==null}"><span v-if="item.a7==null">*</span><number-input v-else v-model="item.a7" :fixed="fixed"></number-input></td>
-                        <td :class="{'green':item.a8!=null,'blue':item.a8==null}"><span v-if="item.a8==null">*</span><number-input v-else v-model="item.a8" :fixed="fixed"></number-input></td>
-                        <td :class="{'green':item.a9!=null,'blue':item.a9==null}"><span v-if="item.a9==null">*</span><number-input v-else v-model="item.a9" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a5!=null,'blue ta-c':item.a5==null}"><span v-if="item.a5==null">*</span><number-input v-else v-model="item.a5" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a6!=null,'blue ta-c':item.a6==null}"><span v-if="item.a6==null">*</span><number-input v-else v-model="item.a6" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a7!=null,'blue ta-c':item.a7==null}"><span v-if="item.a7==null">*</span><number-input v-else v-model="item.a7" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a8!=null,'blue ta-c':item.a8==null}"><span v-if="item.a8==null">*</span><number-input v-else v-model="item.a8" :fixed="fixed"></number-input></td>
+                        <td :class="{'green':item.a9!=null,'blue ta-c':item.a9==null}"><span v-if="item.a9==null">*</span><number-input v-else v-model="item.a9" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a3" :value="item.a10"></number-display><number-input v-else v-model="item.a10" :max="item.a3" :fixed="fixed"></number-input></td>
                         <td :class="{'green':index!=6}"><number-display v-if="index==6" :min="0" :max="item.a10" :value="item.a11"></number-display><number-input v-else v-model="item.a11" :max="item.a10" :fixed="fixed"></number-input></td>
                         <td><number-display :value="item.a12"></number-display></td>

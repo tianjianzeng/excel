@@ -52,7 +52,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">2</td>
-                        <td style="width:25%" class="blue">其中：以非货币性资产清偿债务</td>
+                        <td style="width:25%" class="blue ti-2">其中：以非货币性资产清偿债务</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a2_3"></number-display></td>
@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">3</td>
-                        <td style="width:25%" class="blue">债转股</td>
+                        <td style="width:25%" class="blue ti-4">债转股</td>
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a3_3"></number-display></td>
@@ -85,7 +85,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">5</td>
-                        <td style="width:25%" class="blue">其中：涉及跨境重组的股权收购</td>
+                        <td style="width:25%" class="blue ti-2">其中：涉及跨境重组的股权收购</td>
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a5_3"></number-display></td>
@@ -107,7 +107,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">7</td>
-                        <td style="width:25%" class="blue">其中：涉及跨境重组的资产收购</td>
+                        <td style="width:25%" class="blue ti-2">其中：涉及跨境重组的资产收购</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a7_3"></number-display></td>
@@ -129,7 +129,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">9</td>
-                        <td style="width:25%" class="blue">其中：同一控制下企业合并</td>
+                        <td style="width:25%" class="blue ti-2">其中：同一控制下企业合并</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a9_3"></number-display></td>
@@ -140,7 +140,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">10</td>
-                        <td style="width:25%" class="blue">非同一控制下企业合并</td>
+                        <td style="width:25%" class="blue ti-4">非同一控制下企业合并</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a10_3"></number-display></td>
@@ -173,7 +173,7 @@
                     </tr>
                     <tr>
                         <td style="width:5%" class="blue ta-c">13</td>
-                        <td style="width:25%" class="blue">其中：以非货币性资产对外投资</td>
+                        <td style="width:25%" class="blue ti-2">其中：以非货币性资产对外投资</td>
                         <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a13_3"></number-display></td>

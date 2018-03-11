@@ -21,37 +21,37 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">2</td>
-                        <td class="blue">（一）搬迁补偿收入（3+4+5+6+7）</td>
+                        <td class="blue ti-2">（一）搬迁补偿收入（3+4+5+6+7）</td>
                         <td><number-display :value="a2"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">3</td>
-                        <td class="blue">1.对被征用资产价值的补偿</td>
+                        <td class="blue ti-4">1.对被征用资产价值的补偿</td>
                         <td class="green"><number-input v-model="a3" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">4</td>
-                        <td class="blue">2.因搬迁、安置而给予的补偿</td>
+                        <td class="blue ti-4">2.因搬迁、安置而给予的补偿</td>
                         <td class="green"><number-input v-model="a4" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">5</td>
-                        <td class="blue">3.对停产停业形成的损失而给予的补偿</td>
+                        <td class="blue ti-4">3.对停产停业形成的损失而给予的补偿</td>
                         <td class="green"><number-input v-model="a5" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">6</td>
-                        <td class="blue">4.资产搬迁过程中遭到毁损而取得的保险赔款</td>
+                        <td class="blue ti-4">4.资产搬迁过程中遭到毁损而取得的保险赔款</td>
                         <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">7</td>
-                        <td class="blue">5.其他补偿收入</td>
+                        <td class="blue ti-4">5.其他补偿收入</td>
                         <td class="green"><number-input v-model="a7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">8</td>
-                        <td class="blue">（二）搬迁资产处置收入</td>
+                        <td class="blue ti-2">（二）搬迁资产处置收入</td>
                         <td class="green"><number-input v-model="a8" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -61,37 +61,37 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">10</td>
-                        <td class="blue">（一）搬迁费用支出(11+12+13+14+15)</td>
+                        <td class="blue ti-2">（一）搬迁费用支出(11+12+13+14+15)</td>
                         <td><number-display :value="a10"></number-display></td>
                     </tr>      
                     <tr>
                         <td class="blue ta-c">11</td>
-                        <td class="blue">1.安置职工实际发生的费用</td>
+                        <td class="blue ti-4">1.安置职工实际发生的费用</td>
                         <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">12</td>
-                        <td class="blue">2.停工期间支付给职工的工资及福利费</td>
+                        <td class="blue ti-4">2.停工期间支付给职工的工资及福利费</td>
                         <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">13</td>
-                        <td class="blue">3.临时存放搬迁资产而发生的费用</td>
+                        <td class="blue ti-4">3.临时存放搬迁资产而发生的费用</td>
                         <td class="green"><number-input v-model="a13" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">14</td>
-                        <td class="blue">4.各类资产搬迁安装费用</td>
+                        <td class="blue ti-4">4.各类资产搬迁安装费用</td>
                         <td class="green"><number-input v-model="a14" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">15</td>
-                        <td class="blue">5.其他与搬迁相关的费用</td>
+                        <td class="blue ti-4">5.其他与搬迁相关的费用</td>
                         <td class="green"><number-input v-model="a15" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">16</td>
-                        <td class="blue">（二）搬迁资产处置支出</td>
+                        <td class="blue ti-2">（二）搬迁资产处置支出</td>
                         <td class="green"><number-input v-model="a16" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
@@ -106,17 +106,17 @@
                     </tr>  
                     <tr>
                         <td class="blue ta-c">19</td>
-                        <td class="blue">其中：搬迁所得</td>
+                        <td class="blue ti-4">其中：搬迁所得</td>
                         <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">20</td>
-                        <td class="blue">搬迁损失一次性扣除</td>
+                        <td class="blue ti-6">搬迁损失一次性扣除</td>
                         <td class="green"><number-input v-model="a20" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">21</td>
-                        <td class="blue">搬迁损失分期扣除</td>
+                        <td class="blue ti-6">搬迁损失分期扣除</td>
                         <td class="green"><number-input v-model="a21" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>

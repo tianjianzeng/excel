@@ -32,49 +32,49 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">2</td>
-                        <td class="blue">（一）正常经营管理活动中，按照公允价格销售、转让、变卖非货币资产的损失</td>
+                        <td class="blue ti-2">（一）正常经营管理活动中，按照公允价格销售、转让、变卖非货币资产的损失</td>
                         <td class="green"><number-input v-model="a2_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a2_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">3</td>
-                        <td class="blue">（二）存货发生的正常损耗</td>
+                        <td class="blue ti-2">（二）存货发生的正常损耗</td>
                         <td class="green"><number-input v-model="a3_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a3_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">4</td>
-                        <td class="blue">（三）固定资产达到或超过使用年限而正常报废清理的损失</td>
+                        <td class="blue ti-2">（三）固定资产达到或超过使用年限而正常报废清理的损失</td>
                         <td class="green"><number-input v-model="a4_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a4_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">5</td>
-                        <td class="blue">（四）生产性生物资产达到或超过使用年限而正常死亡发生的资产损失</td>
+                        <td class="blue ti-2">（四）生产性生物资产达到或超过使用年限而正常死亡发生的资产损失</td>
                         <td class="green"><number-input v-model="a5_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a5_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">6</td>
-                        <td class="blue">（五）按照市场公平交易原则，通过各种交易场所、市场等买卖债券、股票、期货、基金以及金融衍生产品等发生的损失</td>
+                        <td class="blue ti-2">（五）按照市场公平交易原则，通过各种交易场所、市场等买卖债券、股票、期货、基金以及金融衍生产品等发生的损失</td>
                         <td class="green"><number-input v-model="a6_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a6_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">7</td>
-                        <td class="blue">（六）分支机构上报的资产损失</td>
+                        <td class="blue ti-2">（六）分支机构上报的资产损失</td>
                         <td class="green"><number-input v-model="a7_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a7_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">8</td>
-                        <td class="blue">（七）其他</td>
+                        <td class="blue ti-2">（七）其他</td>
                         <td class="green"><number-input v-model="a8_1" :min="0" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_2" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a8_3"></number-display></td>
@@ -88,28 +88,28 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">10</td>
-                        <td class="blue">（一）货币资产损失（填写A105091）</td>
+                        <td class="blue ti-2">（一）货币资产损失（填写A105091）</td>
                         <td><number-display :value="a10_1"></number-display></td>
                         <td><number-display :value="a10_2"></number-display></td>
                         <td><number-display :value="a10_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">11</td>
-                        <td class="blue">（二）非货币资产损失（填写A105091）</td>
+                        <td class="blue ti-2">（二）非货币资产损失（填写A105091）</td>
                         <td><number-display :value="a11_1"></number-display></td>
                         <td><number-display :value="a11_2"></number-display></td>
                         <td><number-display :value="a11_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">12</td>
-                        <td class="blue">（三）投资损失（填写A105091）</td>
+                        <td class="blue ti-2">（三）投资损失（填写A105091）</td>
                         <td><number-display :value="a12_1"></number-display></td>
                         <td><number-display :value="a12_2"></number-display></td>
                         <td><number-display :value="a12_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">13</td>
-                        <td class="blue">（四）其他（填写A105091）</td>
+                        <td class="blue ti-2">（四）其他（填写A105091）</td>
                         <td><number-display :value="a13_1"></number-display></td>
                         <td><number-display :value="a13_2"></number-display></td>
                         <td><number-display :value="a13_3"></number-display></td>

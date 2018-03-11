@@ -38,17 +38,17 @@
                     <tr>
                         <td class="blue ta-c" style="width:5%">1</td>
                         <td class="blue" style="width:25%">一、农、林、牧、渔业项目(2+13)</td>  
-                        <td style="width:10%"><div><number-display :value="a1_1"></number-display></div></td>
-                        <td style="width:10%"><div><number-display :value="a1_2"></number-display></div></td>
-                        <td style="width:10%"><div><number-display :value="a1_3"></number-display></div></td>
-                        <td style="width:10%"><div><number-display :value="a1_4"></number-display></div></td>
-                        <td style="width:10%"><div><number-display :value="a1_5"></number-display></div></td>
-                        <td style="width:10%"><div><number-display :value="a1_6"></number-display></div></td>
-                        <td style="width:10%"><div><number-display :value="a1_7"></number-display></div></td>    
+                        <td><div><number-display :value="a1_1"></number-display></div></td>
+                        <td><div><number-display :value="a1_2"></number-display></div></td>
+                        <td><div><number-display :value="a1_3"></number-display></div></td>
+                        <td><div><number-display :value="a1_4"></number-display></div></td>
+                        <td><div><number-display :value="a1_5"></number-display></div></td>
+                        <td><div><number-display :value="a1_6"></number-display></div></td>
+                        <td><div><number-display :value="a1_7"></number-display></div></td>    
                     </tr>
                     <tr>
                         <td class="blue ta-c">2</td>
-                        <td class="blue">（一）免税项目（3+4+5+6+7+8+9+11+12)</td>  
+                        <td class="blue ti-2">（一）免税项目（3+4+5+6+7+8+9+11+12)</td>  
                         <td><div><number-display :value="a2_1"></number-display></div></td>
                         <td><div><number-display :value="a2_2"></number-display></div></td>
                         <td><div><number-display :value="a2_3"></number-display></div></td>
@@ -59,7 +59,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">3</td>
-                        <td class="blue">1.蔬菜、谷物、薯类、油料、豆类、棉花、麻类、糖料、水果、坚果的种植项目</td>  
+                        <td class="blue ti-4">1.蔬菜、谷物、薯类、油料、豆类、棉花、麻类、糖料、水果、坚果的种植</td>  
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_3" :fixed="fixed"></number-input></td>
@@ -70,7 +70,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">4</td>
-                        <td class="blue">2.农作物新品种的选育</td>  
+                        <td class="blue ti-4">2.农作物新品种的选育</td>  
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_3" :fixed="fixed"></number-input></td>
@@ -81,7 +81,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">5</td>
-                        <td class="blue">3.中药材的种植</td>  
+                        <td class="blue ti-4">3.中药材的种植</td>  
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_3" :fixed="fixed"></number-input></td>
@@ -92,7 +92,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">6</td>
-                        <td class="blue">4.林木的培育和种植</td>  
+                        <td class="blue ti-4">4.林木的培育和种植</td>  
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_3" :fixed="fixed"></number-input></td>
@@ -103,7 +103,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">7</td>
-                        <td class="blue">5.牲畜、家禽的饲养</td>  
+                        <td class="blue ti-4">5.牲畜、家禽的饲养</td>  
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_3" :fixed="fixed"></number-input></td>
@@ -114,7 +114,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">8</td>
-                        <td class="blue">6.林产品的采集</td>  
+                        <td class="blue ti-4">6.林产品的采集</td>  
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_3" :fixed="fixed"></number-input></td>
@@ -125,7 +125,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">9</td>
-                        <td class="blue">7.灌溉、农产品初加工、兽医、农技推广、农机作业和维修等农、林、牧、渔服务业项目</td>  
+                        <td class="blue ti-4">7.灌溉、农产品初加工、兽医、农技推广、农机作业和维修等农、林、牧、渔服务业项目</td>  
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_3" :fixed="fixed"></number-input></td>
@@ -136,7 +136,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">10</td>
-                        <td class="blue">其中：农产品初加工</td>  
+                        <td class="blue ti-6">其中：农产品初加工</td>  
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_3" :fixed="fixed"></number-input></td>
@@ -147,7 +147,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">11</td>
-                        <td class="blue">8.远洋捕捞</td>  
+                        <td class="blue ti-4">8.远洋捕捞</td>  
                         <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_3" :fixed="fixed"></number-input></td>
@@ -158,7 +158,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">12</td>
-                        <td class="blue">9.其他</td>  
+                        <td class="blue ti-4">9.其他</td>  
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_3" :fixed="fixed"></number-input></td>
@@ -169,7 +169,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">13</td>
-                        <td class="blue">（二）减半征税项目（14+15+16）</td>  
+                        <td class="blue ti-2">（二）减半征税项目（14+15+16）</td>  
                         <td><div><number-display :value="a13_1"></number-display></div></td>
                         <td><div><number-display :value="a13_2"></number-display></div></td>
                         <td><div><number-display :value="a13_3"></number-display></div></td>
@@ -180,7 +180,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">14</td>
-                        <td class="blue">1.花卉、茶以及其他饮料作物和香料作物的种植</td>  
+                        <td class="blue ti-4">1.花卉、茶以及其他饮料作物和香料作物的种植</td>  
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a14_3" :fixed="fixed"></number-input></td>
@@ -191,7 +191,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">15</td>
-                        <td class="blue">2.海水养殖、内陆养殖</td>  
+                        <td class="blue ti-4">2.海水养殖、内陆养殖</td>  
                         <td class="green"><number-input v-model="a15_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_3" :fixed="fixed"></number-input></td>
@@ -202,7 +202,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">16</td>
-                        <td class="blue">3.其他</td>  
+                        <td class="blue ti-4">3.其他</td>  
                         <td class="green"><number-input v-model="a16_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_3" :fixed="fixed"></number-input></td>
@@ -224,7 +224,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">18</td>
-                        <td class="blue">（一）港口码头项目</td>  
+                        <td class="blue ti-2">（一）港口码头项目</td>  
                         <td class="green"><number-input v-model="a18_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_3" :fixed="fixed"></number-input></td>
@@ -235,7 +235,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">19</td>
-                        <td class="blue">（二）机场项目</td>
+                        <td class="blue ti-2">（二）机场项目</td>
                         <td class="green"><number-input v-model="a19_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_3" :fixed="fixed"></number-input></td>
@@ -246,7 +246,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">20</td>
-                        <td class="blue">（三）铁路项目</td>
+                        <td class="blue ti-2">（三）铁路项目</td>
                         <td class="green"><number-input v-model="a20_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a20_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a20_3" :fixed="fixed"></number-input></td>
@@ -257,7 +257,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">21</td>
-                        <td class="blue">（四）公路项目</td>
+                        <td class="blue ti-2">（四）公路项目</td>
                         <td class="green"><number-input v-model="a21_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a21_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a21_3" :fixed="fixed"></number-input></td>
@@ -268,7 +268,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">22</td>
-                        <td class="blue">（五）城市公共交通项目</td>
+                        <td class="blue ti-2">（五）城市公共交通项目</td>
                         <td class="green"><number-input v-model="a22_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a22_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a22_3" :fixed="fixed"></number-input></td>
@@ -279,7 +279,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">23</td>
-                        <td class="blue">（六）电力项目</td>
+                        <td class="blue ti-2">（六）电力项目</td>
                         <td class="green"><number-input v-model="a23_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a23_3" :fixed="fixed"></number-input></td>
@@ -290,7 +290,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">24</td>
-                        <td class="blue">（七）水利项目</td>
+                        <td class="blue ti-2">（七）水利项目</td>
                         <td class="green"><number-input v-model="a24_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_3" :fixed="fixed"></number-input></td>
@@ -301,7 +301,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">25</td>
-                        <td class="blue">（八）其他项目</td>
+                        <td class="blue ti-2">（八）其他项目</td>
                         <td class="green"><number-input v-model="a25_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a25_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a25_3" :fixed="fixed"></number-input></td>
@@ -323,7 +323,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">27</td>
-                        <td class="blue">（一）公共污水处理项目</td>
+                        <td class="blue ti-2">（一）公共污水处理项目</td>
                         <td class="green"><number-input v-model="a27_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a27_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a27_3" :fixed="fixed"></number-input></td>
@@ -334,7 +334,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">28</td>
-                        <td class="blue">（二）公共垃圾处理项目</td>
+                        <td class="blue ti-2">（二）公共垃圾处理项目</td>
                         <td class="green"><number-input v-model="a28_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a28_3" :fixed="fixed"></number-input></td>
@@ -345,7 +345,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">29</td>
-                        <td class="blue">（三）沼气综合开发利用项目</td>
+                        <td class="blue ti-2">（三）沼气综合开发利用项目</td>
                         <td class="green"><number-input v-model="a29_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a29_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a29_3" :fixed="fixed"></number-input></td>
@@ -356,7 +356,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">30</td>
-                        <td class="blue">（四）节能减排技术改造项目</td>
+                        <td class="blue ti-2">（四）节能减排技术改造项目</td>
                         <td class="green"><number-input v-model="a30_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a30_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a30_3" :fixed="fixed"></number-input></td>
@@ -367,7 +367,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">31</td>
-                        <td class="blue">（五）海水淡化项目</td>
+                        <td class="blue ti-2">（五）海水淡化项目</td>
                         <td class="green"><number-input v-model="a31_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a31_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a31_3" :fixed="fixed"></number-input></td>
@@ -378,7 +378,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">32</td>
-                        <td class="blue">（六）其他项目</td>
+                        <td class="blue ti-2">（六）其他项目</td>
                         <td class="green"><number-input v-model="a32_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a32_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a32_3" :fixed="fixed"></number-input></td>
@@ -400,7 +400,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">34</td>
-                        <td class="blue">（一）技术转让所得不超过500万元部分</td>
+                        <td class="blue ti-2">（一）技术转让所得不超过500万元部分</td>
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
@@ -411,7 +411,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">35</td>
-                        <td class="blue">（二）技术转让所得超过500万元部分</td>
+                        <td class="blue ti-2">（二）技术转让所得超过500万元部分</td>
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
                         <td class="blue"><div>*</div></td>
@@ -433,7 +433,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">37</td>
-                        <td class="blue">（一）实施清洁发展机制项目</td>
+                        <td class="blue ti-2">（一）实施清洁发展机制项目</td>
                         <td class="green"><number-input v-model="a37_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a37_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a37_3" :fixed="fixed"></number-input></td>
@@ -444,7 +444,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">38</td>
-                        <td class="blue">（二）符合条件的节能服务公司实施合同能源管理项目</td>
+                        <td class="blue ti-2">（二）符合条件的节能服务公司实施合同能源管理项目</td>
                         <td class="green"><number-input v-model="a38_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a38_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a38_3" :fixed="fixed"></number-input></td>
@@ -455,7 +455,7 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">39</td>
-                        <td class="blue">（三）其他</td>
+                        <td class="blue ti-2">（三）其他</td>
                         <td class="green"><number-input v-model="a39_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a39_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a39_3" :fixed="fixed"></number-input></td>
@@ -1000,9 +1000,9 @@
                 this.a16_7 = newVal * 0.5;
             },
             a33_6(newVal){
-                this.a34_7 = 5000000;
-                this.a35_7 = (newVal-5000000)/2;
-                if(newVal<=5000000){
+                this.a34_7 = 500000000;
+                this.a35_7 = (newVal-500000000)/2;
+                if(newVal<=500000000){
                     this.a34_7 = newVal;
                     this.a35_7 = 0;
                 }

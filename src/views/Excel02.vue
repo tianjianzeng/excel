@@ -23,29 +23,29 @@
                     </tr>
                     <tr>
                         <td class="blue">101汇总纳税企业</td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a101" :label="0" disabled>总机构</el-radio></td> 
-                        <td colspan="3"><el-radio class="radio" v-model="item.a101" :label="1" disabled>按比例缴纳总机构</el-radio></td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a101" :label="2" disabled>否</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a101" :label="0" disabled>总机构</el-radio></td> 
+                        <td colspan="3" class="green"><el-radio class="radio" v-model="item.a101" :label="1" disabled>按比例缴纳总机构</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a101" :label="2" disabled>否</el-radio></td> 
                     </tr>
                     <tr>
                         <td class="blue">102注册资本（万元）</td> 
                         <td class="green"><number-input v-model="item.a102" :fixed="fixed" :min="100"></number-input></td> 
                         <td class="blue" colspan="2">106境外中资控股居民企业</td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a106" :label="0">是</el-radio></td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a106" :label="1">否</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a106" :label="0">是</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a106" :label="1">否</el-radio></td> 
                     </tr>
                     <tr>
                         <td class="blue">103所属行业明细代码</td> 
                         <td>{{item.a103}}</td> 
                         <td class="blue" colspan="2">107从事国家非限制和禁止行业</td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a107" :label="0" disabled>是</el-radio></td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a107" :label="1" disabled>否</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a107" :label="0" disabled>是</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a107" :label="1" disabled>否</el-radio></td> 
                     </tr>
                     <tr>
                         <td class="blue">104从业人数 </td> 
                         <td class="green"><number-input v-model="item.a104" :fixed="0" :min="0"></number-input></td> 
                         <td class="blue" colspan="2">108存在境外关联交易</td> 
-                        <td colspan="2"><el-radio class="radio" v-model="item.a108" :label="0">是</el-radio></td> 
+                        <td colspan="2" class="green"><el-radio class="radio" v-model="item.a108" :label="0">是</el-radio></td> 
                         <td colspan="2" class="green"><el-radio class="radio" v-model="item.a108" :label="1">否</el-radio></td> 
                     </tr>
                     <tr>
@@ -69,10 +69,10 @@
                         <td colspan="2" style="width: 15%" class="green"><el-radio class="radio" v-model="item.a201" :label="4" disabled>担保</el-radio></td>
                     </tr>
                     <tr>
-                        <td colspan="7"><el-radio class="radio" v-model="item.a201" :label="5">小企业会计制度</el-radio></td>
+                        <td colspan="7" class="green"><el-radio class="radio" v-model="item.a201" :label="5">小企业会计制度</el-radio></td>
                     </tr>
                     <tr>
-                        <td colspan="7"><el-radio class="radio" v-model="item.a201" :label="6">企业会计制度</el-radio></td>
+                        <td colspan="7" class="green"><el-radio class="radio" v-model="item.a201" :label="6">企业会计制度</el-radio></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="blue">事业单位会计制度 </td> 
@@ -211,7 +211,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="save">保存</el-button><el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="save">保存</el-button><el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -374,7 +374,7 @@
                 });
             },
             add(itm){
-                if(!itm.invName){
+                if(!(itm instanceof MouseEvent) && !itm.invName){
                     window.root && window.root.$emit("bizError",'投资者名称必须填写');
                     return;
                 }
@@ -479,6 +479,8 @@
                                     message: '删除成功',
                                     type: 'success'
                                 });
+                                let i = this.list.indexOf(item);
+                                this.list.splice(i,1);
                             }
                         },
                         always:()=>{

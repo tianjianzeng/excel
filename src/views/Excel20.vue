@@ -77,28 +77,28 @@
                     <tr v-for="(item,index) in list" :key="index">
                         <td class="blue ta-c">{{(index+1).toString().padStart(3,"0")}}</td>
                         <td>{{item.a1}}</td>
-                        <td class="green"><number-display :value="item.a2"></number-display></td>
-                        <td class="green"><number-display :value="item.a3"></number-display></td>
-                        <td class="green"><number-display :value="item.a4"></number-display></td>
-                        <td class="green"><number-display :value="item.a5"></number-display></td>
-                        <td class="green"><number-display :value="item.a6"></number-display></td>
-                        <td class="green"><number-display :value="item.a7"></number-display></td>
-                        <td class="green"><number-display :value="item.a8"></number-display></td>
-                        <td class="green"><number-display :value="item.a9"></number-display></td>
+                        <td><number-display :value="item.a2"></number-display></td>
+                        <td><number-display :value="item.a3"></number-display></td>
+                        <td><number-display :value="item.a4"></number-display></td>
+                        <td><number-display :value="item.a5"></number-display></td>
+                        <td><number-display :value="item.a6"></number-display></td>
+                        <td><number-display :value="item.a7"></number-display></td>
+                        <td><number-display :value="item.a8"></number-display></td>
+                        <td><number-display :value="item.a9"></number-display></td>
                         <td><number-display :value="item.a10"></number-display></td>
-                        <td class="green"><number-display :value="item.a11"></number-display></td>
+                        <td><number-display :value="item.a11"></number-display></td>
                         <td><number-display :value="item.a12"></number-display></td>
-                        <td class="green"><number-display :value="item.a13"></number-display></td>
+                        <td><number-display :value="item.a13"></number-display></td>
                         <td><number-display :value="item.a14"></number-display></td>
-                        <td class="green"><number-display :value="item.a15"></number-display></td>
-                        <td class="green"><number-display :value="item.a16"></number-display></td>
-                        <td class="green"><number-display :value="item.a17"></number-display></td>
+                        <td><number-display :value="item.a15"></number-display></td>
+                        <td><number-display :value="item.a16"></number-display></td>
+                        <td><number-display :value="item.a17"></number-display></td>
                         <td><number-display :value="item.a18"></number-display></td>
                         <td><number-display :value="item.a19"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue"></td>
-                        <td class="blue">合计</td>
+                        <td class="blue ta-c">合计</td>
                         <td ><number-display :value="total.a2"></number-display></td>
                         <td ><number-display :value="total.a3"></number-display></td>
                         <td ><number-display :value="total.a4"></number-display></td>

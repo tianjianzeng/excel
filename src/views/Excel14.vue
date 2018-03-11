@@ -32,63 +32,63 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">2</td>
-                        <td class="blue">（一）未到期责任准备金</td>
+                        <td class="blue ti-2">（一）未到期责任准备金</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a2_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">3</td>
-                        <td class="blue">（二）未决赔款准备金（4+5）</td>
+                        <td class="blue ti-2">（二）未决赔款准备金（4+5）</td>
                         <td><number-display :value="a3_1"></number-display></td>
                         <td><number-display :value="a3_2"></number-display></td>
                         <td><number-display :value="a3_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">4</td>
-                        <td class="blue">其中：已发生已报案未决赔款准备金</td>
+                        <td class="blue ti-4">其中：已发生已报案未决赔款准备金</td>
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a4_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">5</td>
-                        <td class="blue">已发生未报案未决赔款准备金</td>
+                        <td class="blue ti-6">已发生未报案未决赔款准备金</td>
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a5_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">6</td>
-                        <td class="blue">（三）巨灾风险准备金</td>
+                        <td class="blue ti-2">（三）巨灾风险准备金</td>
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a6_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">7</td>
-                        <td class="blue">（四）寿险责任准备金</td>
+                        <td class="blue ti-2">（四）寿险责任准备金</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a7_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">8</td>
-                        <td class="blue">（五）长期健康险责任准备金</td>
+                        <td class="blue ti-2">（五）长期健康险责任准备金</td>
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a8_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">9</td>
-                        <td class="blue">（六）保险保障基金</td>
+                        <td class="blue ti-2">（六）保险保障基金</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a9_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">10</td>
-                        <td class="blue">（七）其他</td>
+                        <td class="blue ti-2">（七）其他</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a10_3"></number-display></td>
@@ -102,28 +102,28 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">12</td>
-                        <td class="blue">（一）证券交易所风险基金</td>
+                        <td class="blue ti-2">（一）证券交易所风险基金</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a12_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">13</td>
-                        <td class="blue">（二）证券结算风险基金</td>
+                        <td class="blue ti-2">（二）证券结算风险基金</td>
                         <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a13_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">14</td>
-                        <td class="blue">（三）证券投资者保护基金</td>
+                        <td class="blue ti-2">（三）证券投资者保护基金</td>
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a14_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">15</td>
-                        <td class="blue">（四）其他</td>
+                        <td class="blue ti-2">（四）其他</td>
                         <td class="green"><number-input v-model="a15_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a15_3"></number-display></td>
@@ -137,28 +137,28 @@
                     </tr>
                      <tr>
                         <td class="blue ta-c">17</td>
-                        <td class="blue">（一）期货交易所风险准备金</td>
+                        <td class="blue ti-2">（一）期货交易所风险准备金</td>
                         <td class="green"><number-input v-model="a17_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a17_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a17_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">18</td>
-                        <td class="blue">（二）期货公司风险准备金</td>
+                        <td class="blue ti-2">（二）期货公司风险准备金</td>
                         <td class="green"><number-input v-model="a18_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a18_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue ta-c">19</td>
-                        <td class="blue">（三）期货投资者保障基金</td>
+                        <td class="blue ti-2">（三）期货投资者保障基金</td>
                         <td class="green"><number-input v-model="a19_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a19_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue ta-c">20</td>
-                        <td class="blue">（四）其他</td>
+                        <td class="blue ti-2">（四）其他</td>
                         <td class="green"><number-input v-model="a20_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a20_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a20_3"></number-display></td>
@@ -172,21 +172,21 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">22</td>
-                        <td class="blue">（一）涉农和中小企业贷款损失准备金</td>
+                        <td class="blue ti-2">（一）涉农和中小企业贷款损失准备金</td>
                         <td class="green"><number-input v-model="a22_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a22_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a22_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">23</td>
-                        <td class="blue">（二）贷款损失准备金</td>
+                        <td class="blue ti-2">（二）贷款损失准备金</td>
                         <td class="green"><number-input v-model="a23_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a23_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a23_3"></number-display></td>
                     </tr>
                      <tr>
                         <td class="blue ta-c">24</td>
-                        <td class="blue">（三）其他</td>
+                        <td class="blue ti-2">（三）其他</td>
                         <td class="green"><number-input v-model="a24_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a24_3"></number-display></td>
@@ -200,21 +200,21 @@
                     </tr>
                      <tr>
                         <td class="blue ta-c">26</td>
-                        <td class="blue">（一）担保赔偿准备</td>
+                        <td class="blue ti-2">（一）担保赔偿准备</td>
                         <td class="green"><number-input v-model="a26_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a26_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a26_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">27</td>
-                        <td class="blue">（二）未到期责任准备</td>
+                        <td class="blue ti-2">（二）未到期责任准备</td>
                         <td class="green"><number-input v-model="a27_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a27_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a27_3"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">28</td>
-                        <td class="blue">（三）其他</td>
+                        <td class="blue ti-2">（三）其他</td>
                         <td class="green"><number-input v-model="a28_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a28_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a28_3"></number-display></td>

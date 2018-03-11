@@ -38,10 +38,9 @@ export function formatDate(dateTime, type = "YYYY/MM/DD") {
     return moment(dateTime).format(type);
 }
 
-export function formatYear(year) {
-    let arr = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-    let idx = new Date().getYear() + 1899 - year;
-    if (idx == -1) {
+export function formatYear(idx) {
+    let arr = ["五", "四", "三", "二", "一"];
+    if (idx == 5) {
         return "本年";
     }
     return `前${arr[idx]}年度`;

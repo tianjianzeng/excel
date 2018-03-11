@@ -15,7 +15,7 @@
                         <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
-                        <td colspan="3">一、创业投资企业直接投资于未上市中小高新企业按投资额一定比例抵扣应纳税所得额</td>
+                        <td class="blue" colspan="3">一、创业投资企业直接投资于未上市中小高新企业按投资额一定比例抵扣应纳税所得额</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">1</td>
@@ -54,11 +54,11 @@
                     </tr>
                     <tr>
                         <td class="blue ta-c">8</td>
-                        <td class="blue">本年实际抵扣应纳税所得额（5行≤6行，本行=5行；5行＞6行，本行=6行）</td>
+                        <td class="blue">结转以后年度抵扣的股权投资余额（5＞6，本行=5-7行；5≤6，本行=0）</td>
                         <td><number-display :value="a8"></number-display></td>
                     </tr>
                     <tr>
-                        <td colspan="3">二、通过有限合伙制创业投资企业投资未上市中小高新企业按一定比例抵扣分得的应纳税所得额</td>
+                        <td class="blue" colspan="3">二、通过有限合伙制创业投资企业投资未上市中小高新企业按一定比例抵扣分得的应纳税所得额</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">9</td>
@@ -91,7 +91,7 @@
                         <td><number-display :value="a14"></number-display></td>
                     </tr>
                     <tr>
-                        <td colspan="3">三、抵扣应纳税所得额合计</td>
+                        <td class="blue" colspan="3">三、抵扣应纳税所得额合计</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">15</td>
