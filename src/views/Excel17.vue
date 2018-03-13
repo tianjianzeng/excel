@@ -4,7 +4,7 @@
             <table cellspacing="0" cellpadding="0" border="0" >
                 <col width="60px"/>
                 <col width="100px"/>
-                <col width="100px"/>
+                <col width="120px"/>
                 <col width="4%"/>
                 <col width="4%"/>
                 <col width="120px"/>
@@ -22,7 +22,7 @@
                 <col width="220px"/>
                 <tbody>
                     <tr>
-                        <td colspan="17" class="ta-c">符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表</td>
+                        <td colspan="18" class="ta-c">符合条件的居民企业之间的股息、红利等权益性投资收益优惠明细表</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c" rowspan="3">行次</td>
@@ -33,7 +33,8 @@
                         <td class="blue ta-c" colspan="2">被投资企业利润分配确认金额</td>
                         <td class="blue ta-c" colspan="3">被投资企业清算确认金额</td>
                         <td class="blue ta-c" colspan="6">撤回或减少投资确认金额</td>
-                        <td class="blue ta-c" rowspan="2" colspan="2">合计</td>
+                        <td class="blue ta-c" rowspan="2">合计</td>
+                        <td rowspan="2"></td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">被投资企业做出利润分配或转股决定时间</td>
@@ -70,7 +71,7 @@
                         </td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">{{(index+1).toString().padStart(3, "0")}}</td>
+                        <td class="blue ta-c">{{(index+1).toString().padStart(3, "0")}}</td>
                         <td class="green"><input v-model="item.a1"></td>
                         <td class="green">
                             <el-select v-model="item.a2" placeholder="请选择">
@@ -90,7 +91,7 @@
                         <td class="green"><number-input v-model="item.a8" :min="0" :fixed="fixed"></number-input></td>
                         <td><number-display :value="item.a9"></number-display></td>
                         <td class="green"><number-input v-model="item.a10" :fixed="fixed"></number-input></td>
-                        <td class="green"><number-input v-model="item.a11" :fixed="fixed"></number-input></td>
+                        <td class="green"><number-input v-model="item.a11" :fixed="4" :filter="toPercent"></number-input></td>
                         <td><number-display :value="item.a12"></number-display></td>
                         <td><number-display :value="item.a13"></number-display></td>
                         <td class="green"><number-input v-model="item.a14" :fixed="fixed"></number-input></td>
@@ -105,27 +106,28 @@
                     </tr>
                     <tr>
                         <td class="blue"></td>
-                        <td class="blue">合计</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">合计</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td><number-display :value="total.a6"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td><number-display :value="total.a9"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td><number-display :value="total.a15"></number-display></td>
-                        <td colspan="2"><number-display :value="total.a16"></number-display></td>
+                        <td><number-display :value="total.a16"></number-display></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" @click="refresh">刷新</el-button>
+        <el-button v-if="false" type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -175,10 +177,16 @@
                     var a9=0;
                     var a15=0;
                     var a16=0;
+                    
                     val.forEach(item=>{
                         if(item.saved === undefined){
                             item.saved = true;
                         }
+                        item.a9 = Math.min(item.a7,item.a8);
+                        item.a12 = item.a3 * item.a11 * 1.0 / Math.pow(10,this.fixed);
+                        item.a13 = (item.a10 * Math.pow(10,this.fixed) - item.a12 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
+                        item.a15 = Math.min(item.a13,item.a14);
+                        item.a16 = (item.a6 * Math.pow(10,this.fixed) + item.a9 * Math.pow(10,this.fixed) + item.a15 * Math.pow(10,this.fixed)) * 1.0 / Math.pow(10,this.fixed);
                         a6 += item.a6;
                         a9 += item.a9;
                         a15 += item.a15;
@@ -307,6 +315,11 @@
                     window.root && window.root.$emit("bizError",'被投资企业为必填项');
                     return;
                 }
+                if(!item.a5){
+                    window.root && window.root.$emit("bizError",'被投资企业做出利润分配或转股决定时间为必填项');
+                    return;
+                }
+                
                 //保存接口
                 const loading = this.$loading({
                     lock: true,

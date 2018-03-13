@@ -3,16 +3,28 @@
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <col style="width:60px" />
-                <col style="width:75%"/>
-                <col style="width:20%"/>
-                <col style="width:75%"/>
-                <col style="width:75%"/>
-                <col style="width:20%"/>
-                <col style="width:20%"/>
-                <col style="width:20%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
+                <col style="width:5%"/>
                 <tbody>
                     <tr>
-                        <td colspan="20">研发费用加计扣除优惠明细表</td>
+                        <td colspan="20" class="ta-c">研发费用加计扣除优惠明细表</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c" rowspan="3">行次</td>
@@ -39,7 +51,7 @@
                         <td class="blue ta-c">本年形成无形资产的金额</td>
                         <td class="blue ta-c">本年形成无形资产加计摊销额</td>
                         <td class="blue ta-c">以前年度形成无形资产本年加计摊销额</td>
-                        <td class="blue ta-c">无形资产本年加计摊销额</td>
+                        <td class="blue ta-c" style="border-right:1px solid #dfe6ec">无形资产本年加计摊销额</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">1</td>
@@ -63,30 +75,30 @@
                         <td class="blue ta-c">19（14+18）</td>
                     </tr>
                     <tr v-for="(item,index) in list" :key="index">
-                        <td class="blue">{{(index+1).toString().padStart(3,"0")}}</td>
+                        <td class="blue ta-c">{{(index+1).toString().padStart(3,"0")}}</td>
                         <td>{{item.a1}}</td>
-                        <td class="green"><number-display :value="item.a2"></number-display></td>
-                        <td class="green"><number-display :value="item.a3"></number-display></td>
-                        <td class="green"><number-display :value="item.a4"></number-display></td>
-                        <td class="green"><number-display :value="item.a5"></number-display></td>
-                        <td class="green"><number-display :value="item.a6"></number-display></td>
-                        <td class="green"><number-display :value="item.a7"></number-display></td>
-                        <td class="green"><number-display :value="item.a8"></number-display></td>
-                        <td class="green"><number-display :value="item.a9"></number-display></td>
+                        <td><number-display :value="item.a2"></number-display></td>
+                        <td><number-display :value="item.a3"></number-display></td>
+                        <td><number-display :value="item.a4"></number-display></td>
+                        <td><number-display :value="item.a5"></number-display></td>
+                        <td><number-display :value="item.a6"></number-display></td>
+                        <td><number-display :value="item.a7"></number-display></td>
+                        <td><number-display :value="item.a8"></number-display></td>
+                        <td><number-display :value="item.a9"></number-display></td>
                         <td><number-display :value="item.a10"></number-display></td>
-                        <td class="green"><number-display :value="item.a11"></number-display></td>
+                        <td><number-display :value="item.a11"></number-display></td>
                         <td><number-display :value="item.a12"></number-display></td>
-                        <td class="green"><number-display :value="item.a13"></number-display></td>
+                        <td><number-display :value="item.a13"></number-display></td>
                         <td><number-display :value="item.a14"></number-display></td>
-                        <td class="green"><number-display :value="item.a15"></number-display></td>
-                        <td class="green"><number-display :value="item.a16"></number-display></td>
-                        <td class="green"><number-display :value="item.a17"></number-display></td>
+                        <td><number-display :value="item.a15"></number-display></td>
+                        <td><number-display :value="item.a16"></number-display></td>
+                        <td><number-display :value="item.a17"></number-display></td>
                         <td><number-display :value="item.a18"></number-display></td>
                         <td><number-display :value="item.a19"></number-display></td>
                     </tr>
                     <tr>
                         <td class="blue"></td>
-                        <td class="blue">合计</td>
+                        <td class="blue ta-c">合计</td>
                         <td ><number-display :value="total.a2"></number-display></td>
                         <td ><number-display :value="total.a3"></number-display></td>
                         <td ><number-display :value="total.a4"></number-display></td>
@@ -109,7 +121,7 @@
                 </tbody>
             </table>
         </div>
-        <el-button type="primary" v-if="false" @click="refresh">刷新</el-button>
+        <el-button type="primary" @click="refresh">刷新</el-button>
     </div>
 </template>
 
@@ -208,13 +220,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .excel20{
-        td{
-            text-align: left;
-            padding-left: 10px;
-        }
-        td[colspan="20"]{
-            text-align: center;
-        }
-    }
 </style>

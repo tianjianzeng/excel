@@ -25,7 +25,7 @@
                     let reg4 = new RegExp(`^[0][1-9\-]$`);
 
                     
-                    let reg5 = new RegExp(`^[-]{0,1}[1-9][0-9]*$`);
+                    let reg5 = new RegExp(`^[-]{0,1}[0-9]{1}[0-9]*$`);
                     if(this.fixed>0){
                         //匹配单独负号
                         if(this.min>=0){

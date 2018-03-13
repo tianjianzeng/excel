@@ -3,12 +3,12 @@
         <div class="table-wraper">
             <table cellspacing="0" cellpadding="0" border="0" >
                 <col width="60px"/>
-                <col width="20%"/>
-                <col width="40%"/>
+                <col width="140px"/>
+                <col width="60%"/>
                 <col width="20%"/>
                 <tbody>
                     <tr>
-                        <td colspan="3">减免所得税优惠明细表</td>
+                        <td colspan="3" class="ta-c">减免所得税优惠明细表</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">行次</td>
@@ -16,235 +16,245 @@
                         <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
+                        <td class="blue ta-c">1</td>
                         <td class="blue" colspan="2">一、符合条件的小型微利企业 </td>
                         <td class="green"><number-display :value="a1"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">2</td>
-                        <td class="blue" colspan="2">   其中：减半征税</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ti-2" colspan="2">其中：减半征税</td>
                         <td class="green"><number-input v-model="a2" :max="a1" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">3</td>
+                        <td class="blue ta-c">3</td>
                         <td class="blue" colspan="2">二、国家需要重点扶持的高新技术企业（4+5）</td>
                         <td><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">4</td>
-                        <td class="blue" colspan="2">   （一）高新技术企业低税率优惠（填写A107041）</td>
+                        <td class="blue ta-c">4</td>
+                        <td class="blue ti-2" colspan="2">（一）高新技术企业低税率优惠（填写A107041）</td>
                         <td><number-display :value="a4"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">5</td>
-                        <td class="blue" colspan="2">   （二）经济特区和上海浦东新区新设立的高新技术企业（填写A107041）</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ti-2" colspan="2">（二）经济特区和上海浦东新区新设立的高新技术企业（填写A107041）</td>
                         <td><number-display :value="a5"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">6</td>
+                        <td class="blue ta-c">6</td>
                         <td class="blue" colspan="2">三、其他专项优惠（7+8+9+10+11…+14+15+16+…+31）</td>
                         <td><number-display :value="a6"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">7</td>
-                        <td class="blue" colspan="2">   （一）受灾地区损失严重的企业（7.1+7.2+7.3）</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ti-2" colspan="2">（一）受灾地区损失严重的企业（7.1+7.2+7.3）</td>
                         <td><number-display :value="a7"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">7.1</td>
-                        <td class="blue">     其中:1.</td>
+                        <td class="blue ta-c">7.1</td>
+                        <td class="blue ta-r">其中:1.</td>
                         <td class="blue">芦山受灾地区损失严重的企业</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7.2</td>
-                        <td class="blue">     2.</td>
+                        <td class="blue ta-c">7.2</td>
+                        <td class="blue ta-r">2.</td>
                         <td class="blue">鲁甸受灾地区损失严重的企业</td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7.3</td>
-                        <td class="blue" colspan="2">     3.</td>
+                        <td class="blue ta-c">7.3</td>
+                        <td class="blue ta-r">3.</td>
+                        <td></td>
                         <td><number-display :value="a7_3"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">8</td>
-                        <td class="blue" colspan="2">    （二）受灾地区农村信用社（8.1+8.2+8.3）</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ti-2" colspan="2">（二）受灾地区农村信用社（8.1+8.2+8.3）</td>
                         <td><number-display :value="a8"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">8.1</td>
-                        <td class="blue">     其中:1.</td>
+                        <td class="blue ta-c">8.1</td>
+                        <td class="blue ta-r">其中:1.</td>
                         <td class="blue">芦山受灾地区损失严重的企业</td>
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">8.2</td>
-                        <td class="blue">     2.</td>
+                        <td class="blue ta-c">8.2</td>
+                        <td class="blue ta-r">2.</td>
                         <td class="blue">鲁甸受灾地区农村信用社</td>
                         <td class="green"><number-input v-model="a8_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">8.3</td>
-                        <td class="blue" colspan="2">     3.</td>
+                        <td class="blue ta-c">8.3</td>
+                        <td class="blue ta-r">3.</td>
+                        <td></td>
                         <td><number-display :value="a8_3"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">9</td>
-                        <td class="blue" colspan="2">   （三）受灾地区的促进就业企业（9.1+9.2+9.3）</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ti-2" colspan="2">   （三）受灾地区的促进就业企业（9.1+9.2+9.3）</td>
                         <td><number-display :value="a9"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">9.1</td>
-                        <td class="blue">     其中:1.</td>
+                        <td class="blue ta-c">9.1</td>
+                        <td class="blue ta-r">其中:1.</td>
                         <td class="blue">芦山受灾地区的促进就业企业</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">9.2</td>
-                        <td class="blue">     2.</td>
+                        <td class="blue ta-c">9.2</td>
+                        <td class="blue ta-r">2.</td>
                         <td class="blue">鲁甸受灾地区的促进就业企业</td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">9.3</td>
-                        <td class="blue" colspan="2">     3.</td>
+                        <td class="blue ta-c">9.3</td>
+                        <td class="blue ta-r">3.</td>
+                        <td></td>
                         <td><number-display :value="a9_3"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">10</td>
-                        <td class="blue" colspan="2">   （四）支持和促进重点群体创业就业企业（10.1+10.2+10.3）</td>
+                        <td class="blue ta-c">10</td>
+                        <td class="blue ti-2" colspan="2">（四）支持和促进重点群体创业就业企业（10.1+10.2+10.3）</td>
                         <td><number-display :value="a10"></number-display></td>
                     </tr>     
                     <tr>
-                        <td class="blue">10.1</td>
-                        <td class="blue" colspan="2">      其中:1.下岗失业人员再就业</td>
+                        <td class="blue ta-c">10.1</td>
+                        <td class="blue ta-r">其中:1.</td>
+                        <td class="blue">下岗失业人员再就业</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                     </tr>   
                     <tr>
-                        <td class="blue">10.2</td>
-                        <td class="blue" colspan="2">          2.高校毕业生就业</td>
+                        <td class="blue ta-c">10.2</td>
+                        <td class="blue ta-r">2.</td>
+                        <td class="blue">高校毕业生就业</td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                     </tr>   
                     <tr>
-                        <td class="blue">10.3</td>
-                        <td class="blue" colspan="2">          3.退役士兵就业</td>
+                        <td class="blue ta-c">10.3</td>
+                        <td class="blue ta-r">3.</td>
+                        <td class="blue">退役士兵就业</td>
                         <td class="green"><number-input v-model="a10_3" :fixed="fixed"></number-input></td>
                     </tr>    
                     <tr>
-                        <td class="blue">11</td>
-                        <td class="blue" colspan="2">   （五）技术先进型服务企业</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ti-2" colspan="2">（五）技术先进型服务企业</td>
                         <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">12</td>
-                        <td class="blue" colspan="2">   （六）动漫企业</td>
+                        <td class="blue ta-c">12</td>
+                        <td class="blue ti-2" colspan="2">（六）动漫企业</td>
                         <td class="green"><number-input v-model="a12" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">13</td>
-                        <td class="blue" colspan="2">  （七）集成电路线宽小于0.8微米（含）的集成电路生产企业</td>
+                        <td class="blue ta-c">13</td>
+                        <td class="blue ti-2" colspan="2">（七）集成电路线宽小于0.8微米（含）的集成电路生产企业</td>
                         <td class="green"><number-input v-model="a13" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">14</td>
-                        <td class="blue" colspan="2">   （八）集成电路线宽小于0.25微米的集成电路生产企业（14.1+14.2）</td>
+                        <td class="blue ta-c">14</td>
+                        <td class="blue ti-2" colspan="2">（八）集成电路线宽小于0.25微米的集成电路生产企业（14.1+14.2）</td>
                         <td><number-display :value="a14"></number-display></td>
                     </tr> 
                     <tr>
-                        <td class="blue">14.1</td>
-                        <td class="blue" colspan="2">     其中：1.定期减免企业所得税</td>
+                        <td class="blue ta-c">14.1</td>
+                        <td class="blue ta-r">其中：1.定期减免企业所得税</td>
+                        <td class="blue">.定期减免企业所得税</td>
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
                     </tr>   
                     <tr>
-                        <td class="blue">14.2</td>
-                        <td class="blue" colspan="2">           2.减按15%税率征收企业所得税</td>
+                        <td class="blue ta-c">14.2</td>
+                        <td class="blue ta-r">2.</td>
+                        <td class="blue">减按15%税率征收企业所得税</td>
                         <td class="green"><number-input v-model="a14_2" :fixed="fixed"></number-input></td>
                     </tr>   
                     <tr>
-                        <td class="blue">15</td>
-                        <td class="blue" colspan="2">   （九）投资额超过80亿元人民币的集成电路生产企业（15.1+15.2）</td>
+                        <td class="blue ta-c">15</td>
+                        <td class="blue" colspan="2">（九）投资额超过80亿元人民币的集成电路生产企业（15.1+15.2）</td>
                         <td><number-display :value="a15"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">15.1</td>
-                        <td class="blue" colspan="2">     其中：1.定期减免企业所得税</td>
+                        <td class="blue ta-c">15.1</td>
+                        <td class="blue ta-r">其中：1.</td>
+                        <td class="blue">定期减免企业所得税</td>
                         <td class="green"><number-input v-model="a15_1" :fixed="fixed"></number-input></td>
                     </tr>   
                     <tr>
-                        <td class="blue">15.2</td>
-                        <td class="blue" colspan="2">           2.减按15%税率征收企业所得税</td>
+                        <td class="blue ta-c">15.2</td>
+                        <td class="blue ta-r">2.</td>
+                        <td class="blue">减按15%税率征收企业所得税</td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">16</td>
-                        <td class="blue" colspan="2">   （十）新办集成电路设计企业（填写A107042）</td>
+                        <td class="blue ta-c">16</td>
+                        <td class="blue ti-2" colspan="2">（十）新办集成电路设计企业（填写A107042）</td>
                         <td><number-display :value="a16"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">17</td>
-                        <td class="blue" colspan="2">   （十一）国家规划布局内重点集成电路设计企业</td>
+                        <td class="blue ta-c">17</td>
+                        <td class="blue ti-2" colspan="2">（十一）国家规划布局内重点集成电路设计企业</td>
                         <td class="green"><number-input v-model="a17" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">18</td>
-                        <td class="blue" colspan="2">   （十二）集成电路封装、测试企业</td>
+                        <td class="blue ta-c">18</td>
+                        <td class="blue ti-2" colspan="2">（十二）集成电路封装、测试企业</td>
                         <td class="green"><number-input v-model="a18" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">19</td>
-                        <td class="blue" colspan="2">    （十三）集成电路关键专用材料生产企业或集成电路专用设备生产企业</td>
+                        <td class="blue ta-c">19</td>
+                        <td class="blue ti-2" colspan="2">（十三）集成电路关键专用材料生产企业或集成电路专用设备生产企业</td>
                         <td class="green"><number-input v-model="a19" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">20</td>
-                        <td class="blue" colspan="2">   （十四）符合条件的软件企业（填写A107042）</td>
+                        <td class="blue ta-c">20</td>
+                        <td class="blue ti-2" colspan="2">（十四）符合条件的软件企业（填写A107042）</td>
                         <td><number-display :value="a20"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">21</td>
-                        <td class="blue" colspan="2">   （十五）国家规划布局内重点软件企业</td>
+                        <td class="blue ta-c">21</td>
+                        <td class="blue ti-2" colspan="2">（十五）国家规划布局内重点软件企业</td>
                         <td class="green"><number-input v-model="a21" :fixed="fixed"></number-input></td>
                     </tr>  
                     <tr>
-                        <td class="blue">22</td>
-                        <td class="blue" colspan="2">   （十六）经营性文化事业单位转制企业</td>
+                        <td class="blue ta-c">22</td>
+                        <td class="blue ti-2" colspan="2">（十六）经营性文化事业单位转制企业</td>
                         <td class="green"><number-input v-model="a22" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">23</td>
-                        <td class="blue" colspan="2">  （十七）符合条件的生产和装配伤残人员专门用品企业</td>
+                        <td class="blue ta-c">23</td>
+                        <td class="blue ti-2" colspan="2">（十七）符合条件的生产和装配伤残人员专门用品企业</td>
                         <td class="green"><number-input v-model="a23" :fixed="fixed"></number-input></td>
                     </tr> 
                     <tr>
-                        <td class="blue">24</td>
-                        <td class="blue" colspan="2">   （十八）设在西部地区的鼓励类产业企业</td>
+                        <td class="blue ta-c">24</td>
+                        <td class="blue ti-2" colspan="2">（十八）设在西部地区的鼓励类产业企业</td>
                         <td class="green"><number-input v-model="a24" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">25</td>
-                        <td class="blue" colspan="2">   （十九）新疆困难地区新办企业</td>
+                        <td class="blue ta-c">25</td>
+                        <td class="blue ti-2" colspan="2">（十九）新疆困难地区新办企业</td>
                         <td><number-display :value="a25"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">26</td>
-                        <td class="blue" colspan="2">    （二十）新疆喀什、霍尔果斯特殊经济开发区新办企业</td>
+                        <td class="blue ta-c">26</td>
+                        <td class="blue ti-2" colspan="2">（二十）新疆喀什、霍尔果斯特殊经济开发区新办企业</td>
                         <td><number-display :value="a26"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">27</td>
-                        <td class="blue" colspan="2">   （二十一）横琴新区、平潭综合实验区和前海深港现代化服务业合作区企业</td>
+                        <td class="blue ta-c">27</td>
+                        <td class="blue ti-2" colspan="2">（二十一）横琴新区、平潭综合实验区和前海深港现代化服务业合作区企业</td>
                         <td><number-display :value="a27"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">28</td>
-                        <td class="blue" colspan="2">   （二十二）享受过渡期税收优惠企业</td>
+                        <td class="blue ta-c">28</td>
+                        <td class="blue ti-2" colspan="2">（二十二）享受过渡期税收优惠企业</td>
                         <td><number-display :value="a28"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">29</td>
-                        <td class="blue">   （二十三）其他1</td>
-                        <td class="blue">
+                        <td class="blue ta-c">29</td>
+                        <td class="blue ti-2">（二十三）其他1</td>
+                        <td class="green">
                             <el-select v-model="a29_1" placeholder="请选择">
                                 <el-option
                                     v-for="it in selListA107040"
@@ -257,9 +267,9 @@
                         <td class="green"><number-input v-model="a29" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">30</td>
-                        <td class="blue">   （二十四）其他2</td>
-                        <td class="blue">
+                        <td class="blue ta-c">30</td>
+                        <td class="blue ti-2">（二十四）其他2</td>
+                        <td class="green">
                             <el-select v-model="a30_1" placeholder="请选择">
                                 <el-option
                                     v-for="it in selListA107040"
@@ -272,9 +282,9 @@
                         <td class="green"><number-input v-model="a30" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">31</td>
-                        <td class="blue">   （二十五）其他3</td>
-                        <td class="blue">
+                        <td class="blue ta-c">31</td>
+                        <td class="blue ti-2">（二十五）其他3</td>
+                        <td class="green">
                             <el-select v-model="a31_1" placeholder="请选择">
                                 <el-option
                                     v-for="it in selListA107040"
@@ -287,17 +297,17 @@
                         <td class="green"><number-input v-model="a31" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">32</td>
+                        <td class="blue ta-c">32</td>
                         <td class="blue" colspan="2">四、减：项目所得额按法定税率减半征收企业所得税叠加享受减免税优惠</td>
                         <td class="green"><number-input v-model="a32" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">33</td>
+                        <td class="blue ta-c">33</td>
                         <td class="blue" colspan="2">五、减免地方分享所得税的民族自治地方企业创建</td>
                         <td class="green"><number-input v-model="a33" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">34</td>
+                        <td class="blue ta-c">34</td>
                         <td class="blue" colspan="2">合计：（1+3+6-32+33）</td>
                         <td><number-display :value="a34"></number-display></td>
                     </tr>

@@ -33,57 +33,57 @@
                         <td class="blue ta-c">6</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
+                        <td class="blue ta-c">1</td>
                         <td class="blue">一、职工薪酬</td>
                         <td class="green"><number-display :value="a1_1"></number-display></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a1_3"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">2</td>
+                        <td class="blue ta-c">2</td>
                         <td class="blue">二、劳务费</td>
                         <td class="green"><number-display :value="a2_1"></number-display></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-display :value="a2_3"></number-display></td>
                         <td class="green"><number-input v-model="a2_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">3</td>
+                        <td class="blue ta-c">3</td>
                         <td class="blue">三、咨询顾问费</td>
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">4</td>
+                        <td class="blue ta-c">4</td>
                         <td class="blue">四、业务招待费</td>
                         <td class="green"><number-display :value="a4_1"></number-display></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a4_3"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">5</td>
+                        <td class="blue ta-c">5</td>
                         <td class="blue">五、广告费和业务宣传费</td>
                         <td class="green"><number-display :value="a5_1"></number-display></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a5_3" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">6</td>
+                        <td class="blue ta-c">6</td>
                         <td class="blue">六、佣金和手续费</td>
                         <td class="green"><number-display :value="a6_1"></number-display></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
@@ -93,177 +93,177 @@
                         <td class="green"><number-input v-model="a6_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7</td>
+                        <td class="blue ta-c">7</td>
                         <td class="blue">七、资产折旧摊销费</td>
                         <td class="green"><number-display :value="a7_1"></number-display></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a7_3"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">8</td>
+                        <td class="blue ta-c">8</td>
                         <td class="blue">八、财产损耗、盘亏及毁损损失</td>
                         <td class="green"><number-input v-model="a8_1" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a8_3" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">9</td>
+                        <td class="blue ta-c">9</td>
                         <td class="blue">九、办公费</td>
                         <td class="green"><number-display :value="a9_1"></number-display></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a9_3"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">10</td>
+                        <td class="blue ta-c">10</td>
                         <td class="blue">十、董事会费</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a10_3" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">11</td>
+                        <td class="blue ta-c">11</td>
                         <td class="blue">十一、租赁费</td>
                         <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">12</td>
+                        <td class="blue ta-c">12</td>
                         <td class="blue">十二、诉讼费</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a12_3" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">13</td>
+                        <td class="blue ta-c">13</td>
                         <td class="blue">十三、差旅费</td>
                         <td class="green"><number-display :value="a13_1"></number-display></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a13_3"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">14</td>
+                        <td class="blue ta-c">14</td>
                         <td class="blue">十四、保险费</td>
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a14_3" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">15</td>
+                        <td class="blue ta-c">15</td>
                         <td class="blue">十五、运输、仓储费</td>
                         <td class="green"><number-display :value="a15_1"></number-display></td>
                         <td class="green"><number-input v-model="a15_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a15_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">16</td>
+                        <td class="blue ta-c">16</td>
                         <td class="blue">十六、修理费</td>
                         <td class="green"><number-input v-model="a16_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a16_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">17</td>
+                        <td class="blue ta-c">17</td>
                         <td class="blue">十七、包装费</td>
                         <td class="green"><number-input v-model="a17_1" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a17_3" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">18</td>
+                        <td class="blue ta-c">18</td>
                         <td class="blue">十八、技术转让费</td>
                         <td class="green"><number-input v-model="a18_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_3" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a18_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">19</td>
+                        <td class="blue ta-c">19</td>
                         <td class="blue">十九、研究费用</td>
                         <td class="green"><number-input v-model="a19_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a19_2" :fixed="fixed"></number-input></td>
                         <td class="green"><number-display :value="a19_3"></number-display></td>
                         <td class="green"><number-input v-model="a19_4" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">20</td>
+                        <td class="blue ta-c">20</td>
                         <td class="blue">二十、各项税费</td>
                         <td class="green"><number-input v-model="a20_1" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a20_3"></number-display></td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">21</td>
+                        <td class="blue ta-c">21</td>
                         <td class="blue">二十一、利息收支</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a21_5"></number-display></td>
                         <td class="green"><number-input v-model="a21_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">22</td>
+                        <td class="blue ta-c">22</td>
                         <td class="blue">二十二、汇兑差额</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-display :value="a22_5"></number-display></td>
                         <td class="green"><number-input v-model="a22_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">23</td>
+                        <td class="blue ta-c">23</td>
                         <td class="blue">二十三、现金折扣</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
+                        <td class="blue ta-c">*</td>
                         <td class="green"><number-input v-model="a23_5" :fixed="fixed"></number-input></td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">24</td>
+                        <td class="blue ta-c">24</td>
                         <td class="blue">二十四、其他</td>
                         <td class="green"><number-display :value="a24_1"></number-display></td>
                         <td class="green"><number-input v-model="a24_2" :fixed="fixed"></number-input></td>
@@ -273,7 +273,7 @@
                         <td class="green"><number-input v-model="a24_6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">25</td>
+                        <td class="blue ta-c">25</td>
                         <td class="blue">合计(1+2+3+…24)</td>
                         <td><number-display :value="a25_1"></number-display></td>
                         <td><number-display :value="a25_2"></number-display></td>

@@ -23,6 +23,16 @@
         text-align: center;
         color: #2c3e50;
     }
+
+    .ti-2{
+        padding-left: 2em;
+    }
+    .ti-4{
+        padding-left: 4em;
+    }
+    .ti-6{
+        padding-left: 6em;
+    }
     
     .excel {
         width: 98%;
@@ -52,6 +62,12 @@
         }
         td { 
             text-align: left;
+            .el-button+.el-button {
+                margin-left: 0;
+            }
+            .el-select .el-input.el-input--suffix .el-input__inner {
+                text-align: left;
+            }
             .el-input--prefix .el-input__inner {
                 padding-left: 20px;
             }
@@ -101,6 +117,9 @@
                 text-align: center;
                 padding-left: 0;
             }
+            &.ta-r{
+                text-align: right;
+            }
         }
         tr{
             &:last-of-type {
@@ -115,6 +134,6 @@
     }
     
     .el-date-editor.el-input {
-        width: auto;
+        width: auto !important;
     }
 </style>

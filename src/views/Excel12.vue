@@ -40,7 +40,7 @@
                         <td class="blue ta-c">7(3+6)</td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">1</td>
+                        <td style="width:5%" class="blue ta-c">1</td>
                         <td style="width:25%" class="blue">一、债务重组</td>
                         <td class="green"><number-input v-model="a1_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a1_2" :fixed="fixed"></number-input></td>
@@ -51,8 +51,8 @@
                         <td><number-display :value="a1_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">2</td>
-                        <td style="width:25%" class="blue">其中：以非货币性资产清偿债务</td>
+                        <td style="width:5%" class="blue ta-c">2</td>
+                        <td style="width:25%" class="blue ti-2">其中：以非货币性资产清偿债务</td>
                         <td class="green"><number-input v-model="a2_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a2_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a2_3"></number-display></td>
@@ -62,8 +62,8 @@
                         <td><number-display :value="a2_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">3</td>
-                        <td style="width:25%" class="blue">债转股</td>
+                        <td style="width:5%" class="blue ta-c">3</td>
+                        <td style="width:25%" class="blue ti-4">债转股</td>
                         <td class="green"><number-input v-model="a3_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a3_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a3_3"></number-display></td>
@@ -73,7 +73,7 @@
                         <td><number-display :value="a3_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">4</td>
+                        <td style="width:5%" class="blue ta-c">4</td>
                         <td style="width:25%" class="blue">二、股权收购</td>
                         <td class="green"><number-input v-model="a4_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a4_2" :fixed="fixed"></number-input></td>
@@ -84,8 +84,8 @@
                         <td><number-display :value="a4_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">5</td>
-                        <td style="width:25%" class="blue">其中：涉及跨境重组的股权收购</td>
+                        <td style="width:5%" class="blue ta-c">5</td>
+                        <td style="width:25%" class="blue ti-2">其中：涉及跨境重组的股权收购</td>
                         <td class="green"><number-input v-model="a5_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a5_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a5_3"></number-display></td>
@@ -95,7 +95,7 @@
                         <td><number-display :value="a5_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">6</td>
+                        <td style="width:5%" class="blue ta-c">6</td>
                         <td style="width:25%" class="blue">三、资产收购</td>
                         <td class="green"><number-input v-model="a6_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a6_2" :fixed="fixed"></number-input></td>
@@ -106,8 +106,8 @@
                         <td><number-display :value="a6_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">7</td>
-                        <td style="width:25%" class="blue">其中：涉及跨境重组的资产收购</td>
+                        <td style="width:5%" class="blue ta-c">7</td>
+                        <td style="width:25%" class="blue ti-2">其中：涉及跨境重组的资产收购</td>
                         <td class="green"><number-input v-model="a7_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a7_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a7_3"></number-display></td>
@@ -117,7 +117,7 @@
                         <td><number-display :value="a7_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">8</td>
+                        <td style="width:5%" class="blue ta-c">8</td>
                         <td style="width:25%" class="blue">四、企业合并（9+10）</td>
                         <td><number-display :value="a8_1"></number-display></td>
                         <td><number-display :value="a8_2"></number-display></td>
@@ -128,8 +128,8 @@
                         <td><number-display :value="a8_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">9</td>
-                        <td style="width:25%" class="blue">其中：同一控制下企业合并</td>
+                        <td style="width:5%" class="blue ta-c">9</td>
+                        <td style="width:25%" class="blue ti-2">其中：同一控制下企业合并</td>
                         <td class="green"><number-input v-model="a9_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a9_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a9_3"></number-display></td>
@@ -139,8 +139,8 @@
                         <td><number-display :value="a9_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">10</td>
-                        <td style="width:25%" class="blue">非同一控制下企业合并</td>
+                        <td style="width:5%" class="blue ta-c">10</td>
+                        <td style="width:25%" class="blue ti-4">非同一控制下企业合并</td>
                         <td class="green"><number-input v-model="a10_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a10_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a10_3"></number-display></td>
@@ -150,7 +150,7 @@
                         <td><number-display :value="a10_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">11</td>
+                        <td style="width:5%" class="blue ta-c">11</td>
                         <td style="width:25%" class="blue">五、企业分立</td>
                         <td class="green"><number-input v-model="a11_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a11_2" :fixed="fixed"></number-input></td>
@@ -161,7 +161,7 @@
                         <td><number-display :value="a11_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">12</td>
+                        <td style="width:5%" class="blue ta-c">12</td>
                         <td style="width:25%" class="blue">六、其他</td>
                         <td class="green"><number-input v-model="a12_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a12_2" :fixed="fixed"></number-input></td>
@@ -172,8 +172,8 @@
                         <td><number-display :value="a12_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">13</td>
-                        <td style="width:25%" class="blue">其中：以非货币性资产对外投资</td>
+                        <td style="width:5%" class="blue ta-c">13</td>
+                        <td style="width:25%" class="blue ti-2">其中：以非货币性资产对外投资</td>
                         <td class="green"><number-input v-model="a13_1" :fixed="fixed"></number-input></td>
                         <td class="green"><number-input v-model="a13_2" :fixed="fixed"></number-input></td>
                         <td><number-display :value="a13_3"></number-display></td>
@@ -183,7 +183,7 @@
                         <td><number-display :value="a13_7"></number-display></td>
                     </tr>
                     <tr>
-                        <td style="width:5%" class="blue">14</td>
+                        <td style="width:5%" class="blue ta-c">14</td>
                         <td style="width:25%" class="blue">合计（1+4+6+8+11+12）</td>
                         <td><number-display :value="a14_1"></number-display></td>
                         <td><number-display :value="a14_2"></number-display></td>

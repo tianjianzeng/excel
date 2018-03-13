@@ -7,7 +7,7 @@
                 <col style="width:20%"/>
                 <tbody>
                     <tr>
-                        <td colspan="3">金融、保险等机构取得的涉农利息、保费收入优惠明细表</td>
+                        <td colspan="3" class="ta-c">金融、保险等机构取得的涉农利息、保费收入优惠明细表</td>
                     </tr>
                     <tr>
                         <td class="blue ta-c">行次</td>
@@ -15,67 +15,67 @@
                         <td class="blue ta-c">金额</td>
                     </tr>
                     <tr>
-                        <td class="blue">1</td>
+                        <td class="blue ta-c">1</td>
                         <td class="blue">一、金融机构农户小额贷款的利息收入</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">2</td>
-                        <td class="blue">   （一）金融机构取得农户小额贷款利息收入总额</td>
+                        <td class="blue ta-c">2</td>
+                        <td class="blue ti-2">（一）金融机构取得农户小额贷款利息收入总额</td>
                         <td class="green"><number-input v-model="a2" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">3</td>
-                        <td class="blue">   （二）金融机构取得农户小额贷款利息减计收入（2×10%）</td>
+                        <td class="blue ta-c">3</td>
+                        <td class="blue ti-2">（二）金融机构取得农户小额贷款利息减计收入（2×10%）</td>
                         <td><number-display :value="a3"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">4</td>
+                        <td class="blue ta-c">4</td>
                         <td class="blue">二、保险公司为种植业、养殖业提供保险业务取得的保费收入</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>
                     <tr>
-                        <td class="blue">5</td>
-                        <td class="blue">   （一）保险公司为种植业、养殖业提供保险业务取得的保费收入总额（6+7-8）</td>
+                        <td class="blue ta-c">5</td>
+                        <td class="blue ti-2">（一）保险公司为种植业、养殖业提供保险业务取得的保费收入总额（6+7-8）</td>
                         <td><number-display :value="a5" :min="0"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">6</td>
-                        <td class="blue">       1.原保费收入</td>
+                        <td class="blue ta-c">6</td>
+                        <td class="blue ti-4">1.原保费收入</td>
                         <td class="green"><number-input v-model="a6" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">7</td>
-                        <td class="blue">       2.分保费收入</td>
+                        <td class="blue ta-c">7</td>
+                        <td class="blue ti-4">2.分保费收入</td>
                         <td class="green"><number-input v-model="a7" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">8</td>
-                        <td class="blue">       3.分出保费收入</td>
+                        <td class="blue ta-c">8</td>
+                        <td class="blue ti-4">3.分出保费收入</td>
                         <td class="green"><number-input v-model="a8" :min="0" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">9</td>
-                        <td class="blue">   （二）保险公司为种植业、养殖业提供保险业务取得的保费减计收入（5×10%）</td>
+                        <td class="blue ta-c">9</td>
+                        <td class="blue ti-2">（二）保险公司为种植业、养殖业提供保险业务取得的保费减计收入（5×10%）</td>
                         <td><number-display :value="a9"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">10</td>
+                        <td class="blue ta-c">10</td>
                         <td class="blue">三、其他符合条件的机构农户小额贷款的利息收入</td>
-                        <td class="blue">*</td>
+                        <td class="blue ta-c">*</td>
                     </tr>      
                     <tr>
-                        <td class="blue">11</td>
-                        <td class="blue">   （一）其他符合条件的机构取得农户小额贷款利息收入总额</td>
+                        <td class="blue ta-c">11</td>
+                        <td class="blue ti-2">（一）其他符合条件的机构取得农户小额贷款利息收入总额</td>
                         <td class="green"><number-input v-model="a11" :fixed="fixed"></number-input></td>
                     </tr>
                     <tr>
-                        <td class="blue">12</td>
-                        <td class="blue">   （二）其他符合条件的机构取得农户小额贷款利息减计收入（11×10%）</td>
+                        <td class="blue ta-c">12</td>
+                        <td class="blue ti-2">（二）其他符合条件的机构取得农户小额贷款利息减计收入（11×10%）</td>
                         <td><number-display :value="a12"></number-display></td>
                     </tr>
                     <tr>
-                        <td class="blue">13</td>
+                        <td class="blue ta-c">13</td>
                         <td class="blue">合计（3+9+12）</td>
                         <td><number-display :value="a13"></number-display></td>
                     </tr>
