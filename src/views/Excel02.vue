@@ -421,6 +421,7 @@
                                 message: '保存成功',
                                 type: 'success'
                             });
+                            item.id = rst.data;
                             item.saved = true;
                         }
                     },

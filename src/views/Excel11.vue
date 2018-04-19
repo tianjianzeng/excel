@@ -326,6 +326,7 @@
                                 type: 'success'
                             });
                             item.saved = true;
+                            item.id = rst.data;
                         }
                     },
                     always:()=>{

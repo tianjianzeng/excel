@@ -1,7 +1,7 @@
 <template>
     <div>
         <p v-if="showText" @click="click">{{text|filter(filter,fixed)}}</p>
-        <input ref="valInput" :class="{'error':error}" @focus="focus" v-else v-model="text" @blur="blur" @keyup="keyup">
+        <input ref="valInput" :class="{'error':error}" maxlength="16" @focus="focus" v-else v-model="text" @blur="blur" @keyup="keyup">
     </div>
 </template>
 <script>

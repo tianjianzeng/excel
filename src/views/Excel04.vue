@@ -280,9 +280,9 @@
                 });
                 store.dispatch("getTableA101010",{
                     data:{
-                        "uid":100,
-                        "year":2016,
-                        "userId":10086
+                        "uid": this.uid,
+                        "year": this.year,
+                        "userId": this.userId
                     },
                     always:()=>{
                         loading.close();

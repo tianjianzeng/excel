@@ -159,8 +159,8 @@
                     </tr> 
                     <tr>
                         <td class="blue ta-c">14.1</td>
-                        <td class="blue ta-r">其中：1.定期减免企业所得税</td>
-                        <td class="blue">.定期减免企业所得税</td>
+                        <td class="blue ta-r">其中：1.</td>
+                        <td class="blue">定期减免企业所得税</td>
                         <td class="green"><number-input v-model="a14_1" :fixed="fixed"></number-input></td>
                     </tr>   
                     <tr>

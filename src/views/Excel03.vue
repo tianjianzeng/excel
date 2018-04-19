@@ -314,7 +314,7 @@
                 return rst>=0 ? rst: 0;
             },
             a25(){
-                return this.a23 * this.a24;
+                return this.a23 * this.a24 / 100;
             },
             a28(){
                 //25行-26行-27行

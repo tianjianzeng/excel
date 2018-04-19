@@ -293,7 +293,7 @@
                         a6: item.a6,
                         a7: item.a7,
                         a8: item.a8,
-                        a10: item.a20,
+                        a10: item.a10,
                         a11: item.a11,
                         a14: item.a14
                     },
@@ -350,6 +350,8 @@
                                 message: '保存成功',
                                 type: 'success'
                             });
+                            
+                            item.id = rst.data;
                             item.saved = true;
                         }
                     },
